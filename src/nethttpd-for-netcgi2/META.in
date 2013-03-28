@@ -1,3 +1,0 @@
-version = "@VERSION@"
-requires = "nethttpd"
-description = "Ocamlnet - HTTP daemon - Compat name for nethttpd"

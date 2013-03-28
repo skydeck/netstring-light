@@ -1,6 +1,0 @@
-version = "@VERSION@"
-description = "Ocamlnet - Shared memory"
-requires = "unix netsys bigarray"
-archive(byte) = "netshm.cma"
-archive(native) = "netshm.cmxa"
-archive(native,gprof) = "netshm.p.cmxa"

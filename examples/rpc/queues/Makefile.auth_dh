@@ -1,3 +1,0 @@
-PACKAGES += rpc-auth-dh
-SRV_EXPLICIT_OBJ += qserver_auth_dh.cmo
-CLNT_EXPLICIT_OBJ += qclient_auth_dh.cmo

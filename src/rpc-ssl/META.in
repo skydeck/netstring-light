@@ -1,6 +1,0 @@
-description = "Ocamlnet - SSL add-on for RPC"
-version = "@VERSION@"
-requires = "rpc,equeue-ssl"
-archive(byte) = "rpc_ssl.cma"
-archive(native) = "rpc_ssl.cmxa"
-archive(native,gprof) = "rpc_ssl.p.cmxa"

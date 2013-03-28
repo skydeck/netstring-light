@@ -1,5 +1,0 @@
-version = "@VERSION@"
-requires = "pcre"
-archive(byte) = "netstring-pcre.cma"
-archive(native) = "netstring-pcre.cmxa"
-archive(native,gprof) = "netstring-pcre.p.cmxa"

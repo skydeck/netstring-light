@@ -1,6 +1,0 @@
-version = "@VERSION@"
-description = "Ocamlnet - GSS-API generic definition"
-requires = "unix netsys bigarray netstring"
-archive(byte) = "netgssapi.cma"
-archive(native) = "netgssapi.cmxa"
-archive(native,gprof) = "netgssapi.p.cmxa"

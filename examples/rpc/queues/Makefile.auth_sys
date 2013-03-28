@@ -1,2 +1,0 @@
-SRV_EXPLICIT_OBJ += qserver_auth_sys.cmo
-CLNT_EXPLICIT_OBJ += qclient_auth_sys.cmo

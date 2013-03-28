@@ -1,6 +1,0 @@
-version = "@VERSION@"
-requires = "netstring,netcgi2,equeue,netplex,netsys"
-description = "Ocamlnet - HTTP daemon"
-archive(byte) = "nethttpd.cma"
-archive(native) = "nethttpd.cmxa"
-archive(native,gprof) = "nethttpd.p.cmxa"

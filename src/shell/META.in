@@ -1,6 +1,0 @@
-description = "Ocamlnet - Unix shell functions"
-requires = "unix netsys equeue netstring"
-version = "@VERSION@"
-archive(byte) = "shell.cma"
-archive(native) = "shell.cmxa"
-archive(native,gprof) = "shell.p.cmxa"
