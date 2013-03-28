@@ -1,0 +1,5 @@
+version = "@VERSION@"
+requires = "netstring,@ZIP_PROVIDER@"
+archive(byte) = "netzip.cma"
+archive(native) = "netzip.cmxa"
+archive(native,gprof) = "netzip.p.cmxa"

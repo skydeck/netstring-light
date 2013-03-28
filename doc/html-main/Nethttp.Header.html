@@ -1,0 +1,768 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Nethttp.Cookie.html">
+<link rel="Up" href="Nethttp.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><title>Ocamlnet 3 Reference Manual : Nethttp.Header</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Nethttp.Cookie.html" title="Nethttp.Cookie">Previous</a>
+&nbsp;<a class="up" href="Nethttp.html" title="Nethttp">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Nethttp.Header.html">Nethttp.Header</a></h1>
+<pre><span class="keyword">module</span> Header: <code class="code">sig</code> <a href="Nethttp.Header.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<br>
+This module is a parser/printer for the header fields used in HTTP/1.1.
+ The <code class="code">get_*</code> functions generally raise <code class="code">Not_found</code> when the queried header
+ is not present. If the syntax of the field is a comma-separated list of
+ multiple values, the <code class="code">get_*</code> functions generally merge all headers of
+ the same type. The order is preserved in this case. The list <code class="code">[]</code> means
+ that the header exists, but only with empty value. For example,
+<p>
+
+ <pre class="codepre"><code class="code"> Accept: text/html
+ Accept: text/plain
+ </code></pre>
+<p>
+
+ would be returned as <code class="code">["text/html",[],[]; "text/plain", [],[]]</code>
+ by <code class="code">get_accept</code>.  The header
+<p>
+
+ <pre class="codepre"><code class="code">Accept:</code></pre>
+<p>
+
+ would be returned as <code class="code">[]</code>.
+<p>
+
+ The <code class="code">set_*</code> functions generally produce only a single header with comma-
+ separated values. Existing header are overwritten/removed.
+<p>
+
+ To remove a header, simply use the <code class="code">delete_field</code> method of <code class="code">http_header</code>.
+<p>
+
+ Error behaviour: The <code class="code">get_*</code> functions raise <code class="code">Bad_header_field</code>
+ when they cannot parse a header field. The <code class="code">set_*</code> functions
+ raise <code class="code">Invalid_argument</code> when an invalid value is passed to them
+ (only very few functions do that).  The argument of both
+ exceptions is the function name.<br>
+<pre><span id="VALget_accept"><span class="keyword">val</span> get_accept</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -><br>       (string * (string * string) list * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">Accept</code> header as list of triples <code class="code">(media_range,
+ media_range_params, accept_params)</code>.  If there are
+ <code class="code">accept_params</code>, the first such parameter is always <code class="code">"q"</code>.
+<p>
+
+ All present <code class="code">Accept</code> headers are merged. The function returns
+ <code class="code">[]</code> when there is at least one <code class="code">Accept</code> header, but none of
+ the headers has a non-empty value. The function raises
+ <code class="code">Not_found</code> if there no such headers at all (which should be
+ interpreted as <code class="code"> ["*/*",[],[] ] </code>).<br>
+</div>
+<pre><span id="VALbest_media_type"><span class="keyword">val</span> best_media_type</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list -> string * (string * string) list</code></pre><div class="info">
+Returns the best media type for a header and a list of supported types.
+ If any type is acceptable, "*/*" will be returned. If no type is
+ acceptable, "" will be returned.
+ The supported media types should be sorted such that the best type
+ is mentioned first.
+ Of several media types with equal quality the one mentioned first in the
+ list of supported types is chosen. In case several types in the Accept:
+ header match the same type in the list of supported types, the most
+ specific type is chosen.<br>
+</div>
+<pre><span id="VALset_accept"><span class="keyword">val</span> set_accept</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -><br>       (string * (string * string) list * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Accept</code> header<br>
+</div>
+<pre><span id="VALget_accept_charset"><span class="keyword">val</span> get_accept_charset</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">Accept-charset</code> header as list of pairs <code class="code">(charset,params)</code>.
+ The only mentioned parameter in RFC 2616 is <code class="code">"q"</code>.
+<p>
+
+ All present <code class="code">Accept-charset</code> headers are merged. The function
+ raises <code class="code">Not_found</code> when there is no <code class="code">Accept-charset</code> header
+ (which should be interpreted as <code class="code"> ["*",[]] </code>).<br>
+</div>
+<pre><span id="VALbest_charset"><span class="keyword">val</span> best_charset</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list -> string</code></pre><div class="info">
+Returns the best charset for a header and a list of supported charsets.
+ If any charset is acceptable, "*" will be returned.
+ The supported charsets should be sorted such that the best charset
+ is mentioned first.
+<p>
+
+ This function already implements the special handling of ISO-8859-1
+ mentioned in RFC 2616.<br>
+</div>
+<pre><span id="VALset_accept_charset"><span class="keyword">val</span> set_accept_charset</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Accept-charset</code> header<br>
+</div>
+<pre><span id="VALget_accept_encoding"><span class="keyword">val</span> get_accept_encoding</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">Accept-encoding</code> header as list of pairs <code class="code">(coding,params)</code>.
+ The only mentioned parameter in RFC 2616 is <code class="code">"q"</code>. The RFC describes
+ compatibility problems with the "q" parameter.
+<p>
+
+ All present <code class="code">Accept-encoding</code> headers are merged. The function
+ raises <code class="code">Not_found</code> when there is no <code class="code">Accept-encoding</code> header
+ (which should be interpreted as <code class="code"> ["identity",[]] </code>).  The
+ return value <code class="code">[]</code> must be interpreted as <code class="code"> ["identity",[]] </code>.<br>
+</div>
+<pre><span id="VALbest_encoding"><span class="keyword">val</span> best_encoding</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list -> string</code></pre><div class="info">
+Returns the best encoding for a header and a list of supported
+ encodings.  If anything else fails, "identity" will be
+ returned.  The supported encodings should be sorted such that
+ the best encoding is mentioned first.<br>
+</div>
+<pre><span id="VALset_accept_encoding"><span class="keyword">val</span> set_accept_encoding</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Accept-encoding</code> header<br>
+</div>
+<pre><span id="VALget_accept_language"><span class="keyword">val</span> get_accept_language</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">Accept-language</code> header as list of pairs
+ <code class="code">(lang_range,params)</code>.  The only mentioned parameter in RFC
+ 2616 is <code class="code">"q"</code>.
+<p>
+
+ All present <code class="code">Accept-language</code> headers are merged. The function
+ raises <code class="code">Not_found</code> when there is no <code class="code">Accept-language</code> header
+ (which should be interpreted as <code class="code"> ["*",[]] </code>).<br>
+</div>
+<pre><span id="VALset_accept_language"><span class="keyword">val</span> set_accept_language</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Accept-language</code> header<br>
+</div>
+<pre><span id="VALget_accept_ranges"><span class="keyword">val</span> get_accept_ranges</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list</code></pre><div class="info">
+Returns the <code class="code">Accept-ranges</code> header as list of tokens.
+<p>
+
+ All present <code class="code">Accept-ranges</code> headers are merged. The function
+ raises <code class="code">Not_found</code> when there is no <code class="code">Accept-ranges</code>
+ header. The RFC leaves it open how this is to be interpreted
+ in general.<br>
+</div>
+<pre><span id="VALset_accept_ranges"><span class="keyword">val</span> set_accept_ranges</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string list -> unit</code></pre><div class="info">
+Sets the <code class="code">Accept-ranges</code> header<br>
+</div>
+<pre><span id="VALget_age"><span class="keyword">val</span> get_age</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> float</code></pre><div class="info">
+Returns the <code class="code">Age</code> header as number<br>
+</div>
+<pre><span id="VALset_age"><span class="keyword">val</span> set_age</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> float -> unit</code></pre><div class="info">
+Sets the <code class="code">Age</code> header<br>
+</div>
+<pre><span id="VALget_allow"><span class="keyword">val</span> get_allow</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list</code></pre><div class="info">
+Returns the <code class="code">Allow</code> header as list of tokens.
+<p>
+
+ All present <code class="code">Allow</code> headers are merged. The function raises <code class="code">Not_found</code>
+ when there is no <code class="code">Allow</code> header. The RFC leaves it open how this is
+ to be interpreted in general.<br>
+</div>
+<pre><span id="VALset_allow"><span class="keyword">val</span> set_allow</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string list -> unit</code></pre><div class="info">
+Sets the <code class="code">Allow</code> header<br>
+</div>
+<pre><span id="VALget_authorization"><span class="keyword">val</span> get_authorization</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string * (string * string) list</code></pre><div class="info">
+Returns the <code class="code">Authorization</code> header as pair <code class="code">(auth_scheme,auth_params)</code>,
+ or raises <code class="code">Not_found</code> if not present.
+<p>
+
+ The "Basic" authentication scheme is represented specially as
+ <code class="code">("basic", [ "credentials", creds ])</code> where <code class="code">creds</code> are the
+ Base64-encoded credentials.<br>
+</div>
+<pre><span id="VALset_authorization"><span class="keyword">val</span> set_authorization</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string * (string * string) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Authorization</code> header.
+ The "Basic" authentication scheme is represented as explained for
+ <code class="code">get_authorization</code>.<br>
+</div>
+<pre><span id="VALget_cache_control"><span class="keyword">val</span> get_cache_control</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> <a href="Nethttp.html#TYPEcache_control_token">Nethttp.cache_control_token</a> list</code></pre><div class="info">
+Returns the <code class="code">Cache-control</code> header as list of tokens.
+<p>
+
+ All present <code class="code">Cache-control</code> headers are merged. The function
+ raises <code class="code">Not_found</code> when there is no <code class="code">Cache-control</code> header.<br>
+</div>
+<pre><span id="VALset_cache_control"><span class="keyword">val</span> set_cache_control</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> <a href="Nethttp.html#TYPEcache_control_token">Nethttp.cache_control_token</a> list -> unit</code></pre><div class="info">
+Sets the <code class="code">Cache-control</code> header<br>
+</div>
+<pre><span id="VALget_connection"><span class="keyword">val</span> get_connection</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list</code></pre><div class="info">
+Returns the <code class="code">Connection</code> header as list of tokens.
+<p>
+
+ All present <code class="code">Connection</code> headers are merged. The function
+ raises <code class="code">Not_found</code> when there is no <code class="code">Connection</code> header.
+<p>
+
+ The Connection header must be ignored when received from a
+ HTTP/1.0 client.<br>
+</div>
+<pre><span id="VALset_connection"><span class="keyword">val</span> set_connection</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string list -> unit</code></pre><div class="info">
+Sets the <code class="code">Connection</code> header<br>
+</div>
+<pre><span id="VALget_content_encoding"><span class="keyword">val</span> get_content_encoding</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list</code></pre><div class="info">
+Returns the <code class="code">Content-encoding</code> header as list of tokens.
+<p>
+
+ All present <code class="code">Content-encoding</code> headers are merged.
+<br>
+<b>Raises</b> <code>Not_found</code> when there is no <code class="code">Content-encoding</code> header.<br>
+</div>
+<pre><span id="VALset_content_encoding"><span class="keyword">val</span> set_content_encoding</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string list -> unit</code></pre><div class="info">
+Sets the <code class="code">Content-encoding</code> header<br>
+</div>
+<pre><span id="VALget_content_language"><span class="keyword">val</span> get_content_language</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list</code></pre><div class="info">
+Returns the <code class="code">Content-language</code> header as list of tokens.
+<p>
+
+ All present <code class="code">Content-language</code> headers are merged.
+<br>
+<b>Raises</b> <code>Not_found</code> when there is no <code class="code">Content-language</code> header.<br>
+</div>
+<pre><span id="VALset_content_language"><span class="keyword">val</span> set_content_language</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string list -> unit</code></pre><div class="info">
+Sets the <code class="code">Content-language</code> header<br>
+</div>
+<pre><span id="VALget_content_length"><span class="keyword">val</span> get_content_length</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> int64</code></pre><div class="info">
+Returns the <code class="code">Content-length</code> header as number. If the number
+ is too big for int64, the exception <code class="code">Bad_header_field
+ "Content-length"</code> will be raised.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_content_length"><span class="keyword">val</span> set_content_length</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> int64 -> unit</code></pre><div class="info">
+Sets the <code class="code">Content-length</code> header<br>
+</div>
+<pre><span id="VALget_content_location"><span class="keyword">val</span> get_content_location</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Returns the <code class="code">Content-location</code> header as string.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_content_location"><span class="keyword">val</span> set_content_location</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Sets the <code class="code">Content-location</code> header<br>
+</div>
+<pre><span id="VALget_content_md5"><span class="keyword">val</span> get_content_md5</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Returns the <code class="code">Content-MD5</code> header as string. The Base64 encoding
+ has not been touched.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_content_md5"><span class="keyword">val</span> set_content_md5</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Sets the <code class="code">Content-MD5</code> header<br>
+</div>
+<pre><span id="VALget_content_range"><span class="keyword">val</span> get_content_range</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -><br>       [ `Bytes of (int64 * int64) option * int64 option ]</code></pre><div class="info">
+Returns the <code class="code">Content-range</code> header as
+ <code class="code">`Bytes(byte_range_resp_spec, instance_length)</code>.  The option value
+ <code class="code">None</code> corresponds to "*" in the RFC.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_content_range"><span class="keyword">val</span> set_content_range</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -><br>       [ `Bytes of (int64 * int64) option * int64 option ] -> unit</code></pre><div class="info">
+Sets the <code class="code">Content-range</code> header<br>
+</div>
+<pre><span id="VALget_content_type"><span class="keyword">val</span> get_content_type</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string * (string * string) list</code></pre><div class="info">
+Returns the <code class="code">Content-type</code> header as pair <code class="code">(media_type, params)</code>.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_content_type"><span class="keyword">val</span> set_content_type</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string * (string * string) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Content-type</code> header<br>
+</div>
+<pre><span id="VALget_date"><span class="keyword">val</span> get_date</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> float</code></pre><div class="info">
+Returns the <code class="code">Date</code> header as number (seconds since the Epoch).
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_date"><span class="keyword">val</span> set_date</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> float -> unit</code></pre><div class="info">
+Sets the <code class="code">Date</code> header<br>
+</div>
+<pre><span id="VALget_etag"><span class="keyword">val</span> get_etag</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> <a href="Nethttp.html#TYPEetag">Nethttp.etag</a></code></pre><div class="info">
+Returns the <code class="code">Etag</code> header.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_etag"><span class="keyword">val</span> set_etag</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> <a href="Nethttp.html#TYPEetag">Nethttp.etag</a> -> unit</code></pre><div class="info">
+Sets the <code class="code">Etag</code> header<br>
+</div>
+<pre><span id="VALget_expect"><span class="keyword">val</span> get_expect</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -><br>       (string * string option * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">Expect</code> header as list of triples <code class="code">(token,value,params)</code>.
+<p>
+
+ All present <code class="code">Expect</code> headers are merged.
+<br>
+<b>Raises</b> <code>Not_found</code> when there is no <code class="code">Expect</code> header.<br>
+</div>
+<pre><span id="VALset_expect"><span class="keyword">val</span> set_expect</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -><br>       (string * string option * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Expect</code> header<br>
+</div>
+<pre><span id="VALget_expires"><span class="keyword">val</span> get_expires</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> float</code></pre><div class="info">
+Returns the <code class="code">Expires</code> header as number (seconds since the Epoch).
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_expires"><span class="keyword">val</span> set_expires</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> float -> unit</code></pre><div class="info">
+Sets the <code class="code">Expires</code> header<br>
+</div>
+<pre><span id="VALget_from"><span class="keyword">val</span> get_from</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Returns the <code class="code">From</code> header as string.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_from"><span class="keyword">val</span> set_from</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Sets the <code class="code">From</code> header<br>
+</div>
+<pre><span id="VALget_host"><span class="keyword">val</span> get_host</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string * int option</code></pre><div class="info">
+Returns the <code class="code">Host</code> header as pair <code class="code">(host,port)</code>.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_host"><span class="keyword">val</span> set_host</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string * int option -> unit</code></pre><div class="info">
+Sets the <code class="code">Host</code> header<br>
+</div>
+<pre><span id="VALget_if_match"><span class="keyword">val</span> get_if_match</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> <a href="Nethttp.html#TYPEetag">Nethttp.etag</a> list option</code></pre><div class="info">
+Returns the <code class="code">If-match</code> header. The value <code class="code">None</code> means "*".
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_if_match"><span class="keyword">val</span> set_if_match</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> <a href="Nethttp.html#TYPEetag">Nethttp.etag</a> list option -> unit</code></pre><div class="info">
+Sets the <code class="code">If-match</code> header<br>
+</div>
+<pre><span id="VALget_if_modified_since"><span class="keyword">val</span> get_if_modified_since</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> float</code></pre><div class="info">
+Returns the <code class="code">If-modified-since</code> header as number (seconds
+ since the Epoch).
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_if_modified_since"><span class="keyword">val</span> set_if_modified_since</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> float -> unit</code></pre><div class="info">
+Sets the <code class="code">If-modified-since</code> header<br>
+</div>
+<pre><span id="VALget_if_none_match"><span class="keyword">val</span> get_if_none_match</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> <a href="Nethttp.html#TYPEetag">Nethttp.etag</a> list option</code></pre><div class="info">
+Returns the <code class="code">If-none-match</code> header. The value <code class="code">None</code> means "*".
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_if_none_match"><span class="keyword">val</span> set_if_none_match</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> <a href="Nethttp.html#TYPEetag">Nethttp.etag</a> list option -> unit</code></pre><div class="info">
+Sets the <code class="code">If-none-match</code> header<br>
+</div>
+<pre><span id="VALget_if_range"><span class="keyword">val</span> get_if_range</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> [ `Date of float | `Etag of <a href="Nethttp.html#TYPEetag">Nethttp.etag</a> ]</code></pre><div class="info">
+Returns the <code class="code">If-range</code> header.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_if_range"><span class="keyword">val</span> set_if_range</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> [ `Date of float | `Etag of <a href="Nethttp.html#TYPEetag">Nethttp.etag</a> ] -> unit</code></pre><div class="info">
+Sets the <code class="code">If-range</code> header<br>
+</div>
+<pre><span id="VALget_if_unmodified_since"><span class="keyword">val</span> get_if_unmodified_since</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> float</code></pre><div class="info">
+Returns the <code class="code">If-unmodified-since</code> header as number (seconds
+ since the Epoch).
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_if_unmodified_since"><span class="keyword">val</span> set_if_unmodified_since</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> float -> unit</code></pre><div class="info">
+Sets the <code class="code">If-unmodified-since</code> header<br>
+</div>
+<pre><span id="VALget_last_modified"><span class="keyword">val</span> get_last_modified</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> float</code></pre><div class="info">
+Returns the <code class="code">Last-modified</code> header as number (seconds since the Epoch).
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_last_modified"><span class="keyword">val</span> set_last_modified</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> float -> unit</code></pre><div class="info">
+Sets the <code class="code">Last-modified</code> header<br>
+</div>
+<pre><span id="VALget_location"><span class="keyword">val</span> get_location</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Returns the <code class="code">Location</code> header as string.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_location"><span class="keyword">val</span> set_location</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Sets the <code class="code">Location</code> header<br>
+</div>
+<pre><span id="VALget_max_forwards"><span class="keyword">val</span> get_max_forwards</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> int</code></pre><div class="info">
+Returns the <code class="code">Max-forwards</code> header as number.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_max_forwards"><span class="keyword">val</span> set_max_forwards</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> int -> unit</code></pre><div class="info">
+Sets the <code class="code">Max-forwards</code> header<br>
+</div>
+<pre><span id="VALget_pragma"><span class="keyword">val</span> get_pragma</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * string option) list</code></pre><div class="info">
+Returns the <code class="code">Pragma</code> header as list of pairs <code class="code">(token,value)</code>.
+<p>
+
+ All present <code class="code">Pragma</code> headers are merged.
+<br>
+<b>Raises</b> <code>Not_found</code> when there is no <code class="code">Pragma</code> header.<br>
+</div>
+<pre><span id="VALset_pragma"><span class="keyword">val</span> set_pragma</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * string option) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Pragma</code> header<br>
+</div>
+<pre><span id="VALget_proxy_authenticate"><span class="keyword">val</span> get_proxy_authenticate</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">Proxy-authenticate</code> header as list of challenges
+ <code class="code">(auth_scheme,auth_params)</code>.
+<p>
+
+ All present <code class="code">Proxy-authenticate</code> headers are merged.
+<br>
+<b>Raises</b> <code>Not_found</code> when there is no <code class="code">Proxy-authenticate</code> header.<br>
+</div>
+<pre><span id="VALset_proxy_authenticate"><span class="keyword">val</span> set_proxy_authenticate</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Proxy-authenticate</code> header<br>
+</div>
+<pre><span id="VALget_proxy_authorization"><span class="keyword">val</span> get_proxy_authorization</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string * (string * string) list</code></pre><div class="info">
+Returns the <code class="code">Proxy-authorization</code> header as pair
+ <code class="code">(auth_scheme,auth_params)</code>.<br>
+<b>Raises</b> <code>Not_found</code> when the header is
+ missing.
+<p>
+
+ The "Basic" authentication scheme is represented specially as
+ <code class="code">("basic", [ "credentials", creds ])</code> where <code class="code">creds</code> are the
+ Base64-encoded credentials.<br>
+</div>
+<pre><span id="VALset_proxy_authorization"><span class="keyword">val</span> set_proxy_authorization</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string * (string * string) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Proxy-authorization</code> header
+ The "Basic" authentication scheme is represented as explained for
+ <code class="code">get_proxy_authorization</code>.<br>
+</div>
+<pre><span id="VALget_range"><span class="keyword">val</span> get_range</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> [ `Bytes of (int64 option * int64 option) list ]</code></pre><div class="info">
+Returns the <code class="code">Range</code> header as <code class="code">`Bytes ranges</code>, where the list <code class="code">ranges</code>
+ has elements of the form <code class="code">(Some first_pos, Some last_pos)</code>,
+ <code class="code">(Some first_pos, None)</code> (prefix range), or <code class="code">(None, Some
+ last_pos)</code> (suffix range).
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_range"><span class="keyword">val</span> set_range</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -><br>       [ `Bytes of (int64 option * int64 option) list ] -> unit</code></pre><div class="info">
+Sets the <code class="code">Range</code> header<br>
+</div>
+<pre><span id="VALget_referer"><span class="keyword">val</span> get_referer</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Returns the <code class="code">Referer</code> header as string.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALget_referrer"><span class="keyword">val</span> get_referrer</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Same, for addicts of correct orthography<br>
+</div>
+<pre><span id="VALset_referer"><span class="keyword">val</span> set_referer</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Sets the <code class="code">Referer</code> header<br>
+</div>
+<pre><span id="VALset_referrer"><span class="keyword">val</span> set_referrer</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Same, for addicts of correct orthography<br>
+</div>
+<pre><span id="VALget_retry_after"><span class="keyword">val</span> get_retry_after</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> [ `Date of float | `Seconds of int ]</code></pre><div class="info">
+Returns the <code class="code">Retry-after</code> header.
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_retry_after"><span class="keyword">val</span> set_retry_after</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> [ `Date of float | `Seconds of int ] -> unit</code></pre><div class="info">
+Sets the <code class="code">Retry-after</code> header<br>
+</div>
+<pre><span id="VALget_server"><span class="keyword">val</span> get_server</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Returns the <code class="code">Server</code> header as uninterpreted string (including
+ comments).
+<br>
+<b>Raises</b> <code>Not_found</code> when the header is missing.<br>
+</div>
+<pre><span id="VALset_server"><span class="keyword">val</span> set_server</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Sets the <code class="code">Server</code> header<br>
+</div>
+<pre><span id="VALget_te"><span class="keyword">val</span> get_te</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -><br>       (string * (string * string) list * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">TE</code> header as list of triples
+ <code class="code">(te_token, te_params, accept_params)</code>.
+ If there are <code class="code">accept_params</code>, the first such parameter is always <code class="code">"q"</code>.
+<p>
+
+ All present <code class="code">TE</code> headers are merged. The function returns <code class="code">[]</code> when
+ there is at least one <code class="code">TE</code> header, but none of the headers has a
+ non-empty value.
+<br>
+<b>Raises</b> <code>Not_found</code> if there no such headers at all.<br>
+</div>
+<pre><span id="VALset_te"><span class="keyword">val</span> set_te</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -><br>       (string * (string * string) list * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">TE</code> header<br>
+</div>
+<pre><span id="VALget_trailer"><span class="keyword">val</span> get_trailer</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list</code></pre><div class="info">
+Returns the <code class="code">Trailer</code> header as list of field names.
+<p>
+
+ All present <code class="code">Trailer</code> headers are merged. The function returns
+ <code class="code">[]</code> when there is at least one <code class="code">Trailer</code> header, but none of
+ the headers has a non-empty value.
+<br>
+<b>Raises</b> <code>Not_found</code> if there no such headers at all.<br>
+</div>
+<pre><span id="VALset_trailer"><span class="keyword">val</span> set_trailer</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string list -> unit</code></pre><div class="info">
+Sets the <code class="code">Trailer</code> header<br>
+</div>
+<pre><span id="VALget_transfer_encoding"><span class="keyword">val</span> get_transfer_encoding</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">Transfer-encoding</code> header as list of pairs
+ <code class="code">(token, params)</code>.
+<p>
+
+ All present <code class="code">Transfer-encoding</code> headers are merged. The
+ function returns <code class="code">[]</code> when there is at least one
+ <code class="code">Transfer-encoding</code> header, but none of the headers has a
+ non-empty value.
+<br>
+<b>Raises</b> <code>Not_found</code> if there no such headers at all.<br>
+</div>
+<pre><span id="VALset_transfer_encoding"><span class="keyword">val</span> set_transfer_encoding</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">Transfer-encoding</code> header<br>
+</div>
+<pre><span id="VALget_upgrade"><span class="keyword">val</span> get_upgrade</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string list</code></pre><div class="info">
+Returns the <code class="code">Upgrade</code> header as list of products.
+<p>
+
+ All present <code class="code">Upgrade</code> headers are merged. The function returns
+ <code class="code">[]</code> when there is at least one <code class="code">Upgrade</code> header, but none of
+ the headers has a non-empty value.
+<br>
+<b>Raises</b> <code>Not_found</code> if there no such headers at all.<br>
+</div>
+<pre><span id="VALset_upgrade"><span class="keyword">val</span> set_upgrade</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string list -> unit</code></pre><div class="info">
+Sets the <code class="code">Upgrade</code> header<br>
+</div>
+<pre><span id="VALget_user_agent"><span class="keyword">val</span> get_user_agent</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> string</code></pre><div class="info">
+Returns the <code class="code">User-agent</code> header as uninterpreted string
+ (including comments).
+<br>
+<b>Raises</b> <code>Not_found</code> if the header is missing.<br>
+</div>
+<pre><span id="VALset_user_agent"><span class="keyword">val</span> set_user_agent</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> string -> unit</code></pre><div class="info">
+Sets the <code class="code">User-agent</code> header<br>
+</div>
+<pre><span id="VALget_vary"><span class="keyword">val</span> get_vary</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> [ `Fields of string list | `Star ]</code></pre><div class="info">
+Returns the <code class="code">Vary</code> header.
+<br>
+<b>Raises</b> <code>Not_found</code> if the header is missing.<br>
+</div>
+<pre><span id="VALset_vary"><span class="keyword">val</span> set_vary</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> [ `Fields of string list | `Star ] -> unit</code></pre><div class="info">
+Sets the <code class="code">Vary</code> header<br>
+</div>
+<pre><span id="VALget_www_authenticate"><span class="keyword">val</span> get_www_authenticate</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * (string * string) list) list</code></pre><div class="info">
+Returns the <code class="code">WWW-Authenticate</code> header as list of challenges
+ <code class="code">(auth_scheme,auth_params)</code>.
+<p>
+
+ All present <code class="code">WWW-Authenticate</code> headers are merged.
+<br>
+<b>Raises</b> <code>Not_found</code> if the header is missing.<br>
+</div>
+<pre><span id="VALset_www_authenticate"><span class="keyword">val</span> set_www_authenticate</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * (string * string) list) list -> unit</code></pre><div class="info">
+Sets the <code class="code">WWW-Authenticate</code> header<br>
+</div>
+<pre><span id="VALget_cookie"><span class="keyword">val</span> get_cookie</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> (string * string) list</code></pre><div class="info">
+Get the (Netscape) cookies as (name,value) pairs (or Not_found).<br>
+</div>
+<pre><span id="VALget_cookie_ct"><span class="keyword">val</span> get_cookie_ct</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> <a href="Nethttp.Cookie.html#TYPEt">Nethttp.Cookie.t</a> list</code></pre><div class="info">
+Get the cookies in the <a href="Nethttp.Cookie.html#TYPEt"><code class="code">Nethttp.Cookie.t</code></a> representation
+        (the suffix "_ct" reminds of <code class="code">Cookie.t</code>).
+        This function also supports version 1 cookies.
+        Returns the empty list if there are no cookies.<br>
+</div>
+<pre><span id="VALset_cookie"><span class="keyword">val</span> set_cookie</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> (string * string) list -> unit</code></pre><div class="info">
+Set the <code class="code">Cookie</code> header. Note: This does not set cookies in the client,
+ use <code class="code">set_set_cookie</code> instead!<br>
+</div>
+<pre><span id="VALget_set_cookie"><span class="keyword">val</span> get_set_cookie</span> : <code class="type">#<a href="Nethttp.http_header_ro-c.html">Nethttp.http_header_ro</a> -> <a href="Nethttp.html#TYPEnetscape_cookie">Nethttp.netscape_cookie</a> list</code></pre><div class="info">
+Get the <code class="code">Set-Cookie</code> header<br>
+</div>
+<pre><span id="VALset_set_cookie"><span class="keyword">val</span> set_set_cookie</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> <a href="Nethttp.html#TYPEnetscape_cookie">Nethttp.netscape_cookie</a> list -> unit</code></pre><div class="info">
+Set the <code class="code">Set-Cookie</code> header<br>
+</div>
+<pre><span id="VALset_set_cookie_ct"><span class="keyword">val</span> set_set_cookie_ct</span> : <code class="type">#<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> <a href="Nethttp.Cookie.html#TYPEt">Nethttp.Cookie.t</a> list -> unit</code></pre><div class="info">
+Set the <code class="code">Set-Cookie</code> and <code class="code">Set-Cookie2</code> headers:
+<p>
+
+      <code class="code">set_set_cookie_ct header cookies</code> sets the <code class="code">cookies</code> in <code class="code">header</code>
+	using version 0 or version 1 depending on whether version 1
+	fields are used.  For better browser compatibility, if
+	"Set-cookie2" (RFC 2965) is issued, then a "Set-cookie"
+	precedes (declaring the same cookie with a limited number of
+	options).<br>
+</div>
+</body></html>

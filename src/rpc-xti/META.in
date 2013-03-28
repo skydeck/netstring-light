@@ -1,0 +1,6 @@
+description = "Ocamlnet - XTI helpers for RPC"
+version = "@VERSION@"
+requires = "rpc"
+archive(byte) = "rpc_xti.cma"
+archive(native) = "rpc_xti.cmxa"
+archive(native,gprof) = "rpc_xti.p.cmxa"

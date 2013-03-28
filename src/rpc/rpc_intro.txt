@@ -1,0 +1,975 @@
+{b Contents}
+{ul
+  {- {!Rpc_intro.intro}
+    {ul
+      {- {!Rpc_intro.intro_clnt}}
+      {- {!Rpc_intro.intro_srv}}
+    }
+  }
+  {- {!Rpc_intro.rpcgen}}
+  {- {!Rpc_intro.mapping}
+    {ul 
+      {- {!Rpc_intro.syn_xdr}}
+      {- {!Rpc_intro.syn_prog}}
+      {- {!Rpc_intro.map_names}}
+      {- {!Rpc_intro.map_ints}}
+      {- {!Rpc_intro.map_fps}}
+      {- {!Rpc_intro.map_strings}}
+      {- {!Rpc_intro.map_arrays}}
+      {- {!Rpc_intro.map_records}}
+      {- {!Rpc_intro.map_enums}}
+      {- {!Rpc_intro.map_eunions}}
+      {- {!Rpc_intro.map_iunions}}
+      {- {!Rpc_intro.map_opts}}
+      {- {!Rpc_intro.map_recs}}
+    }
+  }
+  {- {!Rpc_intro.lib}}
+  {- {!Rpc_intro.rpc_netplex}}
+  {- {!Rpc_intro.restrictions}}
+}
+
+{1:intro Introduction to [ocamlrpcgen]}
+
+The tool [ocamlrpcgen] generates O'Caml modules which greatly simplify
+the creation and invocation of remote procedures. For example, if we have an
+XDR definition file [calculate.x]
+
+{[
+program P {
+  version V {
+    int add(int,int) = 1;
+  } = 2;
+} = 3;
+]}
+
+the generation of a corresponding RPC client is done by issuing the command
+
+{[
+ocamlrpcgen -aux -clnt calculate.x
+]}
+
+and the tool will generate an RPC server by calling
+
+{[
+ocamlrpcgen -aux -srv calculate.x
+]}
+
+The flag -aux causes [ocamlrpcgen] to create a module [Calculate_aux]
+containing types, and constants from the XDR definition, and
+containing conversion functions doing the language mapping from XDR to
+O'Caml and vice versa.
+
+[Calculate_aux] defines the types for the arguments of the procedure and
+the result as follows:
+
+{[
+type t_P'V'add'arg =                      (* Arguments *)
+      ( Rtypes.int4 * Rtypes.int4 )
+and t_P'V'add'res =                       (* Result *)
+      Rtypes.int4
+]}
+
+Note that the XDR integer type is mapped to {!Rtypes.int4} which is an
+opaque type representing 4-byte signed integers. {!Rtypes} defines
+conversion functions for int4 to/from other O'Caml types. If
+{!Rtypes.int4} is not what you want, you can select a different
+integer mapping on the command line of [ocamlrpcgen]. For example, [-int
+int32] selects that you want the built-in [int32] integer type, and [-int
+unboxed] selects that you want the built-in [int] integer type. Note (1)
+that you can also select the integer mapping case-by-case (see below),
+and (2) that there is a corresponding switch for the XDR [hyper] type
+(8-byte integers).
+
+[Calculate_aux] also defines constants (none in our example), conversion
+functions, XDR type terms, and RPC programs. These other kinds of definitions
+can be ignored for the moment.
+
+{2:intro_clnt Generating clients with [ocamlrpcgen]}
+
+The flag [-clnt] causes [ocamlrpcgen] to generate the module
+[Calculate_clnt] containing functions necessary to contact a remote
+program as client. Here, [Calculate_clnt] has the signature:
+
+{[
+module P : sig
+  module V : sig
+    open Calculate_aux
+    val create_client :
+            ?esys:Unixqueue.event_system ->
+            Rpc_client.connector ->
+            Rpc.protocol ->
+            Rpc_client.t
+    val create_portmapped_client :
+            ?esys:Unixqueue.event_system ->
+            string ->
+            Rpc.protocol ->
+            Rpc_client.t
+    val add : Rpc_client.t -> t_P'V'add'arg -> t_P'V'add'res
+    val add'async :
+            Rpc_client.t ->
+            t_P'V'add'arg ->
+            ((unit -> t_P'V'add'res) -> unit) ->
+            unit
+  end
+end
+]}
+
+(Note: Depending on the version of [ocamlrpcgen] your are using,
+another function [create_client2] may also be generated.)
+
+Normally, the function [P.V.create_portmapped_client] is the preferred
+function to contact the RPC program. For example, to call the [add]
+procedure running on host [moon], the following statements suffice:
+
+{[
+let m1 = 42 in
+let m2 = 36 in
+let client = Calculator_clnt.P.V.create_portmapped_client "moon" Rpc.Tcp in
+let n = Calculator_clnt.P.V.add client (m1,m2) in
+Rpc_client.shut_down client;
+]}
+
+That's all for a simple client!
+
+
+The invocation of [P.V.create_portmapped_client] first asks the
+portmapper on "moon" for the TCP instance of the program [P.V], and
+stores the resulting internet port. Because we wanted TCP, the TCP
+connection is opened, too. When [P.V.add] is called, the values [m1] and
+[m2] are XDR-encoded and sent over the TCP connection to the remote
+procedure; the answer is XDR-decoded and returned, here [n]. Finally,
+the function [Rpc_client.shut_down] closes the TCP connection.
+
+Of course, this works for UDP transports, too; simply pass [Rpc.Udp]
+instead of [Rpc.Tcp].
+
+The function [P.V.create_client] does not contact the portmapper to
+find out the internet port; you must already know the port and pass it
+as connector argument (see {!Rpc_client} for details).
+
+You could have also invoked [add] in an asynchronous way by using
+[P.V.add'async]. This function does not wait until the result of the
+RPC call arrives; it returns immediately. When the result value has
+been received, the function passed as third argument is called back,
+and can process the value. An application of asynchronous calls is to
+invoke two remote procedures at the same time:
+
+{[
+let esys = Unixqueue.create_event_system() in
+let client1 = Calculator_clnt.P.V.create_portmapped_client 
+                ~esys:esys "moon" Rpc.Tcp in
+let client2 = Calculator_clnt.P.V.create_portmapped_client 
+                ~esys:esys "mars" Rpc.Tcp in
+let got_answer1 get_value =
+  let v = get_value() in
+  print_endline "moon has replied!"; ... in
+let got_answer2 get_value =
+  let v = get_value() in
+  print_endline "mars has replied!"; ... in
+Calculator_clnt.P.V.add'async client1 (m1,m2) got_answer1;
+Calculator_clnt.P.V.add'async client2 (m3,m4) got_answer1;
+Unixqueue.run esys
+]}
+
+Here, the two clients can coexist because they share the same event
+system (see the {!Unixqueue} module); this system manages it that
+every network event on the connection to "moon" will be forwarded to
+[client1] and that the network events on the connection to "mars" will
+be forwarded to [client2]. The [add'async] calls do not block; they
+only register themselves with the event system and return
+immediately. {!Unixqueue.run} starts the event system: The XDR-encoded
+values [(m1,m2)] are sent to "moon", and [(m3,m4)] to "mars"; replies
+are recorded. Once the reply of "moon" is complete, [got_answer1] is
+called; once the reply of "mars" has been fully received,
+[got_answer2] is called. These functions can now query the received
+values by invoking [get_value]; note that [get_value] will either
+return the value or raise an exception if something went wrong. When
+both answers have been received and processed, {!Unixqueue.run} will
+return.
+
+Obviously, asynchronous clients are a bit more complicated than
+synchronous ones; however it is still rather simple to program them. For
+more information on how the event handling works, see {!Equeue_intro}.
+
+Note that clients have only a limited lifetime: After a shutdown or an
+error they become unusable. Since Ocamlnet version 3 there is another
+flavor of client, the so-called proxies. See {!Rpc_proxy.tut} for an
+introduction. In particular, proxies can reconnect the connection to
+the server after a shutdown, and they can even manage several
+connections to the same server, or to different servers that are seen
+as equivalent.
+
+{2:intro_srv Generating servers with [ocamlrpcgen]}
+
+The flag [-srv] causes [ocamlrpcgen] to generate the module
+[Calculate_srv] containing functions which can act as RPC
+servers. (Note: Recent versions of [ocamlrpcgen] also support a switch
+[-srv2] that generates slightly better server stubs where one can bind
+several programs/versions to the same server port.) Here,
+[Calculate_srv] has the signature:
+
+{[
+module P : sig
+  module V : sig
+    open Calculate_aux
+    val create_server :
+            ?limit:int ->
+            proc_add : (t_P'V'add'arg -> t_P'V'add'res) ->
+            Rpc_server.connector ->
+            Rpc.protocol ->
+            Rpc.mode ->
+            Unixqueue.event_system ->
+            Rpc_server.t
+    val create_async_server :
+            ?limit:int ->
+            proc_add : (Rpc_server.session ->
+                        t_P'V'add'arg ->
+                        (t_P'V'add'res -> unit) ->
+                        unit) ->
+            Rpc_server.connector ->
+            Rpc.protocol ->
+            Rpc.mode ->
+            Unixqueue.event_system ->
+            Rpc_server.t
+    end
+end
+]}
+
+There are two functions: [P.V.create_server] acts as a synchronous
+server, and [P.V.create_async_server] works as asynchronous
+server. Let's first explain the simpler synchronous case.
+
+[P.V.create_server] accepts a number of labeled arguments and a number
+of anonymous arguments. There is always an optional [limit] parameter
+limiting the number of pending connections accepted by the server
+(default: 20); this is the second parameter of the [Unix.listen]
+system call. For every procedure p realized by the server there is a
+labeled argument [proc_]p passing the function actually computing the
+procedure. For synchronous servers, this function simply gets the
+argument of the procedure and must return the result of the
+procedure. In this example, we only want to realize the [add]
+procedure, and so there is only a [proc_add] argument. The anonymous
+{!Rpc_server.connector} argument specifies the internet port (or the
+file descriptor) on which the server will listen for incoming
+connections. The {!Rpc.protocol} argument defines whether this is a
+TCP-like (stream-oriented) or a UDP-like (datagram-oriented)
+service. The {!Rpc.mode} parameter selects how the connector must be
+handled: Whether it acts like a socket or whether is behaves like an
+already existing bidirectional pipeline. Finally, the function expects
+the event system to be passed as last argument.
+
+For example, to define a server accepting connections on the local
+loopback interface on TCP port 6789, the following statement creates
+such a server:
+
+{[
+let esys = Unixqueue.create_event_system in
+let server = 
+  Calculate_srv.P.V.create_server
+    ~proc_add: add
+    (Rpc_server.Localhost 6789)            (* connector *)
+    Rpc.Tcp                                (* protocol *)
+    Rpc.Socket                             (* mode *)
+    esys
+]}
+
+Note that this statement creates the server, but actually does not
+serve the incoming connections. You need an additionally
+
+{[
+Unixqueue.run esys
+]}
+
+to start the service. (Note: If the server raises an exception, it will
+fall through to the caller of [Unixqueue.run]. The recommended way of
+handling this is to log the exception, and call [Unixqueue.run] again
+in a loop. If too many exceptions occur in very short time the program
+should terminate.)
+
+Not all combinations of connectors, protocols, and modes are
+sensible. Especially the following values work:
+
+- TCP internet servers: One of the connectors [Localhost]
+  or [Portmapped]; the protocol [Rpc.Tcp]; the mode [Rpc.Socket]
+- UDP internet servers: One of the connectors [Localhost]
+  or [Portmapped]; the protocol [Rpc.Udp]; the mode [Rpc.Socket]
+- Stream-based Unix domain socket servers: The
+  connector [Unix], the protocol [Rpc.Tcp]; the mode [Rpc.Socket]
+- Datagram-based Unix domain socket servers: These are
+  not supported
+- Serving an already accepted (inetd) stream connection:
+  The connector [Descriptor]; the protocol [Rpc.Tcp]; the mode [Rpc.BiPipe]
+
+The connector [Portmapped] registers the service at the local
+portmapper, and is the connector of choice.
+
+Note that servers with mode=[Socket] never terminate; they wait
+forever for service requests. On the contrary, servers with
+mode=[BiPipe] process only the current (next) request, and terminate
+then.
+
+The resulting server is synchronous because the next request is only
+accepted after the previous request has been finished. This means that
+the calls are processed in a strictly serialized way (one after
+another); however, the network traffic caused by the current and by
+previous calls can overlap (to maximize network performance).
+
+In contrast to this, an asynchronous server needs not respond
+immediately to an RPC call. Once the call has been registered, the
+server is free to reply whenever it likes to, even after other calls
+have been received.  For example, you can synchronize several clients:
+Only after both clients A and B have called the procedure [sync], the
+replies of the procedures are sent back:
+
+{[
+let client_a_sync = ref None
+let client_b_sync = ref None
+
+let sync s arg send_result =
+  if arg.name_of_client = "A" then
+    client_a_sync := Some send_result;
+  if arg.name_of_client = "B" then
+    client_b_sync := Some send_result;
+  if !client_a_sync <> None && !client_b_sync <> None then (
+    let Some send_result_to_a = !client_a_sync in
+    let Some send_result_to_b = !client_b_sync in
+    send_result_to_a "Synchronized";
+    send_result_to_b "Synchronized";
+  )
+
+let server =
+  Sync.V.create_async_server
+    ~proc_sync: sync
+    ...
+]}
+
+Here, the variables [client_a_sync] and [client_b_sync] store whether
+one of the clients have already called the [sync] service, and if so,
+the variables store also the function that needs to be called to pass
+the result back. For example, if [A] calls [sync] first, it is only
+recorded that there was such a call; because send_result is not
+invoked, [A] will not get a reply. However, the function [send_result]
+is stored in [client_a_sync] such that it can be invoked later. If [B]
+calls the [sync] procedure next, [client_b_sync] is updated, too.
+Because now both clients have called the service, synchronization has
+happed, and the answers to the procedure calls can be sent back to the
+clients. This is done by invoking the functions that have been
+remembered in [client_a_sync] and [client_b_sync]; the arguments of
+these functions are the return values of the [sync] procedure.
+
+It is even possible for an asynchronous server not to respond at all;
+for example to implement batching (the server receives a large number
+of calls on a TCP connection and replies only to the last call; the
+reply to the last call implicitly commits that all previous calls have
+been received, too).
+
+To create multi-port servers, several servers can share the same event
+system; e.g.
+
+{[
+let esys = Unixqueue.create_event_system in
+let tcp_server = 
+  P.V.create_server ... Rpc.Tcp ... esys in
+let udp_server = 
+  P.V.create_server ... Rpc.Udp ... esys in
+Unixqueue.run esys
+]}
+
+(Note: To create servers that implement several program or version
+definitions, look for what the -srv2 switch of [ocamlrpcgen] generated.)
+
+{2:debuggig Debugging aids}
+
+There are some built-in debugging aids for developing RPC clients and
+servers. Debug messages can be enabled by setting certain variables
+to [true]:
+  - {!Rpc_client.Debug.enable}: Enables a general debug log for clients
+  - {!Rpc_client.Debug.enable_ptrace}: Enables the client-side procedure
+    trace. For every procedure call two messages are emitted, one for
+    the request message and one for the response message. The level of
+    verbosity can be set with {!Rpc_client.Debug.ptrace_verbosity}.
+  - {!Rpc_server.Debug.enable}: Enables a general debug log for servers
+  - {!Rpc_server.Debug.enable_ptrace}: Enables the server-side procedure
+    trace. For every procedure call three messages are emitted, one for
+    the request message, one at the time the request is decoded, and one
+    for the response message. The level of
+    verbosity can be set with {!Rpc_server.Debug.ptrace_verbosity}.
+  - {!Rpc_server.Debug.enable_ctrace}: Enables the server-side connection
+    trace
+
+The messages are output via {!Netlog.Debug}, and have a [`Debug] log
+level.
+
+In Netplex context, the messages are redirected to the current Netplex
+logger, so that they appear in the normal log file. Also, messages are
+suppressed when they refer to the internally used RPC clients and servers.
+
+
+{1:rpcgen Command line arguments of ocamlrpcgen}
+
+The tool accepts the following options:
+
+{[
+usage: ocamlrpcgen [-aux] [-clnt] [-srv] [-srv2]
+                   [-int   (abstract | int32 | unboxed) ]
+                   [-hyper (abstract | int64 | unboxed) ]  
+                   [-cpp   (/path/to/cpp | none) ]
+                   [-D var=value]
+                   [-U var]
+                   [-direct]
+                   file.xdr ...
+]}
+
+- [-aux]: Creates for every XDR file the auxiliary
+   module containing the type and constant definitions as O'Caml expressions, and
+   containing the conversion functions implementing the language mapping.
+- [-clnt]: Creates for every XDR file a client module.
+- [-srv]: Creates for every XDR file a server module.
+- [-srv2]: Creates for every XDR file a new-style server module.
+- [-int abstract]: Uses {!Rtypes.int4} for signed ints and
+  {!Rtypes.uint4} for unsigned ints as default integer representation.
+  This is the default. 
+- [-int int32]: Uses [int32] for both signed and unsigned
+  ints as default integer representation. Note that overflows are ignored for
+  unsigned ints; i.e. large unsigned XDR integers are mapped to negative [int32]
+  values.
+- [-int unboxed]: Uses [Pervasives.int] for both signed and
+  unsigned ints as default integer representation. XDR values outside the range
+  of O'Camls 31 bit signed ints are rejected (raise an exception).
+- [-hyper abstract]: Uses {!Rtypes.int8} for signed ints and
+  {!Rtypes.uint8} for unsigned ints as default hyper (64 bit integer) 
+  representation. This is the default.
+- [-hyper int64]: Uses [int64] for both signed and unsigned
+  ints as default hyper representation. Note that overflows are ignored for
+  unsigned ints; i.e. large unsigned XDR hypers are mapped to negative [int64]
+  values.
+- [-hyper unboxed]: Uses [Pervasives.int] for both signed and
+  unsigned ints as default hyper representation. XDR values outside the range
+  of O'Camls 31 bit signed ints are rejected (raise an exception).
+- [-cpp /path/to/cpp]: Applies the C preprocessor found
+  under /path/to/cpp on the XDR files before these are processed. The default 
+  is [-cpp cpp] (i.e. look up the [cpp] command in the command search path).
+- [-cpp none]: Does not call the C preprocessor.
+- [-D var=value]: Defines the C preprocessor variable [var]
+  with the given [value].
+- [-U var]: Undefines the C preprocessor variable [var].
+- [-direct]: The effect of this switch is that ocamlrpcgen generates
+  different code that directly maps the XDR byte representation to
+  the final OCaml values, and bypasses {!Xdr.xdr_value} as much as
+  possible. This is the same style the traditional rpcgen preferred.
+  The code is faster (up to 50% for certain large values), but also much
+  longer. As a rule of thumb, this style is only a win if you have
+  arrays of structs, and these structs have many elements, and there
+  are not many strings (because there is no acceleration for strings).
+  For example, a numerical RPC interface would definetely profit from
+  this alternate code generation scheme. Except generating more code,
+  there is no downside of this scheme. (Available since Ocamlnet-3.5.)
+
+{1:mapping The language mapping underlying ocamlrpcgen}
+
+The language mapping determines how the XDR types are mapped to O'Caml
+types. See also {!Rpc_mapping_ref}.
+
+{2:syn_xdr The XDR syntax}
+
+From RFC 1832:
+
+{[
+      declaration:
+           type-specifier identifier
+         | type-specifier identifier "[" value "]"
+         | type-specifier identifier "<" [ value ] ">"
+         | "opaque" identifier "[" value "]"
+         | "opaque" identifier "<" [ value ] ">"
+         | "string" identifier "<" [ value ] ">"
+         | type-specifier "*" identifier
+         | "void"
+
+      value:
+           constant
+         | identifier
+
+      type-specifier:
+           [ "unsigned" ] "int"
+         | [ "unsigned" ] "hyper"
+         | "float"
+         | "double"
+         | "quadruple"
+         | "bool"
+         | enum-type-spec
+         | struct-type-spec
+         | union-type-spec
+         | identifier
+
+      enum-type-spec:
+         "enum" enum-body
+
+      enum-body:
+         "{"
+            ( identifier "=" value )
+            ( "," identifier "=" value )*
+         "}"
+
+      struct-type-spec:
+         "struct" struct-body
+
+      struct-body:
+         "{"
+            ( declaration ";" )
+            ( declaration ";" )*
+         "}"
+
+      union-type-spec:
+         "union" union-body
+
+      union-body:
+         "switch" "(" declaration ")" "{"
+            ( "case" value ":" declaration ";" )
+            ( "case" value ":" declaration ";" )*
+            [ "default" ":" declaration ";" ]
+         "}"
+
+      constant-def:
+         "const" identifier "=" constant ";"
+
+      type-def:
+           "typedef" declaration ";"
+         | "enum" identifier enum-body ";"
+         | "struct" identifier struct-body ";"
+         | "union" identifier union-body ";"
+
+      definition:
+           type-def
+         | constant-def
+
+      specification:
+           definition *
+]}
+
+[ocamlrpcgen] supports a few extensions to this standard, see below.
+
+{2:syn_prog Syntax of RPC programs}
+
+From RFC 1831:
+
+{[
+   program-def:
+      "program" identifier "{"
+         version-def
+         version-def *
+      "}" "=" constant ";"
+
+   version-def:
+      "version" identifier "{"
+          procedure-def
+          procedure-def *
+      "}" "=" constant ";"
+
+   procedure-def:
+      type-specifier identifier "(" type-specifier
+        ("," type-specifier )* ")" "=" constant ";"
+
+]}
+
+{2:map_names Mapping names}
+
+Because XDR has a different naming concept than O'Caml, sometimes
+identifiers must be renamed. For example, if you have two structs with
+equally named components
+
+{[
+struct a {
+  t1 c;
+  ...;
+}
+
+struct b {
+  t2 c;
+  ...;
+}
+]}
+
+the corresponding O'Caml types will be
+
+{[
+type a = { c : t1; ... }
+type b = { c' : t2; ... }
+]}
+
+i.e. the second occurrence of [c] has been renamed to [c']. Note that
+[ocamlrpcgen] prints always a warning for such renamings that are hard
+to predict.
+
+Another reason to rename an identifier is that the first letter has
+the wrong case. In O'Caml, the case of the first letter must be
+compatible with its namespace. For example, a module name must be
+uppercase. Because RPC programs are mapped to O'Caml modules, the
+names of RPC programs must begin with an uppercase letter. If this is
+not the case, the identifier is (quietly) renamed, too.
+
+You can specify the O'Caml name of every XDR/RPC identifier manually:
+Simply add after the definition of the identifier the phrase [=>
+ocaml_id] where [ocaml_id] is the preferred name for O'Caml. Example:
+
+{[
+struct a {
+  t1 c => a_c;
+  ...;
+}
+
+struct b {
+  t2 c => b_c;
+  ...;
+}
+]}
+
+Now the generated O'Caml types are
+
+{[
+type a = { a_c : t1; ... }
+type b = { b_c : t2; ... }
+]}
+
+This works wherever a name is defined in the XDR file.
+
+
+{2:map_ints Mapping integer types}
+
+XDR defines 32 bit and 64 bit integers, each in a signed and unsigned
+variant. As O'Caml does only know 31 bit signed integers (type [int]; the
+so-called unboxed integers), 32 bit signed integers (type [int32]), and 64 bit
+signed integers (type [int64]), it is unclear how to map the XDR integers to
+O'Caml integers.
+
+The module {!Rtypes} defines the opaque types [int4], [uint4], [int8],
+and [uint8] which exactly correspond to the XDR types. These are
+useful to pass integer values through to other applications, and for
+simple identification of things. However, you cannot compute directly
+with the {!Rtypes} integers. Of course, {!Rtypes} also provides
+conversion functions to the basic O'Caml integer types [int], [int32],
+and [int64], but it would be very inconvenient to call these
+conversions for every integer individually.
+
+Because of this, [ocamlrpcgen] has the possibility to specify the
+O'Caml integer variant for every integer value (and it generates the
+necessary conversion invocations automatically). The new keywords
+[_abstract], [_int32], [_int64], and [_unboxed] select the variant to
+use:
+
+- [_abstract int]: A signed 32 bit integer mapped to {!Rtypes.int4}
+- [_int32 int]: A signed 32 bit integer mapped to [int32]
+- [_int64 int]: A signed 32 bit integer mapped to [int64]
+- [_unboxed int]: A signed 32 bit integer mapped to [int]
+- [unsigned _abstract int]: An unsigned 32 bit integer mapped to {!Rtypes.uint4}
+- [unsigned _int32 int]: An unsigned 32 bit integer mapped to [int32] 
+  (ignoring overflows)
+- [unsigned _int64 int]: An unsigned 32 bit integer mapped to [int64]
+- [unsigned _unboxed int]: An unsigned 32 bit integer mapped to [int]
+
+Note that the 32 bits of the unsigned integer are simply casted to the
+32 bits of [int32] in the case of [unsigned _int32 int] (the meaning
+of the sign is ignored). In contrast to this, the [_unboxed] specifier
+causes a language mapping rejecting too small or too big values.
+
+A similar mapping can be specified for the 64 bit integers (hypers):
+
+- [_abstract hyper]: A signed 64 bit integer mapped to {!Rtypes.int8}
+- [_int64 hyper]: A signed 64 bit integer mapped to [int64]
+- [_unboxed hyper]: A signed 64 bit integer mapped to [int]
+- [unsigned _abstract hyper]: An unsigned 64 bit integer mapped to {!Rtypes.uint8}
+- [unsigned _int64 hyper]: An unsigned 64 bit integer mapped to [int64]
+- [unsigned _unboxed hyper]: An unsigned 64 bit integer mapped to [int]
+
+Again, [unsigned _int64 hyper] causes that the 64 bits of the XDR values are
+casted to [int64].
+
+If the keyword specifying the kind of language mapping is omitted, the
+default mapping applies. Unless changed on the command line (options
+[-int] and [-hyper]), the default mapping is [_abstract].
+
+{2:map_fps Mapping floating-point types}
+
+The XDR types [single] and [double] are supported and both mapped
+to the O'Caml type [float]. The XDR type [quadruple] is not supported.
+
+The code for [double] assumes that the CPU represents floating-point
+numbers according to the IEEE standards.
+
+{2:map_strings Mapping string and opaque types}
+
+Strings and opaque values are mapped to O'Caml strings. If strings have a fixed
+length or a maximum length, this constraint is checked when the conversion is
+performed.
+
+Since Ocamlnet-3, strings can be declared as "managed" in the XDR 
+file, e.g.
+
+{[
+typedef _managed string s<>;
+]}
+
+A managed string is mapped to the object type {!Xdr_mstring.mstring}.
+The idea of managed strings is to avoid data copies as much as possible,
+and to introduce some freedom of representation. In particular, managed
+strings can be backed by normal strings or by bigarrays of char. The
+RPC library chooses the representation that works best, and avoids copying
+so far possible.
+
+{2:map_arrays Mapping array types}
+
+Arrays are mapped to O'Caml arrays. If arrays have a fixed
+length or a maximum length, this constraint is checked when the conversion is
+performed.
+
+{2:map_records Mapping record types (structs)}
+
+Structs are mapped to O'Caml records.
+
+{2:map_enums Mapping enumerated types (enums)}
+
+Enumerated types are mapped to {!Rtypes.int4} (always, regardless of
+what the [-int] option specifies). The enumerated constants are mapped
+to let-bound values of the same name. Example: The XDR definition
+
+{[
+enum e {
+  A = 1;
+  B = 2;
+}
+]}
+
+generates the following lines of code in the auxiliary module:
+
+{[
+type e = Rtypes.int4;;
+val a : Rtypes.int4;;
+val b : Rtypes.int4;;
+]}
+
+However, when the XDR conversion is performed, it is checked whether values of
+enumerators are contained in the set of allowed values.
+
+The special enumerator [bool] is mapped to the O'Caml type [bool].
+
+{2:map_eunions Mapping union types discriminated by enumerations}
+
+Often, XDR unions are discriminated by enumerations, so this case is
+handled specially. For every case of the enumerator, a polymorphic
+variant is generated that contains the selected arm of the
+union. Example:
+
+{[
+enum e {
+  A = 1;
+  B = 2;
+  C = 3;
+  D = 4;
+}
+
+union u (e discr) {
+  case A: 
+    int x;
+  case B:
+    hyper y;
+  default:
+    string z;
+}
+]}
+
+This is mapped to the O'Caml type definitions:
+
+{[
+type e = Rtypes.int4;;
+type u =
+  [ `a of Rtypes.int4
+  | `b of Rtypes.int8
+  | `c of string
+  | `d of string
+  ]
+]}
+
+Note that the identifiers of the components ([discr], [x], [y], [z])
+have vanished; they are simply not necessary in a sound typing
+environment. Also note that the default case has been expanded;
+because the cases of the enumerator are known it is possible to
+determine the missing cases meant by [default] and to define these
+cases explicitly.
+
+{2:map_iunions Mapping union types discriminated by integers}
+
+If the discriminant has integer type, a different mapping scheme is
+used. For every case occuring in the union definition a separate
+polymorphic variant is defined; if necessary, an extra default variant
+is added. Example:
+
+{[
+union u (int discr) {
+  case -1: 
+    int x;
+  case 1:
+    hyper y;
+  default:
+    string z;
+}
+]}
+
+This is mapped to the O'Caml type definition:
+
+{[
+type u = 
+  [ `__1 of Rtypes.int4
+  | `_1  of Rtypes.int8
+  | `default of (Rtypes.int4 * string)
+  ]
+]}
+
+Note that positive cases get variant tags of the form "_n" and that
+negative cases get variant tags of the form "__n". The default case is
+mapped to the tag [`default] with two arguments: First the value of
+the discriminant, second the value of the default component.
+
+This type of mapping is not recommended, and only provided for
+completeness.
+
+{2:map_opts Mapping option types (*)}
+
+The XDR [*] type is mapped to the O'Caml [option] type. Example:
+
+{[
+typedef string *s;
+]}
+
+is mapped to
+
+{[
+type s = string option
+]}
+
+{2:map_recs Mapping recursive types}
+
+Recursive types are fully supported. Unlike in the C language, you can
+recursively refer to types defined before or after the current type
+definition. Example:
+
+{[
+typedef intlistbody *intlist;   /* Forward reference */
+typedef struct {
+  int value;
+  intlist next;
+} intlistbody;
+]}
+
+This is mapped to:
+
+{[
+type intlist = intlistbody option
+and intlistbody = 
+  { value : Rtypes.int4;
+    next : intlist;
+  }
+]}
+
+However, it is not checked whether there is a finite fixpoint of the
+recursion. The O'Caml compiler will do this check anyway, so it not
+really needed within [ocamlrpcgen].
+
+{1:lib Overview over the RPC library}
+
+Normally, only the following modules are of interest:
+
+- {!Rtypes}: Supports serialization/deserialization of the
+  basic integer and fp types ("rtypes" = remote types)
+- {!Rpc}: Contains some types needed everyhwere
+- {!Rpc_client}: Contains the functions supporting RPC clients
+- {!Rpc_server}: Contains the functions supporting RPC servers
+- {!Rpc_portmapper}: Functions to contact the portmapper service
+- {!Rpc_auth_sys}: AUTH_SYS style authentication.
+
+{1:rpc_netplex Netplex RPC systems}
+
+If you need multi-processing for your RPC program, the Netplex library
+might be a good solution (see {!Netplex_intro}). It is limited to
+stream connections (TCP), however. With Netplex it is possible to
+develop systems of RPC services that connect to each other to do a
+certain job. Effectively, Netplex supports a component-based approach
+comparable to Corba, DCOM or Java Beans, but much more lightweight and
+efficient. In the following we call our technology {b Netplex RPC
+systems}.
+
+In this section it is assumed that you are familiar with the Netplex
+concepts (see {!Netplex_intro} for an introduction).
+
+The module {!Rpc_netplex} (part of the [netplex] findlib library)
+allows us to encapsulate RPC servers as Netplex services. For instance,
+to turn the [calculate.x] example of above into a service we can do
+
+{[
+let factory =
+  Rpc_netplex.rpc_factory
+    ~name:"Calculate"
+    ~configure:(fun _ _ -> ())
+    ~setup:(fun srv () ->
+             Calculate_srv.bind
+	        ~proc_add: add
+                srv
+           )
+    ()
+]}
+
+and pass this [factory] to {!Netplex_main.startup}. Note that we have
+to generate [calculate_srv.ml] with the [-srv2] switch of
+[ocamlrpcgen], otherwise [Calculate_srv.bind] is not available.
+
+In the netplex config file we can refer to (and enable) this service
+by a section like
+
+{[
+    service {
+        name = "Calculate_service"            (* An arbitrary service name *)
+        protocol {
+	    name = "Calculate_proto"          (* An arbitrary protocol name *)
+            address {
+	        type = "internet";
+                bind = "0.0.0.0:2123"
+            }
+        };
+        processor {
+            type = "Calculate"                (* The ~name from above *)
+        };
+        workload_manager {
+            type = "constant";
+            threads = 1;                      (* Run in 1 process/thread *)
+        };
+    }
+]}
+
+The interesting points of this technology are:
+
+- You can bundle several services into one program. The services can be
+  RPC-implemented or by using other protocol modules that are compatible
+  with Netplex like the {!Nethttpd_plex} web server.
+- You can profit from multi-processing or multi-threading.
+- Netplex provides a framework for logging, a message bus, and start/stop.
+
+Currently, there is no directory service where one can register 
+services by name and look them up. Such a service is under development,
+however, and will be released once the major functions work.
+
+
+{1:restrictions Restrictions of the current implementation}
+
+The authentication styles AUTH_DH and AUTH_LOCAL are not yet supported
+on all platforms.
+
+The implementation uses an intermediate, symbolic representation of
+the values to transport over the network. This may restrict the
+performance.
+
+Quadruple-precision fp numbers are not supported.
+
+RPC broadcasts are not supported.
+
+TI-RPC and rpcbind versions 3 and 4 are not supported. (Note: There
+is some restricted support to contact existing TI-RPC servers over
+local transport in the {!Rpc_xti} module.)

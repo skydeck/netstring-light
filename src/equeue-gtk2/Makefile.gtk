@@ -1,0 +1,6 @@
+# Selects the gtk version:
+GTK_PKG = lablgtk2
+GTK_VERSION = GTK2
+ARCHIVE = equeue_gtk2
+FL_NAME = equeue-gtk2
+GTK_DEFINES += $(GTK_EXTRA_DEFINES)

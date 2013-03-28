@@ -1,0 +1,6 @@
+version = "@VERSION@"
+description = "Ocamlnet - Event queues"
+requires = "unix,netsys,netstring"
+archive(byte) = "equeue.cma"
+archive(native) = "equeue.cmxa"
+archive(native,gprof) = "equeue.p.cmxa"

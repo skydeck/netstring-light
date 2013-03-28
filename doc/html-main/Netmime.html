@@ -1,0 +1,597 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Mimestring.html">
+<link rel="next" href="Netsendmail.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Types" rel="Section" href="#types">
+<link title="Classes" rel="Section" href="#classes">
+<link title="Parsing MIME messages" rel="Section" href="#parsing">
+<link title="Printing MIME Messages" rel="Section" href="#printing">
+<title>Ocamlnet 3 Reference Manual : Netmime</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Mimestring.html" title="Mimestring">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netsendmail.html" title="Netsendmail">Next</a>
+</div>
+<h1>Module <a href="type_Netmime.html">Netmime</a></h1>
+<pre><span class="keyword">module</span> Netmime: <code class="code">sig</code> <a href="Netmime.html">..</a> <code class="code">end</code></pre><div class="info">
+Netmime contains high-level classes and functions to process
+ mail and MIME messages.
+<p>
+
+ <b>Contents</b>
+<p>
+<ul>
+<li><a href="Netmime.html#types"><i>Types</i></a></li>
+<li><a href="Netmime.html#classes"><i>Classes</i></a></li>
+<li><a href="Netmime.html#parsing"><i>Parsing MIME messages</i></a></li>
+<li><a href="Netmime.html#printing"><i>Printing MIME Messages</i></a></li>
+</ul>
+
+ The tutorial has been moved to <a href="Netmime_tut.html"><code class="code">Netmime_tut</code></a>.<br>
+</div>
+<hr width="100%">
+<br>
+<h1 id="types">Types</h1><br>
+<pre><span id="TYPEstore"><span class="keyword">type</span> <code class="type"></code>store</span> = <code class="type">[ `File of string | `Memory ]</code> </pre>
+<div class="info">
+Specifies where to store the body of a mail message. <code class="code">`Memory</code>
+ means in-memory, <code class="code">`File name</code> means in the file <code class="code">name</code>. The body
+ is stored in decoded form (i.e. without transfer encoding).<br>
+</div>
+
+<pre><span id="EXCEPTIONImmutable"><span class="keyword">exception</span> Immutable</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+<div class="info">
+Raised if it is tried to modify a read-only value. The string denotes
+ the function or method where the incident happened.<br>
+</div>
+<br>
+MIME headers and bodies are defined in two steps. First the subtype
+ describing read access is defined (<code class="code">mime_header_ro</code>, and <code class="code">mime_body_ro</code>),
+ and after that the full class type including write access is defined
+ (<code class="code">mime_header</code>, and <code class="code">mime_body</code>).
+<p>
+
+ The idea is that you can write functions that take an ro value as
+ input to indicate that they do not modify the value. For example:
+<p>
+
+ <pre class="codepre"><code class="code"> let number_of_fields (h:#mime_header_ro) =
+   List.length (h#fields) </code></pre>
+<p>
+
+ This function accepts both <code class="code">mime_header</code>, and <code class="code">mime_header_ro</code> values as
+ input, but the typing ensures that the function cannot mutate anything.
+<p>
+
+ There is another way to ensure that a header or body is not modified.
+ The read-only flag can be set when creating the object, and this flag
+ causes that all trials to modify the value will raise the exception
+ <code class="code">Immutable</code>. Of course, such trials of mutation are only detected at
+ run-time.
+<p>
+
+ The advantage of the read-only flag is that it even works if 
+ mutation depends on a condition, but it can be ensured that this
+ condition is never true. Furthermore, typing is much simpler (getting
+ subtyping correct can be annoying).<br>
+<pre><span id="TYPEmime_header_ro"><span class="keyword">class type</span> <a href="Netmime.mime_header_ro-c.html">mime_header_ro</a></span> = <code class="code">object</code> <a href="Netmime.mime_header_ro-c.html">..</a> <code class="code">end</code></pre><div class="info">
+This is the read-only version of a MIME header.
+</div>
+<pre><span id="TYPEmime_header"><span class="keyword">class type</span> <a href="Netmime.mime_header-c.html">mime_header</a></span> = <code class="code">object</code> <a href="Netmime.mime_header-c.html">..</a> <code class="code">end</code></pre><div class="info">
+A MIME header with both read and write method.
+</div>
+<pre><span id="TYPEmime_body_ro"><span class="keyword">class type</span> <a href="Netmime.mime_body_ro-c.html">mime_body_ro</a></span> = <code class="code">object</code> <a href="Netmime.mime_body_ro-c.html">..</a> <code class="code">end</code></pre><div class="info">
+This is the read-only version of a MIME body.
+</div>
+<pre><span id="TYPEmime_body"><span class="keyword">class type</span> <a href="Netmime.mime_body-c.html">mime_body</a></span> = <code class="code">object</code> <a href="Netmime.mime_body-c.html">..</a> <code class="code">end</code></pre><div class="info">
+A MIME body with both read and write method.
+</div>
+<br>
+One can consider the pair <code class="code">(mime_header, mime_body)</code> as simple MIME
+ message with one header and one body. Of course, this simple representation
+ does not support multi-part messages (attachments). For that reason,
+ the <code class="code">complex_mime_message</code> was invented: The body can be further
+ structured as a sequence of parts that are complex messages themselves.
+<p>
+
+ For example, a mail message with an attachment is usually
+ represented as
+ <pre class="codepre"><code class="code"> (mail_header, `Parts [ (main_header, `Body main_body);
+                        (att_header, `Body att_body) ] ) </code></pre>
+<p>
+
+ Here, <code class="code">mail_header</code> is the real header of the mail message.
+ <code class="code">main_header</code> is the header of the main message, usually
+ only containing the content type of <code class="code">main_body</code>, the body
+ of the main message. The attachment has also its own 
+ <code class="code">att_header</code>, again usually only containing the content type,
+ and the data of the attachment can be found in <code class="code">att_body</code>.
+<p>
+
+ Nowadays, mails have often even a more complicated structure
+ with <code class="code">`Parts</code> containing nested <code class="code">`Parts</code>. As <code class="code">complex_mime_message</code>
+ is recursive, any kind of nesting can be easily represented.<br>
+<pre><span id="TYPEcomplex_mime_message"><span class="keyword">type</span> <code class="type"></code>complex_mime_message</span> = <code class="type"><a href="Netmime.mime_header-c.html">mime_header</a> * <a href="Netmime.html#TYPEcomplex_mime_body">complex_mime_body</a></code> </pre>
+
+<pre><span id="TYPEcomplex_mime_body"><span class="keyword">type</span> <code class="type"></code>complex_mime_body</span> = <code class="type">[ `Body of <a href="Netmime.mime_body-c.html">mime_body</a> | `Parts of <a href="Netmime.html#TYPEcomplex_mime_message">complex_mime_message</a> list ]</code> </pre>
+
+<pre><span id="TYPEcomplex_mime_message_ro"><span class="keyword">type</span> <code class="type"></code>complex_mime_message_ro</span> = <code class="type"><a href="Netmime.mime_header_ro-c.html">mime_header_ro</a> * <a href="Netmime.html#TYPEcomplex_mime_body_ro">complex_mime_body_ro</a></code> </pre>
+
+<pre><span id="TYPEcomplex_mime_body_ro"><span class="keyword">type</span> <code class="type"></code>complex_mime_body_ro</span> = <code class="type">[ `Body of <a href="Netmime.mime_body_ro-c.html">mime_body_ro</a><br>       | `Parts of <a href="Netmime.html#TYPEcomplex_mime_message_ro">complex_mime_message_ro</a> list ]</code> </pre>
+<div class="info">
+The read-only view of a complex_mime_message<br>
+</div>
+
+<br>
+Note: <code class="code">`Parts []</code>, i.e. <code class="code">`Parts</code> together with an empty list, is 
+ considered as illegal. Such a value cannot be transformed into
+ printable text.<br>
+<pre><span id="TYPEmime_message"><span class="keyword">type</span> <code class="type"></code>mime_message</span> = <code class="type"><a href="Netmime.mime_header-c.html">mime_header</a> * [ `Body of <a href="Netmime.mime_body-c.html">mime_body</a> ]</code> </pre>
+<div class="info">
+Simple MIME message, in a form that is compatible with complex
+ ones.<br>
+</div>
+
+<pre><span id="TYPEmime_message_ro"><span class="keyword">type</span> <code class="type"></code>mime_message_ro</span> = <code class="type"><a href="Netmime.mime_header_ro-c.html">mime_header_ro</a> * [ `Body of <a href="Netmime.mime_body_ro-c.html">mime_body_ro</a> ]</code> </pre>
+<div class="info">
+Read-only variant of simple messages<br>
+</div>
+
+<br>
+<h1 id="classes">Classes</h1><br>
+<pre><span name="TYPEbasic_mime_header"><span class="keyword">class</span> <a href="Netmime.basic_mime_header-c.html">basic_mime_header</a></span> : <code class="type">?ro:bool -> (string * string) list -> </code><code class="type"><a href="Netmime.mime_header-c.html">mime_header</a></code></pre><div class="info">
+An implementation of <code class="code">mime_header</code>.
+</div>
+<pre><span name="TYPEmemory_mime_body"><span class="keyword">class</span> <a href="Netmime.memory_mime_body-c.html">memory_mime_body</a></span> : <code class="type">?ro:bool -> string -> </code><code class="type"><a href="Netmime.mime_body-c.html">mime_body</a></code></pre><div class="info">
+An implementation of <code class="code">mime_body</code> where the value is stored
+ in-memory.
+</div>
+<pre><span name="TYPEfile_mime_body"><span class="keyword">class</span> <a href="Netmime.file_mime_body-c.html">file_mime_body</a></span> : <code class="type">?ro:bool -> ?fin:bool -> string -> </code><code class="type"><a href="Netmime.mime_body-c.html">mime_body</a></code></pre><div class="info">
+An implementation of <code class="code">mime_body</code> where the value is stored
+ in an external file.
+</div>
+<br>
+<h1 id="parsing">Parsing MIME messages</h1><br>
+<pre><span id="VALread_mime_header"><span class="keyword">val</span> read_mime_header</span> : <code class="type">?unfold:bool -><br>       ?strip:bool -> ?ro:bool -> <a href="Netstream.in_obj_stream-c.html">Netstream.in_obj_stream</a> -> <a href="Netmime.mime_header-c.html">mime_header</a></code></pre><div class="info">
+Decodes the MIME header that begins at the current position of the
+ netstream, and returns the header as class <code class="code">basic_mime_header</code>.
+ After returning, the stream is advanced to the byte following the 
+ empty line terminating the header.
+<p>
+
+ Example: To read the header at the beginning of the file "f", use:
+ <pre class="codepre"><code class="code"> 
+ let ch = new Netchannels.input_channel (open_in "f") in
+ let stream = new Netstream.input_stream ch in
+ let h = read_mime_header stream in
+ ...
+ stream#close_in();    (* no need to close ch *)
+ </code></pre>
+<p>
+
+ Note that although the <code class="code">stream</code> position after parsing is exactly 
+ known, the position of <code class="code">ch</code> cannot be predicted.
+<p>
+
+<br>
+</div>
+<div class="param_info"><code class="code">unfold</code> : whether linefeeds are replaced by spaces in the values of the
+   header fields (Note: defaults to <code class="code">false</code> here in contrast to
+   <code class="code">Mimestring.scan_header</code>!)</div>
+<div class="param_info"><code class="code">strip</code> : whether whitespace at the beginning and at the end of the 
+   header fields is stripped</div>
+<div class="param_info"><code class="code">ro</code> : whether the returned header is read-only (default: false)</div>
+<br>
+Hint: To write the header <code class="code">h</code> into the channel <code class="code">ch</code>, use
+ <pre class="codepre"><code class="code"> Mimestring.write_header ch h#fields </code></pre>
+<p>
+
+ Link: <a href="Mimestring.html#VALwrite_header"><code class="code">Mimestring.write_header</code></a><br>
+<pre><span id="TYPEmultipart_style"><span class="keyword">type</span> <code class="type"></code>multipart_style</span> = <code class="type">[ `Deep | `Flat | `None ]</code> </pre>
+<div class="info">
+How to parse multipart messages:<ul>
+<li><code class="code">`None</code>: Do not handle multipart messages specially. Multipart bodies
+    are not further decoded, and returned as <code class="code">`Body b</code> where <code class="code">b</code> is
+    the transfer-encoded text representation.</li>
+<li><code class="code">`Flat</code>: If the top-level message is a multipart message, the parts
+    are separated and returned as list. If the parts are again multipart
+    messages, these inner multipart messages are not furher decoded 
+    and returned as <code class="code">`Body b</code>.</li>
+<li><code class="code">`Deep</code>: Multipart messages are recursively decoded and returned as
+    tree structure.</li>
+</ul>
+
+ This value determines how far the <code class="code">complex_mime_message</code> structure
+ is created for a parsed MIME message. <code class="code">`None</code> means that no parts
+ are decoded, and messages have always only a simple <code class="code">`Body b</code>,
+ even if <code class="code">b</code> is in reality a multi-part body. With <code class="code">`Flat</code>, the
+ top-level multi-part bodies are decoded (if found), and messages
+ can have a structured <code class="code">`Parts [_, `Body b1; _, `Body b1; ...]</code>
+ body. Finally, <code class="code">`Deep</code> allows that inner multi-part bodies are
+ recursively decoded, and messages can have an arbitrarily complex
+ form.<br>
+</div>
+
+<pre><span id="VALdecode_mime_body"><span class="keyword">val</span> decode_mime_body</span> : <code class="type">#<a href="Netmime.mime_header_ro-c.html">mime_header_ro</a> -><br>       <a href="Netchannels.out_obj_channel-c.html">Netchannels.out_obj_channel</a> -> <a href="Netchannels.out_obj_channel-c.html">Netchannels.out_obj_channel</a></code></pre><div class="info">
+<code class="code">let ch' = decode_mime_body hdr ch</code>:
+ According to the value of the Content-transfer-encoding header field
+ in <code class="code">hdr</code> the encoded MIME body written to <code class="code">ch'</code> is decoded and transferred
+ to <code class="code">ch</code>.
+<p>
+
+ Handles 7bit, 8bit, binary, quoted-printable, base64.
+<p>
+
+ Example: The file "f" contains base64-encoded data, and is to be decoded 
+ and to be stored in "g":
+<p>
+
+ <pre class="codepre"><code class="code"> 
+ let ch_f = new Netchannels.input_channel (open_in "f") in
+ let ch_g = new Netchannels.output_channel (open_out "g") in
+ let hdr = new basic_mime_header ["content-transfer-encoding", "base64" ] in
+ let ch = decode_mime_body hdr ch_g in
+ ch # output_channel ch_f;
+ ch # close_out();
+ ch_g # close_out();
+ ch_f # close_in();
+ </code></pre>
+<p>
+
+ Note: This function is internally used by <code class="code">read_mime_message</code> to
+ decode bodies. There is usually no need to call it directly.<br>
+</div>
+<pre><span id="VALstorage"><span class="keyword">val</span> storage</span> : <code class="type">?ro:bool -><br>       ?fin:bool -> <a href="Netmime.html#TYPEstore">store</a> -> <a href="Netmime.mime_body-c.html">mime_body</a> * <a href="Netchannels.out_obj_channel-c.html">Netchannels.out_obj_channel</a></code></pre><div class="info">
+Creates a new storage facility for a mime body according to <code class="code">store</code>.
+ This function can be used to build the <code class="code">storage_style</code> argument 
+ of the class <code class="code">read_mime_message</code> (below). For example, this is
+ useful to store large attachments in external files, as in:
+<p>
+
+ <pre class="codepre"><code class="code"> 
+ let storage_style hdr = 
+   let filename = hdr ... (* extract from hdr *) in
+   storage (`File filename)
+ </code></pre>
+<p>
+
+<br>
+</div>
+<div class="param_info"><code class="code">ro</code> : whether the returned mime_bodies are read-only or not. Note that
+   it is always possible to write into the body using the returned
+   out_obj_channel regardless of the value of ~ro.
+   Default: false</div>
+<div class="param_info"><code class="code">fin</code> : whether to finalize bodies stored in files.
+   Default: false</div>
+<pre><span id="VALread_mime_message"><span class="keyword">val</span> read_mime_message</span> : <code class="type">?unfold:bool -><br>       ?strip:bool -><br>       ?ro:bool -><br>       ?multipart_style:<a href="Netmime.html#TYPEmultipart_style">multipart_style</a> -><br>       ?storage_style:(<a href="Netmime.mime_header-c.html">mime_header</a> -><br>                       <a href="Netmime.mime_body-c.html">mime_body</a> * <a href="Netchannels.out_obj_channel-c.html">Netchannels.out_obj_channel</a>) -><br>       <a href="Netstream.in_obj_stream-c.html">Netstream.in_obj_stream</a> -> <a href="Netmime.html#TYPEcomplex_mime_message">complex_mime_message</a></code></pre><div class="info">
+Decodes the MIME message that begins at the current position of the
+ passed netstream. It is expected that the message continues until
+ EOF of the netstream.
+<p>
+
+ Multipart messages are decoded as specified by <code class="code">multipart_style</code> (see
+ above).
+<p>
+
+ Message bodies with content-transfer-encodings of 7bit, 8bit, binary,
+ base64, and quoted-printable can be processed. The bodies are stored
+ without content-transfer-encoding (i.e. in decoded form), but the
+ content-transfer-encoding header field is not removed from the header.
+<p>
+
+ The <code class="code">storage_style</code> function determines where every message body is
+ stored. The corresponding header of the body is passed to the function
+ as argument; the result of the function is a pair of a new <code class="code">mime_body</code>
+ and an <code class="code">out_obj_channel</code> writing into this body. You can create such a
+ pair by calling <code class="code">storage</code> (above).
+<p>
+
+ By default, the <code class="code">storage_style</code> is <code class="code">storage ?ro `Memory</code> for every header. 
+ Here, the designator <code class="code">`Memory</code> means that the body will be stored in an
+ O'Caml string. The designator <code class="code">`File fn</code> would mean that the body will be stored in the
+ file <code class="code">fn</code>. The file would be created if it did not yet exist, and
+ it would be overwritten if it did already exist.
+<p>
+
+ Note that the <code class="code">storage_style</code> function is called for every non-multipart
+ body part.
+<p>
+
+ Large message bodies (&gt; maximum string length) are supported if the
+ bodies are stored in files. The memory consumption is optimized for
+ this case, and usually only a small constant amount of memory is needed.
+<p>
+
+ Example:
+<p>
+
+ Parse the MIME message stored in the file f:
+<p>
+
+ <pre class="codepre"><code class="code"> let m = read_mime_message 
+           (new input_stream (new input_channel (open_in f)))
+ </code></pre>
+<p>
+
+<br>
+</div>
+<div class="param_info"><code class="code">unfold</code> : whether linefeeds are replaced by spaces in the values of the
+   header fields (Note: defaults to <code class="code">false</code> here in contrast to
+   <a href="Mimestring.html#VALscan_header"><code class="code">Mimestring.scan_header</code></a>!)</div>
+<div class="param_info"><code class="code">strip</code> : whether whitespace at the beginning and at the end of the 
+   header fields is stripped</div>
+<div class="param_info"><code class="code">ro</code> : Whether the created MIME headers are read-only or not. Furthermore,
+   the default <code class="code">storage_style</code> uses this parameter for the MIME bodies, too.
+   However, the MIME bodies may have a different read-only flag in general.</div>
+<br>
+<h1 id="printing">Printing MIME Messages</h1><br>
+<pre><span id="VALencode_mime_body"><span class="keyword">val</span> encode_mime_body</span> : <code class="type">?crlf:bool -><br>       #<a href="Netmime.mime_header_ro-c.html">mime_header_ro</a> -><br>       <a href="Netchannels.out_obj_channel-c.html">Netchannels.out_obj_channel</a> -> <a href="Netchannels.out_obj_channel-c.html">Netchannels.out_obj_channel</a></code></pre><div class="info">
+<code class="code">let ch' = encode_mime_body hdr ch</code>:
+ According to the value of the Content-transfer-encoding header field
+ in <code class="code">hdr</code> the unencoded MIME body written to ch' is encoded and transferred
+ to ch.
+<p>
+
+ Handles 7bit, 8bit, binary, quoted-printable, base64.
+<p>
+
+ For an example, see <code class="code">decode_mime_body</code> which works in a similar way
+ but performs decoding instead of encoding.
+<p>
+
+<br>
+</div>
+<div class="param_info"><code class="code">crlf</code> : if set (this is by default the case) CR/LF will be used for
+   end-of-line (eol) termination, if not set LF will be used. For 7bit, 8bit and
+   binary encoding the existing eol delimiters are not rewritten, so this option
+   has only an effect for quoted-printable and base64.</div>
+<pre><span id="VALwrite_mime_message"><span class="keyword">val</span> write_mime_message</span> : <code class="type">?wr_header:bool -><br>       ?wr_body:bool -><br>       ?nr:int -><br>       ?ret_boundary:string Pervasives.ref -><br>       ?crlf:bool -><br>       <a href="Netchannels.out_obj_channel-c.html">Netchannels.out_obj_channel</a> -> <a href="Netmime.html#TYPEcomplex_mime_message">complex_mime_message</a> -> unit</code></pre><div class="info">
+Writes the MIME message to the output channel. The content-transfer-
+ encoding of the leaves is respected, and their bodies are encoded
+ accordingly. The content-transfer-encoding of multipart messages is
+ always "fixed", i.e. set to "7bit", "8bit", or "binary" depending
+ on the contents.
+<p>
+
+ The function fails if multipart messages do not have a multipart
+ content type field (i.e. the content type does not begin with "multipart").
+ If only the boundary parameter is missing, a good boundary parameter is
+ added to the content type. "Good" means here that it is impossible
+ that the boundary string occurs in the message body if the
+ content-transfer-encoding is quoted-printable or base64, and that
+ such an occurrence is very unlikely if the body is not encoded.
+ If the whole content type field is missing, a "multipart/mixed" type
+ with a boundary parameter is added to the printed header.
+<p>
+
+ Note that already existing boundaries are used, no matter whether
+ they are of good quality or not.
+<p>
+
+ No other header fields are added, deleted or modified. The mentioned
+ modifications are _not_ written back to the passed MIME message but
+ only added to the generated message text.
+<p>
+
+ It is possible in some cases that the boundary does not work (both
+ the existing boundary, and the added boundary). This causes that a wrong
+ and unparseable MIME message is written. In order to ensure a correct
+ MIME message, it is recommended to parse the written text, and to compare
+ the structure of the message trees. It is, however, very unlikely that
+ a problem arises.
+<p>
+
+ Note that if the passed message is a simple message like (_,`Body _),
+ and if no content-transfer-encoding is set, the written message might
+ not end with a linefeed character.
+<p>
+
+<br>
+</div>
+<div class="param_info"><code class="code">wr_header</code> : If true, the outermost header is written. Inner headers
+   of the message parts are written unless ~wr_body=false.</div>
+<div class="param_info"><code class="code">wr_body</code> : If true, the body of the whole message is written; if false,
+   no body is written at all.</div>
+<div class="param_info"><code class="code">nr</code> : This argument sets the counter that is included in generated
+   boundaries to a certain minimum value.</div>
+<div class="param_info"><code class="code">ret_boundary</code> : if passed, the boundary of the outermost multipart
+   message is written to this reference. (Internally used.)</div>
+<div class="param_info"><code class="code">crlf</code> : if set (this is by default the case) CR/LF will be used for
+   end-of-line (eol) termination, if not set LF will be used. The eol 
+   separator is used for the header, the multipart framing, and for
+   bodies encoded as quoted-printable or base64. Other eol separators are
+   left untouched.</div>
+</body></html>

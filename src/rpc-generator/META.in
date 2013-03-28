@@ -1,0 +1,2 @@
+description = "Ocamlnet - Remote Procedure Call (RPC) ocamlrpcgen"
+version = "@VERSION@"

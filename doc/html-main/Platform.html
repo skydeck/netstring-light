@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Intro.html">
+<link rel="next" href="Foreword.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Platform Support" rel="Section" href="#1_PlatformSupport">
+<link title="POSIX" rel="Subsection" href="#2_POSIX">
+<link title="Windows" rel="Subsection" href="#2_Windows">
+<link title="Hints for portable programming" rel="Subsection" href="#2_Hintsforportableprogramming">
+<title>Ocamlnet 3 Reference Manual : Platform</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Intro.html" title="Intro">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Foreword.html" title="Foreword">Next</a>
+</div>
+<h1>Platform</h1>
+<br>
+<h1 id="1_PlatformSupport">Platform Support</h1>
+<p>
+
+Not everything works in the same way for all operating systems. This
+documents describes the different levels of support for the various
+platforms.
+<p>
+
+<h2 id="2_POSIX">POSIX</h2>
+<p>
+
+Ocamlnet has been primarily developed for POSIX systems. Most libraries
+should work on all systems, but there are also some more special features
+that are designed for certain systems only.
+<p>
+
+<h3 id="3_Banningselect">Banning <code class="code">select()</code></h3>
+<p>
+
+On POSIX systems, the <code class="code">select()</code> system call is not used anymore. As
+a general-purpose replacement Ocamlnet favors <code class="code">poll()</code>. In future
+versions of Ocamlnet, there will also be support for the improved
+versions of <code class="code">poll()</code> some systems provide, such as <code class="code">epoll</code> on Linux,
+<code class="code">kqueue</code> on BSD, and <code class="code">/dev/poll</code> on Solaris. Ocamlnet is already
+prepared for this change.
+<p>
+
+The reason for banning <code class="code">select()</code> are the limited capabilities of this
+API. Especially, it cannot handle file descriptors whose numeric
+values exceed a system-dependent limit. Although this limit is quite
+high (usually 1024) there are applications that need more descriptors.
+(Note that it is not sufficient to simply increase the maximum number
+of descriptors a process can have - the <code class="code">select()</code> call is still 
+restricted in the mentioned sense, and this seems to be unfixable.)
+The <code class="code">poll()</code> interface does not have this problem.
+<p>
+
+The <code class="code">poll()</code> interface is made accessible from Ocaml in
+<a href="Netsys_posix.html"><code class="code">Netsys_posix</code></a>.
+<p>
+
+<h3 id="3_Multiprocessingandfork">Multi-processing and <code class="code">fork()</code></h3>
+<p>
+
+One of the main difference of the POSIX platforms compared with
+Windows is that there is the <code class="code">fork()</code> system call. Ocamlnet provides
+multi-processing support in the <code class="code">netplex</code> library (see <a href="Netplex_mp.html"><code class="code">Netplex_mp</code></a>).
+This makes it easy to manage a set of child processes that are used
+as parallel running "workers" (e.g. for accepting network connections).
+<p>
+
+There is a registry of user functions to be run after a new child
+process has been forked off (see
+<a href="Netsys_posix.html#VALregister_post_fork_handler"><code class="code">Netsys_posix.register_post_fork_handler</code></a>). The intention is that the
+child can close descriptors it would otherwise share with the parent.
+<p>
+
+One should note that there is a basic incompatibility between code
+that uses <code class="code">fork()</code> to achieve parallelism and multi-threading. The
+problem is that the state of synchronization objects like mutexes is
+undefined after <code class="code">fork()</code>. In the C language, one can try to define
+special handlers that run before/after the <code class="code">fork()</code> to fix up such
+objects.  There is no such possibility in Ocaml (the mentioned
+registry cannot be used for this purpose). One simply should not call
+<code class="code">fork()</code> while there is more than one thread. It is of course allowed
+to start threads in the sub processes.
+<p>
+
+For the multi-processing capability of <code class="code">netplex</code> this means that one
+must not create threads in the master process (from which the worker
+processes are forked off). There is no such restriction for the
+children.
+<p>
+
+<h3 id="3_Startingprogramsassubprocesses">Starting programs as sub processes</h3>
+<p>
+
+There is now extended support for starting subprograms. First, there
+is <a href="Netsys_posix.html#VALspawn"><code class="code">Netsys_posix.spawn</code></a> which provides a comfortable way for starting
+programs. The interface is patterned after the <code class="code">posix_spawn()</code> system
+call although the implemention is not using <code class="code">posix_spawn()</code> yet, but
+a traditional <code class="code">fork/exec</code> combination.
+(In a later version of Ocamlnet it is planned to give the user the
+choice of using <code class="code">posix_spawn()</code> as the underlying system interface.
+On some OS, <code class="code">posix_spawn()</code> is highly optimized and significantly
+faster than <code class="code">fork/exec</code>.)
+<p>
+
+Second, it is now possible to let Ocamlnet watch for the termination
+of child processes: <a href="Netsys_posix.html#VALwatch_subprocess"><code class="code">Netsys_posix.watch_subprocess</code></a>. This function
+arranges that the <code class="code">SIGCHLD</code> signal is caught, and that the process
+termination is reported as a file descriptor event. By means of
+careful programming this even works for multi-threaded applications
+(where signal handling is notoriously difficult).
+<p>
+
+<h3 id="3_RPCintegration">RPC integration</h3>
+<p>
+
+POSIX systems usually already provide RPC functionality, as some
+deeply-integrated networking protocols like NFS are based on it.
+Traditionally, there is a program called <code class="code">portmapper</code> that acts as
+registry of RPC services running on a machine. Ocamlnet can register
+servers in <code class="code">portmapper</code>, and it can also look up services there.
+<p>
+
+On some systems, there is a newer version of <code class="code">portmapper</code> called
+<code class="code">rpcbind</code>. Fortunately, <code class="code">rpcbind</code> is backward-compatible, and also
+provides a <code class="code">portmapper</code>-style interface.
+<p>
+
+There is some problem, though, on systems that also provide the XTI
+networking API which is a replacement for the socket API.  Whereas
+TCP/IP can be used with both XTI and sockets, the local network
+connections the API's provide are incompatible: A local XTI endpoint
+cannot be contacted over the socket API, and a local socket endpoint
+(i.e. a Unix domain socket) cannot be contacted over XTI. There is
+the helper library <a href="Rpc_xti_client.html"><code class="code">Rpc_xti_client</code></a> that allows to connect to a local
+XTI server.
+<p>
+
+<h2 id="2_Windows">Windows</h2>
+<p>
+
+<h3 id="3_Cygwin">Cygwin</h3>
+<p>
+
+On Cygwin Ocamlnet should behave like on a POSIX machine.
+<p>
+
+<h3 id="3_Win32">Win32</h3>
+<p>
+
+<b>General remark:</b> The Win32 port is still very experimental, and
+far from being bug-free! Development progresses very slowly. Please
+don't expect wonders.
+<p>
+
+There is now a lot of support for Win32, even for asynchronous network
+programming. The minimum Windows version is Windows XP SP2. One should
+also mention that some functions are only supported when the Ocaml
+program is compiled as multi-threaded program, as sometimes helper
+threads are needed to emulate a certain behavior. For example, Win32
+limits the number of file handles to 64 per thread when one watches
+them for events. Ocamlnet includes support to overcome this limit by
+creating helper threads as needed.
+<p>
+
+As a substitute for Unix Domain sockets, Ocamlnet provides access to
+Win32 named pipes. These are, for security reasons, restricted to
+local connection (within the same machine). As named pipes exist in a
+special file system, one cannot create named pipes in arbitrary
+directories (unlike Unix Domain sockets). As a workaround, it is also
+supported to create named pipes with random names, and to write these
+names into text files. A number of functions that used to expect Unix
+Domain socket files as input can now also deal with these text files,
+and will automatically map these files to the referenced named pipes
+(see <a href="Netplex_sockserv.html#VALany_file_client_connector"><code class="code">Netplex_sockserv.any_file_client_connector</code></a>).
+<p>
+
+The <b>RPC</b> implementation supports TCP/IP sockets and named pipes,
+both for clients and for servers. As for POSIX, the clients and servers
+can be programmed in an asynchronous way.
+<p>
+
+<b>Netplex</b> is supported, but only for multi-threaded containers. The
+multi-processing containers are not available. Netplex can manage both
+TCP connections and named pipes.
+<p>
+
+The <b>Shell</b> library works, too. As for POSIX, it is possible to
+create complex pipelines between the started shell commands, and it is
+possible to read the output of and to provide input to the commands at
+the same time.  All asynchronous command execution features are
+available!  The only limitation is that one can redirect only
+stdin/stdout/stderr of the started commands, and not arbitrary
+descriptors as for POSIX (this is a restriction of Win32).
+<p>
+
+The <b>Equeue</b> library is supported. The GTK- and TclTk-specific
+extensions do not work, however. The SSL add-on is untested.
+<p>
+
+The <b>Netshm</b> library is only partially supported: The managed memory
+object must be file-backed and cannot (yet) live in RAM-only shared
+memory.
+<p>
+
+The <b>Nethttpd</b> library is fully supported.
+<p>
+
+XXX: Netcgi2
+<p>
+
+<h3 id="3_Win32lowlevel">Win32 low-level</h3>
+<p>
+
+The missing Win32 calls are made available via <a href="Netsys_win32.html"><code class="code">Netsys_win32</code></a>. The 
+accessible objects are:
+<p>
+<ul>
+<li>Events: Win32 event objects can signal a condition (and look like
+  condition variables)</li>
+<li>Named pipes: Win32 named pipes are network connections between
+  a client endpoint and a server endpoint. Ocamlnet only supports
+  local connections, however.</li>
+<li>Pipe servers: The notion
+  of "pipe servers" does not exist in Win32 as kernel objects. Win32
+  sees a pipe server as a set of endpoints one can connect to, and the
+  user code has to manage this set. In <a href="Netsys_win32.html"><code class="code">Netsys_win32</code></a>, pipe server
+  objects are emulated to simplify this for user code, so that pipe
+  servers look very much like socket servers.</li>
+<li>Input threads: <a href="Netsys_win32.html"><code class="code">Netsys_win32</code></a> provides helper threads allowing one to 
+  read from an arbitrary file handle in an asynchronous way, even if Win32 
+  does not support that for the type of handle. This is intended for 
+  reading from anonymous pipes (as returned by <code class="code">Unix.pipe</code>).</li>
+<li>Output threads: a similar kind of object writing to file handles</li>
+<li>Processes</li>
+<li>Consoles</li>
+</ul>
+
+As you can see, we are trying to make the Win32 calls a bit more user
+friendly. One of the goals of this wrapper is to make them even usable
+in programs that are mainly written for POSIX.
+<p>
+
+A central idea here is the concept of "proxy descriptors". Many of the
+mentioned objects have a complex inner structure - e.g. a pipe server
+can mean an open number of Win32 file handles. However, it is intended
+to make these objects look like in POSIX, and that means that there is
+only a single descriptor referencing the object. The proxy descriptors
+are additional file descriptors Ocamlnet allocates only for the purpose
+of referencing these objects. For example, a pipe server is mainly
+represented by the type <a href="Netsys_win32.html#TYPEw32_pipe_server"><code class="code">Netsys_win32.w32_pipe_server</code></a>, and there are
+a lot of functions dealing with such values, e.g.
+<a href="Netsys_win32.html#VALpipe_shutdown_server"><code class="code">Netsys_win32.pipe_shutdown_server</code></a> for shutting a server down.
+Of course, a <a href="Netsys_win32.html#TYPEw32_pipe_server"><code class="code">Netsys_win32.w32_pipe_server</code></a> is not a file descriptor,
+but a complex Ocaml record. The question is now how to pass such an
+object to functions that only accept file descriptors as input? The
+solution looks simple although the implementation causes a lot of
+headache: A special file descriptor is allocated, and there is a global
+table mapping these descriptors to the real objects. For instance, you
+can get the proxy descriptor of a pipe server by calling
+<p>
+
+<pre class="codepre"><code class="code"> let (fd : Unix.file_descr) =
+     Netsys_win32.pipe_server_descr psrv 
+</code></pre>
+<p>
+
+for a pipe server object <code class="code">psrv</code>. You can pass <code class="code">fd</code> around, and when
+a called function requires the pipe server object again, one can
+map <code class="code">fd</code> back by:
+<p>
+
+<pre class="codepre"><code class="code"> let (psrv : Netsys_win32.w32_pipe_server) =
+     Netsys_win32.lookup_pipe_server fd
+</code></pre>
+<p>
+
+Like other descriptors, <code class="code">fd</code> must be closed after use. The tricky part
+of the implementation is that unreferenced proxy descriptors are
+detected, and that the entry of the global mapping table is deleted
+then.
+<p>
+
+As mentioned, Ocamlnet supports asynchronous I/O for the supported
+Win32 objects. For some objects, Win32 has built-in support in the
+form of so-called overlapped I/O. This kind of I/O is, unfortunately,
+different than what POSIX provides (<code class="code">poll</code>-style I/O). The analysis
+shows that the main difference is that in Win32 one has to start an
+I/O operation in order to asynchronously check whether and when it is
+finally possible, whereas POSIX allows one to check the possibility of
+I/O before one starts the operation. Ocamlnet hides this difference in
+the <a href="Netsys_win32.html"><code class="code">Netsys_win32</code></a> wrapper by providing additional buffering. The
+price is, however, that the generic <code class="code">read</code> and <code class="code">write</code> calls (or
+better, <code class="code">ReadFile</code> and <code class="code">WriteFile</code> in Win32) can no longer be used.
+As a substitute, Ocamlnet provides for each kind of object a special
+set of read and write operations, e.g. <a href="Netsys_win32.html#VALpipe_read"><code class="code">Netsys_win32.pipe_read</code></a>
+for named pipes.
+<p>
+
+For simplicity of user code, there are also generalized read/write
+operations: <a href="Netsys.html#VALgread"><code class="code">Netsys.gread</code></a> and <a href="Netsys.html#VALgwrite"><code class="code">Netsys.gwrite</code></a>. These work for
+all descriptors supported by <code class="code">Unix.read</code> and <code class="code">Unix.write</code>, plus for
+sockets, plus for all of the mentioned Win32-specific objects for 
+which reading and writing are reasonable I/O operations.
+<p>
+
+If overlapping I/O is unavailable for a kind of file handle, it is
+still possible to use the input and output threads in order to do
+asynchronous I/O for these handles. An example of such a handle type
+are anonymous pipes. The threads are automatically started and
+initiate synchronous I/O operations when needed. The completion of the
+operations is signalled via condition variables to the caller, so that
+it is possible to provide an asynchronous API to the file handle.
+<p>
+
+<h2 id="2_Hintsforportableprogramming">Hints for portable programming</h2>
+<p>
+
+Generally, the functions in <a href="Netsys.html"><code class="code">Netsys</code></a> are available on all platforms
+(but not necessarily in all variants), whereas <a href="Netsys_posix.html"><code class="code">Netsys_posix</code></a> and
+<a href="Netsys_win32.html"><code class="code">Netsys_win32</code></a> contain the platform-specific stuff.
+<p>
+
+In order to read and write file descriptors, one should first get
+the kind of descriptor <code class="code">fd</code>:
+<p>
+
+<pre class="codepre"><code class="code"> let st = Netsys.get_fd_style fd </code></pre>
+<p>
+
+Now, one can read and write to the file descriptor by calling
+<a href="Netsys.html#VALgread"><code class="code">Netsys.gread</code></a> and <a href="Netsys.html#VALgwrite"><code class="code">Netsys.gwrite</code></a> (or by some of the provided
+variants of these functions). These functions need <code class="code">st</code> as input,
+and internally call the right system function to do the requested
+I/O operation.
+<p>
+
+There is also <a href="Netsys.html#VALgshutdown"><code class="code">Netsys.gshutdown</code></a> for shutting a descriptor down
+(possibly only half-way), and <a href="Netsys.html#VALgclose"><code class="code">Netsys.gclose</code></a> for closing a
+descriptor.
+<p>
+
+In order to wait for a <b>single</b> descriptor, one can call one of the
+<a href="Netsys.html"><code class="code">Netsys</code></a> functions doing so, e.g. <a href="Netsys.html#VALwait_until_readable"><code class="code">Netsys.wait_until_readable</code></a>.
+These functions block execution until the requested I/O operation
+is possible, or until a timeout elapses.
+<p>
+
+If <b>several</b> descriptors need to be waited for, there is the
+portable class type <a href="Netsys_pollset.pollset-c.html"><code class="code">Netsys_pollset.pollset</code></a>. One can add several
+descriptors to pollsets and wait until I/O operations for one of the
+descriptors become possible. There are implementations for both POSIX
+and Win32. <a href="Netsys_pollset_generic.html#VALstandard_pollset"><code class="code">Netsys_pollset_generic.standard_pollset</code></a> automatically
+selects the best pollset implementation for "normal use".
+<p>
+
+For porting programs that are still written around <code class="code">Unix.select</code>,
+there is an emulation of <code class="code">select</code> on top of pollsets:
+<a href="Netsys_pollset_generic.html#VALselect_emulation"><code class="code">Netsys_pollset_generic.select_emulation</code></a>.
+<br>
+</body></html>

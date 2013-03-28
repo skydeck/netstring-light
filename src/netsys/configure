@@ -1,0 +1,388 @@
+#! /bin/sh
+
+netsys_link_options=""
+have_posix_shm=0
+have_posix_sem_anon=0
+have_posix_sem_named=0
+have_posix_fadvise=0
+have_posix_fallocate=0
+have_posix_memalign=0
+have_posix_pthread=0
+have_printexc_register_printer=0
+have_printexc_register_printer_bool=false
+code_printexc_register_printer='()'
+have_ocaml_fancy_page_tables=0
+have_syslog=0
+have_at=0
+have_fchdir=0
+have_fdopendir=0
+
+win32=0
+
+stdlib=`ocamlc -where`
+
+rm -f config.h
+ulimit -c 0          # no coredumps
+
+######################################################################
+
+# Programs linked with ocamlc have more libraries linked in by default.
+# Because of this, we use ocamlopt if available.
+
+call_ocamlc () {
+    if ocamlopt; then
+	if [ -z "$opts" ]; then
+	    echo '$' ocamlopt "$@"
+	    ocamlopt "$@"
+	else
+	    echo '$' ocamlopt "$@" -cclib "$opts"
+	    ocamlopt "$@" -cclib "$opts"
+	fi
+    else
+	if [ -z "$opts" ]; then
+	    echo '$' ocamlc -custom "$@"
+	    ocamlc -custom "$@"
+	else
+	    echo '$' ocamlc -custom "$@" -cclib "$opts"
+	    ocamlc -custom "$@" -cclib "$opts"
+	fi
+    fi
+}
+
+
+compile () {
+    # arg 1: name of test. There must be a test program configtests/<name>.c
+    # var "cclib": optional params for -cclib. It is first tried to link
+    #    with only $netsys_link_options, and if this does not work, $cclib
+    #    is prepended
+
+    compiles=0
+    new_link_opts=""
+    opts=""
+    if [ -n "$netsys_link_options" ]; then
+	opts="$netsys_link_options"
+    fi
+
+    rm -f configtests/"$1.err"
+    if ( cd configtests; call_ocamlc -o "$1" "$1.c" main.ml ) \
+	>> configtests/"$1.err" 2>&1
+    then
+	compiles=1
+    else
+	if [ -n "$cclib" ]; then
+	    if [ -n "$netsys_link_options" -o -n "$cclib" ]; then
+		opts="$cclib $netsys_link_options"
+	    fi
+	    if ( cd configtests; call_ocamlc -o "$1" "$1.c" main.ml ) \
+		>> configtests/"$1.err" 2>&1
+	    then
+		compiles=1
+		new_link_opts="$cclib"
+	    fi
+	fi
+    fi
+
+    if [ $compiles -gt 0 ]; then
+	echo "ocamlc: compiles OK" >> configtests/"$1.err"
+	echo '$' "./$1" >> configtests/"$1.err"
+	    # NB. We need sh here to prevent that messages like
+	    # "Segmentation fault" appear on the terminal.
+	if ( cd configtests;  exec >> "$1.err" 2>&1; sh -c "./$1" ) 
+	then
+	    echo "program executes successfully" >> configtests/"$1.err"
+	    if [ -n "$new_link_opts" ]; then
+		netsys_link_options="$new_link_opts $netsys_link_options"
+	    fi
+	    return 0
+	fi
+    fi
+    return 1
+}
+
+
+compile_emit () {
+    # arg 1: name of test. There must be a test program configtests/<name>.c
+    # arg 2: name of symbol for config.h
+
+    if compile "$1"; then
+	echo "found"
+	echo "#define $2" >>config.h
+    else
+	echo "not found"
+	echo "#undef $2" >>config.h
+    fi
+}
+
+######################################################################
+
+printf "Checking for win32... "
+system=`ocamlc -config | grep system | sed -e 's/system: //'`
+case "$system" in
+    mingw|msvc)
+	  echo "yes"
+	  win32=1
+          netsys_link_options="$netsys_link_options -lws2_32" ;;
+	*)
+	  echo "no"  ;;
+esac
+
+
+######################################################################
+
+rm -f configtests/printexc_register_printer.err
+printf "Checking whether Ocaml has Printexc.register_printer... "
+if ( cd configtests; ocamlc -c printexc_register_printer.ml ) \
+     >>configtests/printexc_register_printer.err 2>&1
+then
+    have_printexc_register_printer=1
+    have_printexc_register_printer_bool=true
+    code_printexc_register_printer='Printexc.register_printer f'
+fi
+
+if [ $have_printexc_register_printer -gt 0 ]; then
+    echo "found"
+else
+    echo "not found"
+fi
+
+
+######################################################################
+
+printf "Checking for POSIX pthread... "
+
+# Following test is stolen from Ocaml's configure script:
+posix_pthr_link_options=""
+case `uname -s` in
+    SunOS)         posix_pthr_link_options="-lpthread -lposix4" ;;
+    FreeBSD)       posix_pthr_link_options="-pthread" ;;
+    OpenBSD)       posix_pthr_link_options="-pthread" ;;
+    *)             posix_pthr_link_options="-lpthread" ;;
+esac
+
+cclib="$posix_pthr_link_options"
+compile_emit posix_pthread HAVE_PTHREAD
+
+######################################################################
+
+printf "Checking whether Ocaml has fancy page tables... "
+
+cclib=""
+compile_emit ocaml_fancy_page_tables FANCY_PAGE_TABLES
+
+######################################################################
+
+printf "Checking for POSIX shared memory... "
+
+cclib="-lrt"
+compile_emit posix_shm HAVE_POSIX_SHM
+
+######################################################################
+
+if [ $win32 -gt 0 ]; then
+    # For some strange reason the test does not work on win32. So
+    # force to skip this.
+    echo "#undef HAVE_POSIX_SEM_ANON" >> config.h
+    echo "#undef HAVE_POSIX_SEM_NAMED" >> config.h
+else
+
+    printf "Checking for POSIX semaphores (anonymous)... "
+
+    cclib="-lrt"
+    compile_emit posix_sem_anon HAVE_POSIX_SEM_ANON
+    
+    printf "Checking for POSIX semaphores (named)... "
+    
+    cclib="-lrt"
+    compile_emit posix_sem_named HAVE_POSIX_SEM_NAMED
+fi
+
+######################################################################
+
+printf "Checking for POSIX spawn... "
+
+cclib=""
+compile_emit posix_spawn HAVE_POSIX_SPAWN
+
+######################################################################
+
+printf "Checking for POSIX fadvise... "
+
+cclib=""
+compile_emit posix_fadvise HAVE_POSIX_FADVISE
+
+######################################################################
+
+printf "Checking for POSIX fallocate... "
+
+cclib=""
+compile_emit posix_fallocate HAVE_POSIX_FALLOCATE
+
+######################################################################
+
+printf "Checking for POSIX memalign... "
+
+cclib=""
+compile_emit posix_memalign HAVE_POSIX_MEMALIGN
+
+######################################################################
+
+printf "Checking for syslog... "
+
+cclib=""
+compile_emit syslog HAVE_SYSLOG
+
+######################################################################
+
+printf "Checking for POSIX functions like openat... "
+
+cclib=""
+compile_emit atfunctions HAVE_AT
+
+######################################################################
+
+printf "Checking for fchdir... "
+
+cclib=""
+compile_emit fchdir HAVE_FCHDIR
+
+######################################################################
+
+printf "Checking for fdopendir... "
+
+cclib=""
+compile_emit fdopendir HAVE_FDOPENDIR
+
+######################################################################
+
+printf "Checking for realpath... "
+
+cclib=""
+compile_emit realpath HAVE_REALPATH
+
+######################################################################
+
+printf "Checking for grantpt (System V style PTYs)... "
+
+cclib=""
+compile_emit grantpt HAVE_PTY
+
+######################################################################
+
+printf "Checking for posix_openpt (System V style PTYs)... "
+
+cclib=""
+compile_emit posix_openpt HAVE_PTY_OPENPT
+
+######################################################################
+
+printf "Checking for initgroups..."
+
+cclib=""
+compile_emit initgroups HAVE_INITGROUPS
+
+######################################################################
+
+printf "Checking for POSIX clocks..."
+
+cclib=""
+compile_emit clock_gettime HAVE_CLOCK
+
+######################################################################
+
+printf "Checking for POSIX timers..."
+
+cclib="-lrt"
+compile_emit timer_create HAVE_POSIX_TIMER
+
+######################################################################
+
+printf "Checking for eventfd (Linux)..."
+
+cclib=""
+compile_emit eventfd HAVE_EVENTFD
+
+######################################################################
+
+printf "Checking for timerfd (Linux)..."
+
+cclib=""
+compile_emit timerfd HAVE_TIMERFD
+
+######################################################################
+
+printf "Checking for epoll (Linux)..."
+
+cclib=""
+compile_emit epoll_create HAVE_EPOLL
+
+######################################################################
+
+printf "Checking for compare_and_swap (GCC)..."
+
+cclib=""
+compile_emit gcc_compare_and_swap HAVE_GCC_COMPARE_AND_SWAP
+
+######################################################################
+
+printf "Checking for GPROF... "
+
+if [ -f $stdlib/std_exit.p.cmx ]; then
+    echo "found"
+    def_have_gprof="#define HAVE_GPROF"
+else
+    echo "not found"
+    def_have_gprof="#undef HAVE_GPROF"
+fi
+
+######################################################################
+#
+# Locales: We use nl_langinfo which is not available on Win32.
+# So we just assume we have locales on all other platforms.
+
+if [ $win32 -gt 0 ]; then
+    def_have_locale="#undef HAVE_LOCALE"
+else
+    def_have_locale="#define HAVE_LOCALE"
+fi
+
+######################################################################
+
+printf "Checking for O_SHARE_DELETE... "
+mkdir -p tmp
+cat <<_EOF_ >tmp/t.ml
+let x = Unix.O_SHARE_DELETE;;
+_EOF_
+
+def_o_share_delete="-D NO_O_SHARE_DELETE"
+if ocaml unix.cma tmp/t.ml >/dev/null 2>/dev/null; then
+    echo "yes"
+    def_o_share_delete="-D HAVE_O_SHARE_DELETE"
+else
+    echo "no"
+fi
+
+
+######################################################################
+
+
+cat <<EOF >Makefile.conf
+NETSYS_LINK_OPTIONS = $netsys_link_options
+DEF_O_SHARE_DELETE = $def_o_share_delete
+EOF
+
+cat <<EOF >>config.h
+$def_have_gprof
+$def_have_locale
+EOF
+
+cat <<EOF >netsys_conf.ml
+(* This file is written by netsys/configure *)
+
+let have_printexc_register_printer = $have_printexc_register_printer_bool
+
+let printexc_register_printer f =
+  $code_printexc_register_printer
+
+EOF
+
+exit 0

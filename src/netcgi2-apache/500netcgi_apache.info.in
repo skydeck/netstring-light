@@ -1,0 +1,5 @@
+LoadModule: caml_module @APACHE_LIBDIR@/netcgi_apache.so
+Directives:
+ CamlLoad
+ CamlHandler
+Description: Cgi scripts, apache handlers,... in OCaml

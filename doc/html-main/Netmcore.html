@@ -1,0 +1,544 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Netmech_scram_gssapi.html">
+<link rel="next" href="Netmcore_camlbox.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Types and exceptions" rel="Section" href="#2_Typesandexceptions">
+<link title="Defining processes" rel="Section" href="#2_Definingprocesses">
+<link title="Managing resources from worker processes" rel="Section" href="#2_Managingresourcesfromworkerprocesses">
+<link title="Initialization and system start" rel="Section" href="#2_Initializationandsystemstart">
+<title>Ocamlnet 3 Reference Manual : Netmcore</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Netmech_scram_gssapi.html" title="Netmech_scram_gssapi">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netmcore_camlbox.html" title="Netmcore_camlbox">Next</a>
+</div>
+<h1>Module <a href="type_Netmcore.html">Netmcore</a></h1>
+<pre><span class="keyword">module</span> Netmcore: <code class="code">sig</code> <a href="Netmcore.html">..</a> <code class="code">end</code></pre><div class="info">
+Multi-processing for compute jobs
+<p>
+
+    This library allows it to develop parallel algorithms that can take
+    advantage of multiple CPU cores. It does not use Ocaml's multi-threading
+    feature because this would implicitly serialize all computations.
+    Instead, independent processes are created, and the communication
+    between processes is made as cheap and unproblematic as possible.
+<p>
+
+    Before using this library, it is required to call <a href="Netmcore.html#VALstartup"><code class="code">Netmcore.startup</code></a>.
+    This turns the current process into the master process. The master
+    process has only a supervising function, and is responsible for
+    managing global resources, and for starting further worker processes.
+<p>
+
+    The worker processes can start more workers. This is different from
+    creating a new thread, though: The new worker does not share memory
+    with its creator. It is also different from calling <code class="code">Unix.fork</code>,
+    because new workers are always subprocesses of the master process.
+    This means it is not initialized with a copy of the state of the
+    logical creator, but with its real parent process which is always
+    the master.
+<p>
+
+    Compatibility with multi-threading: You may run into big trouble
+    when the master process starts further threads (after forking 
+    thread-related resources are in an uncontrolled state). There is
+    no such problem in the worker processes. In this library,
+    however, nothing is done to ease the multi-threaded life, so you
+    should carefully check the compatibility first.
+<p>
+
+    <a href="Netmcore.html"><code class="code">Netmcore</code></a> controls the lifetime of certain system resources in
+    addition to worker processes:<ul>
+<li>Temporary files</li>
+<li>Shared memory objects</li>
+<li>Named semaphores</li>
+</ul>
+
+    These objects have kernel persistence, and continue to exist when
+    the program ends. Because of this, there are two mechanisms to
+    control the lifetime, and to delete these objects finally: First,
+    if all using processes terminate normally, an object is deleted.
+    Second, in order to also catch abnormal terminations, these objects
+    are also managed by storing their names into an external file
+    "netplex.pmanage" (in the socket directory). When the program is
+    started the next time with the same socket directory, the objects
+    from the previous run are automatically deleted. The second mechanism
+    can be disabled by setting the<ul>
+<li><code class="code">disable_pmanage</code> parameter for the <a href="Netmcore.html#VALstartup"><code class="code">Netmcore.startup</code></a> call, or by
+      setting the</li>
+<li><code class="code">unlink</code> parameter in the same call. This second option only disables
+      the deletion, but the management file is updated.</li>
+</ul>
+<br>
+</div>
+<hr width="100%">
+<br>
+<h2 id="2_Typesandexceptions">Types and exceptions</h2><br>
+<pre><span id="TYPEres_id"><span class="keyword">type</span> <code class="type"></code>res_id</span> = <code class="type">[ `Resource of int ]</code> </pre>
+<div class="info">
+This tagged integer identifies resources. This variant type will never
+      be extended.<br>
+</div>
+
+<pre><span id="TYPEprocess_id"><span class="keyword">type</span> <code class="type"></code>process_id</span> = <code class="type">[ `Process of int ]</code> </pre>
+<div class="info">
+This tagged integer identifies processes. This variant type will never
+      be extended.
+<p>
+
+      Note that the int argument is not the Unix PID, but just a self-generated
+      identifier that is unique for the lifetime of the program.<br>
+</div>
+
+<pre><span id="TYPEcompute_resource_type"><span class="keyword">type</span> <code class="type"></code>compute_resource_type</span> = <code class="type">[ `File<br>       | `Fork_point<br>       | `Join_point<br>       | `Posix_sem<br>       | `Posix_shm<br>       | `Posix_shm_preallocated<br>       | `Posix_shm_preallocated_sc<br>       | `Posix_shm_sc ]</code> </pre>
+
+<pre><span id="TYPEinherit_request"><span class="keyword">type</span> <code class="type"></code>inherit_request</span> = <code class="type">[ `All | `Resources of <a href="Netmcore.html#TYPEres_id">res_id</a> list ]</code> </pre>
+
+<pre><span id="TYPEcompute_resource_repr"><span class="keyword">type</span> <code class="type"></code>compute_resource_repr</span> = <code class="type">[ `File of string<br>       | `Fork_point of<br>           <a href="Netmcore.html#TYPEinherit_request">inherit_request</a> * <a href="Netplex_encap.html#TYPEencap">Netplex_encap.encap</a> -> <a href="Netmcore.html#TYPEprocess_id">process_id</a><br>       | `Join_point of <a href="Netmcore.html#TYPEprocess_id">process_id</a> -> <a href="Netplex_encap.html#TYPEencap">Netplex_encap.encap</a> option<br>       | `Posix_sem of string<br>       | `Posix_shm of string<br>       | `Posix_shm_preallocated of string * <a href="Netsys_mem.html#TYPEmemory">Netsys_mem.memory</a><br>       | `Posix_shm_preallocated_sc of<br>           string * <a href="Netsys_mem.html#TYPEmemory">Netsys_mem.memory</a> * <a href="Netsys_sem.html#TYPEcontainer">Netsys_sem.container</a><br>       | `Posix_shm_sc of string * <a href="Netsys_sem.html#TYPEprefix">Netsys_sem.prefix</a> ]</code> </pre>
+<div class="info">
+Centrally managed resources include:<ul>
+<li><code class="code">`File name</code>: (Temporary) file <code class="code">name</code> (absolute name)</li>
+<li><code class="code">`Posix_shm name</code>: Shared memory objects with <code class="code">name</code></li>
+<li><code class="code">`Posix_shm_sc(name,p)</code>: Shared memory objects with <code class="code">name</code>, and
+        attached container for semaphores with prefix <code class="code">p</code></li>
+<li><code class="code">`Posix_shm_preallocated(name,m)</code>: Shared memory objects already
+        allocated by the master process. These objects are passed over
+        to the worker processes by inheritance, and are always mapped at
+        the same address. <code class="code">m</code> is the bigarray mapping the object.</li>
+<li><code class="code">`Posix_shm_preallocated_sc(name,m.p)</code>: Same, plus attached
+        container for semaphores with prefix <code class="code">p</code></li>
+<li><code class="code">`Posix_sem name</code>: Semaphores with <code class="code">name</code></li>
+<li><code class="code">`Fork_point(inh,f)</code>: Fork points where <code class="code">let pid=f arg</code> fork a new process
+        with argument <code class="code">arg</code>. <code class="code">pid</code> is the process identifier. The list <code class="code">inh</code>
+        are resources inherited from the master.</li>
+<li><code class="code">`Joint_point f</code>: Joint points where <code class="code">let res=f pid</code> wait until
+        the process <code class="code">pid</code> terminates. If <code class="code">res</code> is non-<code class="code">None</code> it is the
+        result value. If it is <code class="code">None</code>, no result was passed back
+        (including all pathological cases like crashes)</li>
+</ul>
+
+      Except fork and join points, these resources are also added to
+      the pmanage object of Netplex (see <a href="Netplex_cenv.html#VALpmanage"><code class="code">Netplex_cenv.pmanage</code></a> and
+      <a href="Netsys_pmanage.html"><code class="code">Netsys_pmanage</code></a>).<br>
+</div>
+
+<pre><span id="EXCEPTIONNo_resource"><span class="keyword">exception</span> No_resource</span> <span class="keyword">of</span> <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a></code></pre>
+<div class="info">
+No such resource, or no resource of the expected type<br>
+</div>
+<pre><span id="TYPEcompute_resource"><span class="keyword">class type</span> <a href="Netmcore.compute_resource-c.html">compute_resource</a></span> = <code class="code">object</code> <a href="Netmcore.compute_resource-c.html">..</a> <code class="code">end</code></pre><br>
+<h2 id="2_Definingprocesses">Defining processes</h2><br>
+<br>
+This is the lower-level version of the process API where arguments
+    and results of processes are dynamically typed. It may have some
+    uses when writing generic process managers, but for the
+    normal application the statically typed API in <a href="Netmcore_process.html"><code class="code">Netmcore_process</code></a>
+    is easier to use (and less verbose).<br>
+<pre><span id="VALdef_process"><span class="keyword">val</span> def_process</span> : <code class="type">(<a href="Netplex_encap.html#TYPEencap">Netplex_encap.encap</a> -> <a href="Netplex_encap.html#TYPEencap">Netplex_encap.encap</a>) -><br>       <a href="Netmcore.html#TYPEres_id">res_id</a> * <a href="Netmcore.html#TYPEres_id">res_id</a></code></pre><div class="info">
+<code class="code">let fork_point, join_point = def_process f</code>:
+      Defines process types, i.e. ways of starting and finishing processes. 
+      The definition must be done in the master process, e.g. before the first
+      worker is started. 
+<p>
+
+      Once the process type is defined, new processes can be started,
+      and these processes will run the function <code class="code">f</code>. When <code class="code">f</code> is 
+      finished, the process will terminate. Starting processes is possible
+      from other worker processes.
+<p>
+
+      <code class="code">f</code> is supplied with its argument by the process starter <code class="code">start</code>.
+      The result value of <code class="code">f</code> can be retrieved with <code class="code">join</code> (by any
+      process, but only the first <code class="code">join</code> for this process will be successful).
+<p>
+
+      If <code class="code">f</code> throws exceptions, these will be caught and logged, but not
+      be passed back to the caller (which just gets <code class="code">None</code> as result
+      of <code class="code">join</code>). The same happens for any unplanned termination of the
+      process.
+<p>
+
+      It is allowed to immediately release the <code class="code">join_point</code> if there is
+      no interest in catching the termination of started processes.
+<p>
+
+      Here is an example how to define a process that takes a <code class="code">string</code>
+      argument and returns an <code class="code">int</code>:
+<p>
+
+      <pre class="codepre"><code class="code">      module String_encap = Netplex_encap.Make_encap(struct type t=string end)
+      module Int_encap = Netplex_encap.Make_encap(struct type t=int end)
+
+      let my_process_fork, my_process_join =
+        Netmcore.def_process
+          (fun s_encap -&gt;
+            let (s:string) = String_encap.unwrap s_encap in
+            let (r:int) = ... in
+            Int_encap.wrap r
+          )
+      </code></pre>
+<p>
+
+      The wrapping and unwrapping is required for ensuring type-safety
+      (see <a href="Netplex_encap.html"><code class="code">Netplex_encap</code></a> for the details of the idea).
+<p>
+
+      Calling this process is done with (also see below):
+<p>
+
+      <pre class="codepre"><code class="code">      let pid = Netmcore.start my_process_fork (String_encap.wrap s) in
+      let r_encap_opt = Netmcore.join my_process_join pid in
+      match r_encap_opt with
+        | None -&gt; failwith "Something went wrong"
+        | Some r_encap -&gt; Int_encap.unwrap r_encap
+      </code></pre><br>
+</div>
+<br>
+The following functions can also be called from worker processes
+    (i.e. Netplex containers)<br>
+<pre><span id="VALstart"><span class="keyword">val</span> start</span> : <code class="type">?inherit_resources:<a href="Netmcore.html#TYPEinherit_request">inherit_request</a> -><br>       <a href="Netmcore.html#TYPEres_id">res_id</a> -> <a href="Netplex_encap.html#TYPEencap">Netplex_encap.encap</a> -> <a href="Netmcore.html#TYPEprocess_id">process_id</a></code></pre><div class="info">
+<code class="code">let pid = start fork_point arg</code>: Starts the process with the
+      given <code class="code">fork_point</code> and the argument <code class="code">arg</code>.
+<p>
+
+      Raises <code class="code">No_resource</code> if there is no such resource.
+<p>
+
+      The function returns a process identifier. This is not the Unix
+      PID, but a sequentially generated number that is unique for a
+      running program.
+<p>
+
+      Option <code class="code">inherit_resources</code>: Certain resources are only accessible by
+      the process when they are inherited to it. This is the case for
+      <code class="code">`Posix_shm_preallocated</code>. This can be set to <code class="code">`All</code> to inherit
+      all inheritable resources, or to <code class="code">`Resources l</code> to only inherit
+      the resources of <code class="code">l</code>. By default, all resources are inherited.
+      (This changed in Ocamlnet-3.5 - before, no resources were inherited,
+      which turned out to be quite dangerous as default.)<br>
+</div>
+<pre><span id="VALjoin"><span class="keyword">val</span> join</span> : <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a> -> <a href="Netmcore.html#TYPEprocess_id">process_id</a> -> <a href="Netplex_encap.html#TYPEencap">Netplex_encap.encap</a> option</code></pre><div class="info">
+<code class="code">let res_opt = join join_point pid</code>: Waits until the process <code class="code">pid</code>
+      is done, and returns the result value if any.
+<p>
+
+      Raises <code class="code">No_resource</code> if there is no such resource.<br>
+</div>
+<br>
+<h2 id="2_Managingresourcesfromworkerprocesses">Managing resources from worker processes</h2><br>
+<br>
+The following functions can also be called from worker processes
+    (i.e. Netplex containers)<br>
+<pre><span id="VALget_resource"><span class="keyword">val</span> get_resource</span> : <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a> -> <a href="Netmcore.compute_resource-c.html">compute_resource</a></code></pre><div class="info">
+Retrieves the resource by ID. This implicitly also marks this resource
+      as being used by this process. Don't forget to call <code class="code">release</code> when
+      your are done with the resource.
+<p>
+
+      Raises <code class="code">No_resource</code> if there is no such resource.<br>
+</div>
+<pre><span id="VALrelease"><span class="keyword">val</span> release</span> : <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a> -> unit</code></pre><div class="info">
+Release the resource with this ID. (Same as calling the <code class="code">release</code>
+      method on the object.)<br>
+</div>
+<pre><span id="VALmanage_file"><span class="keyword">val</span> manage_file</span> : <code class="type">string -> <a href="Netmcore.compute_resource-c.html">compute_resource</a></code></pre><div class="info">
+hands over a file to the manager<br>
+</div>
+<pre><span id="VALget_file"><span class="keyword">val</span> get_file</span> : <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a> -> string</code></pre><div class="info">
+Gets the file with this ID (or raises <code class="code">No_resource</code>). As for
+      <code class="code">get_resource</code> the file is marked as being used by the process.<br>
+</div>
+<pre><span id="VALmanage_shm"><span class="keyword">val</span> manage_shm</span> : <code class="type">string -> <a href="Netmcore.compute_resource-c.html">compute_resource</a></code></pre><div class="info">
+hands over a named shm object to the manager<br>
+</div>
+<pre><span id="VALmanage_shm_sc"><span class="keyword">val</span> manage_shm_sc</span> : <code class="type">string -> <a href="Netsys_sem.html#TYPEcontainer">Netsys_sem.container</a> -> <a href="Netmcore.compute_resource-c.html">compute_resource</a></code></pre><div class="info">
+hands over a named shm object plus semaphore container to the manager<br>
+</div>
+<pre><span id="VALget_shm"><span class="keyword">val</span> get_shm</span> : <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a> -> string</code></pre><div class="info">
+Gets the shm object with this ID (or raises <code class="code">No_resource</code>). As
+      for <code class="code">get_resource</code> the shm object is marked as being used by the process.<br>
+</div>
+<pre><span id="VALget_sem_container"><span class="keyword">val</span> get_sem_container</span> : <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a> -> <a href="Netsys_sem.html#TYPEcontainer">Netsys_sem.container</a></code></pre><div class="info">
+Get the semaphore container<br>
+</div>
+<br>
+Shared memory objects can be created with <a href="Netsys_posix.html#VALshm_create"><code class="code">Netsys_posix.shm_create</code></a>,
+    and opened with <a href="Netsys_posix.html#VALshm_open"><code class="code">Netsys_posix.shm_open</code></a>.<br>
+<pre><span id="VALcreate_preallocated_shm"><span class="keyword">val</span> create_preallocated_shm</span> : <code class="type">?value_area:bool -> string -> int -> <a href="Netmcore.html#TYPEres_id">res_id</a> * string</code></pre><div class="info">
+<code class="code">create_preallocated_shm prefix size</code>: Creates a new preallocated
+      shm object with a unique name based on <code class="code">prefix</code>, and a length of
+      <code class="code">size</code> bytes. The object is created and mapped into the master
+      process, and will be available to any newly started process when
+      the resource ID is inherited to the process.
+<p>
+
+      Returns <code class="code">(res_id,shm_name)</code> where <code class="code">res_id</code> identifies the new
+      resource, and <code class="code">shm_name</code> is the name of the POSIX shared memory
+      object.
+<p>
+
+      Note that the process calling this function cannot look up this
+      resource (using <code class="code">get_shm</code> or <code class="code">get_resource</code>) because the shm
+      block cannot be mapped at the right address. Nevertheless, the calling
+      process counts as a user of the object, and needs to release
+      the object.
+<p>
+
+      Option <code class="code">value_area</code>: if set, the new memory is marked as value
+      area, so the ocaml runtime allows value comparisons in this
+      memory area.<br>
+</div>
+<pre><span id="VALcreate_preallocated_shm_sc"><span class="keyword">val</span> create_preallocated_shm_sc</span> : <code class="type">?value_area:bool -><br>       string -> int -> <a href="Netmcore.html#TYPEres_id">res_id</a> * string * <a href="Netsys_sem.html#TYPEcontainer">Netsys_sem.container</a></code></pre><div class="info">
+Same as <code class="code">create_preallocated_shm</code> with the extension that 
+      a semaphore container is also allocated and returned<br>
+</div>
+<pre><span id="VALmanage_sem"><span class="keyword">val</span> manage_sem</span> : <code class="type">string -> <a href="Netmcore.compute_resource-c.html">compute_resource</a></code></pre><div class="info">
+hands over a named semaphore to the manager<br>
+</div>
+<pre><span id="VALget_sem"><span class="keyword">val</span> get_sem</span> : <code class="type"><a href="Netmcore.html#TYPEres_id">res_id</a> -> string</code></pre><div class="info">
+gets the semaphore with this ID (or raises <code class="code">No_resource</code>). As
+      for <code class="code">get_resource</code> the semaphore is marked as being used by the process.<br>
+</div>
+<br>
+Semaphores can be opened with <a href="Netsys_posix.html#VALsem_open"><code class="code">Netsys_posix.sem_open</code></a>, and
+    created with <a href="Netsys_posix.html#VALsem_create"><code class="code">Netsys_posix.sem_create</code></a>.<br>
+<pre><span id="VALself_process_id"><span class="keyword">val</span> self_process_id</span> : <code class="type">unit -> <a href="Netmcore.html#TYPEprocess_id">process_id</a></code></pre><div class="info">
+Returns the process ID of a worker<br>
+</div>
+<br>
+<h2 id="2_Initializationandsystemstart">Initialization and system start</h2><br>
+<br>
+This module can either be used as Netplex plugin and integrated into
+    any existing Netplex program, or it can be started in stand-alone mode<br>
+<pre><span id="VALadd_plugins"><span class="keyword">val</span> add_plugins</span> : <code class="type"><a href="Netplex_types.controller-c.html">Netplex_types.controller</a> -> unit</code></pre><div class="info">
+To enable compute processes for any Netplex program, call this
+      function with the controller object as argument. This can e.g. 
+      be done in the <code class="code">post_add_hook</code> of the processor.<br>
+</div>
+<pre><span id="VALstartup"><span class="keyword">val</span> startup</span> : <code class="type">socket_directory:string -><br>       ?pidfile:string -><br>       ?init_ctrl:(<a href="Netplex_types.controller-c.html">Netplex_types.controller</a> -> unit) -><br>       ?disable_pmanage:bool -><br>       ?no_unlink:bool -><br>       first_process:(unit -> <a href="Netmcore.html#TYPEprocess_id">process_id</a>) -> unit -> unit</code></pre><div class="info">
+This function makes the current process the master process.
+      It starts immediately a new worker process, called the 
+      first process. The <code class="code">startup</code> function returns first when this
+      process is finished, in which case the whole Netplex system is
+      shut down (which may lead to killing the remaining processes,
+      following the usual shutdown procedure).
+<p>
+
+      The first process is created by calling <code class="code">first_process()</code> at the
+      right moment. This function normally just invokes <code class="code">start</code>.
+<p>
+
+      Passing a <code class="code">socket_directory</code> is mandatory. This directory will
+      contain helper files. The must be a separate <code class="code">socket_directory</code>
+      for each running Computeplex instance.
+<p>
+
+      <code class="code">pidfile</code>: If passed, the Unix PID of the master process is written
+      to this file.
+<p>
+
+      <code class="code">disable_pmanage</code>: Disable that persistent kernel objects are
+      managed via the "netplex.pmanage" file in the socket directory.
+<p>
+
+      <code class="code">no_unlink</code>: Disable that old persistent kernel objects are deleted at
+      startup. This may be useful when <code class="code">startup</code> is called a second time
+      from the same program.<br>
+</div>
+<pre><span id="VALdestroy_resources"><span class="keyword">val</span> destroy_resources</span> : <code class="type">unit -> unit</code></pre><div class="info">
+Destroys all resources that may be left<br>
+</div>
+<pre><span class="keyword">module</span> <a href="Netmcore.Debug.html">Debug</a>: <code class="code">sig</code> <a href="Netmcore.Debug.html">..</a> <code class="code">end</code></pre></body></html>

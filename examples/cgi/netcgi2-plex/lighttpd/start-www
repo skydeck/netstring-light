@@ -1,0 +1,3 @@
+#! /bin/sh
+
+~/lib/lighttpd-1.4.10/sbin/lighttpd -D -f ./lighttpd.conf

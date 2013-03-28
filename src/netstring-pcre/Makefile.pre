@@ -1,0 +1,27 @@
+# -*- makefile-mode -*-
+TOP_DIR=../..
+
+PRE = 1
+PKGNAME = netstring-pcre
+GENERATE = netstring_pcre.mli netstring_pcre.ml META
+#PACKLIST = netstring-pcre-packlist
+#INSTALL_EXTRA = netstring-pcre-packlist
+
+#OCAMLDEP_OPTIONS = -syntax camlp4o -package camlp4.macro
+
+include $(TOP_DIR)/Makefile.rules
+
+CLEAN_LIST += $(GENERATE)
+
+netstring_pcre.mli: netstring_pcre.mlip
+	$(CAMLP4)  pa_o.cmo pa_op.cmo pr_o.cmo \
+	    -parser Camlp4MacroParser $(REGEXP_DEFS) \
+	    -intf netstring_pcre.mlip > netstring_pcre.mli || \
+	      rm -f netstring_pcre.mli
+
+netstring_pcre.ml: netstring_pcre.mlp
+	$(CAMLP4)  pa_o.cmo pa_op.cmo pr_o.cmo \
+	    -parser Camlp4MacroParser $(REGEXP_DEFS) \
+	    -impl netstring_pcre.mlp > netstring_pcre.ml || \
+	      rm -f netstring_pcre.ml
+

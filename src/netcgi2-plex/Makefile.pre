@@ -1,0 +1,7 @@
+TOP_DIR=../..
+
+PRE = 1
+PKGNAME = netcgi2-plex
+GENERATE = META
+
+include $(TOP_DIR)/Makefile.rules

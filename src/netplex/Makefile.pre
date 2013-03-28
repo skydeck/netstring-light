@@ -1,0 +1,37 @@
+TOP_DIR=../..
+
+PRE = 1
+PKGNAME = netplex
+GENERATE = netplex_ctrl_aux.ml netplex_ctrl_clnt.ml netplex_ctrl_srv.ml META
+PACKLIST = netplex-packlist
+RPCGEN = ../rpc-generator/ocamlrpcgen
+
+INSTALL_EXTRA = netplex-packlist netplex_mt.cmo netplex_mt.cmx netplex_mt.o \
+		netplex_mt.p.cmx netplex_mt.p.o
+INSTOTHER = install-netplex-admin
+
+PP_OPTIONS = -syntax camlp4o -package camlp4
+
+include $(TOP_DIR)/Makefile.rules
+
+CLEAN_LIST += netplex-admin$(EXEC_SUFFIX) \
+	      netplex_ctrl_aux.mli netplex_ctrl_clnt.mli netplex_ctrl_srv.mli
+
+netplex_ctrl_aux.ml: netplex_ctrl.x
+	$(RPCGEN) -aux netplex_ctrl.x -int unboxed -direct
+
+netplex_ctrl_clnt.ml: netplex_ctrl.x
+	$(RPCGEN) -clnt netplex_ctrl.x -int unboxed -direct
+
+netplex_ctrl_srv.ml: netplex_ctrl.x
+	$(RPCGEN) -srv2 netplex_ctrl.x -int unboxed -direct
+
+.PHONY: install-netplex-admin
+
+install-netplex-admin:
+	mkdir -p "$(DESTDIR)$(BINDIR)"
+	cp netplex-admin$(EXEC_SUFFIX) "$(DESTDIR)$(BINDIR)"
+	@echo "Installed netplex-admin$(EXEC_SUFFIX) into $(DESTDIR)$(BINDIR)"
+
+clean::
+	cd tests && $(MAKE) clean

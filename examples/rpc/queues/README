@@ -1,0 +1,159 @@
+----------------------------------------------------------------------
+File Queues:
+----------------------------------------------------------------------
+
+This is a quite complicated example. The qserver manages several queues
+of files. The qclient accesses these queues via RPC.
+
+
+*** Configuration ***
+
+You must change qserver.ml in order to configure the qserver. There is
+one option of interest in the source code: The variable "spooldir"
+right at the beginning.  Set it to the directory where the queues will
+reside.
+
+This directory must exist, and the user running qserver must have 
+read and write permissions.
+
+Furthermore, you must set the authentication style:
+
+- auth_sys: Insecure "system authentication" (included only for purposes
+  of an example). This is the default.
+
+- auth_dh: Secure RPC - needs the keyserv daemon, however, and Secure
+  RPC utilities.
+
+- auth_ssl: RPC over SSL.
+
+The Makefile variable AUTH_MODULE must be set accordingly (in Makefile.code).
+
+See the comments on the authentication modules below.
+
+
+
+*** Overview ***
+
+qclient supports the following commands:
+
+qclient queues   [ -help | options ]          - List queues
+qclient create   [ -help | options ]          - Create a new queue
+qclient destroy  [ -help | options ]          - Destroy a queue
+qclient status   [ -help | options ]          - Show the status of a queue
+qclient set      [ -help | options ]          - Set queue parameters
+qclient list     [ -help | options ]          - List queue members
+qclient add      [ -help | options ]          - Upload a file and add to queue
+qclient pop      [ -help | options ]          - Download a file from queue
+qclient cancel   [ -help | options ]          - Cancel queue members
+
+Note that new files always added at the end of a queue, and that files
+are popped from the beginning of a queue.
+
+You can set the environment variable QCLIENT_HOST to set a default for
+the host to contact (which server to contact).
+
+
+*** Features ***
+
+There may be additional properties with every file. Properties are lists
+of (key,value) pairs. A number of properties are predefined (see 
+qserver.ml, or just try).
+
+The commands will block if the request cannot be immediately fulfilled, but
+probably in the future. For example, if you try to pop a file from an
+empty queue, the client blocks until a file is available. It is possible
+to specify timeouts.
+
+The queues can be active and inactive. After creation the queues are
+inactive (because you may want to set further parameters before starting
+operation). If inactive, every operation is rejected. 
+
+An active queue may accept new files or not accept them. In the latter
+case, the attempt to add a new file blocks the client until the queue
+accepts files.
+
+An active queue may deliver files or do not deliver them. In the latter
+case, the attempt to download a file blocks the client until delivery
+is again turned on.
+
+It is possible to specify a maximum length for a queue. The client will
+block if it tries to add further files.
+
+You can set the state (active/inactive etc.) and other parameters with
+"qclient set".
+
+
+*** Authorization ***
+
+Everybody ( = every authenticated user) can list the queues and obtain
+status information. Everybody can create a new queue.
+
+Only the owner of a queue can do the other operations. The owner is
+the creator of a queue.
+
+
+======================================================================
+Authentication module auth_sys
+======================================================================
+
+This style of authentication does not use any verification, and is
+inscure because of this. However, it works out of the box.
+
+======================================================================
+Authentication module auth_dh
+======================================================================
+
+qserver and qclient authenticate each other by Secure RPC. I made this
+the default because the example profits from the existing authentication 
+infrastructure, and I don't have to reinvent the wheel. However, you
+have to make sure:
+
+- That the keyserv daemon is running
+- For every user keylogin has been executed
+
+You don't need a working NIS environment, though. (Linux users:
+Install the nis-utils package.)
+
+If you get errors from Rpc_key_service there is a problem with the key
+server. See also the file README.authdh.
+
+The environment variable QCLIENT_NETNAME should be set to the netname
+of the server, otherwise the client cannot authenticate. By default,
+the netname "unix.<host>@<domain>" is assumed, but this may be wrong,
+especially if the server is not run as root. In this case, try
+"unix.<uid>@<domain>" where <uid> is the numeric user ID of the server.
+
+Note that Secure RPC is not supported on all operating systems.
+
+
+Checklist if not working:
+
+- the domainname must be set (command "domainname")
+- keyserv must be running
+- qserver should run as root
+- qclient must run as non-privileged user
+- this user must be logged in at keyserv (using keylogin)
+- try host -host <hostname> option of qclient
+
+======================================================================
+Authentication module auth_ssl
+======================================================================
+
+Certificates are used for authentication.
+
+You need the following files (all in PEM format):
+
+- ca.crt: The root certificate (for both client and server)
+
+- server.crt: The server certificate
+
+- server.key: The server private key (w/o password)
+
+- client.crt: The client certificate
+
+- client.key: The client private key (w/o password)
+
+Put these files into the current working directory.
+
+
+The DN of the client cert is the user name.

@@ -1,0 +1,577 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rpc_auth_gssapi.html">
+<link rel="next" href="Rpc_intro.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="The Rpc_proxy tutorial" rel="Section" href="#tut">
+<link title="Managed clients" rel="Subsection" href="#mclient">
+<link title="Managed Sets" rel="Subsection" href="#2_ManagedSets">
+<link title="Caching reliability data" rel="Subsection" href="#2_Cachingreliabilitydata">
+<link title="Idempotent calls" rel="Subsection" href="#2_Idempotentcalls">
+<title>Ocamlnet 3 Reference Manual : Rpc_proxy</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rpc_auth_gssapi.html" title="Rpc_auth_gssapi">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Rpc_intro.html" title="Rpc_intro">Next</a>
+</div>
+<h1>Module <a href="type_Rpc_proxy.html">Rpc_proxy</a></h1>
+<pre><span class="keyword">module</span> Rpc_proxy: <code class="code">sig</code> <a href="Rpc_proxy.html">..</a> <code class="code">end</code></pre><div class="info">
+RPC proxies<br>
+</div>
+<hr width="100%">
+<br>
+The <code class="code">Rpc_proxy</code> module provides an improved reliability layer on
+    top of <a href="Rpc_client.html"><code class="code">Rpc_client</code></a>. This layer especially features:<ul>
+<li>automatic connection management: TCP connections are started
+       and terminated as needed</li>
+<li>multiple connections can be held in parallel to a remote
+       server to increase concurrency on the server</li>
+<li>failover to other servers when the orignal servers time out</li>
+<li>support for an initial ping at connection establishment time
+       to test the availability of the connection</li>
+<li>retransmission of idempotent RPC calls</li>
+</ul>
+
+    Proxies can only handle stream connections (TCP and Unix Domain).
+    Also, the remote endpoints must already be specified by socket
+    addresses. (No portmapper and other indirect lookup methods.)
+<p>
+
+    The proxy functionality is implemented in two layers, the managed
+    clients, and the managed sets. The former layer can handle only
+    one TCP connection (with reconnect), whereas the latter is able to
+    manage a bunch of connections to the same service.  Both layers
+    can profit from a reliability cache that knows which services had
+    errors in the past.
+<p>
+
+    See below for a tutorial.
+<p>
+
+    There is also a blog article explaining RPC proxies:
+    <a href="http://blog.camlcity.org/blog/ocamlnet3_ha.html"> The next server,
+    please!</a><br>
+<pre><span class="keyword">module</span> <a href="Rpc_proxy.ReliabilityCache.html">ReliabilityCache</a>: <code class="code">sig</code> <a href="Rpc_proxy.ReliabilityCache.html">..</a> <code class="code">end</code></pre><pre><span class="keyword">module</span> <a href="Rpc_proxy.ManagedClient.html">ManagedClient</a>: <code class="code">sig</code> <a href="Rpc_proxy.ManagedClient.html">..</a> <code class="code">end</code></pre><pre><span class="keyword">module</span> <a href="Rpc_proxy.ManagedSet.html">ManagedSet</a>: <code class="code">sig</code> <a href="Rpc_proxy.ManagedSet.html">..</a> <code class="code">end</code></pre><br>
+<h1 id="tut">The <code class="code">Rpc_proxy</code> tutorial</h1>
+<p>
+
+    <h2 id="mclient">Managed clients</h2>
+<p>
+
+    A normal RPC client has a very limited lifecylce: It is created,
+   then a connection is made to an RPC service, messages are exchanged,
+   and finally the connection is terminated. After that the client
+   becomes unusable. In short, it is "use once" client.
+<p>
+
+   In contrast to this, managed clients can be recycled. This is
+   especially useful for dealing with socket errors, and 
+   connection terminations triggered by the RPC server.
+<p>
+
+   <b>How to use managed clients:</b> For a <i>normal</i> RPC client the
+   generator <code class="code">ocamlrpcgen</code> creates all required glue code to easily
+   start RPC calls. For example, if a file <code class="code">proto.x</code> is taken as input
+   for <code class="code">ocamlrpcgen</code>, a piece of code doing a call could look like:
+<p>
+
+   <pre class="codepre"><code class="code"> 
+      let client =
+        Proto_clnt.PROG.VERS.create_client connector protocol
+      let result =
+        Proto_clnt.PROG.VERS.procedure client argument
+   </code></pre>
+<p>
+
+   (Here, <code class="code">PROG</code>, <code class="code">VERS</code>, <code class="code">procedure</code> are just placeholders for the
+   name of the program, the version identifier, and the procedure name.)
+<p>
+
+   For RPC proxies, however, this is slightly more complicated. <code class="code">ocamlrpcgen</code>
+   does not produce a managed client that is ready for use. Instead,
+   only a functor is provided that can take the
+   <code class="code">Rpc_proxy.ManagedlClient</code> module as input:
+<p>
+
+   <pre class="codepre"><code class="code">      module M = Proto_clnt.Make'PROG(Rpc_proxy.ManagedClient)
+
+      let esys =
+        Unixqueue.create_unix_event_system()
+      let mclient_config =
+        Rpc_proxy.ManagedClient.create_mclient_config
+          ~programs:[ Proto_clnt.PROG.VERS._program ]
+          () in
+      let mclient =
+        Rpc_proxy.ManagedClient.create_mclient mclient_config connector esys
+      let result =
+        M.VERS.procedure mclient argument
+   </code></pre>
+<p>
+
+   (The functor approach has been chosen, because it gives the
+   user more flexibility - it is possible to apply the functor
+   on other implementations of improved clients than 
+   <a href="Rpc_proxy.ManagedClient.html"><code class="code">Rpc_proxy.ManagedClient</code></a>.)
+<p>
+
+   Note that <code class="code">esys</code> is always explicit, even in the case the
+   user only performs synchronous calls - the user should create
+   a new <code class="code">esys</code> then, pass it to <code class="code">mclient</code>, and ignore it otherwise.
+<p>
+
+   Now, how does the recycling feature work? The managed client can be
+   in one of three states:<ul>
+<li><code class="code">`Down</code>: The client is not connected. This is the initial state,
+      and the state after errors and terminated connections (no matter
+      whether triggered by the client or by the server)</li>
+<li><code class="code">`Connecting</code>: The client is busy (re)connecting (only used in
+      some cases)</li>
+<li><code class="code">`Up sockaddr</code>: The client is connected and has the socket address
+      <code class="code">sockaddr</code></li>
+</ul>
+
+   The state can be queried with <a href="Rpc_proxy.ManagedClient.html#VALmclient_state"><code class="code">Rpc_proxy.ManagedClient.mclient_state</code></a>.
+   When it is <code class="code">`Down</code>, the next RPC call automatically starts the
+   reconnect to the service. When the connection is established, the
+   call is done, and the messages are exchanged that are representing
+   the call. After that, the state remains <code class="code">`Up</code> after the call.
+<p>
+
+   When the call stops because of an error, the error is reported to
+   the user in the normal way, and the client is shut down, i.e. after
+   an error the state is <code class="code">`Down</code>. If the user decides to try the call
+   again, the client automatically reconnects following the outlined
+   rules. Note that managed clients never automatically retry calls
+   by themselves.
+<p>
+
+   When the TCP connection is regularly shut down (either by the server
+   or by the client calling <a href="Rpc_proxy.ManagedClient.html#VALshut_down"><code class="code">Rpc_proxy.ManagedClient.shut_down</code></a>), the
+   client state is changed to <code class="code">`Down</code> at the next opportunity. Especially
+   a server-driven shutdown may first be detected when the next RPC call
+   is tried on the connection. This may or may not lead to an error 
+   depending on the exact timing. In any way, the connection is finally
+   established again.
+<p>
+
+   Of course, managed clients must be shut down after use, because
+   there is no other (automatic) way of recognizing that they are no
+   longer used. Call <a href="Rpc_proxy.ManagedClient.html#VALshut_down"><code class="code">Rpc_proxy.ManagedClient.shut_down</code></a> for this.
+<p>
+
+   Managed client also have a few more features that can be
+   enabled in <code class="code">mclient_config</code>, especially:<ul>
+<li><b>Initial ping</b>: This means that the TCP connection is tested
+      before being used for user operations. The test is done by pinging
+      the service once (via the RPC null procedure). This is recommended
+      because some connectivity problems can first be detected when the
+      TCP connection is actually used.</li>
+<li><b>Idle timeout</b>: The TCP connection is closed after it is
+      idle for some period of time. "Idle" means here that nothing is
+      being transmitted, and that no response from the server is expected.
+      The connection is closed at the first opportunity. The user should
+      be aware that this can only happen when the event loop for <code class="code">esys</code>
+      is running. Especially for synchronous calls this is typically
+      not the case, so one would have to call <code class="code">Unixqueue.run esys</code> now 
+      and then to create opportunities for detecting the idle timeout.</li>
+<li><b>Reliability cache</b>: The cache object counts errors, and can
+      disable certain service endpoints if they only produce errors.
+      This mostly makes sense when there are alternative endpoints,
+      i.e. in the context of a managed set (see below).</li>
+</ul>
+<br>
+<br>
+<h2 id="2_ManagedSets">Managed Sets</h2>
+<p>
+
+    Managed sets are another layer on top of the managed
+    clients. These sets are able to manage several connections where
+    each is implemented as managed client. The connections can go to
+    the same server endpoint in order to parallelize RPCs at the
+    client side, or to several server endpoints that provide the same
+    service.  The latter can be used for client-driven load balancing,
+    and for client-driven failover management of HA setups (HA = high
+    availability).
+<p>
+
+    For creating a managed set, the code looks like
+<p>
+
+    <pre class="codepre"><code class="code">      module M = Proto_clnt.Make'PROG(Rpc_proxy.ManagedClient)
+
+      let esys =
+        Unixqueue.create_unix_event_system()
+      let mclient_config =
+        Rpc_proxy.ManagedClient.create_mclient_config
+          ~programs:[ Proto_clnt.PROG.VERS._program ]
+          () in
+      let mset_config =
+        Rpc_proxy.ManagedSet.create_mset_config
+          ~mclient_config
+          () in
+      let services =
+        [| connector, n_connections; ... |] in
+      let mset =
+        Rpc_proxy.ManagedSet.create_mset 
+          mset_config 
+          services
+          esys in
+      let mclient, idx =
+        Rpc_proxy.ManagedSet.mset_pick mset in
+      let result =
+        M.VERS.procedure mclient argument
+    </code></pre>
+<p>
+
+    The managed clients are internally created by the set - one
+    only should pass in <code class="code">mclient_config</code> so the set knows what kind of
+    client is preferred. For the simple application of maintaining
+    several connections to the same server, one would create the <code class="code">mset</code>
+    with a one-element service array:
+<p>
+
+    <pre class="codepre"><code class="code">       let services =
+          [| connector, n_connections |]
+    </code></pre>
+<p>
+
+    where <code class="code">connector</code> describes the server port, and <code class="code">n_connections</code> is
+    the maximum number of connections to create and maintain. 
+    The <a href="Rpc_proxy.ManagedSet.html#VALmset_pick"><code class="code">Rpc_proxy.ManagedSet.mset_pick</code></a>
+    function creates internally up to <code class="code">n_connections</code> managed clients,
+    and returns one of them. By default, it is not guaranteed that the
+    client is idle (meaning no previous call is pending)  - 
+    if the connections are all already busy, <code class="code">mset_pick</code>
+    starts returning busy connections (but the least busy one first).
+<p>
+
+    There are a number of options allowing to modify the default
+    behavior:<ul>
+<li>One can enforce that only idle clients are returned by <code class="code">mset_pick</code>.
+       To do this, pass the argument <code class="code">~mset_pending_calls_max:1</code> to
+       <a href="Rpc_proxy.ManagedSet.html#VALcreate_mset_config"><code class="code">Rpc_proxy.ManagedSet.create_mset_config</code></a>. It can then happen
+       that no client is idle, and <code class="code">mset_pick</code> will raise
+       <a href="Rpc_proxy.ManagedSet.html#EXCEPTIONCluster_service_unavailable"><code class="code">Rpc_proxy.ManagedSet.Cluster_service_unavailable</code></a>.</li>
+<li>If the <code class="code">services</code> array has more than one element, they are
+       considered as equivalent service endpoints. <code class="code">mset_pick</code> will
+       pick one of the endpoints. There are two policies controlling
+       the selection: With <code class="code">~policy:`Balance_load</code> it is aimed at
+       sending roughly the same number of calls to all endpoints. With
+       <code class="code">~policy:`Failover</code> the services are assigned precedences by the position
+       in the array (i.e. the first service is used as long as possible,
+       then the second service is used, etc.). The <code class="code">policy</code> argument
+       is again to be passed to <a href="Rpc_proxy.ManagedSet.html#VALcreate_mset_config"><code class="code">Rpc_proxy.ManagedSet.create_mset_config</code></a>.</li>
+</ul>
+
+   Of course, managed sets must be shut down after use, because
+   there is no other (automatic) way of recognizing that they are no
+   longer used. Call <a href="Rpc_proxy.ManagedSet.html#VALshut_down"><code class="code">Rpc_proxy.ManagedSet.shut_down</code></a> for this.
+<p>
+
+   <h2 id="2_Cachingreliabilitydata">Caching reliability data</h2>
+<p>
+
+   The cache allows to disable certain hosts or ports when the error
+   counter reaches a limit. The service is disabled for a limited time span.
+   This is especially useful when there is an alternate port that can
+   jump in for the failing one, i.e. when the <code class="code">services</code> array of a
+   managed set has two or more elements.
+<p>
+
+   There is a single global cache object, but one can also create
+   specific cache objects. Generally, cache objects can be shared by
+   many managed clients and managed sets. The hope is that sharing
+   is useful because more data can be made available to users of
+   services. If you do not want to use the global cache object, you
+   can create your own, and configure it in <code class="code">mclient_config</code>.
+<p>
+
+   The global cache object is automatically used when nothing else
+   is specified. The global cache object is by default configured in
+   a way so it does not have any effect, though. So we have to
+   change this in order to enable the cache:
+<p>
+
+   <pre class="codepre"><code class="code">     let rcache_config =
+       Rpc_proxy.ReliabilityCache.create_rcache_config
+        ~policy:`Independent
+        ~threshold:3
+        () in
+     Rpc_proxy.ReliabilityCache.set_global_rcache_config rcache_config
+   </code></pre>
+<p>
+
+   This means that 3 errors in sequence disable a service port. <code class="code">`Independent</code>
+   means that each port is handled independently in this respect.
+<p>
+
+    At the first time, the port is only disabled for one second. The
+    duration of the time span is increased by each additional error
+    until it reaches 64 seconds. These durations can be changed, of
+    course.
+<p>
+
+    As the impact of changing the global cache object is sometimes
+    unpredictable, one can also create a private cache object
+    (<a href="Rpc_proxy.ReliabilityCache.html#VALcreate_rcache"><code class="code">Rpc_proxy.ReliabilityCache.create_rcache</code></a>). Another way is
+    to derive a semi-private object from the global one. This means
+    that the error counters are global, but the interpretation can
+    be set individually in each use. This would look like:
+<p>
+
+    <pre class="codepre"><code class="code">    let rcache_config =
+      Rpc_proxy.ReliabilityCache.create_rcache_config
+        ~policy:`Independent
+        ~threshold:3
+        () in
+    let rcache =
+      Rpc_proxy.ReliabilityCache.derive_rcache
+        (Rpc_proxy.ReliabilityCache.global_rcache())
+        rcache_config in
+    ...
+    let mclient_config =
+      Rpc_proxy.ManagedClient.create_mclient_config
+        ...
+        ~rcache
+        ...
+        ()
+    </code></pre>
+<p>
+
+  <h2 id="2_Idempotentcalls">Idempotent calls</h2>
+<p>
+
+    In the layer of managed sets there is some limited support for
+    automatically repeating failing idempotent RPC calls.
+<p>
+
+    Instead of calling the RPC with
+<p>
+
+    <pre class="codepre"><code class="code">      let mclient, idx =
+        Rpc_proxy.ManagedSet.mset_pick mset in
+      let result =
+        M.VERS.procedure mclient argument
+    </code></pre>
+<p>
+
+    one uses
+<p>
+
+    <pre class="codepre"><code class="code">      let result =
+        Rpc_proxy.ManagedSet.idempotent_sync_call
+          mset
+          M.VERS.procedure'async
+          argument
+    </code></pre>
+<p>
+
+    The effet is that <a href="Rpc_proxy.ManagedSet.html#VALidempotent_sync_call"><code class="code">Rpc_proxy.ManagedSet.idempotent_sync_call</code></a>
+    repeats automatically the call when an error occurs. It is
+    assumed that the call is idempotent so it can be repeated
+    without changing the meaning.
+<p>
+
+    The call may be repeated several times. This is configured in
+    the managed set <code class="code">mset</code> (parameter <code class="code">mset_idempotent_max</code>).
+<p>
+
+    Note that one has to pass the asynchronous version (suffix <code class="code">'async</code>)
+    of the RPC wrapper even when doing a synchronous call.
+<p>
+
+    Also see the documentation for
+    <a href="Rpc_proxy.ManagedSet.html#VALidempotent_async_call"><code class="code">Rpc_proxy.ManagedSet.idempotent_async_call</code></a>.<br>
+</body></html>

@@ -1,0 +1,656 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Equeue.html">
+<link rel="next" href="Unixqueue_pollset.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Types and exceptions" rel="Section" href="#1_Typesandexceptions">
+<link title="Creating event systems" rel="Section" href="#1_Creatingeventsystems">
+<link title="Using event systems" rel="Section" href="#1_Usingeventsystems">
+<link title="Debugging" rel="Section" href="#1_Debugging">
+<title>Ocamlnet 3 Reference Manual : Unixqueue</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Equeue.html" title="Equeue">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Unixqueue_pollset.html" title="Unixqueue_pollset">Next</a>
+</div>
+<h1>Module <a href="type_Unixqueue.html">Unixqueue</a></h1>
+<pre><span class="keyword">module</span> Unixqueue: <code class="code">sig</code> <a href="Unixqueue.html">..</a> <code class="code">end</code></pre><div class="info">
+Unixqueues are one of the two forms of system event loops provided
+    by Ocamlnet. Besides Unixqueue, there is also pollset (see
+    <a href="Netsys_pollset.html"><code class="code">Netsys_pollset</code></a>). The pollsets are much simpler (there is no
+    queuing of events), and nowadays Unixqueue bases upon pollset,
+    and extends its functionality. Historically, however, Unixqueue
+    precede pollset, and there are still implementations of the former
+    in Ocamlnet not using pollset as its base data structure.
+<p>
+
+    The common idea of both data structures is the generalization of 
+    watching for events, as it is also provided by the <code class="code">Unix.select</code>
+    function. Note, however, that recent implementations no longer
+    use <code class="code">Unix.select</code>, but better system interfaces for the same.
+<p>
+
+    When there is something to do for a file descriptor (reading, 
+    writing, accepting out-of-band data), this is called an <b>event</b>,
+    and the task of Unixqueue is to check when events happen, and to
+    tell some consumer about the events.
+<p>
+
+    There are three further types of events: Timeout events, signal
+    events, and user-defined events.
+<p>
+
+    The events are queued up, and they are presented to event handlers
+    that may process them.
+<p>
+
+    You can describe what types of event conditions are watched by adding
+    <b>resources</b>. You can think a resource being a condition (bound to
+    a real resource of the operating system) for which 
+    events are generated if the condition becomes true. Currently, only
+    file descriptors and timers are supported as resources.<br>
+</div>
+<hr width="100%">
+<br>
+Unixqueues are one of the two forms of system event loops provided
+    by Ocamlnet. Besides Unixqueue, there is also pollset (see
+    <a href="Netsys_pollset.html"><code class="code">Netsys_pollset</code></a>). The pollsets are much simpler (there is no
+    queuing of events), and nowadays Unixqueue bases upon pollset,
+    and extends its functionality. Historically, however, Unixqueue
+    precede pollset, and there are still implementations of the former
+    in Ocamlnet not using pollset as its base data structure.
+<p>
+
+    The common idea of both data structures is the generalization of 
+    watching for events, as it is also provided by the <code class="code">Unix.select</code>
+    function. Note, however, that recent implementations no longer
+    use <code class="code">Unix.select</code>, but better system interfaces for the same.
+<p>
+
+    When there is something to do for a file descriptor (reading, 
+    writing, accepting out-of-band data), this is called an <b>event</b>,
+    and the task of Unixqueue is to check when events happen, and to
+    tell some consumer about the events.
+<p>
+
+    There are three further types of events: Timeout events, signal
+    events, and user-defined events.
+<p>
+
+    The events are queued up, and they are presented to event handlers
+    that may process them.
+<p>
+
+    You can describe what types of event conditions are watched by adding
+    <b>resources</b>. You can think a resource being a condition (bound to
+    a real resource of the operating system) for which 
+    events are generated if the condition becomes true. Currently, only
+    file descriptors and timers are supported as resources.<br>
+<br>
+<b>Relation to other modules.</b> This module is thought as the primary
+    interface to Unixqueues. If there isn't any specialty one has to deal
+    with, just use this module:
+<p>
+<ul>
+<li>It defines all required types like <code class="code">group</code>, <code class="code">wait_id</code>, etc. Note that
+      these types are reexported from <code class="code">Unixqueue_util</code>. Please consider
+      this as implementation detail, and don't use it in your code.</li>
+<li>It defines a standard implementation <code class="code">standard_event_system</code>, which
+      is a good default implementation, although it might not be the best
+      available for all purposes.</li>
+<li>It defines a set of access functions like <code class="code">add_event</code> which 
+      simply call the methods of the event system object of the same name.
+      Note that these functions work for all event system implementation,
+      not only for <code class="code">standard_event_system</code>.</li>
+</ul>
+
+    There are further modules that have to do with Unixqueue:
+<p>
+<ul>
+<li><a href="Unixqueue_pollset.html"><code class="code">Unixqueue_pollset</code></a> is the implementation behind 
+      <code class="code">standard_event_system</code>. If you want to use other pollsets than
+      the standard one, it is possible to create Unixqueues on top of these
+      by using this module directly.</li>
+<li><a href="Unixqueue_select.html"><code class="code">Unixqueue_select</code></a> is the historic default implementation. It
+      calls directly <code class="code">Unix.select</code>. It is still available because it 
+      serves as a reference implementation for now.</li>
+<li><code class="code">Unixqueue_util</code> is an internal module with implementation details.
+      Please don't call it directly.</li>
+<li><a href="Uq_gtk.html"><code class="code">Uq_gtk</code></a> is an implementation of Unixqueue mapping to the 
+      GTK event loop. Useful for multiplexing event-based I/O and
+      GTK graphics operations.</li>
+<li><a href="Uq_tcl.html"><code class="code">Uq_tcl</code></a> is an implementation of Unixqueue mapping to the 
+      TCL event loop. Useful for multiplexing event-based I/O and
+      event-based code written in TCL (especially TK).</li>
+</ul>
+<br>
+<br>
+<b>Thread safety.</b> The default implementation of Unixqueue is
+    thread-safe, and operations can be called from different threads.
+    For other implementations, please look at the modules implementing
+    them.
+<br>
+<br>
+<h1 id="1_Typesandexceptions">Types and exceptions</h1><br>
+<pre><span id="TYPEgroup"><span class="keyword">type</span> <code class="type"></code>group</span> = <code class="type">Unixqueue_util.group</code> </pre>
+<div class="info">
+A group is an abstract tag for a set of events, resources, and
+ event handlers. Usually every event handler creates a new group,
+ and all events and resources processed by the handler are 
+ members of this group.<br>
+</div>
+
+<pre><span id="EXCEPTIONAbort"><span class="keyword">exception</span> Abort</span> <span class="keyword">of</span> <code class="type">(<a href="Unixqueue.html#TYPEgroup">group</a> * exn)</code></pre>
+<div class="info">
+Event handlers can raise this exception to cancel a group 
+ of handlers, events, and resources. If an abort action
+ is defined for the group, it will be executed. Next, all members
+ of the group are removed from the event system. 
+<p>
+
+ First argument is the group. The second argument
+ is an arbitrary exception (must not be <code class="code">Abort</code> again) which is
+ passed to the abort action.
+<p>
+
+ Abort handlers are a questionable feature of Unixqueues. You
+ can also call the <code class="code">clear</code> operation, and raise the exception
+ directly. <b>Do not use in new code!</b><br>
+</div>
+<pre><span id="TYPEwait_id"><span class="keyword">type</span> <code class="type"></code>wait_id</span> = <code class="type">Unixqueue_util.wait_id</code> </pre>
+<div class="info">
+A wait identifier is used to distinguish between several
+ timers, see type <code class="code">operation</code>.<br>
+</div>
+
+<pre><span id="TYPEoperation"><span class="keyword">type</span> <code class="type"></code>operation</span> = <code class="type">Unixqueue_util.operation</code> = </pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELToperation.Wait_in"><span class="constructor">Wait_in</span></span> <span class="keyword">of</span> <code class="type">Unix.file_descr</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >wait for input data</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELToperation.Wait_out"><span class="constructor">Wait_out</span></span> <span class="keyword">of</span> <code class="type">Unix.file_descr</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >wait until output can be written</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELToperation.Wait_oob"><span class="constructor">Wait_oob</span></span> <span class="keyword">of</span> <code class="type">Unix.file_descr</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >wait for out-of-band data</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELToperation.Wait"><span class="constructor">Wait</span></span> <span class="keyword">of</span> <code class="type"><a href="Unixqueue.html#TYPEwait_id">wait_id</a></code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >wait only for timeout</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+<div class="info">
+An <code class="code">operation</code> specifies the condition to wait for. Every kind
+ of operation may have an associated timer (not only <code class="code">Wait</code>).<br>
+</div>
+
+<pre><span id="TYPEevent"><span class="keyword">type</span> <code class="type"></code>event</span> = <code class="type">Unixqueue_util.event</code> = </pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.Input_arrived"><span class="constructor">Input_arrived</span></span> <span class="keyword">of</span> <code class="type">(<a href="Unixqueue.html#TYPEgroup">group</a> * Unix.file_descr)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Input data has arrived</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.Output_readiness"><span class="constructor">Output_readiness</span></span> <span class="keyword">of</span> <code class="type">(<a href="Unixqueue.html#TYPEgroup">group</a> * Unix.file_descr)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Output is possible now</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.Out_of_band"><span class="constructor">Out_of_band</span></span> <span class="keyword">of</span> <code class="type">(<a href="Unixqueue.html#TYPEgroup">group</a> * Unix.file_descr)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >OOB data has arrived</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.Timeout"><span class="constructor">Timeout</span></span> <span class="keyword">of</span> <code class="type">(<a href="Unixqueue.html#TYPEgroup">group</a> * <a href="Unixqueue.html#TYPEoperation">operation</a>)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >A timer has expired</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.Signal"><span class="constructor">Signal</span></span></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >A signal has happened</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.Extra"><span class="constructor">Extra</span></span> <span class="keyword">of</span> <code class="type">exn</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >User-generated event</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTevent.Immediate"><span class="constructor">Immediate</span></span> <span class="keyword">of</span> <code class="type">(<a href="Unixqueue.html#TYPEgroup">group</a> * (unit -> unit))</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >immediate event</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+<div class="info">
+An <code class="code">event</code> is triggered when the condition of an <code class="code">operation</code>
+ becomes true, when a signal happens, or when the event is
+ (artificially) added to the event queue (<code class="code">add_event</code>, below).
+ The events resulting from an <code class="code">operation</code> carry the group of
+ the resource with them. 
+<p>
+
+ The event <code class="code">Signal</code> is triggered when the <code class="code">EINTR</code> condition is
+ caught; this normally means that a signal has just been delivered.
+ The generation of <code class="code">Signal</code> events should be considered as
+ unreliable, not every signal delivery can be detected. Reasons for
+ the unrealiability are that user-supplied code happens to
+ get the <code class="code">EINTR</code> condition and not the <code class="code">Unixqueue</code> event loop,
+ and that there are known race conditions in the O'Caml signal
+ handling routines that may cause signals to be lost. However,
+ it can be expected that almost all signals will trigger <code class="code">Signal</code>.
+<p>
+
+ The event <code class="code">Extra</code> can only be artificially added to the queue,
+ and the argument of <code class="code">Extra</code> is an exception value that distinguishes
+ between several kinds of user-generated events.
+<p>
+
+ The event <code class="code">Immediate(g,f)</code> also can only be artificially added to
+ the queue. In contrast to other events, it is not passed to handlers
+ when the event is processed. Instead, an immediate event is processed
+ by calling <code class="code">f()</code>. This is a more direct way of notification, and
+ it is not necessary to define a handler. Even an immediate event is
+ member of a group <code class="code">g</code>, and if the <code class="code">clear</code> function is called for <code class="code">g</code>,
+ the callback function <code class="code">f</code> will no longer be called.<br>
+</div>
+
+<pre><span id="TYPEevent_system"><span class="keyword">class type</span> <a href="Unixqueue.event_system-c.html">event_system</a></span> = <code class="code">object</code> <a href="Unixqueue.event_system-c.html">..</a> <code class="code">end</code></pre><div class="info">
+The <code class="code">event_system</code> manages events, handlers, resources, groups,
+ etc.
+</div>
+<br>
+<h1 id="1_Creatingeventsystems">Creating event systems</h1><br>
+<pre><span name="TYPEstandard_event_system"><span class="keyword">class</span> <a href="Unixqueue.standard_event_system-c.html">standard_event_system</a></span> : <code class="type">unit -> </code><code class="type"><a href="Unixqueue.event_system-c.html">event_system</a></code></pre><div class="info">
+The standard implementation of an event system.
+</div>
+<pre><span id="VALstandard_event_system"><span class="keyword">val</span> standard_event_system</span> : <code class="type">unit -> <a href="Unixqueue.event_system-c.html">event_system</a></code></pre><div class="info">
+Create a new, empty, standard event system<br>
+</div>
+<pre><span name="TYPEunix_event_system"><span class="keyword">class</span> <a href="Unixqueue.unix_event_system-c.html">unix_event_system</a></span> : <code class="type">unit -> </code><code class="type"><a href="Unixqueue.event_system-c.html">event_system</a></code></pre><div class="info">
+An alternate name for <code class="code">standard_event_system</code>, provided for
+      backward compatibility.
+</div>
+<pre><span id="VALcreate_unix_event_system"><span class="keyword">val</span> create_unix_event_system</span> : <code class="type">unit -> <a href="Unixqueue.event_system-c.html">event_system</a></code></pre><div class="info">
+An alternate name for <code class="code">standard_event_system</code>, provided for
+      backward compatibility.<br>
+</div>
+<pre><span name="TYPEperformance_event_system"><span class="keyword">class</span> <a href="Unixqueue.performance_event_system-c.html">performance_event_system</a></span> : <code class="type">unit -> </code><code class="type"><a href="Unixqueue.event_system-c.html">event_system</a></code></pre><div class="info">
+The implementation using <a href="Netsys_pollset_generic.html#VALperformance_pollset"><code class="code">Netsys_pollset_generic.performance_pollset</code></a>.
+</div>
+<pre><span id="VALperformance_event_system"><span class="keyword">val</span> performance_event_system</span> : <code class="type">unit -> <a href="Unixqueue.event_system-c.html">event_system</a></code></pre><div class="info">
+Same as function<br>
+</div>
+<br>
+<h1 id="1_Usingeventsystems">Using event systems</h1><br>
+<br>
+The following functions work for all kinds of event systems, not
+    only for the ones returned by <code class="code">standard_event_system</code>.<br>
+<pre><span id="VALnew_group"><span class="keyword">val</span> new_group</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEgroup">group</a></code></pre><div class="info">
+Create a new, empty group for the event system<br>
+</div>
+<pre><span id="VALnew_wait_id"><span class="keyword">val</span> new_wait_id</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEwait_id">wait_id</a></code></pre><div class="info">
+Create a new unique wait identifier<br>
+</div>
+<pre><span id="VALexists_resource"><span class="keyword">val</span> exists_resource</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEoperation">operation</a> -> bool</code></pre><div class="info">
+Find out if a specific resource already exists (or better: is
+ already watched by an operation).<br>
+</div>
+<pre><span id="VALadd_resource"><span class="keyword">val</span> add_resource</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -><br>       <a href="Unixqueue.html#TYPEgroup">group</a> -> <a href="Unixqueue.html#TYPEoperation">operation</a> * float -> unit</code></pre><div class="info">
+Add a resource such that it is watched for conditions described
+ by the <code class="code">operation</code> for the period given by the <code class="code">float</code> number.
+ A negative number means that the resource is watched for an infinite
+ period. The resource becomes a member of the <code class="code">group</code>.
+<p>
+
+ You cannot add the same operation several times;
+ if you try it the second operation is silently dropped.
+<p>
+
+ The resource remains even if it has generated an event. The timeout
+ period starts again in this case.<br>
+</div>
+<pre><span id="VALadd_weak_resource"><span class="keyword">val</span> add_weak_resource</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -><br>       <a href="Unixqueue.html#TYPEgroup">group</a> -> <a href="Unixqueue.html#TYPEoperation">operation</a> * float -> unit</code></pre><div class="info">
+Similar to <code class="code">add_resource</code>, but the resource is weak. Such resources
+ do not keep the event system running when only weak resources remain.
+ Normally, <code class="code">Unixqueue.run</code> returns to the caller not before
+ all resources are removed and all events are processed. Weak
+ resources do not count for this condition, i.e. <code class="code">Unixqueue.run</code>
+ also returns when there are only weak resources left.
+ As an example, weak resources can be used to time out unused
+ file descriptors.
+<p>
+
+ Weak resources can be removed with <code class="code">remove_resource</code>.
+<p>
+
+ <b>New in Ocamlnet 3.</b><br>
+</div>
+<pre><span id="VALadd_close_action"><span class="keyword">val</span> add_close_action</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -><br>       <a href="Unixqueue.html#TYPEgroup">group</a> -> Unix.file_descr * (Unix.file_descr -> unit) -> unit</code></pre><div class="info">
+A close action is added for the file descriptor. The action callback
+ (which gets the descriptor as argument) is called when there is not
+ any watched resource remaining for this descriptor.
+<p>
+
+ This may be useful if the descriptor can be closed in this case.
+<p>
+
+ The close action becomes member of the passed <code class="code">group</code>. The only
+ effect of this is that the action is removed when the <code class="code">clear</code> function
+ is called.
+<p>
+
+ You can only add (set) one close action for every descriptor.
+<p>
+
+ Of course, the idea is to do <code class="code">add_close_action ... Unix.close</code>. Note
+ that there is a problem with multi-threaded programs, and this construct
+ must not be used there. In particular, the close action is called from
+ <code class="code">remove_resource</code> or <code class="code">clear</code>, but it is possible that the event system
+ is running, so a watched descriptor might be closed. This has undesired
+ effects. What you should better do is to delay the closure of the
+ descriptor to a sane moment, e.g. by calling
+   <pre class="codepre"><code class="code"> Unixqueue.once esys g 0.0 (fun () -&gt; Unix.close fd) </code></pre>
+ from the close action.<br>
+</div>
+<pre><span id="VALadd_abort_action"><span class="keyword">val</span> add_abort_action</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -><br>       <a href="Unixqueue.html#TYPEgroup">group</a> -> (<a href="Unixqueue.html#TYPEgroup">group</a> -> exn -> unit) -> unit</code></pre><div class="info">
+An abort action is added to the group. The action callback is
+ called when an arbitrary handler raises <code class="code">Abort(g,exn)</code> where
+ <code class="code">g</code> is the group the abort action is member of. In this case,
+ the callback function is invoked with the group and <code class="code">exn</code> as
+ arguments. After that, the group is cleared.
+<p>
+
+ You can only add (set) one abort action for every group.<br>
+</div>
+<pre><span id="VALremove_resource"><span class="keyword">val</span> remove_resource</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEgroup">group</a> -> <a href="Unixqueue.html#TYPEoperation">operation</a> -> unit</code></pre><div class="info">
+Removes the operation from the watch list of the group.
+ It is an error if the operation is member of another group.
+ If the operation cannot be found at all, the exception <code class="code">Not_found</code>
+ will be raised.
+<p>
+
+ The removal of resources may trigger close actions.<br>
+</div>
+<pre><span id="VALadd_handler"><span class="keyword">val</span> add_handler</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -><br>       <a href="Unixqueue.html#TYPEgroup">group</a> -><br>       (<a href="Unixqueue.event_system-c.html">event_system</a> -><br>        <a href="Unixqueue.html#TYPEevent">event</a> <a href="Equeue.html#TYPEt">Equeue.t</a> -> <a href="Unixqueue.html#TYPEevent">event</a> -> unit) -><br>       unit</code></pre><div class="info">
+Add an event handler that is associated to the given group. There
+ may be several handlers for a group.
+<p>
+
+ The handler callback function is invoked when there is an event
+ that could be processeable by the handler. As outlined above, the
+ callback function can accept or reject the event, it can terminate
+ itself, and it can abort the whole group.<br>
+</div>
+<pre><span id="VALadd_event"><span class="keyword">val</span> add_event</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEevent">event</a> -> unit</code></pre><div class="info">
+Add an additional event. The event will be processed after the 
+ current list of events is done.<br>
+</div>
+<pre><span id="VALclear"><span class="keyword">val</span> clear</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEgroup">group</a> -> unit</code></pre><div class="info">
+Terminate the whole group. This means that the handlers of the
+ group are not called any longer, and that all resources and actions
+ are removed. It is possible that there are pending events after
+ termination, but these will be usually be dropped because there is
+ no handler for them.
+<p>
+
+ When a group is terminated, it is not allowed to refer to the
+ group any longer. Functions will raise <code class="code">Invalid_argument</code> if this
+ is tried nevertheless.<br>
+</div>
+<pre><span id="VALrun"><span class="keyword">val</span> run</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> unit</code></pre><div class="info">
+Starts the event loop. This means that the resources are watched,
+ and that events are generated, and that handlers are called.
+<p>
+
+ The event loop returns normally when there are not any resources
+ and not any events in the queue. The loop raises
+ <a href="Equeue.html#EXCEPTIONOut_of_handlers"><code class="code">Equeue.Out_of_handlers</code></a> if there are resources but no handlers
+ to process their events. It is possible that exceptions raised
+ from handlers fall through to the <code class="code">run</code> call.
+<p>
+
+ After the exception is caught and processed, the event loop
+ can be restarted.<br>
+</div>
+<pre><span id="VALis_running"><span class="keyword">val</span> is_running</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> bool</code></pre><div class="info">
+Whether the event loop is running<br>
+</div>
+<pre><span id="VALonce"><span class="keyword">val</span> once</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEgroup">group</a> -> float -> (unit -> unit) -> unit</code></pre><div class="info">
+Arranges that the callback function is called once after the 
+ passed period of time (the <code class="code">float</code> argument) has elapsed.
+<p>
+
+ The arrangement is member of the passed group. By clearing the
+ group, the timer is deleted, too.<br>
+</div>
+<pre><span id="VALweak_once"><span class="keyword">val</span> weak_once</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> <a href="Unixqueue.html#TYPEgroup">group</a> -> float -> (unit -> unit) -> unit</code></pre><div class="info">
+Same as <code class="code">once</code>, but the timer does not keep the event system running
+      if it is the only remaining resource.<br>
+</div>
+<pre><span id="VALepsilon"><span class="keyword">val</span> epsilon</span> : <code class="type"><a href="Unixqueue.event_system-c.html">event_system</a> -> (unit -> unit) -> unit</code></pre><div class="info">
+The execution of the function is pushed onto the event queue
+      (minimal delay)<br>
+</div>
+<br>
+<h1 id="1_Debugging">Debugging</h1><br>
+<pre><span class="keyword">module</span> <a href="Unixqueue.Debug.html">Debug</a>: <code class="code">sig</code> <a href="Unixqueue.Debug.html">..</a> <code class="code">end</code></pre></body></html>

@@ -1,0 +1,3 @@
+PACKAGES += rpc-ssl
+SRV_EXPLICIT_OBJ += qserver_auth_ssl.cmo
+CLNT_EXPLICIT_OBJ += qclient_auth_ssl.cmo

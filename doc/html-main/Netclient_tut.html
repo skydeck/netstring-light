@@ -1,0 +1,751 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Ftp_fs.html">
+<link rel="next" href="Netgssapi.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Netclient tutorial" rel="Section" href="#tutorial">
+<link title="Accessing HTTP and FTP as filesystem" rel="Subsection" href="#2_AccessingHTTPandFTPasfilesystem">
+<link title="Accessing HTTP via Http_client" rel="Subsection" href="#2_AccessingHTTPviaHttpclient">
+<link title="Accessing FTP via Ftp_client" rel="Subsection" href="#2_AccessingFTPviaFtpclient">
+<title>Ocamlnet 3 Reference Manual : Netclient_tut</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Ftp_fs.html" title="Ftp_fs">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netgssapi.html" title="Netgssapi">Next</a>
+</div>
+<h1>Netclient_tut</h1>
+<br>
+<h1 id="tutorial">Netclient tutorial</h1>
+<p>
+
+Here we give some recipes how to submit HTTP and FTP requests to servers.
+There is a quite simple interface representing the hierarchy of remote
+files, which is recommended for all occasional uses. If performance
+is important, however, the protocol-specific interfaces will give you
+more options.
+<p>
+
+<h2 id="2_AccessingHTTPandFTPasfilesystem">Accessing HTTP and FTP as filesystem</h2>
+<p>
+
+Let's start with an example: We want to get the public files
+<p>
+<ul>
+<li><code class="code">http://foo.org/bar</code></li>
+<li><code class="code">ftp://foo.org/baz</code></li>
+</ul>
+
+For HTTP we need a filesystem object accessing the foo.org server:
+<p>
+
+<pre class="codepre"><code class="code">let fs1 = Http_fs.http_fs "http://foo.org"
+</code></pre>
+<p>
+
+The same for FTP looks like:
+<p>
+
+<pre class="codepre"><code class="code">let fs2 = Ftp_fs.ftp_fs "ftp://foo.org"
+</code></pre>
+<p>
+
+The objects <code class="code">fs1</code> and <code class="code">fs2</code> provide now a number of methods for accessing
+files. These do not only cover downloads, but also listing directories,
+writing files, renaming files, and a number of further operations. The
+commonly available methods are those of <a href="Netfs.stream_fs-c.html"><code class="code">Netfs.stream_fs</code></a>. The incarnations
+of this interface for concrete protocols usually define more methods. It
+is guaranteed that you can coerce the types to <a href="Netfs.stream_fs-c.html"><code class="code">Netfs.stream_fs</code></a>, though:
+<p>
+
+<pre class="codepre"><code class="code">let my_filesystems =
+  [ (fs1 :&gt; Netfs.stream_fs); (fs2 :&gt; Netfs.stream_fs) ]
+</code></pre>
+<p>
+
+The method we use here is <code class="code">read</code>:
+<p>
+
+<pre class="codepre"><code class="code">method read : read_flags -&gt; string -&gt; Netchannels.in_obj_channel
+</code></pre>
+<p>
+
+All access methods take a list of flags as first argument. For example,
+a possible flag here is <code class="code">`Binary</code> switching to binary mode for the protcols
+where it makes a difference (like FTP).
+<p>
+
+The second argument is the file path, using slashes as separators, and
+<b>always starting with a slash</b>. The path is appended to the base URL
+given when creating the <code class="code">fs1</code> and <code class="code">fs2</code> objects. Note that the path must
+not contain any URL-specific encodings like "%xx".
+<p>
+
+We get a an <a href="Netchannels.in_obj_channel-c.html"><code class="code">Netchannels.in_obj_channel</code></a> back we can read the data from:
+<p>
+
+<pre class="codepre"><code class="code">let c1 = fs1 # read [] "/bar"
+let s1 = Netchannels.string_of_in_obj_channel c1
+let () = c1 # close_in()
+
+let c2 = fs2 # read [`Binary] "/baz"
+let s2 = Netchannels.string_of_in_obj_channel c2
+let () = c2 # close_in()
+</code></pre>
+<p>
+
+It depends very much on the implementation what actually happens:
+<p>
+<ul>
+<li>HTTP has built-in resilience against errors. Downloads are tried again
+  if errors occur.</li>
+<li>HTTP follows redirects automatically, perhaps pointing to a different
+  server.</li>
+<li>FTP does not retry after errors.</li>
+<li>The possible error codes can be different. For example, FTP does not
+  distinguish between "access denied" and "file not found".</li>
+</ul>
+
+You should keep in mind that the protocol differences do not go away, just
+because we are mapping the protocols to a common interface here.
+<p>
+
+By default, the downloaded data are cached in a temporary file. Some 
+implementations support the streaming mode to avoid that (like HTTP),
+and you are directly connected with the reading socket when reading from
+the returned <code class="code">in_obj_channel</code>. Pass <code class="code">`Streaming</code> as flag to <code class="code">read</code> to
+enable this. In streaming mode, however, neither retries nor redirects
+are possible.
+<p>
+
+<h3 id="3_Otheraccessmethods">Other access methods</h3>
+<p>
+
+An overview:
+<p>
+<ul>
+<li><code class="code">write</code> works very much like <code class="code">read</code>, only that you get a
+  <a href="Netchannels.out_obj_channel-c.html"><code class="code">Netchannels.out_obj_channel</code></a> back. The network write operation
+  normally starts first when this channel is closed, and the so-far
+  cached data are uploaded to the server.  For HTTP there is also
+  a streaming mode. The <code class="code">write</code> operation takes also flags that look
+  like normal open flags, i.e. whether you want to create a file,
+  truncate a file, or ensure the unique creation. Not all protocols
+  support every combination, though. For HTTP a <code class="code">write</code> is translated
+  to sending a <code class="code">PUT</code> method to the server.</li>
+<li><code class="code">readdir</code> reads the names of a directory. For FTP this is clearly
+  an NLST command. For HTTP the implementation just extracts the
+  names from the hyperlinks contained in the page - this works well
+  for applying <code class="code">readdir</code> to automatically generated file indexes.</li>
+<li><code class="code">remove</code> translates to the <code class="code">DELETE</code> method for HTTP. This method
+  is defined in the HTTP standard, but usually not available on
+  servers, though.</li>
+<li><code class="code">size</code> gets the size of a file. This may work for HTTP or may not -
+  depending on whether the server knows the size (which is often not
+  the case for dynamically generated content). For FTP there is the
+  SIZE command. However, this is a later addition to the protocol,
+  and may not be available on ancient servers.</li>
+<li><code class="code">test</code> and <code class="code">test_list</code> allow it to test properties of files
+  (existence, type, non-empty, accessibility). This is only partially
+  implemented for HTTP and FTP.</li>
+</ul>
+
+The following operations are only applicable to FTP:
+<p>
+<ul>
+<li><code class="code">rename</code></li>
+<li><code class="code">mkdir</code></li>
+<li><code class="code">rmdir</code></li>
+</ul>
+
+There are also operations that do not make sense here:
+<p>
+<ul>
+<li><code class="code">symlink</code></li>
+<li><code class="code">readlink</code></li>
+<li><code class="code">copy</code></li>
+</ul>
+
+<h3 id="3_Otherfilesystemimplementations">Other filesystem implementations</h3>
+<p>
+
+There is a full implementation of <a href="Netfs.stream_fs-c.html"><code class="code">Netfs.stream_fs</code></a> for accessing
+local files: <a href="Netfs.html#VALlocal_fs"><code class="code">Netfs.local_fs</code></a>. There are more definitions inside
+and outside Ocamlnet, see <a href="Netfs.html#links"><i>Other impementations of stream_fs</i></a> for a list. It also mentions
+a WebDAV implementation extending the HTTP definition explained here,
+and which covers a larger set of access operations.
+<p>
+
+<h3 id="3_ConfiguringHTTPandFTPfileaccesses">Configuring HTTP and FTP file accesses</h3>
+<p>
+
+When creating the access object, one can set a callback that allows
+almost arbitrary configurations:
+<p>
+
+<pre class="codepre"><code class="code">let fs1 = 
+  Http_fs.http_fs
+     ~config_pipeline:(fun p -&gt; ...)
+     "http://foo.org"
+
+let fs2 = 
+  Ftp_fs.ftp_fs 
+     ~config_client:(fun c -&gt; ...)
+     "ftp://foo.org"
+</code></pre>
+<p>
+
+Here, <code class="code">p</code> and <code class="code">c</code> are the underlying protocol implementations.
+<p>
+
+<h3 id="3_AuthenticationforHTTP">Authentication for HTTP</h3>
+<p>
+
+Do it like this in the <code class="code">config_pipeline</code> callback:
+<p>
+
+<pre class="codepre"><code class="code">  let user = "user" in
+  let password = "secret" in
+  let realm = "the realm string" in
+  let domain = [ "http://foo.org " ] in
+  let keys = new Http_client.key_ring() in
+  keys # add_key (Http_client.key ~user ~password ~realm ~domain);
+  let ah = new Http_client.unified_auth_handler keys in
+  p # add_auth_handler ah
+</code></pre>
+<p>
+
+This works for both "basic" and "digest" authentication.
+<p>
+
+<h3 id="3_AuthenticationforFTP">Authentication for FTP</h3>
+<p>
+
+This is not done in the <code class="code">config_client</code> callback, but directly when
+creating the filesystem object. The user string is always taken from
+the URL (as normally the accessed file space depends on the user).
+Passwords and account names (if needed) are supplied by callbacks:
+<p>
+
+<pre class="codepre"><code class="code">let fs2 = 
+   Ftp_fs.ftp_fs
+      ~get_password:(fun () -&gt; "secret")
+      ~get_account:(fun () -&gt; "account")
+      "ftp://user@foo.org"
+</code></pre>
+<p>
+
+<h3 id="3_ConfigureawebproxyforHTTP">Configure a web proxy for HTTP</h3>
+<p>
+
+Do it like this in the <code class="code">config_pipeline</code> callback:
+<p>
+
+<pre class="codepre"><code class="code">  p # set_proxy "proxy.company.net" 8080;
+  p # set_proxy_auth "user" "secret";
+  p # avoid_proxy_for [ ".company.net"; "localhost" ]
+</code></pre>
+<p>
+
+Or you can just import this data from the environment variables
+"http_proxy" and "no_proxy":
+<p>
+
+<pre class="codepre"><code class="code">  p # set_proxy_from_environment()
+</code></pre>
+<p>
+
+<h3 id="3_ConfigureawebproxyforFTP">Configure a web proxy for FTP</h3>
+<p>
+
+Web proxies often also support FTP URLs, but only for a limited set
+of operations (often only <code class="code">read</code> works).
+<p>
+
+Note that you have to use <a href="Http_fs.html"><code class="code">Http_fs</code></a> to use this feature, not <a href="Ftp_fs.html"><code class="code">Ftp_fs</code></a>:
+<p>
+
+<pre class="codepre"><code class="code">let fs1 = 
+  Http_fs.http_fs
+     ~config_pipeline:(fun p -&gt;
+        p # set_proxy "proxy.company.net" 8080;
+        p # set_proxy_auth "user" "secret";
+     )
+     ~enable_ftp:true
+     "ftp://foo.org"
+</code></pre>
+<p>
+
+In this configuration, the web proxy is contacted via HTTP, and the
+proxy talks FTP with the content server.
+<p>
+
+If you do not configure the proxy, any accesses will fail (no
+transport error).
+<p>
+
+<h3 id="3_ConfigureaSOCKSproxyforHTTP">Configure a SOCKS proxy for HTTP</h3>
+<p>
+
+This is an alternative to a web proxy. 
+Do it like this in the <code class="code">config_pipeline</code> callback:
+<p>
+
+<pre class="codepre"><code class="code">  p # set_socks5_proxy "proxy.company.net" 1080
+</code></pre>
+<p>
+
+<h3 id="3_ConfigureaSOCKSproxyforFTP">Configure a SOCKS proxy for FTP</h3>
+<p>
+
+Do it like this in the <code class="code">config_client</code> callback:
+<p>
+
+<pre class="codepre"><code class="code">  c # set_socks5_proxy "proxy.company.net" 1080
+</code></pre>
+<p>
+
+The current implementation is limited to file transfers in passive mode,
+though. This is nowadays not a problem anymore, because almost all FTP
+servers support it.
+<p>
+
+<h3 id="3_ConfigureHTTPS">Configure HTTPS</h3>
+<p>
+
+Support for TLS (SSL) is not available by default. Ocamlnet must be
+compiled with support for TLS, and a certain configuration must be
+applied to the HTTP pipeline.
+<p>
+
+See the <a href="Https_client.html"><code class="code">Https_client</code></a> module for a recipe (this module is part of
+<code class="code">equeue-ssl</code>).
+<p>
+
+<h3 id="3_Globbing">Globbing</h3>
+<p>
+
+The <a href="Netglob.html"><code class="code">Netglob</code></a> module can be used to interpret wildcards in filenames.
+An example:
+<p>
+
+<pre class="codepre"><code class="code">let files =
+  Netglob.glob
+    ~fsys:(Netglob.of_stream_fs (fs2 :&gt; Netfs.stream_fs))
+    (`String "/dir/*.gif")
+</code></pre>
+<p>
+
+This would return paths to all gif files in /dir on the FTP server <code class="code">fs2</code>.
+<p>
+
+<b>Caveat:</b> Globbing works only well if the server provides the operations
+for recognizing directories. Most FTP servers don't - only the recently (1)
+added MLST command allows it to safely recognize directories.
+<p>
+
+(1) recently = many years ago, but existing FTP deployments seem only to
+be very slowly upgraded.
+<p>
+
+Test whether an FTP server supports MLST: There must be a line for
+MLST in the output for the FEAT command, like in
+<p>
+
+<pre class="codepre"><code class="code">$ ftp localhost
+Connected to localhost.
+220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------
+...
+ftp&gt; quote feat
+211-Extensions supported:
+ EPRT
+ IDLE
+ MDTM
+ SIZE
+ REST STREAM
+ MLST type*;size*;sizd*;modify*;UNIX.mode*;UNIX.uid*;UNIX.gid*;unique*;
+ MLSD
+ AUTH TLS
+ PBSZ
+ PROT
+ UTF8
+ TVFS
+ ESTA
+ PASV
+ EPSV
+ SPSV
+ ESTP
+211 End.
+</code></pre>
+<p>
+
+For HTTP servers, the recognition of directories is even worse. Don't
+rely on it.
+<p>
+
+<h3 id="3_Copying">Copying</h3>
+<p>
+
+There are the generic copy algorithms <a href="Netfs.html#VALcopy"><code class="code">Netfs.copy</code></a> and <a href="Netfs.html#VALcopy_into"><code class="code">Netfs.copy_into</code></a>,
+which can also be used for HTTP and FTP.
+<p>
+
+For example, let's copy the file "/xyz" from <code class="code">fs1</code> to <code class="code">fs2</code>, i.e. from
+an HTTP server to an FTP server:
+<p>
+
+<pre class="codepre"><code class="code">Netfs.copy (fs1 :&gt; Netfs.stream_fs) "/xyz" (fs2 : Netfs.stream_fs) "/xyz"
+</code></pre>
+<p>
+
+<h3 id="3_Iteratingfiles">Iterating files</h3>
+<p>
+
+There is the generic file iterator <a href="Netfs.html#VALiter"><code class="code">Netfs.iter</code></a>, which walks through
+the directory hierarchy on the server:
+<p>
+
+<pre class="codepre"><code class="code">Netfs.iter
+  ~pre:(fun name kind symkind -&gt; ...)
+  (fs2 :&gt; Netfs.stream_fs)
+  "/"
+</code></pre>
+<p>
+
+Note that you may run into problems in conjunction with HTTP and FTP:<ul>
+<li>HTTP may redirect file accesses, and the iterator is not aware of this</li>
+<li>FTP does not represent symlinks as such, and the iterator would
+  follow symlink loops infinitely</li>
+<li>Both HTTP and FTP have problems recognizing directories (see the
+  remarks about globbing above).</li>
+</ul>
+
+<h2 id="2_AccessingHTTPviaHttpclient">Accessing HTTP via <a href="Http_client.html"><code class="code">Http_client</code></a></h2>
+<p>
+
+The <a href="Http_client.html"><code class="code">Http_client</code></a> module is the real implementation of HTTP. It
+is asynchronous, which means it can do many tasks in parallel, but
+also needs special care when using it.
+<p>
+
+The tasks are organized as <i>pipelines</i>. This is actually an HTTP
+protocol feature - one can send the next request(s) to an HTTP server 
+without having to wait for the response of the prior request. The
+pipeline is available as Ocaml class:
+<p>
+
+<pre class="codepre"><code class="code">let p = new Http_client.pipeline
+</code></pre>
+<p>
+
+By adding requests, the pipeline is told to send them to the right
+server. If the server allows pipelining on HTTP level, this feature
+is exploited to speed up the accesses. Here, we submit two different
+<code class="code">GET</code> requests:
+<p>
+
+<pre class="codepre"><code class="code">let x1 = new Http_client.get "http://foo.org/bar"
+let x2 = new Http_client.get "http://foo.org/baz"
+
+p # add x1;
+p # add x2
+</code></pre>
+<p>
+
+The objects <code class="code">x1</code> and <code class="code">x2</code> are instances of <a href="Http_client.http_call-c.html"><code class="code">Http_client.http_call</code></a>.
+They have lots of access methods for changing the request type and
+getting the returned response.
+<p>
+
+Now, after just adding the objects, nothing is done yet. You also
+have to start the pipeline:
+<p>
+
+<pre class="codepre"><code class="code">p # run()
+</code></pre>
+<p>
+
+(Or, alternatively, do <code class="code">Unixqueue.run p#event_system</code>, which is just
+the same.)
+<p>
+
+Now, you can get the fetched data with:
+<p>
+
+<pre class="codepre"><code class="code">let d1 = x1 # response_body # value
+</code></pre>
+<p>
+
+Before looking at the value, you would normally check the status code
+of the response. There are a few possibilities:
+<p>
+<ul>
+<li><a href="Http_client.http_call-c.html#METHODstatus"><code class="code">Http_client.http_call.status</code></a> only indicates the class of the
+  response (success, redirect, client error, server error), or whether
+  there was a socket or protocol error.</li>
+<li><a href="Http_client.http_call-c.html#METHODresponse_status"><code class="code">Http_client.http_call.response_status</code></a> returns the code as
+  variant</li>
+<li><a href="Http_client.http_call-c.html#METHODresponse_status_code"><code class="code">Http_client.http_call.response_status_code</code></a> returns the code numerically</li>
+</ul>
+
+<h3 id="3_Howthepipelineworks">How the pipeline works</h3>
+<p>
+
+The object <code class="code">p</code> is actually several pipelines in one object. For each
+connected server, <code class="code">p</code> keeps a small number of parallel connections
+(normally 2). Each connection is then driven in a pipelined way, if
+possible.
+<p>
+
+When running <code class="code">p</code>, all the connections to the servers are created in 
+parallel, and the communication is done in parallel.
+<p>
+
+<h2 id="2_AccessingFTPviaFtpclient">Accessing FTP via <a href="Ftp_client.html"><code class="code">Ftp_client</code></a></h2>
+<p>
+
+The <a href="Ftp_client.html"><code class="code">Ftp_client</code></a> is also an asynchronous implementation. It is a bit
+more difficult to exploit this, though, because <a href="Ftp_client.html"><code class="code">Ftp_client</code></a> is a bit
+simpler than <a href="Http_client.html"><code class="code">Http_client</code></a>.
+<p>
+
+Generally, a client can only connect to a single server, not to several
+at once. Also, there is no queue of pending requests - all submitted
+requests are immediately executed, and the next request can first be
+started when the previous has finished.
+<p>
+
+In synchrounous code, a file download looks like:
+<p>
+
+<pre class="codepre"><code class="code">let client = new ftp_client()
+let () = client # exec (connect_method ~host:"foo.bar" ())
+let () = client # exec 
+	    (login_method
+	       ~user:"anonymous" 
+	       ~get_password:(fun () -&gt; "")
+	       ~get_account:(fun () -&gt; "")
+		())
+let buffer = Buffer.create 1000 
+let ch = new Netchannels.output_buffer buffer
+let () = client # exec 
+            (get_method
+                ~file:(`NVFS "dir/baz")
+                ~representation:`Image 
+                ~store:(fun _ -&gt; `File_structure ch) 
+                ());
+let s = Buffer.contents buffer
+</code></pre>
+<p>
+
+As you see, this is just a sequence of <code class="code">exec</code> calls. There is also an
+<code class="code">exec_e</code> method allowing to start these operations as
+<a href="Uq_engines.engine-c.html"><code class="code">Uq_engines.engine</code></a>, allowing asynchronous execution.
+<p>
+
+FTP has a number of subtle protocol options - like file transfer in
+several modes. Please refer to <a href="Ftp_client.html"><code class="code">Ftp_client</code></a> where these details are
+extensively documented.
+<p>
+
+You close the connection using the <code class="code">QUIT</code> command with
+<p>
+
+<pre class="codepre"><code class="code">let () = client # exec (quit_method())
+</code></pre>
+<p>
+
+or just run <code class="code">client # reset()</code> to just shut the TCP connection down.
+<br>
+</body></html>

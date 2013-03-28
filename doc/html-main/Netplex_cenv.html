@@ -1,0 +1,489 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rpc_netplex.html">
+<link rel="next" href="Netplex_semaphore.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Debugging" rel="Section" href="#1_Debugging">
+<link title="Logging" rel="Subsection" href="#2_Logging">
+<link title="Timer" rel="Subsection" href="#2_Timer">
+<link title="Container variables" rel="Subsection" href="#2_Containervariables">
+<link title="System control" rel="Subsection" href="#2_Systemcontrol">
+<link title="Inter-Container Communication" rel="Subsection" href="#2_InterContainerCommunication">
+<link title="Direct container and admin interface access" rel="Subsection" href="#2_Directcontainerandadmininterfaceaccess">
+<link title="Persistent kernel objects" rel="Subsection" href="#2_Persistentkernelobjects">
+<title>Ocamlnet 3 Reference Manual : Netplex_cenv</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rpc_netplex.html" title="Rpc_netplex">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netplex_semaphore.html" title="Netplex_semaphore">Next</a>
+</div>
+<h1>Module <a href="type_Netplex_cenv.html">Netplex_cenv</a></h1>
+<pre><span class="keyword">module</span> Netplex_cenv: <code class="code">sig</code> <a href="Netplex_cenv.html">..</a> <code class="code">end</code></pre><div class="info">
+Container environment
+<p>
+
+ Some helper functions to explore the environment from a container.
+ Most of the following functions <b>must</b> be called from a container context,
+ i.e. from a process or thread that acts as container, otherwise
+ the exception <code class="code">Not_in_container_thread</code> is raised. There are also some
+ functions that can be called from controller context for convenience.
+<p>
+
+ <b>Thread safety:</b> Full. The functions in this module can be called from any
+ thread.<br>
+</div>
+<hr width="100%">
+<pre><span id="EXCEPTIONNot_in_container_thread"><span class="keyword">exception</span> Not_in_container_thread</span></pre>
+<div class="info">
+Raised when the caller's thread is not a container thread<br>
+</div>
+<br>
+<h2 id="2_Logging">Logging</h2><br>
+<br>
+Logging functions can be invoked from both container and controller 
+    contexts.<br>
+<pre><span id="VALlog"><span class="keyword">val</span> log</span> : <code class="type"><a href="Netplex_types.html#TYPElevel">Netplex_types.level</a> -> string -> unit</code></pre><div class="info">
+Writes a log message<br>
+</div>
+<pre><span id="VALlogf"><span class="keyword">val</span> logf</span> : <code class="type"><a href="Netplex_types.html#TYPElevel">Netplex_types.level</a> -> ('a, unit, string, unit) Pervasives.format4 -> 'a</code></pre><div class="info">
+Writes a log message like <code class="code">printf</code><br>
+</div>
+<pre><span id="VALreport_connection_string"><span class="keyword">val</span> report_connection_string</span> : <code class="type">Unix.file_descr -> string -> string</code></pre><div class="info">
+Output a log line for the <code class="code">netplex.connections</code> admin message.
+      The string is the detail to report.<br>
+</div>
+<br>
+<h2 id="2_Timer">Timer</h2><br>
+<br>
+Timer functions can only be invoked from container contexts. 
+    More documentation is available in <a href="Netplex_advanced.html#timers"><i>Running timers in containers</i></a>.<br>
+<pre><span id="TYPEtimer"><span class="keyword">type</span> <code class="type"></code>timer</span> </pre>
+<div class="info">
+A timer<br>
+</div>
+
+<pre><span id="VALcreate_timer"><span class="keyword">val</span> create_timer</span> : <code class="type">(<a href="Netplex_cenv.html#TYPEtimer">timer</a> -> bool) -> float -> <a href="Netplex_cenv.html#TYPEtimer">timer</a></code></pre><div class="info">
+<code class="code">create_timer f tmo</code>: Creates a timer with timeout value <code class="code">tmo</code>:
+      In <code class="code">tmo</code> seconds <code class="code">f</code> is called, and if this function returns <code class="code">true</code>,
+      the timer remains active, and another round of timing is arranged.
+      If the functions returns <code class="code">false</code> or raises an exception, the timer
+      is stopped.
+<p>
+
+      Timers are also stopped on container shutdown.
+<p>
+
+      Timers are attached to the container event system, and run only
+      if this event system runs. Also note that <code class="code">f</code> is always called from
+      the main thread of the container.<br>
+</div>
+<pre><span id="VALcancel_timer"><span class="keyword">val</span> cancel_timer</span> : <code class="type"><a href="Netplex_cenv.html#TYPEtimer">timer</a> -> unit</code></pre><div class="info">
+Cancels the timer: The callback function is not called any longer<br>
+</div>
+<pre><span id="VALcancel_all_timers"><span class="keyword">val</span> cancel_all_timers</span> : <code class="type">unit -> unit</code></pre><div class="info">
+Cancels all active timers<br>
+</div>
+<pre><span id="VALtimer_id"><span class="keyword">val</span> timer_id</span> : <code class="type"><a href="Netplex_cenv.html#TYPEtimer">timer</a> -> int</code></pre><div class="info">
+Returns an ID, e.g. useful for debugging<br>
+</div>
+<br>
+<h2 id="2_Containervariables">Container variables</h2><br>
+<br>
+Container variables exist once per container. Primary access is
+    done via the <code class="code">var</code> and <code class="code">set_var</code> methods of the container class.
+    The following functions are often more convenient, however.
+<p>
+
+    These functions can only be invoked from container contexts. 
+<p>
+
+    More documentation: <a href="Netplex_advanced.html#contvars"><i>Container variables</i></a><br>
+<pre><span id="EXCEPTIONContainer_variable_not_found"><span class="keyword">exception</span> Container_variable_not_found</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+<div class="info">
+The variable does not exist<br>
+</div>
+<pre><span id="EXCEPTIONContainer_variable_type_mismatch"><span class="keyword">exception</span> Container_variable_type_mismatch</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+<div class="info">
+The (dynamically typed) variable has the wrong type<br>
+</div>
+<pre><span id="VALint_var"><span class="keyword">val</span> int_var</span> : <code class="type">string -> int</code></pre><pre><span id="VALstring_var"><span class="keyword">val</span> string_var</span> : <code class="type">string -> string</code></pre><pre><span id="VALfloat_var"><span class="keyword">val</span> float_var</span> : <code class="type">string -> float</code></pre><pre><span id="VALbool_var"><span class="keyword">val</span> bool_var</span> : <code class="type">string -> bool</code></pre><div class="info">
+Access a variable with simple type. May raise 
+      <code class="code">Container_variable_not_found</code> or <code class="code">Container_variable_type_mismatch</code><br>
+</div>
+<pre><span id="VALset_int_var"><span class="keyword">val</span> set_int_var</span> : <code class="type">string -> int -> unit</code></pre><pre><span id="VALset_string_var"><span class="keyword">val</span> set_string_var</span> : <code class="type">string -> string -> unit</code></pre><pre><span id="VALset_float_var"><span class="keyword">val</span> set_float_var</span> : <code class="type">string -> float -> unit</code></pre><pre><span id="VALset_bool_var"><span class="keyword">val</span> set_bool_var</span> : <code class="type">string -> bool -> unit</code></pre><div class="info">
+Set a variable with simple type<br>
+</div>
+<pre><span id="VALmake_var_type"><span class="keyword">val</span> make_var_type</span> : <code class="type">('a -> <a href="Netplex_types.html#TYPEencap">Netplex_types.encap</a>) -><br>       (<a href="Netplex_types.html#TYPEencap">Netplex_types.encap</a> -> 'a) -> (string -> 'a) * (string -> 'a -> unit)</code></pre><div class="info">
+Create get and set functions for any (monomorphic) type. For example,
+      to create such function for a type <code class="code">foo</code>, do
+<p>
+
+      <pre class="codepre"><code class="code"> 
+          module E = Netplex_encap.Make_encap(struct type t = foo end)
+          let (get, set) = 
+            make_var_type E.wrap E.unwrap
+      </code></pre>
+<p>
+
+      Read on for using functors to create <code class="code">get</code> and <code class="code">set</code>.<br>
+</div>
+<pre><span class="keyword">module type</span> <a href="Netplex_cenv.TYPE.html">TYPE</a> = <code class="code">sig</code> <a href="Netplex_cenv.TYPE.html">..</a> <code class="code">end</code></pre><div class="info">
+Just a (monomorphic) type <code class="code">t</code>
+</div>
+<pre><span class="keyword">module type</span> <a href="Netplex_cenv.VAR_TYPE.html">VAR_TYPE</a> = <code class="code">sig</code> <a href="Netplex_cenv.VAR_TYPE.html">..</a> <code class="code">end</code></pre><div class="info">
+A (monomorphic) type <code class="code">t</code> with two functions <code class="code">get</code> and <code class="code">set</code>
+      accessing the container variables
+</div>
+<pre><span class="keyword">module</span> <a href="Netplex_cenv.Make_var_type.html">Make_var_type</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="type"><a href="Netplex_cenv.TYPE.html">TYPE</a></code><code class="code">) -&gt; </code><code class="type"><a href="Netplex_cenv.VAR_TYPE.html">VAR_TYPE</a></code><code class="type">  with type t = T.t</code></div></pre><div class="info">
+Creates <code class="code">get</code> and <code class="code">set</code> like <code class="code">make_var_type</code>.
+</div>
+<br>
+<h2 id="2_Systemcontrol">System control</h2><br>
+<br>
+System control functions can be invoked from both container and controller 
+    contexts.<br>
+<pre><span id="VALsystem_shutdown"><span class="keyword">val</span> system_shutdown</span> : <code class="type">unit -> unit</code></pre><div class="info">
+Initiates a system shutdown (like the <code class="code">shutdown</code> method of the
+      controller)<br>
+</div>
+<pre><span id="VALsystem_restart"><span class="keyword">val</span> system_restart</span> : <code class="type">unit -> unit</code></pre><div class="info">
+Initiates a system restart (like the <code class="code">restart</code> method of the
+      controller)<br>
+</div>
+<br>
+<h2 id="2_InterContainerCommunication">Inter-Container Communication</h2><br>
+<br>
+These functions can only be invoked from container contexts, 
+    except <code class="code">send_message</code>.<br>
+<pre><span id="VALsend_message"><span class="keyword">val</span> send_message</span> : <code class="type">string -> string -> string array -> unit</code></pre><div class="info">
+<code class="code">send_message service_pattern msg_name msg_arguments</code>: Sends
+       a message to all services and message receivers matching
+       <code class="code">service_pattern</code>. The pattern may include the wildcard <code class="code">*</code>.
+<p>
+
+       See the <a href="Netplex_types.controller-c.html#METHODsend_message"><code class="code">Netplex_types.controller.send_message</code></a> method for
+       the notification guarantees.
+<p>
+
+       This function can be invoked from both container and controller
+       contexts.<br>
+</div>
+<pre><span id="VALlookup"><span class="keyword">val</span> lookup</span> : <code class="type">string -> string -> string option</code></pre><div class="info">
+<code class="code">lookup service_name protocol_name</code> tries to find a Unix domain
+      socket for the service and returns it.
+<p>
+
+      On Win32, the returned path refers to a file describing the
+      IPC mechanism. Use <a href="Netplex_sockserv.html#VALany_file_client_connector"><code class="code">Netplex_sockserv.any_file_client_connector</code></a>
+      to convert the path into an RPC connector.<br>
+</div>
+<pre><span id="VALlookup_container_sockets"><span class="keyword">val</span> lookup_container_sockets</span> : <code class="type">string -> string -> string array</code></pre><div class="info">
+<code class="code">lookup_container_sockets service_name protocol_name</code>: returns
+      the Unix Domain paths of all container sockets for this service and
+      protocol. These are the sockets declared with address type
+      "container" in the config file.
+<p>
+
+      On Win32, the returned paths refer to files describing the
+      IPC mechanism. Use <a href="Netplex_sockserv.html#VALany_file_client_connector"><code class="code">Netplex_sockserv.any_file_client_connector</code></a>
+      to convert the paths into RPC connectors.
+<p>
+
+      Container sockets are explained here:
+      <a href="Netplex_advanced.html#contsocks"><i>Sending messages to individual containers</i></a><br>
+</div>
+<br>
+<h2 id="2_Directcontainerandadmininterfaceaccess">Direct container and admin interface access</h2><br>
+<pre><span id="VALself_cont"><span class="keyword">val</span> self_cont</span> : <code class="type">unit -> <a href="Netplex_types.container-c.html">Netplex_types.container</a></code></pre><div class="info">
+Returns the container running the code of the caller,
+      or raise <code class="code">Not_in_container_thread</code> if called from outside a 
+      container context.<br>
+</div>
+<pre><span id="VALself_obj"><span class="keyword">val</span> self_obj</span> : <code class="type">unit -><br>       [ `Container of <a href="Netplex_types.container-c.html">Netplex_types.container</a><br>       | `Controller of <a href="Netplex_types.controller-c.html">Netplex_types.controller</a> ]</code></pre><div class="info">
+Returns the container or the controller running the code of the
+      caller, or raise <code class="code">Not_found</code> if called from
+      neither a container not a controller thread.<br>
+</div>
+<pre><span id="VALcurrent_sys_id"><span class="keyword">val</span> current_sys_id</span> : <code class="type">unit -> [ `Process of int | `Thread of int ]</code></pre><div class="info">
+Returns the system-dependent thread identifier of the caller
+      (which must be in container or controller context)<br>
+</div>
+<pre><span id="VALadmin_connector"><span class="keyword">val</span> admin_connector</span> : <code class="type">unit -> <a href="Rpc_client.html#TYPEmode2">Rpc_client.mode2</a></code></pre><div class="info">
+Determines the admin socket of the controller, and returns an RPC
+      client connector suitable for connecting with the admin interface
+      of the controller. For instance to initiate a system shutdown from
+      the context of a container:
+<p>
+
+      <pre class="codepre"><code class="code">         let conn = Netplex_cenv.admin_connector() in
+         let client = Netplex_ctrl_clnt.Admin.V2.create_client2 conn in
+         Netplex_ctrl_clnt.Admin.V2.system_shutdown client ();
+         Rpc_client.shut_down client
+       </code></pre>
+<p>
+
+      Note that the admin interface is going to evolve, and it is advisable
+      to avoid admin calls whenever possible.
+<p>
+
+      This function must be called from container context.<br>
+</div>
+<pre><span id="VALrun_in_controller_context"><span class="keyword">val</span> run_in_controller_context</span> : <code class="type"><a href="Netplex_types.controller-c.html">Netplex_types.controller</a> -> (unit -> unit) -> unit</code></pre><div class="info">
+<code class="code">run_in_controller_context ctrl f</code>: Arranges that <code class="code">f()</code> is executed
+      in the context of the controller. <b>This is only possible for
+      multi-threading but not for multi-processing style!</b> For
+      programs using multi-processing, see <a href="Netplex_cenv.Make_lever.html"><code class="code">Netplex_cenv.Make_lever</code></a>
+      for a workaround.
+<p>
+
+      This function can be called from any thread. The function <code class="code">f</code> is
+      executed by pushing it onto the event queue, and calling it when
+      the pushed event is reached. This is usually a safe point for
+      many kinds of operations, but if controller methods are invoked
+      the details are left unspecified.
+<p>
+
+      For example, this allows it to start helper threads via
+      <a href="Netplex_kit.html#VALadd_helper_service"><code class="code">Netplex_kit.add_helper_service</code></a> at any time.
+<p>
+
+      An example can be found here: <a href="Netplex_advanced.html#levers"><i>Levers - calling controller functions from containers</i></a><br>
+</div>
+<pre><span id="VALrun_in_container_context"><span class="keyword">val</span> run_in_container_context</span> : <code class="type"><a href="Netplex_types.container-c.html">Netplex_types.container</a> -> (unit -> unit) -> unit</code></pre><div class="info">
+<code class="code">run_in_container_context cont f</code>: Arranges that <code class="code">f()</code> is executed
+      in the context of the container <code class="code">cont</code>. <b>This is only possible for
+      multi-threading but not for multi-processing style!</b>
+<p>
+
+      This function can be called from any thread. The function <code class="code">f</code> is
+      executed by pushing it onto the event queue, and calling it when
+      the pushed event is reached. This is usually a safe point for
+      many kinds of operations, but if container method are invoked
+      the details are left unspecified.
+<p>
+
+      There is no guarantee that <code class="code">f</code> is called anytime soon - if the
+      container is busy with something else than with the event queue
+      the execution will be blocked until these other activities are
+      over.<br>
+</div>
+<br>
+Levers are a way to send messages to the controller, and to effectively
+    run functions there that were previously registered. 
+<p>
+
+    More documentation: <a href="Netplex_advanced.html#levers"><i>Levers - calling controller functions from containers</i></a><br>
+<pre><span class="keyword">module type</span> <a href="Netplex_cenv.FUN_TYPE.html">FUN_TYPE</a> = <code class="code">sig</code> <a href="Netplex_cenv.FUN_TYPE.html">..</a> <code class="code">end</code></pre><div class="info">
+Abstraction for function types <code class="code">s-&gt;t</code>
+</div>
+<pre><span class="keyword">module type</span> <a href="Netplex_cenv.LEVER.html">LEVER</a> = <code class="code">sig</code> <a href="Netplex_cenv.LEVER.html">..</a> <code class="code">end</code></pre><pre><span class="keyword">module</span> <a href="Netplex_cenv.Make_lever.html">Make_lever</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="type"><a href="Netplex_cenv.FUN_TYPE.html">FUN_TYPE</a></code><code class="code">) -&gt; </code><code class="type"><a href="Netplex_cenv.LEVER.html">LEVER</a></code><code class="type">  with type s=T.s and type r=T.r</code></div></pre><div class="info">
+Creates a <code class="code">LEVER</code> module from a function type as specified in
+      <code class="code">FUN_TYPE</code>
+</div>
+<br>
+<h2 id="2_Persistentkernelobjects">Persistent kernel objects</h2><br>
+<pre><span id="VALpmanage"><span class="keyword">val</span> pmanage</span> : <code class="type">unit -> <a href="Netsys_pmanage.pmanage-c.html">Netsys_pmanage.pmanage</a></code></pre><div class="info">
+Access the manager for persistent kernel objects with limited
+      lifetime. Among these objects there are shared memory objects,
+      and named semaphores. These objects can usually be deleted when
+      the program finishes (or crashes), but this is not done automatically
+      because of kernel persistency.
+<p>
+
+      See <a href="Netplex_admin.html#unlink"><i>Deleting persistent kernel objects</i></a> for more information.<br>
+</div>
+<br>
+<h1 id="1_Debugging">Debugging</h1><br>
+<pre><span class="keyword">module</span> <a href="Netplex_cenv.Debug.html">Debug</a>: <code class="code">sig</code> <a href="Netplex_cenv.Debug.html">..</a> <code class="code">end</code></pre></body></html>

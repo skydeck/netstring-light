@@ -1,0 +1,6 @@
+version = "@VERSION@"
+description = "Ocamlnet - Authentication mechanism SCRAM"
+requires = "unix netsys bigarray netstring cryptokit netgssapi"
+archive(byte) = "netmech-scram.cma"
+archive(native) = "netmech-scram.cmxa"
+archive(native,gprof) = "netmech-scram.p.cmxa"

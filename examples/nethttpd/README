@@ -1,0 +1,62 @@
+These example demonstrate how to use Nethttpd on several coding levels.
+The most advanced (and recommended for applications) is netplex.ml.
+
+- easy_daemon.ml: Very low-level, uses only Nethttpd_kernel
+
+- easy_reactor.ml: Low-level, uses directly the reactive encapsulation of
+  the kernel. The reactor calls the "adder", the simple example of a
+  dynamic web service, using the Netcgi interface (which is already possible
+  on this coding level). The resulting server is single-threaded, i.e. 
+  can only handle one request at a time.
+
+  This example demonstrates how to program the reactor directly.
+
+- easy_engine.ml: Low-level, uses directly the engine encapsulation of 
+  the kernel. The engine implements a very simple example of a dynamic web
+  service, using the Netcgi interface (which is already possible
+  on this coding level). The resulting server can handle multiple requests
+  in parallel.
+
+  This example demonstrates how to program the engine directly.
+
+- file_reactor.ml: Medium-level, uses the reactive encapsulation together
+  with the Nethttpd_services module. The example mixes accesses to the
+  file system with dynamic services. The resulting server is single-threaded,
+  i.e. can only handle one request at a time.
+
+- file_mt_reactor.ml: Same as file_reactor.ml, but uses multi-threading to
+  serve several requests in parallel.
+
+- file_engine.ml: Medium-level, uses the engine encapsulation together
+  with the Nethttpd_services module. The example mixes accesses to the
+  file system with dynamic services. The resulting server can handle multiple
+  requests in parallel.
+
+- proxy_engine.ml: Medium-level, uses the engine encapsulation to
+  realize a simple proxy service. The resulting server can handle multiple
+  requests in parallel.
+
+  This example shows the power of engines.
+
+- netplex.ml: High-level, uses Netplex to configure and control the reactive
+  encapsulation. The example mixes accesses to the file system with dynamic
+  services. There is a configuration file. The resulting server uses
+  multi-processing to serve requests in parallel by default, but there is also 
+  a command-line switch to change that to multi-threading. The server can be
+  controlled (start/stop) using the generic netplex-admin tool.
+
+  This is what you should use for your applications.
+
+
+Getting debug messages:
+
+- For netplex.ml there are additional command-line switches to print
+  debug messages (e.g. -debug-all)
+
+- For the other examples, one can set the environment variables
+  DEBUG and DEBUG_WIN32 (see comment in the code)
+
+The resulting output can be fairly detailed. For a better
+understanding how Ocamlnet works internally, it is recommended to
+enable debugging only for a few modules, and to compare the debug
+output with the code.

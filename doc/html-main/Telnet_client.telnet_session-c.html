@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="Up" href="Telnet_client.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><title>Ocamlnet 3 Reference Manual : Telnet_client.telnet_session</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="Telnet_client.html" title="Telnet_client">Up</a>
+&nbsp;</div>
+<h1>Class <a href="type_Telnet_client.telnet_session.html">Telnet_client.telnet_session</a></h1>
+<pre><span name="TYPEtelnet_session"><span class="keyword">class</span> telnet_session</span> : <code class="type"></code><code class="code">object</code> <a href="Telnet_client.telnet_session-c.html">..</a> <code class="code">end</code></pre><div class="info">
+A telnet session<br>
+</div>
+<hr width="100%">
+<h2 id="2_Overwiew">Overwiew</h2>
+<p>
+
+ The <code class="code">telnet_session</code> object has two queues, one for arriving data,
+ one for data to send.
+ Once the session object is attached to an event system, it connects
+ to the remote peer, and processes the queues. Input is appended to
+ the input queue; output found on the output queue is sent to the
+ other side.
+ If input arrives, a callback function is invoked.
+ You may close the output side of the socket by putting <code class="code">Telnet_eof</code>
+ onto the output queue.
+ Once the EOF marker has been received, a <code class="code">Telnet_eof</code> is appended to
+ the input queue, and the connection is closed (completely). The
+ session object detaches from the event system automatically in this
+ case.
+<p>
+
+ <b>Hints</b>
+<p>
+
+ Set an input handler as callback function in the session object.
+ The input handler is called when new input data have been arrived.
+ It should inspect the input queue, process the queue as much as
+ possible, and it should remove the processed items from the queue.
+ While processing, it may add new items to the output queue. 
+<p>
+
+ If you are not within the callback function and add items to the
+ output queue, the session object will not detect that there are
+ new items to send - unless you invoke the <code class="code">update</code> method.
+<p>
+
+ If you want option negotiation, it is the simplest way to use
+ the special option negotiation methods. Configure the options
+ as you want (invoking <code class="code">enable</code>, <code class="code">disable</code> etc), but do not forget
+ to modify the way input is processed. Every <code class="code">Telnet_will</code>, <code class="code">_wont</code>,
+ <code class="code">_do</code>, and <code class="code">_dont</code> command must be passed to <code class="code">process_option_command</code>.<pre><span id="METHODset_connection"><span class="keyword">method</span> set_connection</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_connector">telnet_connector</a> -> unit</code></pre><div class="info">
+Sets the host name and the port of the remote server to contact.<br>
+</div>
+<pre><span id="METHODset_event_system"><span class="keyword">method</span> set_event_system</span> : <code class="type"><a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -> unit</code></pre><div class="info">
+Sets the event system to use. By default, a private event system
+ is used.<br>
+</div>
+<pre><span id="METHODset_callback"><span class="keyword">method</span> set_callback</span> : <code class="type">(bool -> unit) -> unit</code></pre><div class="info">
+Sets the callback function. This function is called after new
+ commands have been put onto the input queue. 
+ The argument passed to the callback function indicates whether
+ a 'Synch' sequence was received from the remote side or not.
+<p>
+
+ <b>Note Synch:</b> If the client sees a data mark command it will assume
+ that it is actually a Synch sequence. The client automatically
+ discards any <code class="code">Telnet_data</code> commands from the input queue (but not
+ <code class="code">Telnet_data</code>s inside subnegotiations). The data mark command
+ itself remains on the queue.<br>
+</div>
+<pre><span id="METHODset_exception_handler"><span class="keyword">method</span> set_exception_handler</span> : <code class="type">(exn -> unit) -> unit</code></pre><div class="info">
+Sets the exception handler. Every known error condition is
+ caught and passed to the exception handler.
+ The exception handler can do whatever it wants to do. If it
+ raises again an exception, the new exception is always propagated
+ up to the caller (whoever this is). Often the caller is the
+ event system scheduler (i.e. <code class="code">Unixqueue.run</code>); see the documention
+ there.
+<p>
+
+ If you do not set the exception handler, a default handler is
+ active. It first resets the session (see method <code class="code">reset</code>), and
+ then wraps the exception into the <code class="code">Telnet_protocol</code> exception,
+ and raises this exception again.<br>
+</div>
+<pre><span id="METHODoutput_queue"><span class="keyword">method</span> output_queue</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_command">telnet_command</a> Queue.t</code></pre><div class="info">
+The queue of commands to send to the remote side. If you add new
+ commands to this queue, do not forget to invoke the <code class="code">update</code>
+ method which indicates to the event system that new data to
+ send is available.
+ After commands have been sent, they are removed from the queue.<br>
+</div>
+<pre><span id="METHODinput_queue"><span class="keyword">method</span> input_queue</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_command">telnet_command</a> Queue.t</code></pre><div class="info">
+The queue of commands received from the remote side. This class
+ only adds commands to the queue (and invokes the callback 
+ function). The user of this class is responsible for removing
+ commands from the queue which have been processed.<br>
+</div>
+<pre><span id="METHODget_options"><span class="keyword">method</span> get_options</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_options">telnet_options</a></code></pre><div class="info">
+Get the configuration options.<br>
+</div>
+<pre><span id="METHODset_options"><span class="keyword">method</span> set_options</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_options">telnet_options</a> -> unit</code></pre><div class="info">
+Set the configuration options.<br>
+</div>
+<pre><span id="METHODreset"><span class="keyword">method</span> reset</span> : <code class="type">unit -> unit</code></pre><div class="info">
+Closes the connection immediately and empties all queues.
+ All negotiated options are reset, too.<br>
+</div>
+<h2 id="2_Telnetoptions">Telnet options</h2>
+<p>
+
+ The following methods deal with Telnet protocol options. These
+ are negotiated between local and remote side by the Will, Won't,
+ Do and Don't commands. 
+<p>
+
+ The "local" options describe the modification of the behaviour
+ of the local side; the "remote" options describe the modifications
+ of the remote side. Both set of options are independent.
+ This object may track the set of accepted and rejected options
+ if the following methods are used; but this works only if
+ the <code class="code">Telnet_will</code>, <code class="code">_wont</code>, <code class="code">_do</code>, and <code class="code">_dont</code> commands received from
+ the remote side are processed by <code class="code">process_option_command</code>. So
+ you need to invoke this method for the mentioned commands in
+ your command interpretation loop.
+<p>
+
+ The idea is: If you <b>enable</b> an option, it is possible to
+ switch it on. If the remote side requests the option to be enabled,
+ the request will be acknowledged. If the remote side does not
+ request the option, it remains off.
+<p>
+
+ You can also actively demand an option (<code class="code">offer_local_option</code>,
+ <code class="code">request_remote_option</code>); this is of course only possible if
+ the option is already enabled. In this case the client tries
+ actively to switch it on.
+<p>
+
+ You can also <b>disable</b> an option. If the option is on, the
+ client actively rejects the option; following the Telnet protocol
+ this is always possible (rejections cannot be rejected).
+<p>
+
+ The <code class="code">reset</code> methods are somewhat dangerous. They simply reset
+ the internal state of the client, but do not negotiate. This
+ possibility was added to allow the Timing Mark option to send
+ again timing marks even if the previous timing marks have
+ already been accepted. After <code class="code">reset</code>, the client thinks the
+ option was never negotiated; but nothing is done to tell
+ the remote side about this.
+<p>
+
+ <code class="code">option_negotiation_is_over</code>: true if no option negotiation is
+ pending (i.e. nothing has still to be acknowledged).<pre><span id="METHODenable_local_option"><span class="keyword">method</span> enable_local_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODenable_remote_option"><span class="keyword">method</span> enable_remote_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODdisable_local_option"><span class="keyword">method</span> disable_local_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODdisable_remote_option"><span class="keyword">method</span> disable_remote_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODoffer_local_option"><span class="keyword">method</span> offer_local_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODrequest_remote_option"><span class="keyword">method</span> request_remote_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODreset_local_option"><span class="keyword">method</span> reset_local_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODreset_remote_option"><span class="keyword">method</span> reset_remote_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> unit</code></pre><pre><span id="METHODget_local_option"><span class="keyword">method</span> get_local_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> <a href="Telnet_client.html#TYPEtelnet_option_state">telnet_option_state</a></code></pre><pre><span id="METHODget_remote_option"><span class="keyword">method</span> get_remote_option</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_negotiated_option">telnet_negotiated_option</a> -> <a href="Telnet_client.html#TYPEtelnet_option_state">telnet_option_state</a></code></pre><pre><span id="METHODoption_negotiation_is_over"><span class="keyword">method</span> option_negotiation_is_over</span> : <code class="type">bool</code></pre><pre><span id="METHODprocess_option_command"><span class="keyword">method</span> process_option_command</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_command">telnet_command</a> -> unit</code></pre><pre><span id="METHODfetch_subnegotiation"><span class="keyword">method</span> fetch_subnegotiation</span> : <code class="type">string option</code></pre><div class="info">
+This method should be called as follows:
+ If you find a <code class="code">Telnet_sb</code> at the beginning of the input queue,
+ remove this command <code class="code">Queue.take</code>, and invoke <code class="code">fetch_subnegotiation</code>.
+ This method scans the queue and looks for the associated 
+ <code class="code">Telnet_se</code> command. If it does not find it, <code class="code">None</code> is returned.
+ If <code class="code">Telnet_se</code> is found, the parameter enclosed by the two commands
+ is returned as <code class="code">Some s</code> where <code class="code">s</code> is the parameter string. Furthermore,
+ in the latter case the data items and the closing <code class="code">Telnet_se</code> are
+ removed from the queue.<br>
+</div>
+<h2 id="2_Runningthesession">Running the session</h2><pre><span id="METHODattach"><span class="keyword">method</span> attach</span> : <code class="type">unit -> unit</code></pre><div class="info">
+Attach to the event system. After being attached, the client
+ is ready to work.<br>
+</div>
+<pre><span id="METHODrun"><span class="keyword">method</span> run</span> : <code class="type">unit -> unit</code></pre><div class="info">
+Run the event system<br>
+</div>
+<pre><span id="METHODupdate"><span class="keyword">method</span> update</span> : <code class="type">unit -> unit</code></pre><div class="info">
+If there are commands in the output queue, the event system is
+ signaled that this client wants to do network I/O.<br>
+</div>
+<pre><span id="METHODsend_synch"><span class="keyword">method</span> send_synch</span> : <code class="type"><a href="Telnet_client.html#TYPEtelnet_command">telnet_command</a> list -> unit</code></pre><div class="info">
+At the next output oppurtunity, a Synch sequence is sent to
+ the remote peer. This means that the passed commands, extended
+ by an additional Data Mark command, are sent to the peer as
+ urgent data.
+<p>
+
+ Sending a Synch sequence has higher priority than the output
+ queue; processing of the output queue is deferred until the
+ Synch sequence has been completely sent.<br>
+</div>
+<pre><span id="METHODexpect_input"><span class="keyword">method</span> expect_input</span> : <code class="type">bool -> unit</code></pre><div class="info">
+Set whether the timeout value is to be applied to the input side
+	  of the connection. This is <code class="code">true</code> by default.<br>
+</div>
+</body></html>

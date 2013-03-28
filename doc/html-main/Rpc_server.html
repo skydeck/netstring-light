@@ -1,0 +1,712 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rpc_portmapper.html">
+<link rel="next" href="Rpc_auth_sys.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><title>Ocamlnet 3 Reference Manual : Rpc_server</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rpc_portmapper.html" title="Rpc_portmapper">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Rpc_auth_sys.html" title="Rpc_auth_sys">Next</a>
+</div>
+<h1>Module <a href="type_Rpc_server.html">Rpc_server</a></h1>
+<pre><span class="keyword">module</span> Rpc_server: <code class="code">sig</code> <a href="Rpc_server.html">..</a> <code class="code">end</code></pre><div class="info">
+RPC servers<br>
+</div>
+<hr width="100%">
+<br>
+Like the client, the RPC server module is programmed on top of the
+ Unixqueue event system. It pushes itself on an existing Unixqueue
+ as a new service that accepts RPC calls, forwards them to configurable
+ functions, and sends the replies back.
+<p>
+
+ The server module can manage two kinds of RPC functions: synchronous
+ and asynchronous. Synchronous functions compute their result immediately
+ and thus the result can be sent back just after the evaluation of the
+ function has finished. In contrast to this, asynchronous functions only
+ get noticed about the call and need not to know immediately what should
+ be answered. Typically, an asynchronous function initiates a second
+ communication channel and its result depends on what happens on the
+ second channel. The communication on this channel is done in an
+ asynchronous way, too, and can be managed by the same event system that
+ carries out the RPC service. After several input or output events,
+ the result has somehow been computed, and the answer can be sent
+ back to the original caller. To do so, the asynchronous RPC function
+ invokes 'reply' together with the necessary session IDs that identify
+ the answer among all answers.<br>
+<pre><span id="EXCEPTIONConnection_lost"><span class="keyword">exception</span> Connection_lost</span></pre>
+<div class="info">
+raised by the 'reply' function if the connection to the original caller
+ has been lost in the meantime.<br>
+</div>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+<div class="info">
+represents a server for an RPC program<br>
+</div>
+
+<pre><span id="TYPEsession"><span class="keyword">type</span> <code class="type"></code>session</span> </pre>
+<div class="info">
+identifies a pair of a call and a reply<br>
+</div>
+
+<pre><span id="TYPEconnection_id"><span class="keyword">type</span> <code class="type"></code>connection_id</span> </pre>
+<div class="info">
+identifies the connection of a session. For connectionless servers,
+ every session gets a new connection_id.
+ You can compare connection_ids to find out whether two sessions
+ belong to the same connection. Use "=" for equality.<br>
+</div>
+
+<pre><code><span id="TYPEconnector"><span class="keyword">type</span> <code class="type"></code>connector</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Localhost"><span class="constructor">Localhost</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The service is installed on 'localhost' and listens on the
+ given port number. A number of 0 means that the port is
+ chosen by the operating system.
+ Note: The service is only locally reachable.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Portmapped"><span class="constructor">Portmapped</span></span></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The service is installed on every network interface; the port is
+ chosen by the operating system; the program is registered with the
+ portmapper</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Internet"><span class="constructor">Internet</span></span> <span class="keyword">of</span> <code class="type">(Unix.inet_addr * int)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The service is installed on the passed interface/port combination.
+ Use Unix.inet_addr_any to listen on all network interfaces.
+ Use port 0 to automatically choose the port number.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Unix"><span class="constructor">Unix</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The service is installed on a Unix domain socket.
+ Note: the socket path must not exist when the server is started,
+ and the socket must be unlinked when the server terminates.
+ Note Win32: Unix domain sockets are emulated by writing the
+ inet4 port number into a one-line file.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.W32_pipe"><span class="constructor">W32_pipe</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The service is installed for a named pipe. (Only for Win32.)</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Descriptor"><span class="constructor">Descriptor</span></span> <span class="keyword">of</span> <code class="type">Unix.file_descr</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The service listens on the given file descriptor.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Dynamic_descriptor"><span class="constructor">Dynamic_descriptor</span></span> <span class="keyword">of</span> <code class="type">(unit -> Unix.file_descr)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The service listens on the returned file descriptor.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+<pre><code><span id="TYPEbinding_sync"><span class="keyword">type</span> <code class="type"></code>binding_sync</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_sync.sync_name">sync_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >procedure name</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_sync.sync_proc">sync_proc</span>&nbsp;:<code class="type"><a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a></code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the function that implements the
+ procedure</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+
+<pre><code><span id="TYPEbinding_async"><span class="keyword">type</span> <code class="type"></code>binding_async</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_async.async_name">async_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >procedure name</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding_async.async_invoke">async_invoke</span>&nbsp;:<code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> unit</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >A function that is called when the procedure is called</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+
+<pre><code><span id="TYPEbinding"><span class="keyword">type</span> <code class="type"></code>binding</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding.Sync"><span class="constructor">Sync</span></span> <span class="keyword">of</span> <code class="type"><a href="Rpc_server.html#TYPEbinding_sync">binding_sync</a></code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >bind a synchonous procedure</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTbinding.Async"><span class="constructor">Async</span></span> <span class="keyword">of</span> <code class="type"><a href="Rpc_server.html#TYPEbinding_async">binding_async</a></code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >bind an asynchonous procedure</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+<pre><span id="VALconnector_of_sockaddr"><span class="keyword">val</span> connector_of_sockaddr</span> : <code class="type">Unix.sockaddr -> <a href="Rpc_server.html#TYPEconnector">connector</a></code></pre><div class="info">
+Converts the socket address into a connector<br>
+</div>
+<pre><span id="VALconnector_of_socksymbol"><span class="keyword">val</span> connector_of_socksymbol</span> : <code class="type"><a href="Netsockaddr.html#TYPEsocksymbol">Netsockaddr.socksymbol</a> -> <a href="Rpc_server.html#TYPEconnector">connector</a></code></pre><div class="info">
+Converts the <a href="Netsockaddr.html#TYPEsocksymbol"><code class="code">Netsockaddr.socksymbol</code></a> into a connector<br>
+</div>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">?program_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       ?version_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       <a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -><br>       <a href="Rpc_server.html#TYPEconnector">connector</a> -><br>       <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a> -><br>       <a href="Rpc.html#TYPEmode">Rpc.mode</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> <a href="Rpc_server.html#TYPEbinding">binding</a> list -> int -> <a href="Rpc_server.html#TYPEt">t</a></code></pre><div class="info">
+Deprecated creation of an RPC server. For new programs, use <code class="code">create2</code>
+ or one of its variants.
+<p>
+
+ Creates a new server that is pushed onto the event queue.
+ The <code class="code">connector</code>, <code class="code">protocol</code> and <code class="code">mode</code> values control the network
+ type of the server. Note that not all combinations are valid; the
+ following can be used:<ul>
+<li>any <code class="code">connector</code>, <code class="code">protocol=Tcp</code>, <code class="code">mode=Socket</code>:
+     creates a classic TCP server socket that allows multiple
+     stream connections at the same time</li>
+<li><code class="code">connector=Descriptor s</code>, <code class="code">protocol=Tcp</code>, <code class="code">mode=BiPipe</code>:
+     (where <code class="code">s</code> is one half of a socketpair)
+     creates a stream socket that is the endpoint of a point-to-point
+     stream connection (bidirectional pipe)</li>
+<li>any Internet namespace connector, <code class="code">protocol=Udp</code>, <code class="code">mode=Socket</code>:
+     creates a UDP server socket that allows serving multiple datagrams</li>
+</ul>
+
+ Note: If <code class="code">connector = Descriptor _</code> the file descriptor is not opened by
+ this module and not closed. The other <code class="code">connector</code>s work automatically
+ regarding this point, i.e. descriptors are opened and closed as
+ necessary.
+<p>
+
+ <code class="code">connector = Dynamic_descriptor</code>: The open descriptor is closed after use.
+<p>
+
+ The <code class="code">Rpc_program.t</code> specifies the procedures that are available and
+ their signatures. The <code class="code">binding list</code> should contain for every procedure
+ name the function that handles calls of the procedures.
+<p>
+
+ The remaining integer is the maximum number of waiting connections
+ if a classic Tcp server socket is used; other connection types ignore
+ this number.
+<p>
+
+ The optional arguments <code class="code">?program_number</code> and <code class="code">?version_number</code> override
+ the numbers specified in the passed program.
+<p>
+
+ <b>Notes on servers:</b><ul>
+<li>servers that allow multiple connections never terminate by themselves</li>
+<li>servers for only one connection (endpoint of a bidirectional pipe)
+   terminate if they see an EOF on the stream; in this case the stream
+   is closed by the server</li>
+<li>the <code class="code">create</code> function may block if the connector is Portmapped</li>
+</ul>
+
+ <b>Note for UDP servers:</b> Due to limitations of the ocaml runtime
+ there is a limit of 16K per message.<br>
+</div>
+<pre><span id="TYPEsocket_config"><span class="keyword">class type</span> <a href="Rpc_server.socket_config-c.html">socket_config</a></span> = <code class="code">object</code> <a href="Rpc_server.socket_config-c.html">..</a> <code class="code">end</code></pre><pre><span id="VALdefault_socket_config"><span class="keyword">val</span> default_socket_config</span> : <code class="type"><a href="Rpc_server.socket_config-c.html">socket_config</a></code></pre><pre><span name="TYPEdefault_socket_config"><span class="keyword">class</span> <a href="Rpc_server.default_socket_config-c.html">default_socket_config</a></span> : <code class="type"></code><code class="type"><a href="Rpc_server.socket_config-c.html">socket_config</a></code></pre><pre><span id="TYPEmode2"><span class="keyword">type</span> <code class="type"></code>mode2</span> = <code class="type">[ `Dummy of <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a><br>       | `Multiplexer_endpoint of <a href="Rpc_transport.rpc_multiplex_controller-c.html">Rpc_transport.rpc_multiplex_controller</a><br>       | `Socket of <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a> * <a href="Rpc_server.html#TYPEconnector">connector</a> * <a href="Rpc_server.socket_config-c.html">socket_config</a><br>       | `Socket_endpoint of <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a> * Unix.file_descr ]</code> </pre>
+<div class="info">
+Determines the type of the server for <code class="code">create2</code>:
+<p>
+<ul>
+<li><code class="code">`Socket_endpoint(proto,fd)</code>: Socket <code class="code">fd</code> is a connected socket
+   descriptor used for communication. <code class="code">proto</code> determines the 
+   encapsulation; should be <code class="code">Tcp</code> for stream sockets and <code class="code">Udp</code> for
+   datagram sockets.</li>
+</ul>
+<ul>
+<li><code class="code">`Multiplexer_endpoint m</code>: <code class="code">m</code> is an RPC multiplex controller.</li>
+</ul>
+<ul>
+<li><code class="code">`Socket(proto, conn, config)</code>: Opens or uses a server socket 
+   according to <code class="code">conn</code>. <code class="code">proto</code> determines the 
+   encapsulation; should be <code class="code">Tcp</code> for stream sockets and <code class="code">Udp</code> for
+   datagram sockets. <code class="code">config</code> specifies configuration details.</li>
+</ul>
+
+ Despite their names, <code class="code">`Socket_endpoint</code> and <code class="code">`Socket</code> also support
+ Win32 named pipes.<br>
+</div>
+
+<pre><span id="VALcreate2"><span class="keyword">val</span> create2</span> : <code class="type"><a href="Rpc_server.html#TYPEmode2">mode2</a> -> <a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -> <a href="Rpc_server.html#TYPEt">t</a></code></pre><div class="info">
+Creates a server according to the <code class="code">mode2</code> argument. This kind of server
+ does initially not have any bindings.<br>
+</div>
+<pre><span id="VALbind"><span class="keyword">val</span> bind</span> : <code class="type">?program_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       ?version_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> <a href="Rpc_server.html#TYPEbinding">binding</a> list -> <a href="Rpc_server.html#TYPEt">t</a> -> unit</code></pre><div class="info">
+Binds the program as specified by the <code class="code">binding list</code>. If the portmapper
+ must be informed, this action is started (and continued in the
+ background). One can bind several programs in several versions to the
+ same server.<br>
+</div>
+<pre><span id="VALunbind"><span class="keyword">val</span> unbind</span> : <code class="type">?program_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       ?version_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> <a href="Rpc_server.html#TYPEt">t</a> -> unit</code></pre><div class="info">
+Unbinds the program if it is bound by the server<br>
+</div>
+<pre><span id="VALbound_programs"><span class="keyword">val</span> bound_programs</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> list</code></pre><div class="info">
+Returns the bound programs<br>
+</div>
+<pre><span id="VALget_event_system"><span class="keyword">val</span> get_event_system</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a></code></pre><div class="info">
+Find out the event system that contains the 'session'<br>
+</div>
+<pre><span id="VALget_connection_id"><span class="keyword">val</span> get_connection_id</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Rpc_server.html#TYPEconnection_id">connection_id</a></code></pre><div class="info">
+Get the connection_id<br>
+</div>
+<pre><span id="VALget_xid"><span class="keyword">val</span> get_xid</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a></code></pre><div class="info">
+Returns the session ID.
+ Important note: This number identifies the session from the caller's
+ view, not from the server's view!<br>
+</div>
+<pre><span id="VALget_socket_name"><span class="keyword">val</span> get_socket_name</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> Unix.sockaddr</code></pre><pre><span id="VALget_peer_name"><span class="keyword">val</span> get_peer_name</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> Unix.sockaddr</code></pre><div class="info">
+Return the address of the socket serving the session, and the client
+ socket, resp. These functions fail if the server is not running on
+ a socket.<br>
+</div>
+<pre><span id="VALget_conn_socket_name"><span class="keyword">val</span> get_conn_socket_name</span> : <code class="type"><a href="Rpc_server.html#TYPEconnection_id">connection_id</a> -> Unix.sockaddr</code></pre><pre><span id="VALget_conn_peer_name"><span class="keyword">val</span> get_conn_peer_name</span> : <code class="type"><a href="Rpc_server.html#TYPEconnection_id">connection_id</a> -> Unix.sockaddr</code></pre><div class="info">
+Return the address of the socket serving the connection, and the client
+ socket, resp. These functions fail if the server is not running on
+ a socket.<br>
+</div>
+<pre><span id="VALget_server"><span class="keyword">val</span> get_server</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Rpc_server.html#TYPEt">t</a></code></pre><div class="info">
+Returns the server instance of the session<br>
+</div>
+<pre><span id="VALget_main_socket_name"><span class="keyword">val</span> get_main_socket_name</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> Unix.sockaddr</code></pre><div class="info">
+Returns the address of the server socket, or the address of the
+ bidirectional pipe.
+ This function fails if the main file descriptor is not a socket.<br>
+</div>
+<pre><span id="VALget_protocol"><span class="keyword">val</span> get_protocol</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a></code></pre><div class="info">
+Return whether Tcp or Udp<br>
+</div>
+<pre><span id="VALget_srv_event_system"><span class="keyword">val</span> get_srv_event_system</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> <a href="Unixqueue.unix_event_system-c.html">Unixqueue.unix_event_system</a></code></pre><div class="info">
+Returns the event system<br>
+</div>
+<pre><span id="VALget_last_proc_info"><span class="keyword">val</span> get_last_proc_info</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> string</code></pre><div class="info">
+Get a debug string describing the last invoked procedure<br>
+</div>
+<pre><span id="VALis_dummy"><span class="keyword">val</span> is_dummy</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> bool</code></pre><div class="info">
+Whether this is a server in <code class="code">`Dummy</code> mode. These servers cannot be
+      used for communication<br>
+</div>
+<pre><span id="TYPErule"><span class="keyword">type</span> <code class="type"></code>rule</span> = <code class="type">[ `Accept<br>       | `Accept_limit_length of int * <a href="Rpc_server.html#TYPErule">rule</a><br>       | `Deny<br>       | `Drop<br>       | `Reject<br>       | `Reject_with of <a href="Rpc.html#TYPEserver_error">Rpc.server_error</a> ]</code> </pre>
+
+<pre><span id="VALset_session_filter"><span class="keyword">val</span> set_session_filter</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> (<a href="Rpc_transport.html#TYPEsockaddr">Rpc_transport.sockaddr</a> -> <a href="Rpc_server.html#TYPErule">rule</a>) -> unit</code></pre><div class="info">
+If set, the filter function is invoked every time the beginning of a new
+ RPC call is received, and the result of the filter function determines
+ what to do with the call:
+<p>
+
+ `Deny: TCP connections are immediately closed; UDP packets are dropped
+ `Drop: The call is dropped (it does not allocate memory)
+ `Reject_with: A response is sent back that the call is rejected. The
+   parameter specified the error code
+ `Reject: The same as <code class="code">`Reject_with Rpc.Auth_too_weak</code>
+ `Accept: The call is accepted without limitation (the default if no
+   filter is installed)
+ `Accept_limit_length(n,r): If the call is longer than n bytes, the rule
+   r will be applied
+<p>
+
+ The parameter of the filter function is the socket address of the
+ client.
+<p>
+
+ The intention of filters is to prevent denial of service attacks.
+ A simple but good filter for TCP servers is
+   set_filter srv (fun _ -&gt; (`Accept_limit_length(n,`Deny))
+ which accepts messages up to n bytes without limit, and denies longer
+ messages. n is the length of the longest sensible message.
+<p>
+
+ For UDP servers, there is an implicit limit of 16K, so it is
+ not necessary to care about this.
+<p>
+
+ Another application is to restrict which systems can contact this
+ server, based on the IP address of the client.
+<p>
+
+ Note that this is not a protection against distributed denial of service
+ attacks.<br>
+</div>
+<pre><span id="VALset_session_filter_2"><span class="keyword">val</span> set_session_filter_2</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -><br>       (<a href="Rpc_transport.html#TYPEsockaddr">Rpc_transport.sockaddr</a> -> <a href="Rpc_server.html#TYPEconnection_id">connection_id</a> -> <a href="Rpc_server.html#TYPErule">rule</a>) -><br>       unit</code></pre><div class="info">
+Same as <code class="code">set_session_filter</code>, but the filter gets as second argument the
+ connection ID.<br>
+</div>
+<pre><span id="VALset_mstring_factories"><span class="keyword">val</span> set_mstring_factories</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> <a href="Xdr_mstring.html#TYPEnamed_mstring_factories">Xdr_mstring.named_mstring_factories</a> -> unit</code></pre><div class="info">
+Sets the mstring factories to use for decoding requests containing
+      managed strings<br>
+</div>
+<pre><span id="VALreply"><span class="keyword">val</span> reply</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> unit</code></pre><div class="info">
+Asynchronous procedures can reply their results with this function.
+<p>
+
+ NOTES:<ul>
+<li>As with synchronous procedures, the transfer is not reliable since
+   the connection may be broken at any time</li>
+<li>If it is already known that the connection is down, a Connection_lost
+   exception is raised.</li>
+<li>If you don't want to reply to a certain call, just don't <code class="code">reply</code>.
+   Unreplied calls do not allocate memory.</li>
+<li>It is possible to reply several times ("batch mode"), but the client
+   must support it, too. Just call <code class="code">reply</code> several times for the same
+   session.</li>
+</ul>
+<br>
+</div>
+<pre><span id="VALreply_error"><span class="keyword">val</span> reply_error</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Rpc.html#TYPEserver_error">Rpc.server_error</a> -> unit</code></pre><div class="info">
+Like <code class="code">reply</code>, but an error condition is sent back to the caller.<br>
+</div>
+<pre><span id="VALset_exception_handler"><span class="keyword">val</span> set_exception_handler</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> (exn -> unit) -> unit</code></pre><div class="info">
+Sets the exception handler for the server.
+ The exception handler gets most exceptions raised by the functions that
+ are bound to procedures. The exception handler does not get Abort
+ exceptions and any exceptions resulting from I/O problems.
+<p>
+
+ NOTES ABOUT EXCEPTIONS:<ul>
+<li>The default exception handler logs a <code class="code">`Crit</code> message using <a href="Netlog.html"><code class="code">Netlog</code></a>.</li>
+<li>I/O problems usually lead to an 'Abort' of the whole server.</li>
+</ul>
+<br>
+</div>
+<pre><span id="VALset_onclose_action"><span class="keyword">val</span> set_onclose_action</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> (<a href="Rpc_server.html#TYPEconnection_id">connection_id</a> -> unit) -> unit</code></pre><div class="info">
+Every time a connection is closed, the onclose function is called
+ with the closed connection.
+ The default onclose action is to do nothing. The function is also
+ called for <code class="code">Descriptor</code> connectors when the socket should be closed
+ (for these connectors the socket is not closed by this module).
+<p>
+
+ Note that this action only applies to closed connections. It will
+ not be executed for closed sockets in general (closed master socket,
+ closed datagram socket).
+<p>
+
+ If several onclose actions are set, they will be executed in reverse
+ order.<br>
+</div>
+<pre><span id="VALset_timeout"><span class="keyword">val</span> set_timeout</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> float -> unit</code></pre><div class="info">
+Sets the timeout for the transport.<br>
+</div>
+<pre><span id="VALstop_server"><span class="keyword">val</span> stop_server</span> : <code class="type">?graceful:bool -> <a href="Rpc_server.html#TYPEt">t</a> -> unit</code></pre><div class="info">
+Stops the server: If a TCP server socket is listening, it is immediately
+ closed. The shutdown procedure for the connections is initiated.
+ Pending result messages are dropped.
+<p>
+
+ <code class="code">graceful</code>: If true, the shutdown procedure is deferred until all
+ responses have been transferred back to the caller. This includes
+ any responses added to the message queue in the current callback.
+ New calls are not accepted.<br>
+</div>
+<pre><span id="VALstop_connection"><span class="keyword">val</span> stop_connection</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> <a href="Rpc_server.html#TYPEconnection_id">connection_id</a> -> unit</code></pre><div class="info">
+Schedules a special event that causes the connection to be stopped in the
+ very near future. The function has only an effect for stream-oriented
+ servers (mode = Tcp). The connection socket will be closed (unless it
+ was passed using <code class="code">Descriptor</code>). Nothing happens for datagram-oriented
+ servers (mode = Udp).<br>
+</div>
+<pre><code><span id="TYPEauth_result"><span class="keyword">type</span> <code class="type"></code>auth_result</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTauth_result.Auth_positive"><span class="constructor">Auth_positive</span></span> <span class="keyword">of</span> <code class="type">(string * string * string * <a href="Xdr.html#TYPEencoder">Xdr.encoder</a> option * <a href="Xdr.html#TYPEdecoder">Xdr.decoder</a> option)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Successful authentication:
+          <code class="code">(username, returned_verifier_flavour, returned_verifier_data, 
+	    enc_opt, dec_opt
+	  )</code>
+<p>
+
+	  Encoders and decoders are allowed to raise the exceptions
+	  <a href="Rpc_server.html#EXCEPTIONLate_drop"><code class="code">Rpc_server.Late_drop</code></a> and <a href="Rpc.html#EXCEPTIONRpc_server"><code class="code">Rpc.Rpc_server</code></a>.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTauth_result.Auth_negative"><span class="constructor">Auth_negative</span></span> <span class="keyword">of</span> <code class="type"><a href="Rpc.html#TYPEserver_error">Rpc.server_error</a></code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Failed authentication</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTauth_result.Auth_reply"><span class="constructor">Auth_reply</span></span> <span class="keyword">of</span> <code class="type">(<a href="Xdr_mstring.mstring-c.html">Xdr_mstring.mstring</a> list * string * string)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The authentication method generates the positive response
+	  of this RPC call:
+	  <code class="code">(data, verf_flavor, verf_data)</code>
+	  (new in Ocamlnet-3.3)</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTauth_result.Auth_drop"><span class="constructor">Auth_drop</span></span></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Authentication demands to drop the message</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+<pre><span id="EXCEPTIONLate_drop"><span class="keyword">exception</span> Late_drop</span></pre>
+<div class="info">
+This can be raised in encryption/decryption functions to prevent
+      that a response is sent.<br>
+</div>
+<pre><span id="TYPEauth_peeker"><span class="keyword">type</span> <code class="type"></code>auth_peeker</span> = <code class="type">[ `None<br>       | `Peek_descriptor of Unix.file_descr -> string option<br>       | `Peek_multiplexer of<br>           <a href="Rpc_transport.rpc_multiplex_controller-c.html">Rpc_transport.rpc_multiplex_controller</a> -> string option ]</code> </pre>
+
+<pre><span id="TYPEauth_details"><span class="keyword">class type</span> <a href="Rpc_server.auth_details-c.html">auth_details</a></span> = <code class="code">object</code> <a href="Rpc_server.auth_details-c.html">..</a> <code class="code">end</code></pre><pre><span id="TYPEauth_method"><span class="keyword">class type</span> <a href="Rpc_server.auth_method-c.html">auth_method</a></span> = <code class="code">object</code> <a href="Rpc_server.auth_method-c.html">..</a> <code class="code">end</code></pre><pre><span id="VALset_auth_methods"><span class="keyword">val</span> set_auth_methods</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> <a href="Rpc_server.auth_method-c.html">auth_method</a> list -> unit</code></pre><div class="info">
+Sets the available authentication methods.
+ By default, the list is set to <code class="code"> auth_none </code>.
+ If none of the methods apply, the call is rejected (Auth_too_weak).<br>
+</div>
+<pre><span id="VALauth_none"><span class="keyword">val</span> auth_none</span> : <code class="type"><a href="Rpc_server.auth_method-c.html">auth_method</a></code></pre><div class="info">
+The authentication method "AUTH_NONE", i.e. no user name is passed.
+ The function <code class="code">get_user</code> will return "".<br>
+</div>
+<pre><span id="VALauth_too_weak"><span class="keyword">val</span> auth_too_weak</span> : <code class="type"><a href="Rpc_server.auth_method-c.html">auth_method</a></code></pre><div class="info">
+The method that always rejects.<br>
+</div>
+<pre><span id="VALauth_transport"><span class="keyword">val</span> auth_transport</span> : <code class="type"><a href="Rpc_server.auth_method-c.html">auth_method</a></code></pre><div class="info">
+Authenticate by trusting the transport layer. The user returned by
+ the multiplexer's method peer_user_name is taken.<br>
+</div>
+<pre><span id="VALget_user"><span class="keyword">val</span> get_user</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> string</code></pre><div class="info">
+Returns the user name as returned by the authentication method. See
+ the description of the method for the format of the user name string.<br>
+</div>
+<pre><span id="VALget_auth_method"><span class="keyword">val</span> get_auth_method</span> : <code class="type"><a href="Rpc_server.html#TYPEsession">session</a> -> <a href="Rpc_server.auth_method-c.html">auth_method</a></code></pre><div class="info">
+Returns the method that was used to authenticate the user.<br>
+</div>
+<pre><span id="VALverbose"><span class="keyword">val</span> verbose</span> : <code class="type">bool -> unit</code></pre><div class="info">
+<b>Deprecated.</b>
+      Set whether you want debug messages to stderr or not<br>
+</div>
+<pre><span id="VALdetach"><span class="keyword">val</span> detach</span> : <code class="type"><a href="Rpc_server.html#TYPEt">t</a> -> unit</code></pre><div class="info">
+<b>Internal function.</b> Cancels all pending I/O operations, and
+      deallocates buffers. This function has only one purpose: The
+      RPC servers inherited by a Netplex child process return memory.
+      The RPC server is unusable after this.<br>
+</div>
+<pre><span class="keyword">module</span> <a href="Rpc_server.Debug.html">Debug</a>: <code class="code">sig</code> <a href="Rpc_server.Debug.html">..</a> <code class="code">end</code></pre></body></html>

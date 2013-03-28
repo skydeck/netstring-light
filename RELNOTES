@@ -1,0 +1,58 @@
+----------------------------------------------------------------------
+Intro
+----------------------------------------------------------------------
+
+These are release notes for ocamlnet-3.0.
+
+Major changes include:
+
+ - Port to Win32
+ - The new Rpc_proxy layer
+ - Netplex has been extended (Netplex_sharedvar etc.)
+ - New implementation of the Shell library for starting subprocesses
+ - Uniform debugging with Netlog.Debug
+ - Exception printers (Netexn)
+ - Coordination of signal handling in Netsys_signal
+ - New foundation for Unixqueue via pollsets
+ - Extended Unixqueue engines (e.g. Uq_io)
+ - More system calls in netsys
+ - Camlboxes as an efficient way of message passing between processes
+ - The netcgi1 library has been dropped in favor of netcgi2
+
+Also, there are lots of smaller improvements and bug fixes.
+
+----------------------------------------------------------------------
+Known Problems
+----------------------------------------------------------------------
+
+There are known problems in this preview release:
+
+- The port to Win32 is incomplete and still alpha quality
+
+- Sometimes, DNS errors are just reported by the exception Not_found
+
+- In netcgi2-plex, the "mount_dir" and "mount_at" options are not yet
+  implemented.
+
+- In netclient, aggressive caching of HTTP connections is still
+  buggy. Do not use this option (by default, it is not enabled).
+
+- The FTP client is still incomplete.
+
+----------------------------------------------------------------------
+Resources
+----------------------------------------------------------------------
+
+The current development version is available in Subversion:
+
+https://godirepo.camlcity.org/svn/lib-ocamlnet2
+
+Note that the ocamlnet file tree in Sourceforge refers to
+ocamlnet-1 only.
+
+There is a mailing list for Ocamlnet development:
+
+http://sourceforge.net/mail/?group_id=19774
+
+In case of problems, you can also contact me directly:
+Gerd Stolpmann <gerd@gerd-stolpmann.de>

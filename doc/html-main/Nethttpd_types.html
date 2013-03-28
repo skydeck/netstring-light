@@ -1,0 +1,392 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Netgssapi.html">
+<link rel="next" href="Nethttpd_kernel.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Exceptions" rel="Section" href="#exceptions">
+<link title="Environment" rel="Section" href="#environment">
+<link title="Generating error responses, logging" rel="Section" href="#1_Generatingerrorresponseslogging">
+<link title="Service Providers" rel="Section" href="#service">
+<link title="Helpers" rel="Section" href="#helpers">
+<link title="Construction of environments" rel="Subsection" href="#2_Constructionofenvironments">
+<link title="Auxiliary Functions for Environments" rel="Subsection" href="#2_AuxiliaryFunctionsforEnvironments">
+<title>Ocamlnet 3 Reference Manual : Nethttpd_types</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Netgssapi.html" title="Netgssapi">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Nethttpd_kernel.html" title="Nethttpd_kernel">Next</a>
+</div>
+<h1>Module <a href="type_Nethttpd_types.html">Nethttpd_types</a></h1>
+<pre><span class="keyword">module</span> Nethttpd_types: <code class="code">sig</code> <a href="Nethttpd_types.html">..</a> <code class="code">end</code></pre><div class="info">
+Type definitions for the HTTP daemon
+<p>
+
+ <b>Contents</b>
+<p>
+<ul>
+<li><a href="Nethttpd_types.html#exceptions"><i>Exceptions</i></a></li>
+<li><a href="Nethttpd_types.html#environment"><i>Environment</i></a></li>
+<li><a href="Nethttpd_types.html#service"><i>Service Providers</i></a></li>
+<li><a href="Nethttpd_types.html#helpers"><i>Helpers</i></a></li>
+</ul>
+<br>
+</div>
+<hr width="100%">
+<br>
+Many types can also be found in the <code class="code">Nethttp</code> module (part of netstring).
+ Furthermore, <code class="code">Netcgi_env</code> and <code class="code">Netcgi_types</code> are of interest (part of cgi).<br>
+<br>
+<h1 id="exceptions">Exceptions</h1><br>
+<pre><span id="EXCEPTIONStandard_response"><span class="keyword">exception</span> Standard_response</span> <span class="keyword">of</span> <code class="type"><a href="Nethttp.html#TYPEhttp_status">Nethttp.http_status</a> * <a href="Nethttp.http_header-c.html">Nethttp.http_header</a> option * string option</code></pre>
+<div class="info">
+Some HTTP containers allow you to raise this exception. The standard
+ response corresponding to <code class="code">http_status</code> is sent back to the client.
+ If the third argument exists, an entry into the error log
+ is written.<br>
+</div>
+<br>
+<h1 id="environment">Environment</h1><br>
+<pre><span id="TYPEoutput_state"><span class="keyword">type</span> <code class="type"></code>output_state</span> = <code class="type">[ `End | `Sending | `Start ]</code> </pre>
+
+<pre><span id="VALstring_of_output_state"><span class="keyword">val</span> string_of_output_state</span> : <code class="type"><a href="Nethttpd_types.html#TYPEoutput_state">output_state</a> -> string</code></pre><div class="info">
+Debugging<br>
+</div>
+<pre><span id="TYPEv_extended_environment"><span class="keyword">class type</span> <span class="keyword">virtual</span> <a href="Nethttpd_types.v_extended_environment-c.html">v_extended_environment</a></span> = <code class="code">object</code> <a href="Nethttpd_types.v_extended_environment-c.html">..</a> <code class="code">end</code></pre><div class="info">
+An extension of <code class="code">cgi_environment</code> for use with the daemon.
+</div>
+<pre><span id="TYPEextended_environment"><span class="keyword">class type</span> <a href="Nethttpd_types.extended_environment-c.html">extended_environment</a></span> = <code class="code">object</code> <a href="Nethttpd_types.extended_environment-c.html">..</a> <code class="code">end</code></pre><div class="info">
+Same as <code class="code">v_extended_environment</code>, but no virtual methods
+</div>
+<br>
+<h2 id="2_Constructionofenvironments">Construction of environments</h2><br>
+<pre><span name="TYPEempty_environment"><span class="keyword">class</span> <span class="keyword">virtual</span> <a href="Nethttpd_types.empty_environment-c.html">empty_environment</a></span> : <code class="type"></code><code class="code">object</code> <a href="Nethttpd_types.empty_environment-c.html">..</a> <code class="code">end</code></pre><div class="info">
+This class implements an environment with defined internal containers.
+</div>
+<pre><span name="TYPEredirected_environment"><span class="keyword">class</span> <a href="Nethttpd_types.redirected_environment-c.html">redirected_environment</a></span> : <code class="type">?in_header:<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> ?properties:(string * string) list -> ?in_channel:<a href="Netchannels.in_obj_channel-c.html">Netchannels.in_obj_channel</a> -> <a href="Nethttpd_types.extended_environment-c.html">extended_environment</a> -> </code><code class="type"><a href="Nethttpd_types.extended_environment-c.html">extended_environment</a></code></pre><div class="info">
+This class overlays the input-side containers of an existing environment.
+</div>
+<br>
+<h2 id="2_AuxiliaryFunctionsforEnvironments">Auxiliary Functions for Environments</h2><br>
+<pre><span id="VALoutput_static_response"><span class="keyword">val</span> output_static_response</span> : <code class="type">#<a href="Nethttpd_types.extended_environment-c.html">extended_environment</a> -><br>       <a href="Nethttp.html#TYPEhttp_status">Nethttp.http_status</a> -> <a href="Nethttp.http_header-c.html">Nethttp.http_header</a> option -> string -> unit</code></pre><div class="info">
+Outputs the string argument as response body, together with the given status and
+ the header (optional). Response header fields are set as follows:<ul>
+<li>The <code class="code">Content-Length</code> is set to the length of the string.</li>
+<li>The <code class="code">Content-Type</code> is set to "text/html" unless given by the header.</li>
+</ul>
+
+ If the header is not passed, the header of the environment is taken. If the header
+ argument exists, however, it overrides the header of the environment.<br>
+</div>
+<pre><span id="VALoutput_file_response"><span class="keyword">val</span> output_file_response</span> : <code class="type">#<a href="Nethttpd_types.extended_environment-c.html">extended_environment</a> -><br>       <a href="Nethttp.html#TYPEhttp_status">Nethttp.http_status</a> -><br>       <a href="Nethttp.http_header-c.html">Nethttp.http_header</a> option -> string -> int64 -> int64 -> unit</code></pre><div class="info">
+Outputs the contents of a file as response body, together with the given status and
+ the header (optional). The string is the file name. The first int64 number is
+ the position in the file where to start, and the second number is the length
+ of the body.  Response header fields are set as follows:<ul>
+<li>The <code class="code">Content-Length</code> is set to the length of the string.</li>
+<li>The <code class="code">Content-Type</code> is set to "text/html" unless given by the header.</li>
+</ul>
+
+ Note that <code class="code">Content-Range</code> is not set automatically, even if the file is only
+ partially transferred.
+<p>
+
+ If the header is not passed, the header of the environment is taken. If the header
+ argument exists, however, it overrides the header of the environment.
+<p>
+
+ The function raises <code class="code">Sys_error</code> when the file cannot be read.<br>
+</div>
+<br>
+<h1 id="1_Generatingerrorresponseslogging">Generating error responses, logging</h1><br>
+<pre><span id="TYPErequest_info"><span class="keyword">class type</span> <a href="Nethttpd_types.request_info-c.html">request_info</a></span> = <code class="code">object</code> <a href="Nethttpd_types.request_info-c.html">..</a> <code class="code">end</code></pre><pre><span id="TYPEfull_info"><span class="keyword">class type</span> <a href="Nethttpd_types.full_info-c.html">full_info</a></span> = <code class="code">object</code> <a href="Nethttpd_types.full_info-c.html">..</a> <code class="code">end</code></pre><pre><span name="TYPEcreate_full_info"><span class="keyword">class</span> <a href="Nethttpd_types.create_full_info-c.html">create_full_info</a></span> : <code class="type">response_status_code:int -> request_body_rejected:bool -> output_header:<a href="Nethttp.http_header-c.html">Nethttp.http_header</a> -> output_body_size:int64 -> <a href="Nethttpd_types.request_info-c.html">request_info</a> -> </code><code class="type"><a href="Nethttpd_types.full_info-c.html">full_info</a></code></pre><div class="info">
+Creates a <code class="code">full_info</code> object by adding to a <code class="code">request_info</code> object
+</div>
+<pre><span id="TYPEerror_response_params"><span class="keyword">class type</span> <a href="Nethttpd_types.error_response_params-c.html">error_response_params</a></span> = <code class="code">object</code> <a href="Nethttpd_types.error_response_params-c.html">..</a> <code class="code">end</code></pre><pre><span id="TYPEmin_config"><span class="keyword">class type</span> <a href="Nethttpd_types.min_config-c.html">min_config</a></span> = <code class="code">object</code> <a href="Nethttpd_types.min_config-c.html">..</a> <code class="code">end</code></pre><div class="info">
+Minimal configuration needed for <code class="code">output_std_response</code>
+</div>
+<pre><span id="VALoutput_std_response"><span class="keyword">val</span> output_std_response</span> : <code class="type">#<a href="Nethttpd_types.min_config-c.html">min_config</a> -><br>       #<a href="Nethttpd_types.extended_environment-c.html">extended_environment</a> -><br>       <a href="Nethttp.html#TYPEhttp_status">Nethttp.http_status</a> -> <a href="Nethttp.http_header-c.html">Nethttp.http_header</a> option -> string option -> unit</code></pre><div class="info">
+Outputs a "standard response" for the <code class="code">http_status</code>. The string argument
+ is an optional entry into the error log.
+<p>
+
+ If the header is not passed, an empty header is taken. If the header argument
+ exists, this header is taken. The header of the environment is never taken.<br>
+</div>
+<br>
+<h1 id="service">Service Providers</h1>
+<p>
+
+ Service providers are defined using the three class types:<ul>
+<li><code class="code">http_service</code>: The service provider as such. When a HTTP header has been
+   received, and the service provider is invoked, it returns an object
+   fitting to the next class type, <code class="code">http_service_receiver</code>. This object
+   is tagged with <code class="code">`Accept_body</code>; at this point there are also alternate ways
+   of processing, see below.</li>
+<li><code class="code">http_service_receiver</code>: The task of this object is to receive the request
+   body. When the body has been completely received, the object is notified,
+   and returns a third object of type <code class="code">http_service_generator</code>.</li>
+<li><code class="code">http_service_generator</code>: The task of this object is to generate the
+   response.</li>
+</ul>
+
+ An implementor is free to define only one class that satisfies all three
+ class types at once. However, this is only an option.
+<p>
+
+ The three objects reflect three stages of HTTP processing. The stages have
+ made explicit to allow the implementor of services to intercept the points
+ in time when the processing of the next stage begins. Furthermore, in multi-threaded
+ environments it is allowed that the stages are performed in the contexts of
+ different threads.
+<p>
+
+ In addition to the three-stage model there also several faster paths of 
+ processing:<ul>
+<li><code class="code">`Reject_body</code> can be used to refuse the acceptance of the request body when
+   it is already clear that an error response is sent back. This path skips
+   the stage <code class="code">http_service_receiver</code>.</li>
+<li><code class="code">`Static</code> can be used to send a constant string back (only to be used
+   when the string needs not to be computed)</li>
+<li><code class="code">`File</code> can be used to send the contents of a file back (only to be used
+   when the file already exists)</li>
+</ul>
+<br>
+<pre><span id="EXCEPTIONRedirect_request"><span class="keyword">exception</span> Redirect_request</span> <span class="keyword">of</span> <code class="type">string * <a href="Nethttp.http_header-c.html">Nethttp.http_header</a></code></pre>
+<div class="info">
+The "early" redirect is only allowed in stage 1 of HTTP processing.
+ The string argument is the new URI path of the request. The header can also
+ be exchanged except the fields that are needed to decode the request
+ body. It is not possible to change the method.<br>
+</div>
+<pre><span id="EXCEPTIONRedirect_response"><span class="keyword">exception</span> Redirect_response</span> <span class="keyword">of</span> <code class="type">string * <a href="Nethttp.http_header-c.html">Nethttp.http_header</a></code></pre>
+<div class="info">
+The "late" redirect is only allowed in stage 3 of HTTP processing.
+ The string argument is the new URI path of the request.  The header can also
+ be exchanged except the fields that are needed to decode the request
+ body. <b>The method is always changed to <code class="code">GET</code>.</b><br>
+</div>
+<pre><span id="TYPEhttp_service_generator"><span class="keyword">class type</span> <a href="Nethttpd_types.http_service_generator-c.html">http_service_generator</a></span> = <code class="code">object</code> <a href="Nethttpd_types.http_service_generator-c.html">..</a> <code class="code">end</code></pre><pre><span id="TYPEhttp_service_receiver"><span class="keyword">class type</span> <a href="Nethttpd_types.http_service_receiver-c.html">http_service_receiver</a></span> = <code class="code">object</code> <a href="Nethttpd_types.http_service_receiver-c.html">..</a> <code class="code">end</code></pre><pre><span id="TYPEhttp_service_reaction"><span class="keyword">type</span> <code class="type"></code>http_service_reaction</span> = <code class="type">[ `Accept_body of <a href="Nethttpd_types.http_service_receiver-c.html">http_service_receiver</a><br>       | `File of<br>           <a href="Nethttp.html#TYPEhttp_status">Nethttp.http_status</a> * <a href="Nethttp.http_header-c.html">Nethttp.http_header</a> option * string * int64 * int64<br>       | `Reject_body of <a href="Nethttpd_types.http_service_generator-c.html">http_service_generator</a><br>       | `Static of <a href="Nethttp.html#TYPEhttp_status">Nethttp.http_status</a> * <a href="Nethttp.http_header-c.html">Nethttp.http_header</a> option * string<br>       | `Std_response of<br>           <a href="Nethttp.html#TYPEhttp_status">Nethttp.http_status</a> * <a href="Nethttp.http_header-c.html">Nethttp.http_header</a> option * string option ]</code> </pre>
+<div class="info">
+Indicates the immediate reaction upon an arriving HTTP header:<ul>
+<li><code class="code">`Accept_body</code> is the regular way of processing requests. If necessary,
+   the client is told to continue sending the rest of the request.</li>
+<li><code class="code">`Reject_body</code> can be used when the body of the request is not needed,
+   and the response will be negative.</li>
+<li><code class="code">`Static</code> means to send the header and a constant string back as response.
+   The header is taken from the environment if not explicitly passed,
+   Note: The <code class="code">Content-Length</code> header is automatically added. The <code class="code">Content-Type</code>
+   defaults to "text/html".</li>
+<li><code class="code">`File</code> is similar to this, but the data come from a file. The file
+   is specified by an absolute pathname. The range of the file is given
+   by the start position and the length of the range.
+   The header is taken from the environment if not explicitly passed,
+   Note: The <code class="code">Content-Length</code> header is automatically added. The <code class="code">Content-Type</code>
+   defaults to "text/html".</li>
+<li><code class="code">`Std_response</code> is similar to <code class="code">`Static</code>, however the body is the standard
+   text for the status code. If the header is omitted, it is taken as empty.
+   The third argument is an optional entry into the error log.
+   Note: The <code class="code">Content-Length</code> header is automatically added. The <code class="code">Content-Type</code>
+   defaults to "text/html".</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="TYPEhttp_service"><span class="keyword">class type</span> <code class="type">['a]</code> <a href="Nethttpd_types.http_service-c.html">http_service</a></span> = <code class="code">object</code> <a href="Nethttpd_types.http_service-c.html">..</a> <code class="code">end</code></pre><br>
+<h1 id="helpers">Helpers</h1><br>
+<pre><span id="VALupdate_alist"><span class="keyword">val</span> update_alist</span> : <code class="type">('a * 'b) list -> ('a * 'b) list -> ('a * 'b) list</code></pre><div class="info">
+<code class="code">update_alist updl l</code>: Returns the alist with all elements of <code class="code">updl</code>
+ and all elements of <code class="code">l</code> that are not member of <code class="code">updl</code>.<br>
+</div>
+</body></html>

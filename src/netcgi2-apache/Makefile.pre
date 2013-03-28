@@ -1,0 +1,38 @@
+TOP_DIR=../..
+
+PRE = 1
+PKGNAME = netcgi_apache
+GENERATE = config.h netcgi_apache_mod.ml META 500netcgi_apache.info
+
+INSTALL_EXTRA = netcgi_modtpl.cma 500netcgi_apache.info \
+	        mod_netcgi_apache.so 
+
+
+config.h: config.h.in
+	sed -e 's,@APACHE_LIBDIR@,$(APACHE_LIBDIR),g' \
+	-e 's,@PACKAGE@,$(PACKAGE),g' \
+	-e 's,@VERSION@,$(VERSION),g' \
+	-e 's,@APACHE_MAJOR@,$(APACHE_MAJOR),g' \
+	< $< > $@
+
+netcgi_apache_mod.ml: netcgi_apache_mod.ml.in
+	sed -e 's,@APACHE_OCAMLLIBDIR@,$(APACHE_OCAMLLIBDIR),g' \
+	-e 's,@PKGNAME@,$(PKGNAME),g' \
+	-e 's,@VERSION@,$(VERSION),g' \
+	-e 's,@APACHE_MAJOR@,$(APACHE_MAJOR),g' \
+	-e 's,@APACHE_LIBDIR@,$(APACHE_LIBDIR),g' \
+	< $< > $@
+
+500netcgi_apache.info: 500netcgi_apache.info.in
+	sed -e 's,@APACHE_LIBDIR@,$(APACHE_LIBDIR),g' < $< > $@
+
+
+include $(TOP_DIR)/Makefile.rules
+
+
+CLEAN_LIST += $(wildcard *.so) $(wildcard *.lo) $(wildcard *.slo) \
+  $(wildcard *.la) config.h netcgi_apache_mod.ml 500netcgi_apache.info
+
+clean::
+	test -d .libs && $(RM) -rf .libs/
+

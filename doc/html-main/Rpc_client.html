@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rpc_transport.html">
+<link rel="next" href="Rpc_simple_client.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Deprecated Interfaces" rel="Section" href="#2_DeprecatedInterfaces">
+<link title="Debugging" rel="Section" href="#2_Debugging">
+<title>Ocamlnet 3 Reference Manual : Rpc_client</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rpc_transport.html" title="Rpc_transport">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Rpc_simple_client.html" title="Rpc_simple_client">Next</a>
+</div>
+<h1>Module <a href="type_Rpc_client.html">Rpc_client</a></h1>
+<pre><span class="keyword">module</span> Rpc_client: <code class="code">sig</code> <a href="Rpc_client.html">..</a> <code class="code">end</code></pre><div class="info">
+RPC clients<br>
+</div>
+<hr width="100%">
+<br>
+This module implements an RPC client, i.e. provides means to connect
+ to an RPC service and call remote procedures.
+ In general, this module works in an asynchronous way and is implemented
+ event-driven. All events are handled by an event queue of type
+ Unixqueue.t that must already exist and to which this module adds its
+ own event handlers and event resources. This means that this module
+ can co-exist with other services and share the same event queue with
+ them.
+<p>
+
+ You can push several procedure calls on the event queue at once.
+ The queue serves then as a pipeline; the calls are sent to the
+ server as long as the server accepts new calls. Replies are received
+ in any order, and the return values of the remote procedures are
+ delivered using a callback function.
+<p>
+
+ You can set timeouts and force automatic retransmission if you want
+ this; these features are enabled by default if the underlying transport
+ mechanism is UDP. Timeouts and other exceptions are delivered to the
+ callback functions, too.
+<p>
+
+ The whole mechanism is designed to allow maximum parallelism without
+ needing to use the multi-threading features of O'Caml. Especially,
+ the following parallelisms can be done:<ul>
+<li>Call several procedures of the same server in parallel. Note that
+   this does not necessarily mean that the procedures are run in
+   parallel since the server is free to decide whether to work
+   in a synchronous or asynchronous way.</li>
+<li>Call several procedures of different servers in parallel. To do so,
+   simply add several RPC clients to the same event queue.</li>
+<li>Call a procedure and do something completely different in the
+   background; this works well as long as the other task can be
+   programmed using file descriptor events, too.</li>
+</ul>
+
+ However, there are still some restrictions concerning asynchronous
+ calls. Some of them will be removed in the future, but others are
+ difficult to tackle:<ul>
+<li>Authentication methods requiring RPC calls or other network services are
+   performed in an synchronous way, too.</li>
+<li>Name service lookups are synchronous, too.</li>
+</ul>
+
+ <b>Multi-threading:</b> Only a single thread may use an RPC client at a
+ time. There is a way so that several threads can share the same client
+ without giving up concurrency, see <a href="Uq_mt.html#rpc_client"><i>Example: Threads sharing an RPC client</i></a> for details.<br>
+<pre><span id="EXCEPTIONMessage_lost"><span class="keyword">exception</span> Message_lost</span></pre>
+<div class="info">
+got EOF when some pending procedure calls were not replied or even sent<br>
+</div>
+<pre><span id="EXCEPTIONMessage_timeout"><span class="keyword">exception</span> Message_timeout</span></pre>
+<div class="info">
+After all retransmissions, there was still no reply<br>
+</div>
+<pre><span id="EXCEPTIONResponse_dropped"><span class="keyword">exception</span> Response_dropped</span></pre>
+<div class="info">
+Drop reason: The response exceeded the configured maximum message size<br>
+</div>
+<pre><span id="EXCEPTIONCommunication_error"><span class="keyword">exception</span> Communication_error</span> <span class="keyword">of</span> <code class="type">exn</code></pre>
+<div class="info">
+an I/O error happened<br>
+</div>
+<pre><span id="EXCEPTIONClient_is_down"><span class="keyword">exception</span> Client_is_down</span></pre>
+<div class="info">
+The RPC call cannot be performed because the client has been shut down
+ in the meantime. You can get this exception if you begin a new call,
+ but the connection is closed now.<br>
+</div>
+<pre><span id="EXCEPTIONKeep_call"><span class="keyword">exception</span> Keep_call</span></pre>
+<div class="info">
+This exception can be raised by the callback function that is invoked
+ when the server response arrives. It causes that the RPC call record
+ is kept in the housekeeping structure of the client. If the server
+ sends another response, the callback function will be invoked again.
+ I.e. one call can be replied several times (server-driven batching).<br>
+</div>
+<pre><span id="EXCEPTIONUnbound_exception"><span class="keyword">exception</span> Unbound_exception</span> <span class="keyword">of</span> <code class="type">exn</code></pre>
+<div class="info">
+This exception can be raised by the callback function that is invoked
+ when the server response arrives. It simply causes that the inner
+ exception bypasses the exception handler, and falls through to the 
+ caller of <code class="code">Unixqueue.run</code>. This is useful to jump out of the running RPC
+ routines.<br>
+</div>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+<div class="info">
+The type of RPC clients<br>
+</div>
+
+<pre><code><span id="TYPEconnector"><span class="keyword">type</span> <code class="type"></code>connector</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Inet"><span class="constructor">Inet</span></span> <span class="keyword">of</span> <code class="type">(string * int)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Hostname or IP address, port</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Internet"><span class="constructor">Internet</span></span> <span class="keyword">of</span> <code class="type">(Unix.inet_addr * int)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The address plus port</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Unix"><span class="constructor">Unix</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Path to unix dom sock. Not supported on Win32.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.W32_pipe"><span class="constructor">W32_pipe</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Path to named pipe (only Win32)</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Descriptor"><span class="constructor">Descriptor</span></span> <span class="keyword">of</span> <code class="type">Unix.file_descr</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Pass an already open socket descriptor. The descriptor will not
+ be closed when the client is done! On Win32, the proxy descriptors
+ as returned by <a href="Netsys_win32.html#VALpipe_descr"><code class="code">Netsys_win32.pipe_descr</code></a> are also accepted.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Dynamic_descriptor"><span class="constructor">Dynamic_descriptor</span></span> <span class="keyword">of</span> <code class="type">(unit -> Unix.file_descr)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The function is called to get the socket descriptor. 
+ Unlike <code class="code">Descriptor</code>, the descriptor will be closed when the
+ client is done (unless it is a proxy descriptor)</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTconnector.Portmapped"><span class="constructor">Portmapped</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The portmapper on this host is queried to get address information</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+<pre><span id="VALconnector_of_sockaddr"><span class="keyword">val</span> connector_of_sockaddr</span> : <code class="type">Unix.sockaddr -> <a href="Rpc_client.html#TYPEconnector">connector</a></code></pre><div class="info">
+Converts the socket address into a connector<br>
+</div>
+<pre><span id="VALconnector_of_socksymbol"><span class="keyword">val</span> connector_of_socksymbol</span> : <code class="type"><a href="Netsockaddr.html#TYPEsocksymbol">Netsockaddr.socksymbol</a> -> <a href="Rpc_client.html#TYPEconnector">connector</a></code></pre><div class="info">
+Converts the <a href="Netsockaddr.html#TYPEsocksymbol"><code class="code">Netsockaddr.socksymbol</code></a> into a connector<br>
+</div>
+<pre><span id="VALshutdown_connector"><span class="keyword">val</span> shutdown_connector</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -><br>       <a href="Rpc_transport.rpc_multiplex_controller-c.html">Rpc_transport.rpc_multiplex_controller</a> -> (unit -> unit) -> unit</code></pre><div class="info">
+The default implementation to shut down the connector. Actions are
+ triggered that will take the connector down at some time in the future.
+ At this time, the callback function is invoked.
+<p>
+
+ For <code class="code">Descriptor</code> connector the socket is shut down but not closed.
+ For the other connector types the socket is also closed. 
+ Win32 named pipes are shut down.<br>
+</div>
+<pre><span id="TYPEsocket_config"><span class="keyword">class type</span> <a href="Rpc_client.socket_config-c.html">socket_config</a></span> = <code class="code">object</code> <a href="Rpc_client.socket_config-c.html">..</a> <code class="code">end</code></pre><div class="info">
+Configuration for <code class="code">`Socket</code> (see below).
+</div>
+<pre><span id="VALdefault_socket_config"><span class="keyword">val</span> default_socket_config</span> : <code class="type"><a href="Rpc_client.socket_config-c.html">socket_config</a></code></pre><div class="info">
+Default configuration with <code class="code">non_blocking_connect</code> = true<br>
+</div>
+<pre><span name="TYPEdefault_socket_config"><span class="keyword">class</span> <a href="Rpc_client.default_socket_config-c.html">default_socket_config</a></span> : <code class="type"></code><code class="type"><a href="Rpc_client.socket_config-c.html">socket_config</a></code></pre><div class="info">
+Default configuration as class
+</div>
+<pre><span id="VALblocking_socket_config"><span class="keyword">val</span> blocking_socket_config</span> : <code class="type"><a href="Rpc_client.socket_config-c.html">socket_config</a></code></pre><div class="info">
+Configuration with <code class="code">non_blocking_connect</code> = false<br>
+</div>
+<pre><span name="TYPEblocking_socket_config"><span class="keyword">class</span> <a href="Rpc_client.blocking_socket_config-c.html">blocking_socket_config</a></span> : <code class="type"></code><code class="type"><a href="Rpc_client.socket_config-c.html">socket_config</a></code></pre><div class="info">
+blocking <code class="code">connect</code> configuration as class
+</div>
+<pre><span id="TYPEmode2"><span class="keyword">type</span> <code class="type"></code>mode2</span> = <code class="type">[ `Multiplexer_endpoint of <a href="Rpc_transport.rpc_multiplex_controller-c.html">Rpc_transport.rpc_multiplex_controller</a><br>       | `Socket of <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a> * <a href="Rpc_client.html#TYPEconnector">connector</a> * <a href="Rpc_client.socket_config-c.html">socket_config</a><br>       | `Socket_endpoint of <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a> * Unix.file_descr ]</code> </pre>
+<div class="info">
+Determines the type of the client for <code class="code">create2</code>:
+<p>
+<ul>
+<li><code class="code">`Socket_endpoint(proto,fd)</code>: Socket <code class="code">fd</code> is a connected socket
+   descriptor used for communication. <code class="code">proto</code> determines the
+   encapsulation; should be <code class="code">Tcp</code> for stream sockets and <code class="code">Udp</code> for
+   datagram sockets. The descriptor will be closed when the client
+   terminates.</li>
+</ul>
+<ul>
+<li><code class="code">`Multiplexer_endpoint m</code>: <code class="code">m</code> is an RPC multiplex controller.</li>
+</ul>
+<ul>
+<li><code class="code">`Socket(proto, conn, config)</code>: Creates and connect a client
+   socket according to <code class="code">conn</code>. <code class="code">proto</code> determines the
+   encapsulation; should be <code class="code">Tcp</code> for stream sockets and <code class="code">Udp</code> for
+   datagram sockets. <code class="code">config</code> specifies configuration details.</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="VALcreate2"><span class="keyword">val</span> create2</span> : <code class="type">?program_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       ?version_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       ?initial_xid:int -><br>       ?shutdown:(<a href="Rpc_client.html#TYPEt">t</a> -><br>                  <a href="Rpc_transport.rpc_multiplex_controller-c.html">Rpc_transport.rpc_multiplex_controller</a> -> (unit -> unit) -> unit) -><br>       <a href="Rpc_client.html#TYPEmode2">mode2</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> <a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -> <a href="Rpc_client.html#TYPEt">t</a></code></pre><div class="info">
+New style clients:
+ Opens a connection to the server specified by <code class="code">mode2</code>.
+ The server is assumed to implement an RPC program as specified by
+ the <code class="code">Rpc_program.t</code> argument. (You can override the program and version
+ numbers stored in this argument by the optional parameters
+ <code class="code">program_number</code> and <code class="code">version_number</code>. If you need to call several
+ programs/versions with the same client, use <code class="code">unbound_create</code> instead.)
+<p>
+
+ All communication to the server is handled using the given queue
+ <code class="code">Unixqueue.event_system</code>. There is a limit of 2GB per message
+ or <code class="code">Sys.max_string_length</code>, whatever is lower.
+<p>
+
+ If the protocol (passed along with <code class="code">mode2</code>) is Tcp, the communication 
+ will be handled stream-oriented. In this case, no timeout is detected
+ and no retransmissions are done.
+<p>
+
+ If the protocol is Udp, a datagram-oriented communication style is
+ used. This works only for Internet UDP sockets because these are
+ bidirectional (Unix domain sockets are unidirectional and do not
+ work). For Udp, there is a timeout of 15 seconds and a maximum
+ of 3 retransmissions (i.e. a total of 4 transmission trials).
+ For connected UDP sockets there is a limit of 64K per message
+ (max. size of an Internet packet). For unconnected UDP sockets
+ there is a limit of 16K per message due to restrictions in the
+ OCaml runtime.
+<p>
+
+<br>
+</div>
+<div class="param_info"><code class="code">program_number</code> : Overrides the program number in <code class="code">Rpc_program.t</code></div>
+<div class="param_info"><code class="code">version_number</code> : Overrides the version number in <code class="code">Rpc_program.t</code></div>
+<div class="param_info"><code class="code">initial_xid</code> : The initial value for the session identifier.</div>
+<div class="param_info"><code class="code">shutdown</code> : This function is called when the client is shut down
+   to close the client socket. By default, <code class="code">shutdown_connector</code> is
+   called.</div>
+<pre><span id="VALunbound_create"><span class="keyword">val</span> unbound_create</span> : <code class="type">?initial_xid:int -><br>       ?shutdown:(<a href="Rpc_client.html#TYPEt">t</a> -><br>                  <a href="Rpc_transport.rpc_multiplex_controller-c.html">Rpc_transport.rpc_multiplex_controller</a> -> (unit -> unit) -> unit) -><br>       <a href="Rpc_client.html#TYPEmode2">mode2</a> -> <a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -> <a href="Rpc_client.html#TYPEt">t</a></code></pre><div class="info">
+Creates an unbound client. This is like <code class="code">create2</code>, but the client is
+      not restricted to a particular RPC program.
+<p>
+
+      One can convert an unbound client into a bound client by calling
+      <code class="code">bind</code>, see below. It is possible to bind several times, so several
+      programs can be called with the same client (provided the server is
+      also capable of dealing with several programs).
+<p>
+
+      This function does not support <code class="code">Portmapped</code> connectors.<br>
+</div>
+<pre><span id="VALbind"><span class="keyword">val</span> bind</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> unit</code></pre><div class="info">
+Binds this program additionally<br>
+</div>
+<pre><span id="VALuse"><span class="keyword">val</span> use</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> unit</code></pre><div class="info">
+If there are no bound programs, this is a no-op. Otherwise it is 
+      checked whether the passed program is bound. If not, an exception
+      is raised.
+<p>
+
+      Programs are compared by comparing <a href="Rpc_program.html#VALid"><code class="code">Rpc_program.id</code></a>. The program
+      must be the same value, but it is also allowed to 
+      <a href="Rpc_program.html#VALupdate"><code class="code">Rpc_program.update</code></a> it in the meantime, i.e. to change program
+      and version numbers.<br>
+</div>
+<pre><span id="VALconfigure"><span class="keyword">val</span> configure</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> int -> float -> unit</code></pre><div class="info">
+<code class="code">configure client retransmissions timeout</code>:
+ sets the number of retransmissions and the timeout for the next calls.
+ (These values are defaults; the actual values are stored with each
+ call.)
+<p>
+
+ Values of <code class="code">retransmissions &gt; 0</code> are semantically only valid if the
+ called procedures are idempotent, i.e. invoking them several times
+ with the same values has the same effect as only one invocation.
+ Positive values for <code class="code">retransmissions</code> should only be used for Udp-style
+ communication.
+<p>
+
+ The timeout value determines how long the client waits until the
+ next retransmission is done, or, if no more retransmissions are
+ permitted, a <code class="code">Message_timeout</code> exception is delivered to the receiving
+ callback function. A <code class="code">timeout</code> value of 0.0 means immediate timeout
+ (see next paragraph). A negative <code class="code">timeout</code> value means 'no timeout'.
+ Positive <code class="code">timeout</code> values are possible for both Udp and Tcp connections.
+ Timeout values are measured in seconds.
+<p>
+
+ There is a special application for the timeout value 0.0: If you
+ don't expect an answer from the server at all ("batch mode"), this
+ timeout value will cause that the message handler will get
+ a <code class="code">Message_timeout</code> exception immediately. You should ignore this
+ exception for batch mode. The positive effect from the timeout is that
+ the internal management routines will remove the remote call from
+ the list of pending calls such that this list will not become too long.
+ (You can get a similar effect by calling <code class="code">set_batch_call</code>, however.)
+<p>
+
+ Note that the meaning of timeouts for TCP connections is unclear.
+ The TCP stream may be in an undefined state. Because of this, the
+ client does not make any attempt to clean the state up for TCP.
+ The user is advised to shut down the client, and reconnect.
+<p>
+
+ There is another subtle difference between UDP and TCP. For UDP,
+ the timer is started when the packet is sent. For TCP, however,
+ the timer is already started when the RPC call is added to the
+ queue, i.e. much earlier. This means that the time for connecting
+ to the remote service is also bound by the timeout. The rationale
+ is that TCP timeouts are usually set to catch total service failures
+ rather than packet losses, and this behaviour is best for this purpose.<br>
+</div>
+<pre><span id="VALconfigure_next_call"><span class="keyword">val</span> configure_next_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> int -> float -> unit</code></pre><div class="info">
+Same as <code class="code">configure</code>, but it only affects the next call<br>
+</div>
+<pre><span id="VALset_dgram_destination"><span class="keyword">val</span> set_dgram_destination</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> Unix.sockaddr option -> unit</code></pre><div class="info">
+<code class="code">set_dgram_destination client addr_opt</code>: This function is required
+ for using the client in conjunction with unconnected UDP sockets.
+ For connected sockets, the destination of datagrams is implicitly
+ given. For unconnected sockets, one has to set the destination
+ explicitly. Do so by calling <code class="code">set_dgram_destination</code> with
+ <code class="code">Some addr</code> as <code class="code">addr_opt</code> argument before calling.
+ Passing <code class="code">None</code> as <code class="code">addr_opt</code> removes the explicit destination again.
+ Note that unconnected sockets differ from connected sockets also in
+ the relaxation that they can receive messages from any IP address,
+ and not only the one they are connected to.
+<p>
+
+ The current destination is used for all following calls. It is
+ not automatically reset to <code class="code">None</code> after the next call.<br>
+</div>
+<pre><span id="VALset_batch_call"><span class="keyword">val</span> set_batch_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> unit</code></pre><div class="info">
+The next call will be a batch call. The client does not wait for the
+      response of a batch call. Instead, the client immediately fakes the
+      response of a "void" return value.
+<p>
+
+      It is required that the batch call has a "void" return type. Otherwise,
+      the client raises an exception, and ignores the call.
+<p>
+
+      This setting only affects the next call.<br>
+</div>
+<pre><span id="VALset_user_name"><span class="keyword">val</span> set_user_name</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> string option -> unit</code></pre><div class="info">
+Sets the user name, or <code class="code">None</code> (the default user name). This is only
+      meaningful for authentication.<br>
+</div>
+<pre><span id="VALset_max_response_length"><span class="keyword">val</span> set_max_response_length</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> int -> unit</code></pre><div class="info">
+Sets the maximum length of responses. By default, there is only the
+      implicit maximum of <code class="code">Sys.max_string_length</code>.
+<p>
+
+      If the maximum is exceeded, the exception <code class="code">Response_dropped</code> is raised.<br>
+</div>
+<pre><span id="VALset_exception_handler"><span class="keyword">val</span> set_exception_handler</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> (exn -> unit) -> unit</code></pre><div class="info">
+sets an exception handler (the default prints the exception 
+ with <code class="code">`Crit</code> level to the logger set in <a href="Netlog.html"><code class="code">Netlog</code></a>).
+ Only exceptions resulting from invocations of a
+ callback function are forwarded to this handler (unless wrapped
+ by <code class="code">Unbound_exception</code>).
+<p>
+
+ Exceptions occuring in the handler itself are not caught, and will
+ fall through.<br>
+</div>
+<pre><span id="VALset_mstring_factories"><span class="keyword">val</span> set_mstring_factories</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Xdr_mstring.html#TYPEnamed_mstring_factories">Xdr_mstring.named_mstring_factories</a> -> unit</code></pre><div class="info">
+Sets the mstring factory configuration that is used for decoding
+      responses containing managed strings.<br>
+</div>
+<pre><span id="VALevent_system"><span class="keyword">val</span> event_system</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a></code></pre><div class="info">
+Returns the unixqueue to which the client is attached<br>
+</div>
+<pre><span id="VALprograms"><span class="keyword">val</span> programs</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> list</code></pre><div class="info">
+Returns the list of all bound programs<br>
+</div>
+<pre><span id="VALget_socket_name"><span class="keyword">val</span> get_socket_name</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> Unix.sockaddr</code></pre><pre><span id="VALget_peer_name"><span class="keyword">val</span> get_peer_name</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> Unix.sockaddr</code></pre><div class="info">
+Return the addresses of the client socket and the server socket, resp.
+ Note that these are only available when the client is already connected.
+ The function calls fail otherwise. It is also possible that the
+ underlying transport mechanism does not know these data.<br>
+</div>
+<pre><span id="VALget_sender_of_last_response"><span class="keyword">val</span> get_sender_of_last_response</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> Unix.sockaddr</code></pre><div class="info">
+Return the address of the sender of the last received response.<br>
+</div>
+<pre><span id="VALget_xid_of_last_call"><span class="keyword">val</span> get_xid_of_last_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a></code></pre><div class="info">
+Returns the session identifier used in the just made call<br>
+</div>
+<pre><span id="VALget_protocol"><span class="keyword">val</span> get_protocol</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a></code></pre><div class="info">
+Get the protocol flavour<br>
+</div>
+<pre><span id="VALabandon_call"><span class="keyword">val</span> abandon_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -> unit</code></pre><div class="info">
+To be used in conjunction with <a href="Rpc_client.html#EXCEPTIONKeep_call"><code class="code">Rpc_client.Keep_call</code></a>: The call
+      with this session identifier is no longer expected, and removed
+      from the internal data structures.
+<p>
+
+      Restriction: for now, this does not work when there is authentication.<br>
+</div>
+<pre><span id="VALis_up"><span class="keyword">val</span> is_up</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> bool</code></pre><div class="info">
+Return whether the client is up<br>
+</div>
+<pre><span id="VALunbound_sync_call"><span class="keyword">val</span> unbound_sync_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> string -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a></code></pre><div class="info">
+<code class="code">unbound_sync_call client pgm proc arg</code>: Invoke the remote procedure
+      <code class="code">proc</code> of the program <code class="code">pgm</code> via <code class="code">client</code>. The input arguments are
+      <code class="code">arg</code>. The result arguments are returned (or an error is raised)<br>
+</div>
+<pre><span id="VALunbound_async_call"><span class="keyword">val</span> unbound_async_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -><br>       <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -><br>       string -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> ((unit -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a>) -> unit) -> unit</code></pre><div class="info">
+<code class="code">unbound_ssync_call client pgm proc arg emit</code>: Invoke the remote 
+      procedure
+      <code class="code">proc</code> of the program <code class="code">pgm</code> via <code class="code">client</code>. The input arguments are
+      <code class="code">arg</code>. When the result <code class="code">r</code> is available, the client will call
+      <code class="code">emit (fun () -&gt; r)</code> back. When an exception <code class="code">e</code> is available, the
+      client will call <code class="code">emit (fun () -&gt; raise e)</code> back.<br>
+</div>
+<pre><span name="TYPEunbound_async_call"><span class="keyword">class</span> <a href="Rpc_client.unbound_async_call-c.html">unbound_async_call</a></span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> string -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> </code><code class="type">[<a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a>]</code> <code class="type"><a href="Uq_engines.engine-c.html">Uq_engines.engine</a></code></pre><div class="info">
+Same as <code class="code">unbound_async_call</code>, but with an engine API.
+</div>
+<pre><span id="VALsynchronize"><span class="keyword">val</span> synchronize</span> : <code class="type"><a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -> ('a -> ((unit -> 'b) -> unit) -> unit) -> 'a -> 'b</code></pre><div class="info">
+Turns an async call into a synchronous call<br>
+</div>
+<pre><span id="VALshut_down"><span class="keyword">val</span> shut_down</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> unit</code></pre><div class="info">
+Shuts down the connection. Any unprocessed calls get the exception
+ <code class="code">Message_lost</code>. It is no error to shut down a client that is already
+ down - nothing happens in this case.
+<p>
+
+ Shutdowns can be complex operations. For this reason, this function
+ implements some magic that is usually the right thing, but may also
+ be wrong:<ul>
+<li>If called outside the event loop, it is assumed that a synchronous
+    shutdown is desired, and the event loop is started to complete the
+    shutdown immediately. This is right
+    when the only task connected with the event loop is the shutdown,
+    which is then done, and this function returns finally to the caller. If
+    there are other tasks on the event loop, these tasks are also run,
+    however, which may lead to side effects and infinite delay. This can
+     be wrong.</li>
+<li>If called from within the event loop, the shutdown is only triggered
+    but not immediately done. When the caller returns to the event loop
+    the shutdown will be performed. This case is problematic when you
+    pass the file descriptor explicitly with <code class="code">Descriptor</code> to the client.
+    You don't know when the client is finally down, and the descriptor
+    can be closed.</li>
+</ul>
+
+ The following functions allow more fine grained control of the shutdown.<br>
+</div>
+<pre><span id="VALsync_shutdown"><span class="keyword">val</span> sync_shutdown</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> unit</code></pre><div class="info">
+Enforces a synchronous shutdown of the connection. This is only
+ possible if called from outside the event loop. This function fails
+ if called from within the event loop.
+<p>
+
+ You can be sure that the shutdown is completely done when this
+ function returns normally.<br>
+</div>
+<pre><span id="VALtrigger_shutdown"><span class="keyword">val</span> trigger_shutdown</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> (unit -> unit) -> unit</code></pre><div class="info">
+Triggers the shutdown, and calls the passed function back when it is
+ done.
+<p>
+
+ The function is not only called when the client has to be taken
+ down, but also if the client is already down.<br>
+</div>
+<pre><span id="TYPEreject_code"><span class="keyword">type</span> <code class="type"></code>reject_code</span> = <code class="type">[ `Fail | `Next | `Renew | `Retry ]</code> </pre>
+<div class="info">
+Reaction on authentication problems:<ul>
+<li><code class="code">`Fail</code>: Stop here, and report to user</li>
+<li><code class="code">`Retry</code>: Just try again with current session</li>
+<li><code class="code">`Renew</code>: Drop the current session, and get a new session from
+        the current <code class="code">auth_method</code></li>
+<li><code class="code">`Next</code>: Try the next authentication method</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="TYPEauth_session"><span class="keyword">class type</span> <a href="Rpc_client.auth_session-c.html">auth_session</a></span> = <code class="code">object</code> <a href="Rpc_client.auth_session-c.html">..</a> <code class="code">end</code></pre><div class="info">
+An <code class="code">auth_session</code> object is normally created for every client instance.
+</div>
+<pre><span id="TYPEauth_protocol"><span class="keyword">class type</span> <a href="Rpc_client.auth_protocol-c.html">auth_protocol</a></span> = <code class="code">object</code> <a href="Rpc_client.auth_protocol-c.html">..</a> <code class="code">end</code></pre><div class="info">
+An authentication protocol is used for creating an authentication
+      session.
+</div>
+<pre><span id="TYPEauth_method"><span class="keyword">class type</span> <a href="Rpc_client.auth_method-c.html">auth_method</a></span> = <code class="code">object</code> <a href="Rpc_client.auth_method-c.html">..</a> <code class="code">end</code></pre><div class="info">
+An <code class="code">auth_method</code> object represents a method of authentication.
+</div>
+<pre><span id="VALauth_none"><span class="keyword">val</span> auth_none</span> : <code class="type"><a href="Rpc_client.auth_method-c.html">auth_method</a></code></pre><div class="info">
+The authentication method that does not perform authentication.<br>
+</div>
+<pre><span id="VALset_auth_methods"><span class="keyword">val</span> set_auth_methods</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc_client.auth_method-c.html">auth_method</a> list -> unit</code></pre><div class="info">
+Set the authentication methods for this client. The passed methods
+ are tried in turn until a method is accepted by the server.
+ The default is <code class="code"> auth_none </code>
+<p>
+
+ When the methods are set for an active client, the ongoing calls
+ are continued with the old method. First new calls are ensured to
+ use the new list.<br>
+</div>
+<pre><span class="keyword">module type</span> <a href="Rpc_client.USE_CLIENT.html">USE_CLIENT</a> = <code class="code">sig</code> <a href="Rpc_client.USE_CLIENT.html">..</a> <code class="code">end</code></pre><div class="info">
+This module type is what the generated "clnt" module assumes about the
+    client interface
+</div>
+<br>
+<h2 id="2_DeprecatedInterfaces">Deprecated Interfaces</h2><br>
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">?program_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       ?version_number:<a href="Rtypes.html#TYPEuint4">Rtypes.uint4</a> -><br>       ?initial_xid:int -><br>       ?shutdown:(<a href="Rpc_client.html#TYPEt">t</a> -><br>                  <a href="Rpc_transport.rpc_multiplex_controller-c.html">Rpc_transport.rpc_multiplex_controller</a> -> (unit -> unit) -> unit) -><br>       <a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -><br>       <a href="Rpc_client.html#TYPEconnector">connector</a> -> <a href="Rpc.html#TYPEprotocol">Rpc.protocol</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a> -> <a href="Rpc_client.html#TYPEt">t</a></code></pre><div class="info">
+<span class="warning">Deprecated.</span>This function should not be used any more in new programs.
+    Use <code class="code">create2</code> or <code class="code">unbound_create</code>.<br>
+Opens a connection to the server specified by the <code class="code">connector</code>.
+ The server is assumed to implement an RPC program as specified by
+ the <code class="code">Rpc_program.t</code> argument. (You can override the program and version
+ numbers stored in this argument by the optional parameters
+ <code class="code">program_number</code> and <code class="code">version_number</code>.)
+<p>
+
+ All communication to the server is handled using the given queue
+ <code class="code">Unixqueue.event_system</code>.
+<p>
+
+ If the protocol is Tcp, the communication will be handled stream-
+ oriented. In this case, no timeout is detected and no retransmissions
+ are done.
+<p>
+
+ If the protocol is Udp, a datagram-oriented communication style is
+ used. This works only for Internet UDP sockets because these are
+ bidirectional (Unix domain sockets are unidirectional and do not
+ work). For Udp, there is a timeout of 15 seconds and a maximum
+ of 3 retransmissions (i.e. a total of 4 transmission trials).
+<p>
+
+ Unlike <code class="code">create2</code>, servers made with <code class="code">create</code> always use blocking
+ <code class="code">connect</code> for backwards compatibility.
+<p>
+
+<br>
+</div>
+<div class="param_info"><code class="code">program_number</code> : Overrides the program number in <code class="code">Rpc_program.t</code></div>
+<div class="param_info"><code class="code">version_number</code> : Overrides the version number in <code class="code">Rpc_program.t</code></div>
+<div class="param_info"><code class="code">initial_xid</code> : The initial value for the session identifier.</div>
+<div class="param_info"><code class="code">shutdown</code> : This function is called when the client is shut down
+   to close the client socket. By default, <code class="code">shutdown_connector</code> is
+   called.</div>
+<pre><span id="VALprogram"><span class="keyword">val</span> program</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> <a href="Rpc_program.html#TYPEt">Rpc_program.t</a></code></pre><div class="info">
+<span class="warning">Deprecated.</span>This is the same as <code class="code">List.hd (Rpc_client.programs client)</code><br>
+Returns the program the client represents.<br>
+</div>
+<pre><span id="VALadd_call"><span class="keyword">val</span> add_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -><br>       string -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> ((unit -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a>) -> unit) -> unit</code></pre><div class="info">
+<span class="warning">Deprecated.</span><code class="code">add_call</code> is restricted to the case that there is only
+   one bound program. It will fail in other cases. Use 
+   <code class="code">unbound_async_call</code> instead. Note also that there is no longer
+   the optional <code class="code">when_sent</code> argument. Use <code class="code">set_batch_call</code> instead<br>
+<code class="code">add_call client proc_name arg f</code>: add the call to the procedure <code class="code">name</code>
+ with argument <code class="code">arg</code> to the queue of unprocessed calls.
+<p>
+
+ When the reply has arrived or an error situation is detected, the
+ function <code class="code">f</code> is called back. The argument of <code class="code">f</code> is another function
+ that will return the result or raise an exception:
+<p>
+
+ <pre class="codepre"><code class="code"> let my_f get_result =
+      try
+        let result = get_result() in
+        ...
+      with
+         exn -&gt; ...
+    in
+    add_call client name arg my_f
+ </code></pre>
+<p>
+
+ If <code class="code">f</code> does not catch the exception, the pluggable exception handler
+ of the client is called (see <code class="code">set_exception_handler</code>). Exceptions are
+ either <code class="code">Message_lost</code>, <code class="code">Message_timeout</code>, or <code class="code">Communication_error</code>.
+<p>
+
+ The function <code class="code">f</code> can raise the exception <code class="code">Keep_call</code> to indicate
+ the special handling that a further reply of the call is expected
+ (batching).
+<p>
+
+<br>
+</div>
+<pre><span id="VALsync_call"><span class="keyword">val</span> sync_call</span> : <code class="type"><a href="Rpc_client.html#TYPEt">t</a> -> string -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a> -> <a href="Xdr.html#TYPExdr_value">Xdr.xdr_value</a></code></pre><br>
+Calls the procedure synchronously.
+ Note that this implies that the underlying unixqueue is started and that
+ all events are processed regardless of whether they have something to do
+ with this call or not.
+<p>
+
+<br>
+<pre><span id="VALverbose"><span class="keyword">val</span> verbose</span> : <code class="type">bool -> unit</code></pre><div class="info">
+set whether you want debug messages or not (same as setting
+      <a href="Rpc_client.Debug.html#VALenable"><code class="code">Rpc_client.Debug.enable</code></a>)<br>
+</div>
+<br>
+<h2 id="2_Debugging">Debugging</h2><br>
+<pre><span class="keyword">module</span> <a href="Rpc_client.Debug.html">Debug</a>: <code class="code">sig</code> <a href="Rpc_client.Debug.html">..</a> <code class="code">end</code></pre></body></html>

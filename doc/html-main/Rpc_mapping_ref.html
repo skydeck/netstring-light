@@ -1,0 +1,775 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rpc_intro.html">
+<link rel="next" href="Rpc_intro_gss.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="RPC Language Mapping Reference" rel="Section" href="#1_RPCLanguageMappingReference">
+<link title="Representation Levels" rel="Subsection" href="#2_RepresentationLevels">
+<link title="XDR: Simple Types" rel="Subsection" href="#2_XDRSimpleTypes">
+<link title="XDR: Options" rel="Subsection" href="#2_XDROptions">
+<link title="XDR: Arrays" rel="Subsection" href="#2_XDRArrays">
+<link title="XDR: Structs" rel="Subsection" href="#2_XDRStructs">
+<link title="XDR: Enumerations" rel="Subsection" href="#2_XDREnumerations">
+<link title="XDR: Unions discriminated by integers" rel="Subsection" href="#2_XDRUnionsdiscriminatedbyintegers">
+<link title="XDR: Unions discriminated by enumerations" rel="Subsection" href="#2_XDRUnionsdiscriminatedbyenumerations">
+<link title="RPC: Programs" rel="Subsection" href="#2_RPCPrograms">
+<link title="RPC: Clients" rel="Subsection" href="#2_RPCClients">
+<link title="RPC: Servers" rel="Subsection" href="#2_RPCServers">
+<title>Ocamlnet 3 Reference Manual : Rpc_mapping_ref</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rpc_intro.html" title="Rpc_intro">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Rpc_intro_gss.html" title="Rpc_intro_gss">Next</a>
+</div>
+<h1>Rpc_mapping_ref</h1>
+<br>
+<h1 id="1_RPCLanguageMappingReference">RPC Language Mapping Reference</h1>
+<p>
+
+The OncRPC (alias SunRPC) standard consists of two parts, namely the
+external data representation (XDR) and the RPC protocol. They are 
+defined in RFC 1831 and RFC 1832.
+<p>
+
+In this document we describe how the various parts of XDR and RPC
+are mapped to the Objective Caml language.
+<p>
+
+<h2 id="2_RepresentationLevels">Representation Levels</h2>
+<p>
+
+The transformation of binary XDR messages to O'Caml values is done in
+several steps, corresponding to several ways of representing the values:
+<p>
+<ul>
+<li>Binary level: The message is represented as byte string. In O'Caml,
+  these byte strings are always <code class="code">string</code> values.</li>
+<li>Term level: The message is represented as structured <a href="Xdr.html#TYPExdr_value"><code class="code">Xdr.xdr_value</code></a>
+  term. For example, an XDR <code class="code">struct</code> with two components <code class="code">a</code> and <code class="code">b</code>
+  with integer values 1 and 2 is represented as
+  <pre class="codepre"><code class="code">XV_struct [ "a", XV_int r1; "b" XV_int r2 ]</code></pre> where
+  <code class="code">r1 = Rtypes.int4_of_int 1</code> and <code class="code">r2 = Rtypes.int4_of_int 2</code>. There
+  are sometimes several ways of representing a value on term level.</li>
+<li>Fully-mapped level: The message is represented as a generated O'Caml type
+  that closely corresponds to the XDR type. The <code class="code">struct</code> example
+  would use the type <pre class="codepre"><code class="code">type name = { a : int; b : int }</code></pre>. Some details
+  can be selected by the user, e.g. how integers are represented.
+  The types are generated using <code class="code">ocamlrpcgen</code>.</li>
+</ul>
+
+The tool <code class="code">ocamlrpcgen</code> can be invoked on an input file <code class="code">name.x</code> with
+different switches to create three modules: the type mapper
+<code class="code">Name_aux</code>, the RPC client <code class="code">Name_clnt</code> and the RPC server <code class="code">Name_srv</code>.
+The type mapper module mainly contains the necessary definitions to
+convert values between the representation levels.
+<p>
+
+In particular, the type mapper module contains for every XDR type <i>t</i>
+several definitions:
+<p>
+<ul>
+<li>The definition of the O'Caml type corresponding to <i>t</i> on the
+  fully-mapped level.</li>
+<li>The dynamic representation of the XDR type as <a href="Xdr.html#VALxdr_type_term"><code class="code">Xdr.xdr_type_term</code></a>.
+  This definition is named <code class="code">xdrt_</code><i>t</i>. The type term is required to
+  convert a binary message to a value on term level. The conversion
+  functions to do so are available in the <a href="Xdr.html"><code class="code">Xdr</code></a> module.</li>
+<li>The conversion function <code class="code">_of_</code><i>t</i> that turns a fully-mapped
+  value into a term value represented as <a href="Xdr.html#TYPExdr_value"><code class="code">Xdr.xdr_value</code></a>.</li>
+<li>The conversion function <code class="code">_to_</code><i>t</i> that turns a term value
+  to a fully-mapped value.</li>
+</ul>
+
+In order to develop an RPC client or server it is usually not necessary
+to use these definitions. They are useful, however, to
+encode or decode binary XDR messages directly (e.g. outside an RPC
+context).
+<p>
+
+<h2 id="2_XDRSimpleTypes">XDR: Simple Types</h2>
+<p>
+
+The simple XDR types are
+<p>
+<ul>
+<li><code class="code">void</code>: special type denoting that no data is passed</li>
+<li>signed <code class="code">int</code> and <code class="code">unsigned int</code>: 32 bit signed/unsigned integers</li>
+<li>signed <code class="code">hyper</code> and <code class="code">unsigned hyper</code>: 64 bit signed/unsigned integers</li>
+<li><code class="code">bool</code>: the boolean type with two values <code class="code">FALSE</code> and <code class="code">TRUE</code></li>
+<li><code class="code">float</code>: single-precision IEEE floating point numbers </li>
+<li><code class="code">double</code>: double-precision IEEE floating point numbers </li>
+<li><code class="code">opaque[n]</code>: fixed-length opaque data containing n bytes, written
+  <pre class="codepre"><code class="code">opaque varname[n]</code></pre> in .x files</li>
+<li><code class="code">opaque&lt;n&gt;</code>: variable-length opaque data containing up to n bytes,
+  written <pre class="codepre"><code class="code">opaque varname&lt;n&gt;</code></pre> in .x files</li>
+<li><code class="code">string&lt;n&gt;</code>: string data containing up to n bytes,
+  written <pre class="codepre"><code class="code">string varname&lt;n&gt;</code></pre> in .x files</li>
+</ul>
+
+In O'Caml, these types are mapped as follows:
+<p>
+<ul>
+<li><code class="code">void</code>: on term level mapped to <code class="code">Xdr.XV_void</code>. On the fully-mapped level
+  sometimes mapped to <code class="code">unit</code>, sometimes omitted</li>
+<li><code class="code">signed int</code>: on term level mapped to <code class="code">Xdr.XV_int</code> which takes an
+  <a href="Rtypes.html#TYPEint4"><code class="code">Rtypes.int4</code></a> as argument.
+  On the fully-mapped level this type can be mapped either to 
+  <a href="Rtypes.html#TYPEint4"><code class="code">Rtypes.int4</code></a>, <code class="code">int32</code> or
+  <code class="code">int</code>, depending on what the application needs. When mapping to <code class="code">int</code>
+  it can happen that not all values can be represented. The exception
+  <a href="Rtypes.html#EXCEPTIONCannot_represent"><code class="code">Rtypes.Cannot_represent</code></a> is raised in this case.</li>
+<li><code class="code">unsigned int</code>: on term level mapped to <code class="code">Xdr.XV_uint</code> which takes an
+  <a href="Rtypes.html#TYPEuint4"><code class="code">Rtypes.uint4</code></a> as argument.
+  On the fully-mapped level this type
+  can be mapped either to <a href="Rtypes.html#TYPEuint4"><code class="code">Rtypes.uint4</code></a>, <code class="code">int32</code> or
+  <code class="code">int</code>, depending on what the application needs. The mapping to <code class="code">int32</code>
+  (which is signed) is done bitwise (sign bit is ignored). 
+  When mapping to <code class="code">int</code> it can happen that not all values can be represented. 
+  The exception <a href="Rtypes.html#EXCEPTIONCannot_represent"><code class="code">Rtypes.Cannot_represent</code></a> is raised in this case.</li>
+<li><code class="code">signed hyper</code>: on term level mapped to <code class="code">Xdr.XV_hyper</code> which takes an
+  <a href="Rtypes.html#TYPEint8"><code class="code">Rtypes.int8</code></a> as argument.
+  On the fully-mapped level this type 
+  can be mapped either to <a href="Rtypes.html#TYPEint8"><code class="code">Rtypes.int8</code></a>, <code class="code">int64</code> or
+  <code class="code">int</code>, depending on what the application needs. When mapping to <code class="code">int</code>
+  it can happen that not all values can be represented. The exception
+  <a href="Rtypes.html#EXCEPTIONCannot_represent"><code class="code">Rtypes.Cannot_represent</code></a> is raised in this case.</li>
+<li><code class="code">unsigned hyper</code>: on term level mapped to <code class="code">Xdr.XV_uhyper</code> which takes an
+  <a href="Rtypes.html#TYPEuint8"><code class="code">Rtypes.uint8</code></a> as argument.
+  On the fully-mapped level this type
+  can be mapped either to <a href="Rtypes.html#TYPEuint8"><code class="code">Rtypes.uint8</code></a>, <code class="code">int64</code> or
+  <code class="code">int</code>, depending on what the application needs. The mapping to <code class="code">int64</code>
+  (which is signed) is done bitwise (sign bit is ignored). 
+  When mapping to <code class="code">int</code> it can happen that not all values can be represented. 
+  The exception <a href="Rtypes.html#EXCEPTIONCannot_represent"><code class="code">Rtypes.Cannot_represent</code></a> is raised in this case.</li>
+<li><code class="code">bool</code>: on term level mapped to <a href="Xdr.html#VALxv_false"><code class="code">Xdr.xv_false</code></a> or <a href="Xdr.html#VALxv_true"><code class="code">Xdr.xv_true</code></a>
+  which are pre-defined constants using enumerations for booleans.
+  Actually, <code class="code">xv_false</code> is <code class="code">XV_enum_fast 0</code> and <code class="code">xv_true</code> is
+  <code class="code">XV_enum_fast 1</code>. On the fully-mapped level this type is
+  mapped to <code class="code">bool</code></li>
+<li><code class="code">float</code>: on the term level mapped to <code class="code">Xdr.XV_float</code> which takes an
+  <a href="Rtypes.html#TYPEfp4"><code class="code">Rtypes.fp4</code></a> as argument. On the fully-mapped level this type is
+  mapped to <code class="code">float</code> which, however, is double-precision. When converting
+  an O'Caml <code class="code">float</code> to an XDR <code class="code">float</code> it may happen that precision is lost,
+  and that very small or large numbers cannot represented at all. The
+  nearest value is taken instead which may be <code class="code">0</code> or <code class="code">infinity</code>.</li>
+<li><code class="code">double</code>: on the term level mapped to <code class="code">Xdr.XV_double</code> which takes an
+  <a href="Rtypes.html#TYPEfp8"><code class="code">Rtypes.fp8</code></a> as argument. On the fully-mapped level this type is
+  mapped to <code class="code">float</code> (loss-free)</li>
+<li><code class="code">opaque</code>: on the term level mapped to <code class="code">Xdr.XV_opaque</code> which takes
+  a string argument. On the fully-mapped level this type is
+  mapped to <code class="code">string</code>. The size constraint is dynamically checked in
+  both cases when RPC message are analyzed or created.</li>
+<li><code class="code">string</code>: on the term level mapped to <code class="code">Xdr.XV_string</code> which takes
+  a string argument. On the fully-mapped level this type is
+  mapped to <code class="code">string</code>. The size constraint is dynamically checked
+  in both cases when RPC message are analyzed or created.</li>
+</ul>
+
+Since Ocamlnet-3, there is also the variant of managed strings. A
+managed string (declared by the keyword <code class="code">_managed</code> in the XDR file)
+is mapped to <code class="code">Xdr.XV_mstring</code> on the term level. This constructor
+takes an argument of type <a href="Xdr_mstring.mstring-c.html"><code class="code">Xdr_mstring.mstring</code></a>, which is also the
+type on the fully-mapped level.
+<p>
+
+<h2 id="2_XDROptions">XDR: Options</h2>
+<p>
+
+The "pointer type" <code class="code">*t</code> is considered as an option type in XDR
+corresponding to <code class="code">option</code> in O'Caml, i.e. a variant with the two
+cases that an argument is missing or present. Option types are
+written <pre class="codepre"><code class="code">t *varname</code></pre> in .x files.
+<p>
+
+On term level, the missing argument value is represented as 
+<a href="Xdr.html#VALxv_none"><code class="code">Xdr.xv_none</code></a>. The present argument value is represented as
+<a href="Xdr.html#VALxv_some"><code class="code">Xdr.xv_some</code></a> <code class="code">v</code> when <code class="code">v</code> is the mapped argument value. Actually,
+<code class="code">xv_none</code> and <code class="code">xv_some</code> construct XDR terms that are unions over
+the boolean enumeration as discriminator.
+<p>
+
+On the fully-mapped level, the option type is mapped to
+<pre class="codepre"><code class="code">t' option</code></pre> O'Caml type when <code class="code">t'</code> is the mapped argument type.
+<p>
+
+<h2 id="2_XDRArrays">XDR: Arrays</h2>
+<p>
+
+In XDR arrays are formed over an element type. Furthermore, there may
+be the size constraint that exactly or at most n elements are
+contained in the array. If the size constraint is missing, the array
+may have arbitrary many elements. However, due to the binary
+representation, the number is actually limited to 2 ^ 32 - 1.
+<p>
+
+Fixed-size array are written <pre class="codepre"><code class="code">t varname[n]</code></pre> and variable-size arrays
+<pre class="codepre"><code class="code">t varname&lt;n&gt;</code></pre> in .x files (where n is the size). Arrays of any size
+are written <pre class="codepre"><code class="code">t varname&lt;&gt;</code></pre> in .x files.
+<p>
+
+On term level, array values are mapped to <code class="code">Xdr.XV_array</code> <code class="code">v</code> where
+<code class="code">v</code> is an O'Caml array of the mapped element values.
+<p>
+
+On the fully-mapped level, arrays are mapped to the <pre class="codepre"><code class="code">t' array</code></pre>
+O'Caml type when <code class="code">t'</code> is the mapped element type.
+<p>
+
+The size constraint is dynamically checked in both cases when RPC
+message are analyzed or created.
+<p>
+
+<h2 id="2_XDRStructs">XDR: Structs</h2>
+<p>
+
+Structs are products with named components, like record types in O'Caml.
+The components have, in addition to their name, a fixed order, 
+because the order of the components determines the order in the
+binary message format. That means that the components can be accessed
+by two methods: by name and by index.
+<p>
+
+Struct are written as
+<pre class="codepre"><code class="code"> struct {
+     t0 varname0;
+     t1 varname1;
+     ...
+  }
+</code></pre> in .x files.
+<p>
+
+For example, <code class="code"> struct { int a; hyper b } </code> means a struct with two
+components. At position 0 we find "a", and at position 1 we find "b".
+Of course, this type is different from <code class="code"> struct { hyper b; int a } </code>
+because the order of the components is essential.
+<p>
+
+On term level, there are two ways of representing structs: one
+identifies components by name, one by position. The latter is also
+called the "fast" representation (and the one used by <code class="code">ocamlrpcgen</code>).
+<p>
+
+In the "by name" case, the struct value is represented as
+<code class="code">Xdr.XV_struct</code> <code class="code">components</code> where <code class="code">components</code> is an association
+list <code class="code">[(c0_name, c0_val); (c1_name, c1_val); ...]</code> where
+<code class="code">cK_name</code> are the names of the components and <code class="code">cK_val</code> their
+actual values as terms. The order of the components can be arbitrary.
+<p>
+
+In the "by position" case, the struct value is represented as
+<code class="code">Xdr.XV_struct_fast</code> <code class="code">components</code> where <code class="code">components</code> is an 
+array of terms such that <code class="code">components.(k)</code> is the term value of
+the <code class="code">k</code>-th component.
+<p>
+
+On the fully-mapped level, the struct is mapped to an O'Caml record.
+The order of the components remains the same, but the names of
+the components may be modified. First, the names are modified such
+that they are valid component names in O'Caml by ensuring that the
+first letter is lowercase. Second, the names may be changed because
+several structs use the same component names which is not possible
+in O'Caml. Thus, the generated O'Caml record type look like
+<p>
+
+<pre class="codepre"><code class="code"> {
+     mutable varname0' : t0';
+     mutable varname1' : t1';
+     ...
+   }
+</code></pre>
+<p>
+
+where <code class="code">varnameK'</code> is the component name after the mentioned renaming
+and <code class="code">tK'</code> is the mapped component type, both for position <code class="code">K</code>.
+<p>
+
+<h2 id="2_XDREnumerations">XDR: Enumerations</h2>
+<p>
+
+In XDR it is possible to define enumerations which are considered as
+subtypes of <code class="code">int</code>. These consist of a list of integers with associated
+symbolic names. In the .x file this is written as
+<p>
+
+<pre class="codepre"><code class="code"> enum {
+     Name0 = Int0,
+     Name1 = Int1,
+     ...
+   }
+</code></pre>
+<p>
+
+where <code class="code">NameK</code> are identifiers and <code class="code">IntK</code> are literal numbers.
+<p>
+
+In this section we only consider the case that the enumerations are 
+not used as discriminator for a union. (See below for the other case.)
+<p>
+
+On term level, there are again two representations. One uses the
+names to identify one of the enumerated values, and the other
+uses a positional method.
+<p>
+
+In the "by name" case, the value named <code class="code">NameK</code> is represented as
+<code class="code">Xdr.XV_enum "NameK"</code>, i.e. the name is the argument of <code class="code">XV_enum</code>.
+<p>
+
+In the "by position" case, the value named <code class="code">NameK</code> is represented as
+<code class="code">Xdr.XV_enum_fast K</code>, i.e. the position in the enum declaration is
+the argument of <code class="code">XV_enum</code>.
+<p>
+
+On the fully-mapped level, the enumerated value named <code class="code">NameK</code> is
+represented as O'Caml value of type <code class="code">Rtypes.int4</code> whose value is
+<code class="code">IntK</code>, i.e. the number associated with the name. In the type mapper
+file generated by <code class="code">ocamlrpcgen</code> there are additional definitions
+for every enum. In particular, there is a constant whose name
+is <code class="code">NameK</code> (after makeing the name O'Camlish) and whose value is
+<code class="code">IntK</code>.
+<p>
+
+<h2 id="2_XDRUnionsdiscriminatedbyintegers">XDR: Unions discriminated by integers</h2>
+<p>
+
+In XDR a union must always have disriminator. This can be an <code class="code">int</code>, an
+<code class="code">unsigned int</code>, or an enumeration. The latter case is described in the
+next section. In the integer case, the union declaration enumerates
+a number of arms and a default arm:
+<p>
+
+<pre class="codepre"><code class="code"> union switch (d varname) {
+     case Int0:
+       t0 varname0;
+     case Int1:
+       t1 varname1;
+     ...
+     default:
+       tD varnameD;
+   }
+</code></pre>
+<p>
+
+Here, <code class="code">d</code> is either <code class="code">int</code> or <code class="code">unsigned int</code>.
+<p>
+
+On term level, this is represented as <code class="code">Xdr.XV_union_over_int(n,v)</code> for
+the <code class="code">int</code> case or <code class="code">Xdr.XV_union_over_uint(n,v)</code> for the <code class="code">unsigned int</code> case.
+The number <code class="code">n</code> is the selected arm of the union (it is not indicated 
+whether the arm is one of the declared arms or the default arm).
+The value <code class="code">v</code> is the mapped value of the arm.
+<p>
+
+On the fully-mapped level, the union is mapped to a polymorphic
+variant that corresponds to the original union declaration:
+<p>
+
+<pre class="codepre"><code class="code"> 
+   [ `_Int0 of t0'
+   | `_Int1 of t1'
+   ...
+   | `default of tD'
+   ]
+</code></pre>
+<p>
+
+The labels of the variants are derived from the <b>decimal literals</b> of
+the numbers <code class="code">IntK</code> associated with the arms. For example, the
+union 
+<pre class="codepre"><code class="code"> union switch (int d) { 
+     case -1: 
+       hyper a;
+     case 0:
+       bool b;
+     default:
+       string s&lt;&gt;;
+   }
+</code></pre>
+<p>
+
+is mapped to
+<p>
+
+<pre class="codepre"><code class="code"> [ `__1 of int64 | `_0 of bool | `default of Rtypes.int4 * string ] </code></pre>
+<p>
+
+Note that the default case consists of the value of the discriminant
+on the left and the value of the union on the right.
+<p>
+
+If an arm is simply <code class="code">void</code>, the corresponding variant will not have
+an argument.
+<p>
+
+<h2 id="2_XDRUnionsdiscriminatedbyenumerations">XDR: Unions discriminated by enumerations</h2>
+<p>
+
+If the discriminator is an enumeration, different O'Caml types are used,
+as a much nicer mapping is possible.
+<p>
+
+As for integer-discriminated unions, the arms are enumerated. The default
+arm, however, is now optional. The whole construct looks like:
+<p>
+
+<pre class="codepre"><code class="code"> enum e {
+     Name0 = Int0,
+     Name1 = Int1,
+     ...
+   }
+
+   union switch (e varname) {
+     case Name0:
+       t0 varname0;
+     case Name1:
+       t1 varname1;
+     ...
+     default:          /* optional! */
+       tD varnameD;
+   }
+</code></pre>
+<p>
+
+On the term level, there are again two different ways of representing
+a union value, namely by referring to the arm symbolically or by
+position.
+<p>
+
+In the first case, the value is represented as
+<code class="code">Xdr.XV_union_over_enum(n,v)</code> where <code class="code">n</code> is the string name of the
+value of the discriminator (i.e. <code class="code">"NameK"</code>), and <code class="code">v</code> is the mapped
+value of the selected arm.
+<p>
+
+In the second case, the value is represented as
+<code class="code">Xdr.XV_union_over_enum_fast(K,v)</code> where <code class="code">K</code> is the position of
+the value of the discriminator in the enumeration, and <code class="code">v</code> is the mapped
+value of the selected arm.
+<p>
+
+On the fully-mapped level, the union is again mapped to a
+polymorphic variant:
+<p>
+
+<pre class="codepre"><code class="code">  [ `Name0 of t0'
+  | `Name1 of t1'
+  | ...
+  ]
+</code></pre>
+<p>
+
+Every label of an enumerated value is turned into the label of the
+variant. The argument is the mapped value of the corresponding arm.
+Note that default values do not occur in this representation as
+such.
+<p>
+
+For example, the union
+<p>
+
+<pre class="codepre"><code class="code"> enum e {
+     A = 5,
+     B = 42,
+     C = 7,
+     D = 81
+   }
+
+  union switch (e d) {
+    case B:
+      int b;
+    case C:
+      void;
+    default:
+      hyper ad;
+  }
+</code></pre>
+<p>
+
+is mapped to the O'Caml type
+<p>
+
+<pre class="codepre"><code class="code"> 
+   [ 'A of int64     (* expanded default case *)
+   | `B of int32
+   | `C
+   | `D of int64     (* expanded default case *)
+   ]
+</code></pre>
+<p>
+
+If an arm is simply <code class="code">void</code>, the corresponding variant will not have
+an argument.
+<p>
+
+<h2 id="2_RPCPrograms">RPC: Programs</h2>
+<p>
+
+In an .x file one can declare programs. A program consists of a number
+of program versions, and every version consists of a number of
+procedures. Every procedure takes a (possibly empty) list of arguments
+and yields exactly one result (which may be <code class="code">void</code>, however). This
+is written as:
+<p>
+
+<pre class="codepre"><code class="code">   /* type definitions come first */
+   ...
+
+   /* Now the programs: */
+   program P1 {
+       version V1 {
+           r1 name1(arg11, arg12, ...) = L1;
+           r2 name2(arg21, arg22, ...) = L2;
+           ...
+       } = M1;
+
+       version V2 {
+          ...
+       } = M2;
+
+       ...
+
+   } = N1;
+
+   program P2 {
+     ...
+   } = N2;
+
+   ...
+</code></pre>
+<p>
+
+Here, P1, P2, ..., V1, V2, ...,name1, name2, ...  are identifiers.
+r1, r2, arg11, ... are type expressions. N1, N2, ..., M1, M2, ...,
+L1, L2, ... are unsigned numbers.
+<p>
+
+Programs are dynamically represented using the <a href="Rpc_program.html"><code class="code">Rpc_program</code></a> module.
+Every <a href="Rpc_program.html#TYPEt"><code class="code">Rpc_program.t</code></a> value contains the full signature of
+exactly one version of one program.
+<p>
+
+In the generated type mapper module, the definitions for the programs
+are available as constants <code class="code">program_</code><i>P</i><code class="code">'</code><i>V</i> where <i>P</i> is the name of
+the program and <i>V</i> is the version of the program.
+<p>
+
+<h2 id="2_RPCClients">RPC: Clients</h2>
+<p>
+
+To write
+<p>
+<ul>
+<li>Point to <a href="Rpc_client.html"><code class="code">Rpc_client</code></a> as basis</li>
+<li>Clients can be used on term level by directly calling functions of
+  <a href="Rpc_client.html"><code class="code">Rpc_client</code></a></li>
+<li><code class="code">ocamlrpcgen</code> generates an enhanced client module containing
+  procedure stubs. These stubs are on the fully-mapped level.</li>
+</ul>
+
+<h2 id="2_RPCServers">RPC: Servers</h2>
+<p>
+
+To write
+<p>
+<ul>
+<li>Point to <a href="Rpc_server.html"><code class="code">Rpc_server</code></a> as basis</li>
+<li>Servers can be created on term level by using functions
+  of <a href="Rpc_server.html"><code class="code">Rpc_server</code></a></li>
+<li><code class="code">ocamlrpcgen</code> generates an enhanced server module containing a
+  converter to/from the fully-mapped level.
+</li>
+</ul>
+<br>
+</body></html>

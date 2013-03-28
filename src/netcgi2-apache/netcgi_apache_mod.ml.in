@@ -1,0 +1,626 @@
+(* netcgi_apache_mod.ml
+
+   Copyright (C) 2005-2007
+
+     Christophe Troestler
+     email: Christophe.Troestler@umh.ac.be
+     WWW: http://math.umh.ac.be/an/
+
+   This library is free software; see the file LICENSE for more information.
+
+   This library is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the file
+   LICENSE for more details.
+*)
+
+(* This is a module with minimal dependencies to embed the ocaml
+   runtime into Apache.  Together with some C bindings it will make
+   the mod_netcgi.so Apache module.  The Netcgi_apache will then be
+   loaded (with ist dependencies) using Apache directives. *)
+
+(** Configuration settings. *)
+module Conf =
+struct
+  let ocaml_libdir = "@APACHE_OCAMLLIBDIR@"
+  let package = "@PKGNAME@"
+  let version = "@VERSION@"
+  let apache_libdir = "@APACHE_LIBDIR@"
+  let apache_major = @APACHE_MAJOR@
+
+  let gateway_interface = "Netcgi_apache"
+  let server_software =
+    String.concat "" ["Apache/"; Filename.basename apache_libdir;
+                      " "; gateway_interface; "/"; version]
+end
+
+(* We do not want to use the Netcgi_apache one because we want minimal
+   dependencies. *)
+let log_error msg =
+  let t = Unix.localtime(Unix.time()) in
+  let dow = [| "Sun"; "Mon"; "Tue"; "Wed"; "Thu"; "Fri";
+               "Sat" |].(t.Unix.tm_wday)
+  and month = [| "Jan"; "Feb"; "Mar"; "Apr"; "May"; "Jun"; "Jul"; "Aug";
+                 "Sep"; "Oct"; "Nov"; "Dec" |].(t.Unix.tm_mon) in
+  Printf.eprintf "[%s %s %d %02d:%02d:%02d %d] [Netcgi_apache_mod] %s\n%!"
+    dow month t.Unix.tm_mday  t.Unix.tm_hour t.Unix.tm_min t.Unix.tm_sec
+    (t.Unix.tm_year + 1900) msg
+
+
+
+
+(* One has at least to use the apache.c functions here so they are
+   part of the dynamic library. *)
+module Raw_Apache =
+struct
+  (* Forked from mod_caml on May 29, 2006. *)
+
+  module Table = struct (* Table functions. *)
+    type t
+    external clear : t -> unit			= "netcgi2_apache_table_clear"
+    external get : t -> string -> string	= "netcgi2_apache_table_get"
+    external get_all : t -> string -> string list
+      = "netcgi2_apache_table_get_all"
+    external fields : t -> (string * string) list
+      = "netcgi2_apache_table_fields"
+    external set : t -> string -> string -> unit	= "netcgi2_apache_table_set"
+    external add : t -> string -> string -> unit	= "netcgi2_apache_table_add"
+    external unset : t -> string -> unit	= "netcgi2_apache_table_unset"
+
+  (*
+    Non-copying version. Not a great idea to allow access to this.
+    external setn : t -> string -> string -> unit = "netcgi2_apache_table_setn"
+  *)
+
+  (* ... etc ... *)
+  end
+
+  module Server = struct  (* Server_rec functions. *)
+    type t				(* Actual server_rec structure. *)
+    external hostname : t -> string 	= "netcgi2_apache_server_hostname"
+    external admin : t -> string	= "netcgi2_apache_server_admin"
+    external is_virtual : t -> bool	= "netcgi2_apache_server_is_virtual"
+
+  (* ... etc ... *)
+  end
+
+  module Connection = (* Conn_rec functions. *)
+  struct
+    type t				(* Actual conn_rec structure. *)
+
+    external remote_ip : t -> string = "netcgi2_apache_connection_remote_ip"
+    external remote_host : t -> string = "netcgi2_apache_connection_remote_host"
+
+  (* ... etc ... *)
+  end
+
+  module Request = struct (* Request_rec functions. *)
+    type t (* request_rec structure. *)
+
+    external connection : t -> Connection.t
+      = "netcgi2_apache_request_connection"
+    external server : t -> Server.t	= "netcgi2_apache_request_server"
+    external next : t -> t		= "netcgi2_apache_request_next"
+    external prev : t -> t		= "netcgi2_apache_request_prev"
+    external main : t -> t		= "netcgi2_apache_request_main"
+    external the_request : t -> string	= "netcgi2_apache_request_the_request"
+    external assbackwards : t -> bool	= "netcgi2_apache_request_assbackwards"
+
+    external header_only : t -> bool	= "netcgi2_apache_request_header_only"
+    external protocol : t -> string	= "netcgi2_apache_request_protocol"
+    external proto_num : t -> int	= "netcgi2_apache_request_proto_num"
+    external hostname : t -> string	= "netcgi2_apache_request_hostname"
+    external request_time : t -> float	= "netcgi2_apache_request_request_time"
+    external status_line : t -> string	= "netcgi2_apache_request_status_line"
+    external set_status_line : t -> string -> unit
+      = "netcgi2_apache_request_set_status_line"
+    external status : t -> int		  = "netcgi2_apache_request_status"
+    external set_status : t -> int -> unit = "netcgi2_apache_request_set_status"
+    external method_name : t -> string	  = "netcgi2_apache_request_method"
+    external method_number : t -> int = "netcgi2_apache_request_method_number"
+    let request_methods =
+      [| `GET; `PUT; `POST; `DELETE; `CONNECT; `OPTIONS; `TRACE; `PATCH;
+         `PROPFIND; `PROPPATCH; `MKCOL; `COPY; `MOVE; `LOCK; `UNLOCK;
+         `INVALID |]
+    let method_number r =
+      let n = method_number r in
+      if n < 0 || n >= Array.length request_methods then assert false;
+      Array.unsafe_get request_methods n
+
+    external headers_in : t -> Table.t	  = "netcgi2_apache_request_headers_in"
+    external headers_out : t -> Table.t	  = "netcgi2_apache_request_headers_out"
+    external err_headers_out : t -> Table.t
+      = "netcgi2_apache_request_err_headers_out"
+    external subprocess_env : t -> Table.t
+      = "netcgi2_apache_request_subprocess_env"
+    external notes : t -> Table.t	  = "netcgi2_apache_request_notes"
+    external content_type : t -> string = "netcgi2_apache_request_content_type"
+    external set_content_type : t -> string -> unit
+      = "netcgi2_apache_request_set_content_type"
+
+    external uri : t -> string		  = "netcgi2_apache_request_uri"
+    external port : t -> int		  = "netcgi2_apache_request_port"
+    external set_uri : t -> string -> unit = "netcgi2_apache_request_set_uri"
+    external filename : t -> string	  = "netcgi2_apache_request_filename"
+    external set_filename : t -> string -> unit
+      = "netcgi2_apache_request_set_filename"
+    external path_info : t -> string	  = "netcgi2_apache_request_path_info"
+    external set_path_info : t -> string -> unit
+      = "netcgi2_apache_request_set_path_info"
+    external args : t -> string		  = "netcgi2_apache_request_args"
+    external set_args : t -> string -> unit = "netcgi2_apache_request_set_args"
+    external finfo : t -> Unix.stats option = "netcgi2_apache_request_finfo"
+
+    type read_policy = NO_BODY
+                       | CHUNKED_ERROR
+		       | CHUNKED_DECHUNK
+		       | CHUNKED_PASS
+
+    external setup_client_block : t -> read_policy -> int
+      = "netcgi2_apache_request_setup_client_block"
+
+    external should_client_block : t -> bool
+      = "netcgi2_apache_request_should_client_block"
+    external get_client_block : t -> string
+      = "netcgi2_apache_request_get_client_block"
+    external get_client_block_buffer : t -> string -> int -> int -> int
+      = "netcgi2_apache_request_get_client_block_buffered"
+    external discard_request_body : t -> int
+      = "netcgi2_apache_request_discard_request_body"
+
+    external user : t -> string		  = "netcgi2_apache_request_user"
+      (* In Apache 1.3 this field is actually in the [conn_rec]
+         structure, and was moved here in Apache 2.0.  We
+         transparently hide this detail for you. *)
+    external auth_type : t -> string = "netcgi2_apache_auth_type"
+    external note_auth_failure : t -> unit
+      = "netcgi2_apache_request_note_auth_failure"
+    external note_basic_auth_failure : t -> unit
+      = "netcgi2_apache_request_note_basic_auth_failure"
+    external note_digest_auth_failure : t -> unit
+      = "netcgi2_apache_request_note_digest_auth_failure"
+    external get_basic_auth_pw : t -> int * string option
+      = "netcgi2_apache_request_get_basic_auth_pw"
+
+    external send_http_header : t -> unit
+      = "netcgi2_apache_request_send_http_header"
+    external rflush : t -> int		= "netcgi2_apache_request_rflush"
+
+    external internal_redirect : string -> t -> unit
+      = "netcgi2_apache_request_internal_redirect"
+    external internal_redirect_handler : string -> t -> unit
+      = "netcgi2_apache_request_internal_redirect_handler"
+
+    external print_char : t -> char -> unit
+      = "netcgi2_apache_request_print_char"
+
+    external unsafe_output : t -> string -> int -> int -> int
+      = "netcgi2_apache_request_output"
+    let output r s ofs len =
+      if ofs < 0 || len < 0 || ofs + len > String.length s then
+        invalid_arg "Netcgi_apache.Apache.Request.output";
+      unsafe_output r s ofs len
+
+    let print_string r s =
+      let n = String.length s in
+      let i = ref 0 in
+      while !i < n do
+        let w = unsafe_output r s !i (n - !i) in
+        if w <= 0 then failwith "print_string: end of file or error";
+        i := !i + w;
+      done
+
+    let print_int r i =     print_string r (string_of_int i)
+    let print_float r f =   print_string r (string_of_float f)
+    let print_newline r =   print_string r "\r\n"
+    let print_endline r s = print_string r s; print_newline r
+
+    (* ... etc ... *)
+
+    external register_cleanup : t -> (unit -> unit) -> unit
+      = "netcgi2_apache_request_register_cleanup"
+  end
+
+
+  (* Unless we actually reference the external C functions, OCaml
+     doesn't load them into the primitive table and we won't be able to
+     access them!  *)
+  let _table_clear = Table.clear
+  let _table_get = Table.get
+  let _table_get_all = Table.get_all
+  let _table_fields = Table.fields
+  let _table_set = Table.set
+  let _table_add = Table.add
+  let _table_unset = Table.unset
+
+  let _server_hostname = Server.hostname
+  let _server_admin = Server.admin
+  let _server_is_virtual = Server.is_virtual
+
+  let _connection_remote_ip = Connection.remote_ip
+  let _connection_remote_host = Connection.remote_host
+
+  let _request_connection = Request.connection
+  let _request_server = Request.server
+  let _request_next = Request.next
+  let _request_prev = Request.prev
+  let _request_main = Request.main
+  let _request_the_request = Request.the_request
+  let _request_assbackwards = Request.assbackwards
+  let _request_header_only = Request.header_only
+  let _request_protocol = Request.protocol
+  let _request_proto_num = Request.proto_num
+  let _request_hostname = Request.hostname
+  let _request_request_time = Request.request_time
+  let _request_status_line = Request.status_line
+  let _request_set_status_line = Request.set_status_line
+  let _request_status = Request.status
+  let _request_set_status = Request.set_status
+  let _request_method_name = Request.method_name
+  let _request_method_number = Request.method_number
+  let _request_headers_in = Request.headers_in
+  let _request_headers_out = Request.headers_out
+  let _request_err_headers_out = Request.err_headers_out
+  let _request_subprocess_env = Request.subprocess_env
+  let _request_notes = Request.notes
+  let _request_content_type = Request.content_type
+  let _request_set_content_type = Request.set_content_type
+  let _request_uri = Request.uri
+  let _request_port = Request.port
+  let _request_set_uri = Request.set_uri
+  let _request_filename = Request.filename
+  let _request_set_filename = Request.set_filename
+  let _request_path_info = Request.path_info
+  let _request_set_path_info = Request.set_path_info
+  let _request_args = Request.args
+  let _request_set_args = Request.set_args
+  let _request_finfo = Request.finfo
+  let _request_setup_client_block = Request.setup_client_block
+  let _request_should_client_block = Request.should_client_block
+  let _request_get_client_block = Request.get_client_block
+  let _request_get_client_block_buffer = Request.get_client_block_buffer
+  let _request_discard_request_body = Request.discard_request_body
+  let _request_user = Request.user
+  let _request_auth_type = Request.auth_type
+  let _request_note_auth_failure = Request.note_auth_failure
+  let _request_note_basic_auth_failure = Request.note_basic_auth_failure
+  let _request_note_digest_auth_failure = Request.note_digest_auth_failure
+  let _request_get_basic_auth_pw = Request.get_basic_auth_pw
+  let _request_send_http_header = Request.send_http_header
+  let _request_rflush = Request.rflush
+  let _request_internal_redirect = Request.internal_redirect
+  let _request_internal_redirect_handler = Request.internal_redirect_handler
+  let _request_print_char = Request.print_char
+  let _request_unsafe_output = Request.unsafe_output
+  let _request_register_cleanup = Request.register_cleanup
+end (* module Raw_Apache ------------------------------------------------- *)
+
+
+module Handler =
+struct
+  (* Forked from mod_caml.ml but streamlined and adapted to Netcgi2 style. *)
+
+  type result = OK | DECLINED | DONE | HTTP of int
+
+  type t = Raw_Apache.Request.t -> result
+    (* Handler on the Caml side.  May also exit through an exception. *)
+
+  (*----- Initialize Dynlink library. -----*)
+
+  let () =
+    try
+      Dynlink.init ();
+      Dynlink.allow_unsafe_modules true
+    with
+      Dynlink.Error(e) -> failwith(Dynlink.error_message e)
+
+  (*----- Configuration. -----*)
+
+  type dir_config_t = {
+    location : string option;
+    check_user_id : t option;
+    auth_checker : t option;
+    access_checker : t option;
+    type_checker : t option;
+    fixer_upper : t option;
+    logger : t option;
+    header_parser : t option;
+    post_read_request : t option;
+    ocaml_bytecode_handler : t option;
+  }
+
+  type server_config_t = {
+    translate_handler : t option;
+  }
+
+  let create_dir_config dirname =
+    { location = dirname;
+      check_user_id = None;
+      auth_checker = None;
+      access_checker = None;
+      type_checker = None;
+      fixer_upper = None;
+      logger = None;
+      header_parser = None;
+      post_read_request = None;
+      ocaml_bytecode_handler = None }
+
+  let update b a = if a = None then b else a
+
+  let merge_dir_config base add =
+    {
+      location = 	update base.location add.location;
+      check_user_id = 	update base.check_user_id add.check_user_id;
+      auth_checker = 	update base.auth_checker add.auth_checker;
+      access_checker = 	update base.access_checker add.access_checker;
+      type_checker = 	update base.type_checker add.type_checker;
+      fixer_upper = 	update base.fixer_upper add.fixer_upper;
+      logger = 		update base.logger add.logger;
+      header_parser = 	update base.header_parser add.header_parser;
+      post_read_request = update base.post_read_request add.post_read_request;
+      ocaml_bytecode_handler =
+        update base.ocaml_bytecode_handler add.ocaml_bytecode_handler;
+    }
+
+  external get_dir_config : Raw_Apache.Request.t -> dir_config_t
+    = "netcgi2_apache_get_dir_config" (* in apache.c *)
+
+  let create_server_config s =
+    { translate_handler = None; }
+
+  let merge_server_config base add =
+    { translate_handler = update base.translate_handler add.translate_handler }
+
+  external get_server_config : Raw_Apache.Request.t -> server_config_t
+    = "netcgi2_apache_get_server_config" (* in apache.c *)
+
+  let () =
+    Callback.register "netcgi2_apache_create_dir_config"    create_dir_config;
+    Callback.register "netcgi2_apache_merge_dir_config"     merge_dir_config;
+    Callback.register "netcgi2_apache_create_server_config"
+      create_server_config;
+    Callback.register "netcgi2_apache_merge_server_config"  merge_server_config
+
+
+  (*----- Handlers. -----*)
+
+  (** [make_handler name conf_member] register a function that, when
+      executed (on the C side), will run the handler set in the
+      configuration if any is present. *)
+  let make_handler name conf =
+    (* This function returns an integer (DECLINED -1, DONE -2, OK 0 or
+       an HTTP status) so we can deal with exceptions on the Caml side. *)
+    let handler r =
+      try
+        match conf r with
+        | Some handler ->
+            (try
+                match handler r with
+                | OK -> 0
+                | DECLINED -> -1
+                | DONE -> -2
+                | HTTP i -> i
+              with
+              | Exit -> 0 (* = OK; considered a correct way to terminate *)
+              | exn ->
+                  log_error(name ^ ": Uncaught exception: "
+                             ^ Printexc.to_string exn);
+                  500 (* Internal Server Error *)
+            )
+        | None -> -1 (* DECLINED; no handler *)
+      with Not_found -> -1 (* DECLINED; no server config *)
+    in
+    Callback.register name (handler:Raw_Apache.Request.t -> int)
+
+  let () =
+    make_handler "netcgi2_apache_translate_handler"
+      (fun r -> (get_server_config r).translate_handler);
+    make_handler "netcgi2_apache_check_user_id"
+      (fun r -> (get_dir_config r).check_user_id);
+    make_handler "netcgi2_apache_auth_checker"
+      (fun r -> (get_dir_config r).auth_checker);
+    make_handler "netcgi2_apache_access_checker"
+      (fun r -> (get_dir_config r).access_checker);
+    make_handler "netcgi2_apache_type_checker"
+      (fun r -> (get_dir_config r).type_checker);
+    make_handler "netcgi2_apache_fixer_upper"
+      (fun r -> (get_dir_config r).fixer_upper);
+    make_handler "netcgi2_apache_logger"
+      (fun r -> (get_dir_config r).logger);
+    make_handler "netcgi2_apache_header_parser"
+      (fun r -> (get_dir_config r).header_parser);
+    make_handler "netcgi2_apache_post_read_request"
+      (fun r -> (get_dir_config r).post_read_request);
+    make_handler "netcgi2_apache_ocaml_bytecode_handler"
+      (fun r -> (get_dir_config r).ocaml_bytecode_handler)
+
+
+  (*----- Handler registration. -----*)
+
+  let reg_table = Hashtbl.create 16
+
+  let reg_module_name = ref None
+
+  let register_module handler full_name =
+    Hashtbl.replace reg_table full_name handler
+
+  (* Register the module's handler. *)
+  let register (handler:t) name =
+    match !reg_module_name with
+    | None ->
+        failwith("Netcgi_apache.Handler.register: \
+		 call outside module initialization")
+    | Some module_name -> register_module handler (module_name ^ "." ^ name)
+
+  (*----- Commands. -----*)
+
+  (* NetcgiLoad [filename].  Preprend the ocaml standard library path
+     (ocamlc -where) if [filename] is relative. *)
+  let cmd_load filename =
+    let filename =
+      if Filename.is_relative filename then
+        Filename.concat Conf.ocaml_libdir filename
+      else filename in
+    reg_module_name := Some(String.capitalize(Filename.chop_extension
+                                               (Filename.basename filename)));
+    try  Dynlink.loadfile filename;
+    with Dynlink.Error(e) ->
+      log_error(Dynlink.error_message e)
+
+  let skip_findlib = [ "unix"; "dynlink"; "findlib" ]
+  let predicates = ref [ "byte" ]
+  let loaded = ref []
+  let init_findlib_var = ref false
+
+  let init_findlib() =
+    if not !init_findlib_var then (
+      Findlib.init();
+      init_findlib_var := true
+    )
+
+  let split_in_words s =
+    (* Copy of Fl_split.in_words.
+       splits s in words separated by commas and/or whitespace *)
+    let l = String.length s in
+    let rec split i j =
+      if j < l then
+	match s.[j] with
+            (' '|'\t'|'\n'|'\r'|',') ->
+              if i<j then (String.sub s i (j-i)) :: (split (j+1) (j+1))
+              else split (j+1) (j+1)
+	  | _ ->
+              split i (j+1)
+      else
+	if i<j then [ String.sub s i (j-i) ] else []
+    in
+    split 0 0
+
+  let cmd_require pkg =
+    (* Findlib-supported package loading. Also see topfind.ml in findlib *)
+    init_findlib();
+    try
+      let eff_pkglist =
+	Findlib.package_deep_ancestors !predicates [pkg] in
+      List.iter
+	(fun pkg ->
+	   if not (List.mem pkg !loaded) then begin
+             (* Determine the package directory: *)
+             let d = Findlib.package_directory pkg in
+             if not (List.mem pkg skip_findlib) then begin
+               (* Determine the 'archive' property: *)
+               let archive =
+		 try Findlib.package_property !predicates pkg "archive"
+		 with
+		     Not_found -> ""
+               in
+               (* Split the 'archive' property and load the files: *)
+               let archives = split_in_words archive in
+               List.iter
+		 (fun arch -> 
+		    let arch' = Findlib.resolve_path ~base:d arch in
+		    reg_module_name := 
+		      Some(String.capitalize(Filename.chop_extension
+					       (Filename.basename arch')));
+		    try Dynlink.loadfile arch';
+		    with Dynlink.Error(e) ->
+		      log_error(Dynlink.error_message e)
+		 )
+		 archives;
+             end;
+             (* The package is loaded: *)
+             loaded := pkg :: !loaded
+	   end
+	)
+	eff_pkglist
+    with
+      | Findlib.No_such_package(name,_) ->
+	  log_error ("No such ocaml package: " ^ name)
+      | Findlib.Package_loop name ->
+	  log_error ("Ocaml package loop: " ^ name)
+      | Failure msg ->
+	  log_error ("Failure: " ^ msg)
+
+  let cmd_thread _ =
+    init_findlib();
+    let have_mt_support() =
+      Findlib.package_property [] "threads" "type_of_threads" = "posix" in
+      if not(List.mem "threads" !loaded) then (
+	(* This works only for POSIX threads. *)
+	if have_mt_support() then (
+	  predicates := ["mt"; "mt_posix"] @ !predicates;
+	  cmd_require "threads"
+	)
+	else (
+	  log_error "NetcgiThread: No support for threads"
+	)
+      )
+
+  let cmd_predicates s =
+    init_findlib();
+    let preds = split_in_words s in
+    predicates := preds @ !predicates
+
+  let cmd_translate_handler sconfig name =
+    { sconfig with translate_handler = Some (Hashtbl.find reg_table name) }
+
+  let cmd_check_user_id_handler dconfig name =
+    { dconfig with check_user_id = Some (Hashtbl.find reg_table name) }
+
+  let cmd_auth_checker_handler dconfig name =
+    { dconfig with auth_checker = Some (Hashtbl.find reg_table name) }
+
+  let cmd_access_checker_handler dconfig name =
+    { dconfig with access_checker = Some (Hashtbl.find reg_table name) }
+
+  let cmd_type_checker_handler dconfig name =
+    { dconfig with type_checker = Some (Hashtbl.find reg_table name) }
+
+  let cmd_fixer_upper_handler dconfig name =
+    { dconfig with fixer_upper = Some (Hashtbl.find reg_table name) }
+
+  let cmd_logger_handler dconfig name =
+    { dconfig with logger = Some (Hashtbl.find reg_table name) }
+
+  let cmd_header_parser_handler dconfig name =
+    { dconfig with header_parser = Some (Hashtbl.find reg_table name) }
+
+  let cmd_post_read_request_handler dconfig name =
+    { dconfig with post_read_request = Some (Hashtbl.find reg_table name) }
+
+  let cmd_handler dconfig name =
+    { dconfig with ocaml_bytecode_handler = Some (Hashtbl.find reg_table name) }
+
+  let () =
+    let cb = Callback.register in
+    cb "netcgi2_apache_cmd_load"                   cmd_load;
+    cb "netcgi2_apache_cmd_require"                cmd_require;
+    cb "netcgi2_apache_cmd_thread"                 cmd_thread;
+    cb "netcgi2_apache_cmd_predicates"             cmd_predicates;
+    cb "netcgi2_apache_cmd_translate_handler"      cmd_translate_handler;
+    cb "netcgi2_apache_cmd_check_user_id_handler"  cmd_check_user_id_handler;
+    cb "netcgi2_apache_cmd_auth_checker_handler"   cmd_auth_checker_handler;
+    cb "netcgi2_apache_cmd_access_checker_handler" cmd_access_checker_handler;
+    cb "netcgi2_apache_cmd_type_checker_handler"   cmd_type_checker_handler;
+    cb "netcgi2_apache_cmd_fixer_upper_handler"    cmd_fixer_upper_handler;
+    cb "netcgi2_apache_cmd_logger_handler"         cmd_logger_handler;
+    cb "netcgi2_apache_cmd_header_parser_handler"  cmd_header_parser_handler;
+    cb "netcgi2_apache_cmd_post_read_request_handler"
+      cmd_post_read_request_handler;
+    cb "netcgi2_apache_cmd_handler"                cmd_handler
+
+end (* module Handler ------------------------------------------------- *)
+
+
+(** Support for classes.  Unless we use classes here, the support for
+    classes will not be embedded in apache and loading Netcgi will fail. *)
+class _support__classes_ = object end
+
+(** There is no lazy.cma, lexing.cma, stream.cma,... to load.
+    Reference these modules here to make sure they are included in the
+    module hence the mod .so *)
+let _arg_parse_ = Arg.parse
+let _lazy_force_ = Lazy.force
+let _lexing_lexeme_ = Lexing.lexeme
+let _queue_create_ = Queue.create
+let _stack_create_ = Stack.create
+let _stream_sempty_ = Stream.sempty

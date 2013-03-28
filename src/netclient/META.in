@@ -1,0 +1,6 @@
+version = "@VERSION@"
+requires = "netsys,equeue,unix,netstring"
+requires(mt) = "netsys,equeue,unix,netstring,threads"
+archive(byte) = "netclient.cma"
+archive(native) = "netclient.cmxa"
+archive(native,gprof) = "netclient.p.cmxa"

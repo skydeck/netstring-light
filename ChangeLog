@@ -1,0 +1,749 @@
+2013-01-13  Gerd Stolpmann  <gerd@samsung>
+
+	* Release OCamlnet-3.6.3
+
+	* Netmcore_heap.mli: allowing to [add] bigarrays. New
+	  function [add_string] for creating uninitialized strings on
+	  heaps. New function [add_immutable] for retaining value sharing.
+
+	* Netsys_mem: New options [Copy_conditionally] and [Keep_atom]
+	  for function [init_value].
+
+2012-12-26  Gerd Stolpmann  <gerd@samsung>
+
+	* Release OCamlnet-3.6.2
+
+	* netsys_c_subprocess.c: fixing a deadlock issue
+	  (when calling commands via the Shell library)
+
+2012-11-19  Gerd Stolpmann  <gerd@samsung>
+
+	* Netdate: Fix interpretation of the ~localzone argument
+	  of several functions. Now the timezone is assumed for the
+	  target time, not the calling time
+
+	* Netdate: Adding localization
+
+	* Netconversion: Adding functions for converting to lowercase/
+	  uppercase/titlecase, and for case-insensitive comparison
+
+2012-11-07  Gerd Stolpmann  <gerd@samsung>
+
+	* Release OCamlnet-3.6.1
+
+	* Fix Netfs.copy: When the copy method throws EXDEV, it is
+	  fallen back to a streaming-type copy
+
+	* Several fixes for OS X
+
+	* Daemonizer: now using a signal for waiting until the children
+	  are up and running
+
+	* Fixes for OCaml-4.00
+
+2012-09-30 Gerd Stolpmann <gerd@gerd-stolpmann.de>
+	* Better endianness check as suggested by Matias Giovannini
+
+	* Fixing handling of `Recv_send_implied sockets in
+	  socket_multiplex_controller
+
+2012-08-27 Gerd Stolpmann <gerd@gerd-stolpmann.de>
+
+	* netzip: it is now autodetected whether the camlzip library
+	  is available under the findlib name "zip" or "camlzip"
+
+2012-07-20  Gerd Stolpmann  <gerd@samsung>
+
+	* Release Ocamlnet-3.6
+
+	* Netsys_sem: a new abstraction for emulating anonymous
+	  semaphores on systems that only provide named semaphores,
+	  like OS X. All users of semaphores inside Ocamlnet now
+	  base on Netsys_sem.
+
+2012-07-19  Gerd Stolpmann  <gerd@samsung>
+
+	* reimplementing Netstring_str for the case the Str engine
+	  is used. It is now thread-safe without having to use
+	  mutexes.
+
+	* The default is now -disable-pcre
+
+	* The module Netstring_pcre has been moved to a library of its
+	  own, namely netstring-pcre. It is only installed if -enable-pcre
+
+2012-06-27 Gerd Stolpmann <gerd@gerd-stolpmann.de>
+
+	* Nethttp.Header.best_media_type: improved
+	  (patch by Christopher Zimmemann)
+
+2012-06-22 Gerd Stolpmann
+
+        * Netsys_mem.alloc_memory_pages: one can now mark the memory
+          pages as executable
+
+2012-05-31  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* src/netsys/configure: disabling POSIX semaphore check
+	  for win32
+
+2012-05-26 Gerd Stolpmann <gerd@gerd-stolpmann.de>
+
+	* Fixes for OpenBSD (by Christopher Zimmermann)
+
+	* Netcgi connectors (SCGI, AJP, FCGI): unifying the ~sockaddr
+          and ~port arguments. ~port now also assumes a loopback binding.
+          (Suggested by Christopher Zimmermann).
+
+2012-03-15  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Allowing posix_spawn again for MacOS. It turns out the
+	  number of file actions is limited. If we are above the
+	  limit, posix_spawn is not used.
+
+2012-03-01  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Ssl_exts: adding function for returning the fingerprint of
+	  a certificate
+
+	* Https_client: new verify callback for additional certificate
+	  checks
+
+2012-02-29  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Release Ocamlnet-3.5.1
+
+	* Fixing various build problems:
+	  - FreeBSD-9: clock_getcpuclockid problem
+	  - FreeBSD-9: PATH_MAX problem
+	  - Mac OS: disbling posix_spawn (cannot debug this right now)
+	  - Linux: adding -lpthread to ocamlopt link flags
+
+2012-02-22  Gerd Stolpmann  <gerd@samsung>
+
+	* Release Ocamlnet-3.5
+
+	* Documentation: new Equeue_howto introduction into Equeue/engines
+
+2012-02-21  Gerd Stolpmann  <gerd@samsung>
+
+	* Netplex: new option "greedy_accpepts" for improving the speed
+	  of Netplex systems accepting new connections at a very high
+	  rate (> 1000/s).
+
+	* Netplex: the constant workload manager gets the option
+	  max_jobs_per_thread.
+
+2012-02-20  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Netchannels: new option ~pass_through for buffered netchannels
+
+	* Netshm_data.string_manager: speeding up (using memory_of_bigarray)
+
+	* Netsys_mem.memory_of_bigarray: added
+
+	* Netmcore_condition: There is now a second kind of wait_entry
+	  allowing it to wait via file descriptor polling.
+
+2012-02-16  Gerd Stolpmann  <gerd@samsung>
+
+	* Http_client: fixing the case that a non-idempotent request
+	  needs authentication, but should always be tried again even
+	  if reconnect_mode does not allow to create a new connection.
+
+	* Netplex: making many container methods/functions thread-safe
+
+2012-02-15  Gerd Stolpmann  <gerd@samsung>
+
+	* Uq_mt: this new module coordinates access to shared
+	  engine-based resources from multiple threads (e.g.
+	  share an RPC client by several threads)
+
+	* Uq_ssl + Https_client: fixing problem when the client
+	  times out while still connecting. Before, the module closed the
+	  file descriptor too early. (Thanks to Henry Hughes for
+	  reporting.)
+
+2012-02-14  Gerd Stolpmann  <gerd@samsung>
+
+	* XDR/RPC: implemented direct mapping from byte representation
+	  to Ocaml value. Use new switch -direct with ocamlrpcgen to
+	  enable.
+
+2012-02-10  Gerd Stolpmann  <gerd@samsung>
+
+	* Xdr: additional check against invalid XDR messages.
+
+	* Xdr: calling Netnumber instead of Rtypes
+
+	* Netnumber: speeding int8 readers and writers up (only on
+	  64 bit systems)
+
+2012-02-08  Gerd Stolpmann  <gerd@samsung>
+
+	* epoll: Adding support. This is exported as "event aggregator" in
+	  Netsys_posix (the API is prepared for other poll implementations).
+	  There is also Netsys_pollset_posix.accelerated_pollset.
+
+	* Netplex: Adding container_event_system and container_run
+	  to [processor_hooks] so users can override these functions
+	  (for using Lwt in Netplex containers).
+
+2012-02-06  Gerd Stolpmann  <gerd@samsung>
+
+	* Netsys_posix: Adding a second implementation for spawn
+	  basing on posix_spawn
+
+2012-02-05  Gerd Stolpmann  <gerd@samsung>
+
+	* Netsys_posix: Adding POSIX clock functions. These allow
+	  operations with nanosecond resolution
+
+	* Netlog and Netdate have been extended to support high
+	  resolution clocks. New "nanos" field in Netdate.t.
+
+	* Netsys_posix: Adding event abstraction. Under Linux this is backed by
+	  eventfd and timerfd. For other OS, an emulation with pipes is
+	  available.
+
+	* Netsys_posix: Adding POSIX timers. They can be connected with
+	  events (the event is signaled when the timer expires).
+
+	* Netsys in general: Splitting netsys_c.c up into several files.
+	  Improved configure script.
+
+	* Netplex_log: Using the new standard formatter.
+
+2012-01-23  Gerd Stolpmann  <gerd@samsung>
+
+	* Http_client: forgot to configure Digest authentication
+	  for the convenience module (thanks to Paolo Donadeo for
+	  finding it)
+
+2012-01-13  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Fix memory leak: Adding finalizer for Netsys_posix.poll_mem
+	  values (thanks to Henry Hughes)
+
+	* Fix (build): ocamlrpcgen respects existing OCAMLPATH
+	  (Dmitry Grebeniuk)
+
+2011-12-30 Gerd Stolpmann <gerd@gerd-stolpmann.de>
+
+        * Security: adding limit max_arguments to Netcgi. This is more
+          a general measure of precaution against DoS attacks where
+          a specially crafted POST request contains many keys that
+          collide massively in the hash table. Actually, Ocamlnet is
+          not directly vulnerable; however, application programs can
+          nevertheless be when they access a degenerated hash table.
+
+2011-10-12  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Release 3.4.1
+
+2011-10-11  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Rpc_client: new functions get_xid_of_last_call, and
+	  abandon_call
+
+2011-09-23  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* rpc-auth-local: Implementing this for more types of OS.
+
+	* Rpc: fixing some bugs
+
+2011-09-20  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Rpc_client and Rpc_server: disabling the Nagle
+	  algorithm. At the same time, Rpc_transport is improved
+	  so it almost never calls write() several times with
+	  small strings.
+
+2011-09-10  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* bugfixes in the Netplex shutdown procedure
+
+2011-08-30  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Uq_io: adding input_lines_e
+
+	* IPv6 support for Neturl and Uq_resolver. Also fixes in Uq_socks5
+	and netcgi2.
+
+	* Netplex: print line number for syntax errors in config files.
+
+	* Netplex: the method socket_directory returns an absolute
+	path. The method startup_directory is now also available in
+	containers.
+
+	* Release 3.4
+	
+2011-08-29  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Http_client: one can set a different proxy server for each
+	transport type
+
+	* Netfs: new methods read_file and write_file, for file-based
+	downloads and uploads, respectively.
+
+	* Netfs: new method cancel to stop an upload prematurely
+
+	* Http_fs, Ftp_fs: new method translate to get the URL for a file
+	operation
+
+	* Ftp_fs: the get_password and get_account functions take the user
+	name as input 
+
+2011-08-23  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Build fixes for Ocaml-3.11. There were some regressions.
+
+2011-08-16  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* netcgi_apache: adding support for Findlib
+	  (new directives NetcgiRequire et al)
+
+2011-08-05  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Released: ocamlnet-3.3.7
+
+2011-08-03  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Netplex: new workload_hook. It is called whenever a
+	  connection is accepted or terminated.
+
+	* Netplex: new config conn_limit to set the maximum number
+	  of connections a container can accept
+
+	* Netplex: new config gc_when_idle to run Gc.full_major
+	  when the container is idle for some time
+
+	* Reducing memory consumption (Uq_io and users such as
+	  Http_client, Netplex, Rpc) by recycling bigarray buffers
+	  more quickly
+
+	* New admin messages netplex.mem.major, netplex.mem.compact,
+	  netplex.mem.pools, netplex.mem.stats
+
+	* Docs netplex_admin.txt
+
+2011-07-29  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Shell: calling subprograms did not work when multi-threading
+	  was enabled because of a caml_leave_blocking_section
+	  without prior caml_enter_blocking_section. This is fixed.
+
+	* Uq_ssl: Changed the method of closing SSL tunnels. Before,
+	  a close-notify SSL message was sent, and also expected by the
+	  peer before the connection was closed on TCP level. Now,
+	  we half-close the TCP connection immediately after sending
+	  close-notify. This seems to fix some SSL sessions where the
+	  server ignores close-notify, and only reacts on TCP closes.
+	  This method of closing seems to be ok with the standard,
+	  which is apparently not very precise on SSL closures.
+
+	* Released: Ocamlnet-3.3.6
+
+2011-07-20  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Fix filter in Rpc_server: they are no longer accidentally reset for
+          longer TCP messages
+
+	* Fix Http_client: avoiding an assert when the server immediately 
+	  responds without awaiting the request
+
+	* Mimestring: reimplementing the MIME scanner w/o regexps. Also new
+          string processing functions for iterating over lines.
+
+        * Nethttpd: banning all regexps in message parsing that could cause
+          stack overflows 
+
+	* Nethttpd: Returning better Content-Encoding for statically served 
+	  files. In particular, the encoding of compressed files is taken
+	  into account
+
+	* Released: Ocamlnet-3.3.5
+	
+2011-07-12  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Shell_sys: Fixing descriptor assignments (avoiding EBADF
+	  errors)
+
+	* Netplex: support for TCP_NODELAY in servers
+	
+	* Released: Ocamlnet-3.3.4
+
+2011-06-24  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Rpc_client: fix for GSS-API authentication how
+	  exceptions are passed back to the caller, avoiding
+	  double callbacks
+
+	* Packing error for Netglob_lex.
+
+2011-06-16  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Rpc_client: fix when trying several authentication methods:
+	  The original call is no longer marked as pending. This avoids
+	  a hanging event system.
+
+	* Netsys_posix: adding with_tty, tty_read_password
+
+2011-06-14  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Adding Netsockaddr module, and a few conversion functions
+	  for socksymbol
+
+2011-06-13  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Fix: sending HTTP requests in URL-encoded form (thanks to
+	  Joel Reymont for pointing it out)
+
+	* Fix: redirects after POST
+
+	* Fix: timeouts in Unixqueue_pollset no longer cause failed
+	  assertions (thanks to Stéphane Legrand)
+
+	* Released: Ocamlnet-3.3.3
+
+2011-06-12  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Fix: Http_client removed the query path from URLs accidentally
+
+	* Released: Ocamlnet-3.3.2
+	
+2011-06-10  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Released: Ocamlnet-3.3.1
+
+2011-06-10  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* FTP protocol: Finishing Ftp_client (w/ API changes). Adding Ftp_fs
+
+	* HTTP protocol: adding support for TLS
+
+	* HTTP protocol: can handle compression automatically
+
+	* Adding tutorial for Netclient
+
+	* Using Uq_resolver, finally
+
+	* Adding Uq_lwt for (limited) compatibility with Lwt
+
+	* Reorganizing regression test suite
+
+2011-05-06  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Unixqueue: important bug fixes that were introduced since
+	  Ocamlnet-3.2, and affect e.g. Http_client.
+
+2011-04-29  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Preventing errors "Netchannels: Suppressed error in close_out:
+  	  Netchannels.Closed_channel" (tentative fix)
+
+2011-04-28  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Reverting Netencoding.Url to the implementation used
+	  in Ocamlnet-2. The new impl introduces some incompatibilities
+	  with Neturl.
+
+	* Ocamlnet can now also be built without PCRE! Just configure
+	  with -disable-pcre.
+
+2011-04-14  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Test release: 3.3.0test1
+
+	* Netmulticore: adding a lot of modules for managing shared
+	  heaps. Also contains a tutorial now.
+
+2011-03-07  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Netnumber: better successor of Rtypes, with both big-endian
+	  and little-endian support. Rtypes is still available as
+	  legacy module
+
+	* Xdr, Xdr_mstring, Rtypes: have been moved to the "netstring"
+	  library part
+
+	* Adding support for GSS-API: The generic interface is defined in
+	  Netgssapi. ONC-RPC support can be found in Rpc_auth_gssapi.
+	  The authentication framework of ONC-RPC had to be slightly
+	  extended.
+
+	* Adding the SCRAM authentication method. Also includes an
+	  encapsulation as GSS-API method.
+
+	* Rpc_client: one can now set the user identifier (also for Rpc_proxy)
+
+	* Rpc_server: added is_dummy
+
+	* Netsys_rng: secure random numbers on all platforms
+	
+2011-01-31  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Rpc_proxy: if initial_ping is enabled, the calls are queued
+	  up in the right order.
+
+	* Netsys_posix: also allowing flags POSIX_FADV_* for better
+	  compatibility with extunix.
+
+2011-01-30 Gerd Stolpmann <gerd@gerd-stolpmann.de>
+
+	* Build fixes for FreeBSD 8.1
+
+	* Build fixes for Ocaml 3.11
+
+2011-01-17  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Http_fs: PUT semantics can be better controlled with the
+	  If-Match and If-None-Match headers.
+
+	* Netchannels: Fixing some close_out problems when errors
+	  occur while closing
+
+2011-01-04  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Optimizations (especially async code)
+
+	* Netplex_sharedvar.dump: new function for debugging
+
+2010-12-23  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Released: Ocamlnet-3.2
+
+	* Http_fs: fixing the case that the channel is closed before
+	  everything is downloaded
+
+	* Netfs: adding `Dummy as value to all flags
+
+	* Netfs: fixing symlinks in iter and copy_into.
+
+	* Netglob: behaves better when the pattern encoding is
+	  distinct from the filename encoding
+
+	* Shell_fs: expose input_stream_adapter, output_stream_adapter
+
+2010-12-20  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Shell_fs: added stream_fs implementation via shell
+
+2010-12-19  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Http_fs: added stream_fs implementation for HTTP
+
+	* Netfs: new `Streaming flags for read and write
+
+	* Netsys_tmp: new module for globally setting where temporary
+	  directories are created
+
+2010-12-17  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Netglob: new module for globbing
+
+2010-12-16  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Netsys_posix: adding query_langinfo function for basic
+	  locale support
+
+	* Netconversion: new fn: user_encoding
+
+	* Netfs: new abstraction representing simple filesystems
+	  (both local and remote)
+	
+	* Netsys_posix: adding the *at functions (like openat).
+	  Also fchdir and fdopendir are new.
+
+2010-12-09  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Http_client: fixing aggressive connection caching. Also
+	  new module Http_client_conncache for extending the functionality
+	  of connection caches.
+
+2010-12-06  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Netdate: Fixing possible exceptions
+
+2010-11-27  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Netplex bugfixes: services could not be finished that had
+	  already no containers
+
+	* Netplex_semaphore: added destroy. Some functions can now be
+	  called from controller context.
+
+	* Netplex config files: added support for config_tree. No
+	  longer defaulting to /etc/netplex. Instead, the suffix ".conf"
+	  is appended to the name of the executable.
+
+	* Adding Netmcore, Netmcore_camlbox
+
+2010-11-23  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Released: Ocamlnet-3.1
+	
+	* Rtypes: on 64 bit platforms, negative ints were incorrectly
+	  decoded
+
+2010-11-22  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Uq_engines.Operators: generalized the type of ( >> )
+
+	* Netsys_mem: init_value allows now to set the custom_ops
+	  struct for custom blocks. Also, some corner cases for
+	  bigarrays have been fixed. Renamed Copy_custom to Copy_custom_int.
+
+	* Netsys_mem: new function copy_value
+
+	* Netcamlbox: it is now also possible to put messages with
+	  int32,int64,nativeint and bigarrays into boxes
+
+2010-10-01  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Nethttpd: Fixing a bug in Nethttpd_services that prevents in
+	  some cases that HTTP connections with pipelining are correctly
+	  processed. This bug showed especially up in conjuction with
+	  Nethttpd_engine.
+
+	* Nethttpd: adding encap args in Nethttpd_plex.
+
+2010-09-09  Gerd Stolpmann  <gerd@thinkpad.lan.sumadev.de>
+
+	* Released: Ocamlnet-3.0.3
+
+	* Nethttpd: Nethttpd_plex.nethttpd_factory got new arg
+	  processor_factory. This allows it to override this
+	  factory. (Caveat: this factory must be polymorphic.)
+
+	* Netsys: netsys_oothr.cma no longer contains a reference to
+	  Thread. New archive netsys_oothr_mt.cma for this.
+
+	* Netsys: resolving circular dep netsys <-> netsys_signal
+
+2010-08-31  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Released Ocamlnet-3.0.0
+
+----------------------------------------------------------------------	
+These are old change logs before the Ocamlnet-3 development
+started.	
+----------------------------------------------------------------------	
+
+2008-03-30  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Adding netzip library
+
+	* Enhancement: Netplex controllers can send and receive messages
+
+	* Enhancement: Plugins for Netplex controllers
+
+	* Adding Netplex_semaphore using the new plugin feature
+
+2008-03-29  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Adding subchannel logging to Netplex
+
+	* Adding access logging to Nethttpd
+
+2008-03-04  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Recognize GNU/kFreeBSD (Stéphane Glondu <steph@glondu.net>)
+
+	* Fix: Upgraded equeue-ssl for use with ocaml-ssl >= 0.4
+	  (thanks to Debian ocaml maintainers)
+
+	* [ChriS]: Removal of old cgi stuff
+
+	* [ChriS]: Preparing netcgi-apache for OCaml 3.11
+
+	* Enhancements: Introducing pollsets and Unixqueue2.
+	  This work is experimental for now and not yet complete.
+
+2007-11-18  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Adding syscalls to Netsys: poll, fsync, fdatasync,
+	  fadvise, fallocate, ioprio_get/set
+
+2007-11-01  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Release 2.2.9
+
+	* Fix: Http_client becomes more robust when it sees illegal header
+ 	  fields.
+
+	* Fix: Netshm decodes pairs correctly
+	
+2007-07-31  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+        * Release 2.2.8
+	
+	* Fix: stop all timers on Netplex shutdown
+
+	* Improved Netbuffer module
+
+	* [ChriS]: Improved examples for netcgi2
+	
+2007-05-06  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Fix: For Unix domain sockets, getsockname and getpeername
+	  may return EAFNOSUPPORT. This code is generated by the
+	  OCaml runtime when it sees an address it does not support.
+	  We handle this case as a connected socket with inaccessible
+	  address. The problem was reported to happen for MacOS.
+
+	* Fix: IPv6 is now supported by most functionality. Exception
+	  is the SOCKS stuff.
+
+	* Fix netcgi2: Improving compatibility of Netcgi1_compat,
+	  such that nethttpd works together with netcgi2. Porting
+	  examples/nethttpd/netplex.ml to nethttpd+netcgi2.
+
+        * [ChriS]: Netcgi2-apache builds for Apache 2
+	 
+2007-04-09  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+        * Release 2.2.7
+	
+        * Including netcgi2-apache into the release
+	
+	* Fix: Error handling in Nethttpd.
+
+	* Fix: Build of nethttpd examples
+
+2007-03-28  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Release 2.2.6
+
+	* Improving timeout handling in Rpc_client. TCP timeouts are now
+	  handled better. Added Unbound_exception.
+
+2007-03-05  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Release 2.2.5
+
+	* Addition of Rpc_client.set_dgram_destination and
+	  get_sender_of_last_response to support unconnected
+	  UDP sockets.
+
+2007-02-20  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Addition of EUC-KR, by Deokhwan Kim <dk@ropas.snu.ac.kr>
+
+2007-01-18  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Fix: The library netshm needs bigarray as requirement.
+
+2007-01-07  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Releases 2.2.3 and 2.2.4:
+
+	Minor clean-ups in the build system.
+
+2006-12-31  Gerd Stolpmann  <gerd@gerd-stolpmann.de>
+
+	* Releases 2.2.1 and 2.2.2:
+
+	Single build fix for Mac OS X.
+	
+

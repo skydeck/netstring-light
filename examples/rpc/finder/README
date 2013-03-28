@@ -1,0 +1,27 @@
+The "finder" example for:
+
+ - RPC client
+ - RPC server
+ - Netplex + RPC
+
+The "finder" is a simple daemon that implements one RPC procedure "find".
+"find" searches for a given file name in a directory hierarchy and returns
+the first match.
+
+The "finder" daemon is implemented with Netplex for maximum parallelism.
+It can either be run in a multi-processing (default) or multi-threading
+(switch -mt) mode. As Netplex has a nice configuration file, many
+of its parameters can be set in this file.
+
+After compiling, start the daemon with
+
+./finder_daemon -conf netplex.cfg
+
+Queries can be issued with the command
+
+./finder_client <filename to search>
+
+You can control finder_daemon with the generic Netplex administration
+command, netplex-admin. For example, to shut the finder down, run
+
+netplex-admin -shutdown

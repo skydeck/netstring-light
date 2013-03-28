@@ -1,0 +1,5 @@
+# Selects the gtk version:
+GTK_PKG = lablgtk
+GTK_VERSION = GTK1
+ARCHIVE = equeue_gtk1
+FL_NAME = equeue-gtk1

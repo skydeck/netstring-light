@@ -1,0 +1,898 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Netunichar.html">
+<link rel="next" href="Netmime_tut.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Netchannels Tutorial" rel="Section" href="#tutorial">
+<link title="Motivation" rel="Subsection" href="#2_Motivation">
+<link title="Programming with in_obj_channel " rel="Subsection" href="#2_Programmingwithinobjchannel">
+<link title="The details of in_obj_channel " rel="Subsection" href="#2_Thedetailsofinobjchannel">
+<link title="Programming with out_obj_channel " rel="Subsection" href="#2_Programmingwithoutobjchannel">
+<link title="The details of out_obj_channel " rel="Subsection" href="#2_Thedetailsofoutobjchannel">
+<link title="How to close channels" rel="Subsection" href="#2_Howtoclosechannels">
+<link title="Examples: HTML Parsing and Printing" rel="Subsection" href="#2_ExamplesHTMLParsingandPrinting">
+<link title="Transactional Output Channels" rel="Subsection" href="#2_TransactionalOutputChannels">
+<link title="Pipes and Filters" rel="Subsection" href="#2_PipesandFilters">
+<link title="Defining Classes for Object Channels" rel="Subsection" href="#2_DefiningClassesforObjectChannels">
+<link title="Some FAQ" rel="Subsection" href="#2_SomeFAQ">
+<title>Ocamlnet 3 Reference Manual : Netchannels_tut</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Netunichar.html" title="Netunichar">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netmime_tut.html" title="Netmime_tut">Next</a>
+</div>
+<h1>Netchannels_tut</h1>
+<br>
+<h1 id="tutorial">Netchannels Tutorial</h1> 
+<p>
+
+<code class="code">Netchannels</code> is one of the basic modules of this library, because it
+provides some very basic abstractions needed for many other functions
+of the library. The key abstractions <code class="code">Netchannels</code> defines are the types
+<code class="code">in_obj_channel</code> and <code class="code">out_obj_channel</code>. Both are class types providing
+sequential access to byte streams, one for input, one for output.
+They are comparable to the types <code class="code">in_channel</code> and <code class="code">out_channel</code> of the
+standard library that
+allow access to files. However, there is one fundamental difference:
+<code class="code">in_channel</code> and <code class="code">out_channel</code> are restricted to resources that are
+available through file descriptors, whereas <code class="code">in_obj_channel</code> and
+<code class="code">out_obj_channel</code> are just class types, and by providing implementations
+for them any kind of resources can be accessed.
+<p>
+
+<h2 id="2_Motivation">Motivation</h2>
+<p>
+
+In some respect, <code class="code">Netchannels</code> fixes a deficiency of the standard
+library. Look at the module <code class="code">Printf</code> which defines six variants
+of the <code class="code">printf</code> function:
+<pre class="codepre"><code class="code">val fprintf : out_channel -&gt; ('a, out_channel, unit) format -&gt; 'a
+val printf : ('a, out_channel, unit) format -&gt; 'a
+val eprintf : ('a, out_channel, unit) format -&gt; 'a
+val sprintf : ('a, unit, string) format -&gt; 'a
+val bprintf : Buffer.t -&gt; ('a, Buffer.t, unit) format -&gt; 'a
+val kprintf : (string -&gt; string) -&gt; ('a, unit, string) format -&gt; 'a
+</code></pre>
+It is possible to write into six different kinds of print targets.
+The basic problem of this style is that the provider of a service 
+function like <code class="code">printf</code> must define it for every commonly used
+print target. The other solution is that the provider defines only
+one version of the service function, but that the caller of the
+function arranges the polymorphism. A <code class="code">Netchannels</code>-aware <code class="code">Printf</code>
+would have only one variant of <code class="code">printf</code>:
+<pre class="codepre"><code class="code">val printf : out_obj_channel -&gt; ('a, out_obj_channel, unit) format -&gt; 'a
+</code></pre>
+The caller would create the right <code class="code">out_obj_channel</code> object for the
+real print target:
+<pre class="codepre"><code class="code">let file_ch = new output_file (file : out_channel) in
+printf file_ch ...
+</code></pre>
+(printing into files), or:
+<pre class="codepre"><code class="code">let buffer_ch = new output_buffer (buf : Buffer.t) in
+printf buffer_ch ...
+</code></pre>
+(printing into buffers).
+Of course, this is only a hypothetical example. The point is that
+this library defines many parsers and printers, and that it is really
+a simplification for both the library and the user of the library
+to have this object encapsulation of I/O resources.
+<p>
+
+<h2 id="2_Programmingwithinobjchannel">Programming with <code class="code">in_obj_channel</code> </h2>
+<p>
+
+For example, let us program a function reading a data source
+line by line, and returning the sum of all lines which must be integer
+numbers. The argument <code class="code">ch</code> is an open <a href="Netchannels.in_obj_channel-c.html"><code class="code">Netchannels.in_obj_channel</code></a>,
+and the return value is the sum:
+<pre class="codepre"><code class="code">let sum_up (ch : in_obj_channel) =
+  let sum = ref 0 in
+  try
+    while true do
+      let line = ch # input_line() in
+      sum := !sum + int_of_string line
+    done;
+    assert false
+  with
+    End_of_file -&gt;
+      !sum
+</code></pre>
+The interesting point is that the data source can be anything: a channel,
+a string, or any other class that implements the class type
+<code class="code">in_obj_channel</code>. 
+<p>
+
+This expression opens the file <code class="code">"data"</code> and returns the sum of this file:
+<pre class="codepre"><code class="code">let ch = new input_channel (open_in "data") in
+sum_up ch
+</code></pre>
+The class <a href="Netchannels.input_channel-c.html"><code class="code">Netchannels.input_channel</code></a> is an implementation of the type
+<code class="code">in_obj_channel</code> where every method of the class simply calls the
+corresponding function of the module <code class="code">Pervasives</code>. (By the way, it would
+be a good idea to close the channel afterwards: <code class="code">ch#close_in()</code>.
+We will discuss that below.)
+<p>
+
+This expression sums up the contents of a constant string:
+<pre class="codepre"><code class="code">let s = "1\n2\n3\n4" in
+let ch = new input_string s in
+sum_up ch
+</code></pre> 
+The class <a href="Netchannels.input_string-c.html"><code class="code">Netchannels.input_string</code></a> is an implementation of the type
+<code class="code">in_obj_channel</code> that reads from a string that is treated
+like a channel.
+<p>
+
+The effect of using the <code class="code">Netchannels</code> module is that the same
+implementation <code class="code">sum_up</code> can be used to read from multiple
+data sources, as it is sufficient to call the function with different
+implementations of <code class="code">in_obj_channel</code>.
+<p>
+
+<h2 id="2_Thedetailsofinobjchannel">The details of <code class="code">in_obj_channel</code> </h2>
+<p>
+
+The properties of any class that implements <code class="code">in_obj_channel</code>
+can be summarized as follows:
+<p>
+<ul>
+<li>After the object has been created (<code class="code">new</code>), the
+  netchannel is open. The netchannel remains open until it is
+  explicitly closed (method <code class="code">close_in : unit -&gt; unit</code>). When you call a
+  method of a closed netchannel, the exception
+  <code class="code">Closed_channel</code> is raised (even if you try to close the channel again).</li>
+<li>The methods
+  <pre class="codepre"><code class="code"> 
+  really_input : string -&gt; int -&gt; int -&gt; unit
+  input_char : unit -&gt; char
+  input_byte : unit -&gt; int
+  input_line : unit -&gt; string
+  </code></pre>
+   work like their counterparts of the standard library. In particular,
+   the end of file condition is signaled by rasising <code class="code">End_of_file</code>.</li>
+<li>The method
+  <pre class="codepre"><code class="code">  input : string -&gt; int -&gt; int -&gt; int
+  </code></pre>
+  works like its counterpart of the standard library, except that the
+  end of the file is also signaled by <code class="code">End_of_file</code>, and not by the
+  return value 0.</li>
+<li>The method <code class="code">pos_in : int</code> returns the current byte position of 
+  the channel in a way that is logically consistent with the 
+  input methods: After reading <code class="code">n</code> bytes, the method
+  must return a position that is increased by <code class="code">n</code>. Usually the
+  position is zero after the object has been created, but this
+  is not specified. Positions are available even for file
+  descriptors that are not seekable.</li>
+<li>There is intentionally no <code class="code">seek_in</code> method.  Seekable channels are
+  currently out of scope, as netstring focuses on non-seekable channels.</li>
+</ul>
+
+<h2 id="2_Programmingwithoutobjchannel">Programming with <code class="code">out_obj_channel</code> </h2>
+<p>
+
+The following function outputs the numbers of an <code class="code">int list</code>
+sequentially on the passed netchannel:
+<pre class="codepre"><code class="code"> 
+let print_int_list (ch : out_obj_channel) l =
+  List.iter
+    (fun n -&gt;
+       ch # output_string (string_of_int n);
+       ch # output_char '\n';
+    )
+    l;
+  ch # flush()
+</code></pre>
+The following statements write the output into a file:
+<pre class="codepre"><code class="code">let ch = new output_channel (open_out "data") in
+print_int_list ch [1;2;3]
+</code></pre>
+And these statements write the output into a buffer:
+<pre class="codepre"><code class="code">let b = Buffer.create 16 in
+let ch = new output_buffer b in
+print_int_list ch [1;2;3]
+</code></pre>
+<p>
+
+Again, the caller of the function <code class="code">print_int_list</code> determines the
+type of the output destination, and you do not need several functions
+for several types of destination.
+<p>
+
+<h2 id="2_Thedetailsofoutobjchannel">The details of <code class="code">out_obj_channel</code> </h2>
+<p>
+
+The properties of any class that implements <code class="code">out_obj_channel</code>
+can be summarized as follows:
+<p>
+<ul>
+<li>After the object has been created (<code class="code">new</code>), the
+  netchannel is open. The netchannel remains open until it is
+  explicitly closed (method <code class="code">close_out : unit -&gt; unit</code>). When you call a
+  method of a closed netchannel, the exception
+  <code class="code">Closed_channel</code> is raised (even if you try to close the channel again).</li>
+<li>The methods
+  <pre class="codepre"><code class="code">  output : string -&gt; int -&gt; int -&gt; int
+  really_output : string -&gt; int -&gt; int -&gt; unit
+  output_char : char -&gt; unit
+  output_byte : int -&gt; unit
+  output_string : string -&gt; unit
+  </code></pre>
+  work like their counterparts of the standard library. There is
+  usually an output buffer, but this is not specified. By calling
+  <code class="code">flush : unit -&gt; unit</code>, the contents of the output buffer are
+  forced to be written to the destination.</li>
+<li>The method
+  <pre class="codepre"><code class="code">  output_buffer : Buffer.t -&gt; unit
+  </code></pre>
+  works like <code class="code">Buffer.output_channel</code>, i.e. the contents of the buffer
+  are printed to the channel.</li>
+<li>The method
+  <pre class="codepre"><code class="code">  output_channel : ?len:int -&gt; in_obj_channel -&gt; unit
+  </code></pre>
+  reads data from the argument <code class="code">in_obj_channel</code> and prints them to
+  the output channel. By default, the input channel is read until the
+  EOF position. If the <code class="code">len</code> argument is passed, at
+  most this number of bytes are copied from the input
+  channel to the output channel. The input channel remains
+  open in all cases.</li>
+<li>The method <code class="code">pos_out : int</code> returns byte positions
+  that are logically consistent: After writing <code class="code">n</code> bytes, the method
+  must return a position that is increased by <code class="code">n</code>. Usually the
+  position is zero after the object has been created, but this
+  is not specified. Positions are available even for file
+  descriptors that are not seekable.</li>
+<li>There is intentionally no <code class="code">seek_out</code> method.
+  Seekable channels are currently out of scope, as netstring
+  focuses on non-seekable channels.</li>
+</ul>
+
+<h2 id="2_Howtoclosechannels">How to close channels</h2>
+<p>
+
+As channels may use file descriptors for their implementation,
+it is very important that all open channels are closed after they have
+been used; otherwise the operating system will certainly get out of
+file descriptors. The simple way,
+<pre class="codepre"><code class="code">let ch = new &lt;channel_class&gt; args ... in
+... do something ...
+ch # close_in() or close_out()
+</code></pre>
+is dangerous because an exception may be raised between channel creation
+and the <code class="code">close_*</code> invocation. An elegant solution is to use
+<code class="code">with_in_obj_channel</code> and <code class="code">with_out_obj_channel</code>, as in:
+<pre class="codepre"><code class="code">with_in_obj_channel             (* or with_out_obj_channel *)
+  (new &lt;channel_class&gt; ...)
+  (fun ch -&gt;
+     ... do something ...
+  )
+</code></pre>
+This programming idiom ensures that the channel is always closed after
+usage, even in the case of exceptions.
+<p>
+
+Complete examples:
+<p>
+
+<pre class="codepre"><code class="code">let sum = with_in_obj_channel
+            (new input_channel (open_in "data"))
+            sum_up ;;
+</code></pre>
+<p>
+
+<pre class="codepre"><code class="code">with_out_obj_channel
+  (new output_channel (open_out "data"))
+  (fun ch -&gt; print_int_list ch ["1";"2";"3"]) ;;
+</code></pre>
+<p>
+
+<h2 id="2_ExamplesHTMLParsingandPrinting">Examples: HTML Parsing and Printing</h2>
+<p>
+
+In the Netstring library there are lots of parsers and printers
+that accept netchannels as data sources and destinations, respectively. One
+of them is the <a href="Nethtml.html"><code class="code">Nethtml</code></a> module providing an HTML parser and printer. A
+few code snippets how to call them, just to get used to netchannels:
+<pre class="codepre"><code class="code">let html_document =
+  with_in_obj_channel
+    (new input_channel (open_in "myfile.html"))
+    Nethtml.parse ;;
+with_out_obj_channel
+  (new output_channel (open_out "otherfile.html"))
+  (fun ch -&gt; Nethtml.write ch html_document) ;;
+</code></pre>
+<p>
+
+<h2 id="2_TransactionalOutputChannels">Transactional Output Channels</h2>
+<p>
+
+Sometimes you do not want that generated output is directly sent to the
+underlying file descriptor, but rather buffered until you know that
+everything worked fine. Imagine you program a network service, and
+you want to return the result only when the computations are successful,
+and an error message otherwise. One way to achieve this effect is
+to manually program a buffer:
+<pre class="codepre"><code class="code">let network_service ch =
+  try
+    let b = Buffer.create 16 in
+    let ch' = new output_buffer b in
+    ... computations, write results into ch' ...
+    ch' # close_out;
+    ch # output_buffer b
+  with
+    error -&gt;
+      ... write error message to ch ...
+</code></pre>
+There is a better way to do this, as there are transactional output
+channels. This type of netchannels provide a buffer for all written
+data like the above example, and only if data is explicitly committed
+it is copied to the real destination. Alternatively, you can also
+rollback the channel, i.e. delete the internal buffer. The signature
+of the type <code class="code">trans_out_obj_channel</code> is:
+<pre class="codepre"><code class="code">class type trans_out_obj_channel = object
+  inherit out_obj_channel
+  method commit_work : unit -&gt; unit
+  method rollback_work : unit -&gt; unit
+end
+</code></pre>
+They have the same methods as <code class="code">out_obj_channel</code> plus
+<code class="code">commit_work</code> and <code class="code">rollback_work</code>. There are two
+implementations, one of them keeping the buffer in memory, and the
+other using a temporary file:
+<pre class="codepre"><code class="code">let ch' = new buffered_trans_channel ch
+</code></pre>
+And:
+<pre class="codepre"><code class="code">let ch' = new tempfile_trans_channel ch
+</code></pre>
+In the latter case, there are optional arguments specifiying where the
+temporary file is created.
+<p>
+
+Now the network service would look like:
+<pre class="codepre"><code class="code">let network_service transaction_provider ch =
+  try
+    let ch' = transaction_provider ch in
+    ... computations, write results into ch' ...
+    ch' # commit_work();
+    ch' # close_out()     (* implies ch # close_out() *)
+  with
+    error -&gt;
+      ch' # rollback_work();
+      ... write error message to ch' ...
+      ch' # commit_work();
+      ch' # close_out()   (* implies ch # close_out() *)
+</code></pre>
+You can program this function without specifying which of the two
+implementations is used. Just call this function as
+<pre class="codepre"><code class="code">network_service (new buffered_trans_channel) ch
+</code></pre>
+or
+<pre class="codepre"><code class="code">network_service (new tempfile_trans_channel) ch
+</code></pre>
+to determine the type of transaction buffer.
+<p>
+
+Some details:<ul>
+<li>The method <code class="code">commit_work</code> copies all uncommitted data
+  to the underlying channel, and flushes all buffers.</li>
+<li>When <code class="code">rollback_work</code> is called the uncommitted data are deleted.</li>
+<li>The method <code class="code">flush</code> does not have any effect.</li>
+<li>The reported position adds the committed and the uncommitted
+  amounts of data. This means that <code class="code">rollback_work</code> resets the position
+  to the value of the last <code class="code">commit_work</code> call.</li>
+<li>When the transactional channel is closed, the underlying
+  channel is closed, too. By default, the uncommitted data is deleted, but
+  the current implementations can optionally commit data in this case.</li>
+</ul>
+
+<h2 id="2_PipesandFilters">Pipes and Filters</h2>
+<p>
+
+The class <code class="code">pipe</code> is an <code class="code">in_obj_channel</code> and an
+<code class="code">out_obj_channel</code> at the same time (i.e. the class has
+the type <code class="code">io_obj_channel</code>). A pipe has two endpoints, one
+for reading and one for writing (similar in concept to the pipes provided
+by the operating system, but note that our pipes have nothing to do
+with the OS pipes). Of course, you cannot read and write
+at the same time, so
+there must be an internal buffer storing the data that have
+been written but not yet read. How can such a construction be
+useful? Imagine you have two routines that run alternately,
+and one is capable of writing into netchannels, and the other
+can read from a netchannel. Pipes are the missing
+communication link in this situation, because the writer
+routine can output into the pipe, and the reader routine can
+read from the buffer of the pipe. In the following example,
+the writer outputs numbers from 1 to 100, and the reader sums
+them up:
+<pre class="codepre"><code class="code">let pipe = new pipe() ;;
+let k = ref 1 ;;
+let writer() =
+  if !k &lt;= 100 then (
+    pipe # output_string (string_of_int !k);
+    incr k;
+    if !k &gt; 100 then pipe # close_out() else pipe # output_char '\n';
+  ) ;;
+let sum = ref 0 ;;
+let reader() =
+  let line = pipe # input_line() in
+  sum := !sum + int_of_string line ;;
+try
+  while true do
+    writer();
+    reader()
+  done
+with
+  End_of_file -&gt;
+    () ;;
+</code></pre>
+The <code class="code">writer</code> function prints the numbers into the pipe, and the
+<code class="code">reader</code> function reads them in. By closing only the output end
+Of the pipe the <code class="code">writer</code> signals the end of the stream, and the
+<code class="code">input_line</code> method raises the exception <code class="code">End_of_file</code>.
+<p>
+
+Of course, this example is very simple. What does happen
+when more is printed into the pipe than read? The internal
+buffer grows. What does happen when more is tried to read from
+the pipe than available? The input methods signal this by
+raising the special exception
+<code class="code">Buffer_underrun</code>. Unfortunately, handling this exception
+can be very complicated, as the reader must be able to deal
+with partial reads.
+<p>
+
+This could be solved by using the <a href="Netstream.html"><code class="code">Netstream</code></a> module. A
+netstream is another extension of <code class="code">in_obj_channel</code> that
+allows one to look ahead, i.e. you can look at the bytes that
+will be read next, and use this information to decide whether
+enough data are available or not. Netstreams are explained in
+another chapter of this manual.
+<p>
+
+Pipes have another feature that makes them useful even for
+"normal" programming. You can specify a conversion function
+that is called when data is to be transferred from the writing
+end to the reading end of the pipe. The module
+<a href="Netencoding.Base64.html"><code class="code">Netencoding.Base64</code></a> defines such a pipe that converts data: The
+class <code class="code">encoding_pipe</code> automatically encodes all bytes
+written into it by the Base64 scheme:
+<pre class="codepre"><code class="code">let pipe = new Netencoding.Base64.encoding_pipe() ;;
+pipe # output_string "Hello World";
+pipe # close_out() ;;
+let s = pipe # input_line() ;;
+</code></pre>
+<code class="code">s</code> has now the value <code class="code">"SGVsbG8gV29ybGQ="</code>, the encoded
+form of the input. This kind of pipe has the same interface
+as the basic pipe class, and the same problems to use it.
+Fortunately, the Netstring library has another facility
+simplifying the usage of pipes, namely <b>filters</b>.
+<p>
+
+There are two kinds of filters: The class
+<a href="Netchannels.output_filter-c.html"><code class="code">Netchannels.output_filter</code></a> redirects data written to an
+<code class="code">out_obj_channel</code> through a pipe, and the class
+<a href="Netchannels.input_filter-c.html"><code class="code">Netchannels.input_filter</code></a> arranges that data read from an
+<code class="code">in_obj_channel</code> flows through a pipe. An example makes
+that clearer. Imagine you have a function <code class="code">write_results</code>
+that writes the results of a computation into an
+<code class="code">out_obj_channel</code>. Normally, this channel is simply a
+file:
+<pre class="codepre"><code class="code">with_out_obj_channel
+  (new output_channel (open_out "results"))
+  write_results
+</code></pre>
+Now you want that the file is Base64-encoded. This can be
+arranged by calling <code class="code">write_results</code> differently:
+<pre class="codepre"><code class="code">let pipe = new Netencoding.Base64.encoding_pipe() in
+with_out_obj_channel
+  (new output_channel (open_out "results"))
+  (fun ch -&gt;
+    let ch' = new output_filter pipe ch in
+    write_results ch';
+    ch' # close_out()
+  )
+</code></pre>
+Now any invocation of an output method for <code class="code">ch'</code>
+actually prints into the filter, which redirects the data
+through the <code class="code">pipe</code>, thus encoding them, and finally
+passing the encoded data to the underlying channel
+<code class="code">ch</code>. Note that you must close <code class="code">ch'</code> to ensure
+that all data are filtered, it is not sufficient to flush
+output.
+<p>
+
+It is important to understand why filters must be closed to
+work properly. The problem is that the Base64 encoding
+converts triples of three bytes into quadruples of four
+bytes.  Because not every string to convert is a multiple of
+three, there are special rules how to handle the exceeding
+one or two bytes at the end. The pipe must know the end of
+the input data in order to apply these rules correctly. If
+you only flush the filter, the exceeding bytes would simply
+remain in the internal buffer, because it is possible that
+more bytes follow. By closing the filter, you indicate that
+the definite end is reached, and the special rules for
+trailing data must be performed. \- Many conversions have
+similar problems, and because of this it is a good advice to
+always close output filters after usage.
+<p>
+
+There is not only the class <code class="code">output_filter</code> but also
+<code class="code">input_filter</code>. This class can be used to perform
+conversions while reading from a file. Note that you often do
+not need to close input filters, because input channels can
+signal the end by raising <code class="code">End_of_file</code>, so the mentioned
+problems usually do not occur.
+<p>
+
+There are a number of predefined conversion pipes:<ul>
+<li><a href="Netencoding.Base64.encoding_pipe-c.html"><code class="code">Netencoding.Base64.encoding_pipe</code></a>: Performs Base64 encoding</li>
+<li><a href="Netencoding.Base64.decoding_pipe-c.html"><code class="code">Netencoding.Base64.decoding_pipe</code></a>: Performs Base64 decoding</li>
+<li><a href="Netencoding.QuotedPrintable.encoding_pipe-c.html"><code class="code">Netencoding.QuotedPrintable.encoding_pipe</code></a>: Performs
+  QuotedPrintable encoding</li>
+<li><a href="Netencoding.QuotedPrintable.decoding_pipe-c.html"><code class="code">Netencoding.QuotedPrintable.decoding_pipe</code></a>: Performs
+  QuotedPrintable decoding</li>
+<li><a href="Netconversion.conversion_pipe-c.html"><code class="code">Netconversion.conversion_pipe</code></a>: Converts the character encoding
+  form charset A to charset B</li>
+</ul>
+
+<h2 id="2_DefiningClassesforObjectChannels">Defining Classes for Object Channels</h2>
+<p>
+
+As subtyping and inheritance are orthogonal in O'Caml, you can
+simply create your own netchannels by defining classes that match the
+<code class="code">in_obj_channel</code> or <code class="code">out_obj_channel</code> types. E.g.
+<pre class="codepre"><code class="code">class my_in_channel : in_obj_channel =
+object (self)
+  method input s pos len = ...
+  method close_in() = ...
+  method pos_in = ...
+  method really_input s pos len = ...
+  method input_char() = ...
+  method input_line() = ...
+  method input_byte() = ...
+end
+</code></pre>
+<p>
+
+Of course, this is non-trivial, especially for the <code class="code">in_obj_channel</code>
+case. Fortunately, the Netchannels module includes a "construction kit"
+that allows one to define a channel class from only a few methods.
+A closer look at <code class="code">in_obj_channel</code> and <code class="code">out_obj_channel</code>
+shows that some methods can be derived from more fundamental methods.
+The following class types include only the fundamental methods:
+<p>
+
+<pre class="codepre"><code class="code">class type raw_in_channel = object
+  method input : string -&gt; int -&gt; int -&gt; int
+  method close_in : unit -&gt; unit
+  method pos_in : int
+end
+</code></pre>
+<pre class="codepre"><code class="code">class type raw_out_channel = object
+  method output : string -&gt; int -&gt; int -&gt; int
+  method close_out : unit -&gt; unit
+  method pos_out : int
+  method flush : unit -&gt; unit
+end
+</code></pre>
+<p>
+
+In order to define a new class, it is sufficient to define this
+raw version of the class, and to lift it to the full functionality.
+For example, to define <code class="code">my_in_channel</code>:
+<pre class="codepre"><code class="code">class my_raw_in_channel : raw_in_channel =
+object (self)
+  method input s pos len = ...
+  method close_in() = ...
+  method pos_in = ...
+end
+class my_in_channel =
+  in_obj_channel_delegation (lift_in (`Raw(new my_raw_in_channel)))
+</code></pre>
+<p>
+
+The function <a href="Netchannels.html#VALlift_in"><code class="code">Netchannels.lift_in</code></a> can lift several forms of incomplete
+channel objects to the full class type <code class="code">in_obj_channel</code>. There is also
+the corresponding function <a href="Netchannels.html#VALlift_out"><code class="code">Netchannels.lift_out</code></a>. Note that lifting
+adds by default another internal buffer to the channel that must be
+explicitly turned off when it is not wanted. The rationale for this
+buffer is that it avoids some cases with extremely poor performance
+which might be surprising for many users.
+<p>
+
+The class <code class="code">in_obj_channel_delegation</code> is just an auxiliary construction
+to turn the <code class="code">in_obj_channel</code> <i>object</i> returned by <code class="code">lift_in</code> again
+into a class.
+<p>
+
+<h2 id="2_SomeFAQ">Some FAQ</h2>
+<p>
+
+<ul>
+<li><i>Netchannels add further layers on top of the
+   built-in channels or file descriptors. Does this make them
+   slow?</i> 
+<p>
+
+   Of course, Netchannels are slower than the underlying
+   built-in I/O facilities. There is at least one, but often
+   even more than one method call until the data is transferred
+   to or from the final I/O target. This costs time, and it is
+   a good idea to reduce the number of method calls for maximum
+   speed. Especially the character- or byte-based method calls
+   should be avoided, it is better to collect data and pass
+   them in larger chunks. This reduces the number
+   of method calls that are needed to transfer a block of
+   data.
+<p>
+
+   However, some classes implement buffers themselves, and
+   data are only transferred when the buffers are full (or
+   empty). The overhead for the extra method calls is small
+   for these classes. The classes that implement their own
+   buffers are the transactional channels, the pipes, and
+   all the classes with "buffer" in their name.
+<p>
+
+   Netchannels are often stacked, i.e. one netchannel object
+   transfers data to an underlying object, and this object
+   passes the data to further objects. Often buffers are
+   involved, and data are copied between buffers several
+   times. Of course, these copies can reduce the speed, too.</li>
+<li><i>Why do Netchannels not support seeking?</i>
+<p>
+
+   Netchannels were invented to support the implementation of
+   network protocols. Network endpoints are not seekable.</li>
+<li><i>What about <code class="code">printf</code> and <code class="code">scanf</code>?</i>
+<p>
+
+   In principle, methods for <code class="code">printf</code> and <code class="code">scanf</code> could be
+   added to <code class="code">out_obj_channel</code> and <code class="code">in_obj_channel</code>, respectively,
+   as recent versions of O'Caml added the necessary language
+   means (polymorphic methods, <code class="code">kprintf</code>, <code class="code">kscanf</code>). However,
+   polymorphic methods work only well when the type of the
+   channel object is always annotated (e.g. as 
+   <code class="code">(ch : out_obj_channel) # printf ...</code>), so this is not
+   that much better than
+   <code class="code">ch # output_string (sprintf ...)</code>.</li>
+<li><i>Can I pass an <code class="code">in_obj_channel</code> to an ocamllex-generated
+   lexer?</i>
+<p>
+
+   Yes, just call <a href="Netchannels.html#VALlexbuf_of_in_obj_channel"><code class="code">Netchannels.lexbuf_of_in_obj_channel</code></a> to turn the
+   <code class="code">in_obj_channel</code> into a <code class="code">lexbuf</code>.</li>
+<li><i>Do Netchannels support non-blocking I/O?</i>
+<p>
+
+   Yes and no. Yes, because you can open a descriptor in
+   non-blocking mode, and create a netchannel from it. When
+   the program would block, the <code class="code">input</code> and <code class="code">output</code> methods return 0
+   to indicate this. However, the non-raw methods cannot cope
+   with these situations.</li>
+<li><i>Do Netchannels support multiplexed I/O?</i>
+<p>
+
+   No, there is no equivalent to <code class="code">Unix.select</code> on the
+   level of netchannels.</li>
+<li><i>Can I use Netchannels in multi-threaded programs?</i>
+<p>
+
+   Yes. However, shared netchannels are not locked, and strange
+   things can happen when netchannels are used by several threads
+   at the same time.</li>
+<li><i>Can I use pipes to communicate between threads?</i>
+<p>
+
+   This could be made work, but it is currently not the case.
+   A multithreading-aware wrapper around pipes could do the job.</li>
+<li><i>Pipes call external programs to do their job, don't they?</i>
+<p>
+
+   No, they do not call external programs, nor do they need
+   any parallel execution threads. Pipes are just a tricky way
+   of organizing buffers.</li>
+<li><i>How do I define my own conversion pipe?</i>
+<p>
+
+   Look at the sources <code class="code">netencoding.ml</code>, it includes several
+   examples of conversion pipes.</li>
+</ul>
+
+<p>
+
+<br>
+</body></html>

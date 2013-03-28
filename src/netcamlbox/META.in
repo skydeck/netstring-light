@@ -1,0 +1,5 @@
+version = "@VERSION@"
+requires = "netsys"
+archive(byte) = "netcamlbox.cma"
+archive(native) = "netcamlbox.cmxa"
+archive(native,gprof) = "netcamlbox.p.cmxa"

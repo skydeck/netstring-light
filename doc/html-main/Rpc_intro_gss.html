@@ -1,0 +1,688 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rpc_mapping_ref.html">
+<link rel="next" href="Rpc_ssl.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Securing RPC with the GSS-API" rel="Section" href="#intro">
+<link title="The GSS-API" rel="Subsection" href="#2_TheGSSAPI">
+<link title="The GSS-API in Ocaml" rel="Subsection" href="#2_TheGSSAPIinOcaml">
+<link title="SCRAM" rel="Subsection" href="#2_SCRAM">
+<link title="Enabling SCRAM for RPC clients" rel="Subsection" href="#2_EnablingSCRAMforRPCclients">
+<link title="Enabling SCRAM for RPC proxies" rel="Subsection" href="#2_EnablingSCRAMforRPCproxies">
+<link title="Enabling SCRAM for RPC servers" rel="Subsection" href="#2_EnablingSCRAMforRPCservers">
+<link title="Enabling SCRAM in Netplex context" rel="Subsection" href="#2_EnablingSCRAMinNetplexcontext">
+<link title="Security considerations" rel="Subsection" href="#2_Securityconsiderations">
+<title>Ocamlnet 3 Reference Manual : Rpc_intro_gss</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rpc_mapping_ref.html" title="Rpc_mapping_ref">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Rpc_ssl.html" title="Rpc_ssl">Next</a>
+</div>
+<h1>Rpc_intro_gss</h1>
+<br>
+<h1 id="intro">Securing RPC with the GSS-API</h1>
+<p>
+
+This text explains how to enable strong authentication and strong
+encryption on RPC connections.
+<p>
+
+<h2 id="2_TheGSSAPI">The GSS-API</h2>
+<p>
+
+The GSS-API (Generic Security Service API) is an interface between
+the security provider (i.e. the authentication/encryption provider)
+and the application needing security features. The GSS-API is a
+standard (RFC 2743). The GSS-API is often already implemented by
+operating systems or by security systems like Kerberos. This means,
+there is usually a library on the C level containing the C functions
+defining GSS-API.
+<p>
+
+The nice thing about GSS-API is the mechanism genericy: The API can
+provide access to multiple security mechanisms, and it is possible
+to wrap almost every security mechanism in the form of GSS-API.
+<p>
+
+There is a "competitor" to GSS-API, namely SASL. The feature set is
+not identical, though. Both APIs allow strong authentication.  GSS-API
+additionally includes encryption and integrity protection for
+message-oriented communication (but not for continuous data streams),
+whereas SASL does not have such a feature and has to rely on external
+layers to do so (which is often SSL). There is a bridge between GSS-API
+and SASL called GS2 - it translates the authentication part of GSS-API
+into SASL.
+<p>
+
+As mentioned, GSS-API only covers the encryption and integrity
+protection of messages, not of continuous streams. In so far there is
+not much intersection with SSL, which only handles such streams.  For
+message-oriented protocols such as RPC the feature set of GSS-API is
+naturally the better choice. There is a standard called RPCSEC-GSS
+defining the details of how GSS-API is to be used for ONCRPC (RFC
+2203).
+<p>
+
+<h2 id="2_TheGSSAPIinOcaml">The GSS-API in Ocaml</h2>
+<p>
+
+The GSS-API is defined as a class type <a href="Netgssapi.gss_api-c.html"><code class="code">Netgssapi.gss_api</code></a>. We do not
+want to go much into detail - for <b>using</b> the GSS-API it is not
+required to understand everything. The class type is "feature
+compatible" with the standard C version of the API (RFC 2744)
+allowing it to interface with implementations of GSS-API available
+in C. (Note that this has not been done when this text is written.)
+<p>
+
+A class type has been chosen because this allows it that each
+security provider can define an independent class implementing
+the GSS-API. This is different than in the C bindings of GSS-API
+where only one provider can exist at a time (linked into the program),
+although the provider can manage several mechanisms.
+<p>
+
+When using GSS-API you will be confronted with OIDs, names, and
+credentials. These concepts are defined in the <a href="Netgssapi.html"><code class="code">Netgssapi</code></a> module:
+<p>
+<ul>
+<li>An OID (object identifier) is a IANA-registered number helping
+  to identify especially security mechanisms, and styles of
+  naming principals (user and system identities). OIDs are also
+  used in other contexts (e.g. ASN-1, X500).</li>
+<li>Names come in various forms, and because of this, GSS-API uses
+  opaque objects for names, not strings. Names can e.g. identify
+  users. There are various styles (name types). For example, users
+  are often identified by a simple string ("guest") whereas
+  service names also include the host name where the service runs
+  ("emailserver@machine"). As names are opaque, they can be
+  imported from a string representation to the opaque object
+  and they can be converted back to strings.</li>
+<li>Credentials are pieces of information allowing the security
+  mechanism to check whether a connected participant has actually
+  a certain name. A simple example is a password.</li>
+</ul>
+
+OIDs are represented as <code class="code">oid = int array</code>. There are a number of predefined
+OIDs, e.g.
+<p>
+<ul>
+<li><a href="Netgssapi.html#VALnt_user_name"><code class="code">Netgssapi.nt_user_name</code></a> is the OID of the name type identifying
+  users by name</li>
+<li><a href="Netgssapi.html#VALnt_hostbased_service"><code class="code">Netgssapi.nt_hostbased_service</code></a> is the OID of the name type
+  identifying services relative to hosts</li>
+<li><a href="Netmech_scram_gssapi.html#VALscram_mech"><code class="code">Netmech_scram_gssapi.scram_mech</code></a> is the OID of the SCRAM
+  security mechanism</li>
+</ul>
+
+An empty array is often used to mean the default (e.g. default
+mechanism).
+<p>
+
+Names are represented as <a href="Netgssapi.html#TYPEname"><code class="code">Netgssapi.name</code></a>. This object has almost
+no methods - which is intended because names are opaque to users
+outside the GSS-API implementation. The GSS-API defines methods
+to import and export names:
+<p>
+<ul>
+<li><a href="Netgssapi.gss_api-c.html#METHODimport_name"><code class="code">Netgssapi.gss_api.import_name</code></a> allows one to convert a pair
+  of a name type and a string to the opaque <a href="Netgssapi.html#TYPEname"><code class="code">Netgssapi.name</code></a>
+  object. The name type is an OID.</li>
+<li><a href="Netgssapi.gss_api-c.html#METHODdisplay_name"><code class="code">Netgssapi.gss_api.display_name</code></a> is roughly the reverse operation
+  (but see below).</li>
+<li><a href="Netgssapi.gss_api-c.html#METHODexport_name"><code class="code">Netgssapi.gss_api.export_name</code></a> converts an opaque name to
+  a binary string. It is ensured that another call of <code class="code">import_name</code>
+  with the same string restores the opaque name.</li>
+</ul>
+
+Note that, at least for certain security mechanisms, there may be
+several ways of writing the name of a principal, or there might be
+naming elements spanning several mechanisms. This is an issue when
+names need to be compared. Generally, it may lead to wrong results
+when names are compared by displaying or exporting them, and then
+comparing the resulting strings. There is a special
+<a href="Netgssapi.gss_api-c.html#METHODcompare_name"><code class="code">Netgssapi.gss_api.compare_name</code></a> method for comparisons, and
+<a href="Netgssapi.gss_api-c.html#METHODcanonicalize_name"><code class="code">Netgssapi.gss_api.canonicalize_name</code></a> may also be useful in this
+context.
+<p>
+
+For RPC, the ways of referring to names have been simplified - more on
+that below.
+<p>
+
+Credentials are also opaque objects - <a href="Netgssapi.html#TYPEcredential"><code class="code">Netgssapi.credential</code></a>. It is
+generally assumed that a GSS-API implementation can look up the right
+credentials for a principal that is identified by name. For example,
+the GSS-API provider for SCRAM can be equipped with a "keyring", i.e.
+a callback that maps user names to passwords.
+<p>
+
+<h2 id="2_SCRAM">SCRAM</h2>
+<p>
+
+SCRAM (Salted Challenge Response Authentication Mechanism) is a
+relatively new security mechanism (RFC 5802) with interesting
+properties:
+<p>
+<ul>
+<li>It is a password-based authentication scheme</li>
+<li>No complicated helpers like certification authorities or 
+  ticket servers are required for deployment</li>
+<li>The password is not transmitted during authentication (because
+  of the challenge/response style)</li>
+<li>The server needs not to store the password in cleartext. Only the salted
+  password is needed, and it is not possible to use a salted password
+  on the client (i.e. it is fruitless to steal the password database)</li>
+<li>Not only the client authenticates to the server, but also vice
+  versa - the protocol proves to the client that the server has access
+  to the salted password</li>
+<li>The server does not have a name</li>
+</ul>
+
+There is an extension for SCRAM so that AES-128 encryption and 
+SHA-1 integrity protection become available in GSS-API context.
+<p>
+
+SCRAM is implemented in <a href="Netmech_scram.html"><code class="code">Netmech_scram</code></a>. The GSS-API encapsulation
+is done in <a href="Netmech_scram_gssapi.html"><code class="code">Netmech_scram_gssapi</code></a>.
+<p>
+
+Some more words on names and credentials: Clients have to impersonate
+as a user, given by a simple unstructured string. The RFC requires
+that this string is UTF-8, and that certain Unicode normalizations
+need to be applied before use. This is not implemented right now
+(SASLprep is missing). Because of this, only US-ASCII user names are
+accepted. The same applies to the passwords.
+<p>
+
+In SCRAM, the client needs to know the password in cleartext. The
+server, however, usually only stores a triple
+<p>
+
+<pre class="codepre"><code class="code"> (salted_password, salt, iteration_count) </code></pre>
+<p>
+
+in the authentication database. The <code class="code">iteration_count</code> is a
+constant defined by the server (should be &gt;= 4096). The <code class="code">salt</code> is
+a random string that is created when the user entry is added to the
+database. The function <a href="Netmech_scram.html#VALcreate_salt"><code class="code">Netmech_scram.create_salt</code></a> can be used
+for this. The <code class="code">salted_password</code> can be computed from the two other
+parameters and the password with <a href="Netmech_scram.html#VALsalt_password"><code class="code">Netmech_scram.salt_password</code></a>.
+<p>
+
+The GSS-API encapsulation of SCRAM is <a href="Netmech_scram_gssapi.scram_gss_api-c.html"><code class="code">Netmech_scram_gssapi.scram_gss_api</code></a>.
+This class
+<p>
+
+<pre class="codepre"><code class="code">class scram_gss_api : 
+        ?client_key_ring:client_key_ring -&gt;
+        ?server_key_verifier:server_key_verifier -&gt;
+        Netmech_scram.profile -&gt;
+          Netgssapi.gss_api
+</code></pre>
+<p>
+
+takes a few arguments. The <code class="code">profile</code> can be just obtained by calling
+<p>
+
+<pre class="codepre"><code class="code">Netmech_scram.profile `GSSAPI
+</code></pre>
+<p>
+
+which is usally the right thing here (one can also set a few parameters
+at this point). Depending on whether the class is needed for clients
+or servers, one passes either <code class="code">client_key_ring</code> or <code class="code">server_key_verifier</code>.
+<p>
+
+<a href="Netmech_scram_gssapi.client_key_ring-c.html"><code class="code">Netmech_scram_gssapi.client_key_ring</code></a> is an object like
+<p>
+
+<pre class="codepre"><code class="code">let client_key_ring =
+  object
+    method password_of_user_name user =
+      match user with
+       | "guest" -&gt; "guest"
+       | "gerd" -&gt; "I won't reveal it"
+       | _ -&gt; raise Not_found
+
+    method default_user_name = Some "guest"
+  end
+</code></pre>
+<p>
+
+that mainly returns the passwords of users and that optionally defines
+a default user. (E.g. the default user could be set to the current
+login name of the process running the client.)
+<p>
+
+<a href="Netmech_scram_gssapi.server_key_verifier-c.html"><code class="code">Netmech_scram_gssapi.server_key_verifier</code></a> provides the credentials
+for password verification, e.g.
+<p>
+
+<pre class="codepre"><code class="code">let server_key_verifier =
+  object
+    method scram_credentials user =
+      match user with
+       | "guest" -&gt;
+            ("\209\002U?,/Vu\253&amp;\140\196j\158{b]\221\140\029", 
+             "68bd268fe5e948a7e171a4df9ef6450a", 
+             4096)
+       | "gerd" -&gt;
+            ("\135\202\182P\142\r\175?\222\156\201bA\188\1296\154\197v\142",
+             "5e51d100ace8d1a69cd4d015ac5da947", 
+             4096)
+       | _ -&gt; raise Not_found
+  end
+</code></pre>
+<p>
+
+<h2 id="2_EnablingSCRAMforRPCclients">Enabling SCRAM for RPC clients</h2>
+<p>
+
+Basically, an RPC client is created by a call like
+<p>
+
+<pre class="codepre"><code class="code">let client = Rpc_client.create2 m prog esys
+</code></pre>
+<p>
+
+or by invoking ocamlrpcgen-created wrappers of this call. How can we
+enable SCRAM authentication?
+<p>
+
+Assumed we already created the <code class="code">gss_api</code> object by instantiating the
+class <a href="Netmech_scram_gssapi.scram_gss_api-c.html"><code class="code">Netmech_scram_gssapi.scram_gss_api</code></a> this is done in two steps:
+<p>
+<ul>
+<li>Create the authentication method on RPC level:
+  <pre class="codepre"><code class="code"> 
+  let am = 
+    Rpc_auth_gssapi.client_auth_method
+      ~user_name_interpretation:(`Plain_name Netgssapi.nt_user_name)
+      gss_api Netmech_scram.scram_mech
+  </code></pre></li>
+<li>Add this method to the client:
+  <pre class="codepre"><code class="code">  Rpc_client.set_auth_methods client [am]
+  </code></pre></li>
+</ul>
+
+Optionally, one can also do a third step:
+<p>
+<ul>
+<li>Set the user (if you do not want to impersonate the default user):
+  <pre class="codepre"><code class="code">  Rpc_client.set_user_name client (Some "gerd")
+  </code></pre></li>
+</ul>
+
+That's it!
+<p>
+
+Of course, <code class="code">am</code> can be shared by several clients. This does not mean,
+however, that the clients share the security contexts. For each client
+a separate context is created (i.e. the authentication protocol starts
+from the beginning).
+<p>
+
+Both TCP and UDP are supported. Note that especially for UDP there
+might be issues with retransmitted client requests after running into
+timeouts. The problem is that retransmitted requests and the following
+responses look different on the wire than the original messages, and
+because of this the client can only accept a response when it is the
+response to the latest retransmission. This makes the retransmission
+feature less reliable. Best is to avoid UDP.
+<p>
+
+The function <a href="Rpc_auth_gssapi.html#VALclient_auth_method"><code class="code">Rpc_auth_gssapi.client_auth_method</code></a> has a few optional
+arguments controlling whether encryption or integrity protection are
+enabled:
+<p>
+<ul>
+<li>By setting <code class="code">~privacy:`Required</code> it is ensured that encryption and
+  integrity protection are both enabled. If the security mechanism
+  does not provide this, the function fails.</li>
+<li>The default is <code class="code">~privacy:`If_possible</code>. This means that
+  privacy is enabled if the mechanism supports it.</li>
+<li>There is a second argument <code class="code">~integrity</code> only controlling integrity
+  protection. It comes into play if full privacy is not available
+  or if it is disabled with <code class="code">~privacy:`None</code>. If integrity protection
+  is on but full privacy is off the messages are not encrypted but
+  only signed with a checksum.</li>
+<li>One can also turn both features off: <code class="code">~privacy:`None</code> and <code class="code">~integrity:`None</code>.
+  In this case, the messages are neither enrypted nor protected. 
+  The authentication protocol at the beginning of a session is unaffected
+  and is done nevertheless. This may be an option if you only want
+  to authenticate a TCP connection but not protect the connection.
+  For UDP it is strongly discouraged to use this mode - it is very
+  easy to hack this.</li>
+<li>Of course, the RPC server has the last word which protection level is
+  acceptable.</li>
+</ul>
+
+You might have wondered why we pass
+<p>
+
+<pre class="codepre"><code class="code">~user_name_interpretation:(`Plain_name Netgssapi.nt_user_name)
+</code></pre>
+<p>
+
+to <code class="code">client_auth_method</code>. As described above, there are various ways
+how to represent names. In the RPC context we need a simple string.
+The <code class="code">user_name_interpretation</code> argument selects how the opaque
+GSS-API names are converted to strings.
+<p>
+
+<h2 id="2_EnablingSCRAMforRPCproxies">Enabling SCRAM for RPC proxies</h2>
+<p>
+
+The <a href="Rpc_proxy.html"><code class="code">Rpc_proxy</code></a> module is a higher-level encapsulation of RPC clients
+providing additional reliability features. One can also configure the
+proxies to use authentication:
+<p>
+<ul>
+<li>Pass the authentication method <code class="code">am</code> (as created above) in the
+  mclient config with the argument <code class="code">~auth_methods</code>, see
+  <a href="Rpc_proxy.ManagedClient.html#VALcreate_mclient_config"><code class="code">Rpc_proxy.ManagedClient.create_mclient_config</code></a>.</li>
+<li>Set the user in the mclient config with the argument <code class="code">~user_name</code></li>
+</ul>
+
+This could e.g. look like
+<p>
+
+<pre class="codepre"><code class="code">let config =
+  Rpc_proxy.ManagedClient.create_mclient_config
+    ...
+    ~auth_methods:[am]
+    ~user_name:(Some "gerd")
+    ...
+    ()
+</code></pre>
+<p>
+
+The <code class="code">config</code> value can then, as usual, be passed to
+<a href="Rpc_proxy.ManagedClient.html#VALcreate_mclient"><code class="code">Rpc_proxy.ManagedClient.create_mclient</code></a>.
+<p>
+
+<h2 id="2_EnablingSCRAMforRPCservers">Enabling SCRAM for RPC servers</h2>
+<p>
+
+The general procedure for enabling authentication is similar to that
+in client context:
+<p>
+<ul>
+<li>Create the authentication method on RPC level:
+  <pre class="codepre"><code class="code"> 
+  let am = 
+    Rpc_auth_gssapi.server_auth_method
+      ~user_name_format:`Plain_name
+      gss_api Netmech_scram.scram_mech
+  </code></pre></li>
+<li>Add this method to the server:
+  <pre class="codepre"><code class="code">  Rpc_server.set_auth_methods server [am]
+  </code></pre></li>
+</ul>
+
+The method <code class="code">am</code> can be shared by several servers.
+<p>
+
+Each connection to a server normally opens a new security context (or
+better, the context handles are kept private per connection).  There
+is a special mode, however, permitting a more liberal setting: By
+passing <code class="code">~shared_context:true</code> to
+<a href="Rpc_auth_gssapi.html#VALserver_auth_method"><code class="code">Rpc_auth_gssapi.server_auth_method</code></a> independent connections can
+share security contexts if they know the security handles. Although
+the Ocamlnet client does not support this mode, it might be required
+for interoperability with other implementations. Also, for UDP
+servers this mode <b>must</b> be enabled - each UDP request/response
+pair is considered as a new connection by the RPC server (in some
+sense this is a peculiarity of the implementation).
+<p>
+
+You can get the name of the authenticated user with the function
+<a href="Rpc_server.html#VALget_user"><code class="code">Rpc_server.get_user</code></a>. The way of translating opaque GSS-API names
+to strings can be selected with the <code class="code">~user_name_format</code> argument
+of <a href="Rpc_auth_gssapi.html#VALserver_auth_method"><code class="code">Rpc_auth_gssapi.server_auth_method</code></a>.
+<p>
+
+By setting <code class="code">~require_privacy</code> one can demand that only privacy-protected
+messages are accepted. <code class="code">~require_integrity</code> demands that at least
+integrity-protected messages are used.
+<p>
+
+<h2 id="2_EnablingSCRAMinNetplexcontext">Enabling SCRAM in Netplex context</h2>
+<p>
+
+The question is where to call <a href="Rpc_server.html#VALset_auth_methods"><code class="code">Rpc_server.set_auth_methods</code></a>.
+<p>
+
+RPC services are created by using <a href="Rpc_netplex.html#VALrpc_factory"><code class="code">Rpc_netplex.rpc_factory</code></a>. This
+function has an argument <code class="code">setup</code> which is a callback for configuring
+the server.  Usually, this callback is used to bind the RPC procedure
+functions to the server object. This is also the ideal place to
+set the authentication method.
+<p>
+
+<b>Pitfall:</b> Note that <code class="code">setup</code> may also be called for dummy servers
+that are not connected to real file descriptors. Netplex does this
+to find out how the server will be configured (especially it is
+interested in the list of procedures). If this is an issue you can
+test for a dummy server with <a href="Rpc_server.html#VALis_dummy"><code class="code">Rpc_server.is_dummy</code></a>.
+<p>
+
+<h2 id="2_Securityconsiderations">Security considerations</h2>
+<p>
+
+SCRAM seems to be an excellent choice for a password-based
+authentication protocol. Of course, it has all the well-known
+weaknesses of the password approach (e.g. dictionary attacks are
+possible), but otherwise it is certainly state of the art.
+<p>
+
+The RPC messages are encrypted with AES-128. This is not configurable.
+<p>
+
+Integrity protection is obtained by using SHA-1 hashes. This is also
+not configurable.
+<p>
+
+Some parts of the RPC messages are not fully protected: Headers and
+error responses. This means that the numbers identifying the called
+RPC procedures are not privacy-protected. They are only
+integrity-protected.
+<p>
+
+Error responses are completely unprotected.
+<p>
+
+<br>
+</body></html>

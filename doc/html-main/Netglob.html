@@ -1,0 +1,699 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Netfs.html">
+<link rel="next" href="Netauth.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Types and exceptions" rel="Section" href="#2_Typesandexceptions">
+<link title="Parsing and printing" rel="Section" href="#2_Parsingandprinting">
+<link title="Operations on valid_glob_expr" rel="Section" href="#2_Operationsonvalidglobexpr">
+<link title="Globbing" rel="Section" href="#2_Globbing">
+<link title="Remarks" rel="Section" href="#2_Remarks">
+<link title="Default access objects" rel="Section" href="#2_Defaultaccessobjects">
+<link title="Compatibility" rel="Section" href="#2_Compatibility">
+<title>Ocamlnet 3 Reference Manual : Netglob</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Netfs.html" title="Netfs">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netauth.html" title="Netauth">Next</a>
+</div>
+<h1>Module <a href="type_Netglob.html">Netglob</a></h1>
+<pre><span class="keyword">module</span> Netglob: <code class="code">sig</code> <a href="Netglob.html">..</a> <code class="code">end</code></pre><div class="info">
+Globbing<br>
+</div>
+<hr width="100%">
+<br>
+Globbing resolves shell wildcards like "*" and "?". For example,
+<p>
+
+    <pre class="codepre"><code class="code">    let files = Netglob.glob (`String "*.cm[iox]")
+    </code></pre>
+<p>
+
+    would return all files matching this pattern (e.g. module.cmi,
+    module.cmo).
+<p>
+
+    The main user function is <a href="Netglob.html#VALglob"><code class="code">Netglob.glob</code></a>. Globbing accesses the
+    local filesystem by default, but one can also run the globbing
+    algorithm on any other filesystem, provided the access primitives
+    of <a href="Netglob.glob_fsys-c.html"><code class="code">Netglob.glob_fsys</code></a> are available.<br>
+<br>
+<h2 id="2_Typesandexceptions">Types and exceptions</h2><br>
+<pre><span id="TYPEglob_expr"><span class="keyword">type</span> <code class="type"></code>glob_expr</span> = <code class="type"><a href="Netglob.html#TYPEglob_expr_atom">glob_expr_atom</a> list</code> </pre>
+
+<pre><span id="TYPEglob_expr_atom"><span class="keyword">type</span> <code class="type"></code>glob_expr_atom</span> = <code class="type">[ `Brace of <a href="Netglob.html#TYPEglob_expr">glob_expr</a> list<br>       | `Bracket of bool * <a href="Netglob.html#TYPEglob_set">glob_set</a><br>       | `Literal of string<br>       | `Qmark<br>       | `Star<br>       | `Tilde of string ]</code> </pre>
+<div class="info">
+Atoms:
+<p>
+<ul>
+<li><code class="code">`Literal s</code>: Matches the string literally. The string must not be empty. 
+       The backslash is not an escape character, but matches the
+       backslash character.</li>
+<li><code class="code">`Star</code>: The "*" operator</li>
+<li><code class="code">`Qmark</code>: The "?" operator</li>
+<li><code class="code">`Bracket(negated,set)</code>:  The <code class="code">[...]</code> operator. The <code class="code">set</code> argument
+       describes the characters that are matched. The <code class="code">negated</code> argument 
+       is true when the expression is negated (i.e. <code class="code">[^...]</code>). </li>
+<li><code class="code">`Brace l</code>: The <code class="code">{e1,e2,...}</code> operator</li>
+<li><code class="code">`Tilde t</code>: The <code class="code">~username</code> operator. If <code class="code">t=""</code> the current user
+      is meant. The <code class="code">`Tilde</code> atom may only occur at the beginning of the list.
+      The <code class="code">`Tilde</code> atom always matches a directory,
+      and must be followed by a literal slash (if anything follows).</li>
+</ul>
+
+    Compatibility: Conforms to POSIX with extensions (braces). Shells often
+    implement brace expressions in a slightly different way (braces are
+    parsed and expanded in a separate step before the other pattern
+    constructors are handled). The cases where this leads to different
+    results are quite exotic (e.g. <code class="code">"{~g,~h}1"</code> would mean <code class="code">"~g1 ~h1"</code>, but
+    this implementation rejects the pattern).<br>
+</div>
+
+<pre><span id="TYPEglob_set"><span class="keyword">type</span> <code class="type"></code>glob_set</span> = <code class="type">< set : (int * int) list ></code> </pre>
+<div class="info">
+A set of code points is given as a list of ranges <code class="code">(from,to)</code>, with
+      <code class="code">from &lt;= to</code>. It is allowed that ranges overlap.<br>
+</div>
+
+<pre><span id="TYPEvalid_glob_expr"><span class="keyword">type</span> <code class="type"></code>valid_glob_expr</span> </pre>
+<div class="info">
+A validated <code class="code">glob_expr</code><br>
+</div>
+
+<pre><span id="TYPEuser_info"><span class="keyword">class type</span> <a href="Netglob.user_info-c.html">user_info</a></span> = <code class="code">object</code> <a href="Netglob.user_info-c.html">..</a> <code class="code">end</code></pre><div class="info">
+Access to the user database
+</div>
+<pre><span id="TYPEglob_fsys"><span class="keyword">class type</span> <a href="Netglob.glob_fsys-c.html">glob_fsys</a></span> = <code class="code">object</code> <a href="Netglob.glob_fsys-c.html">..</a> <code class="code">end</code></pre><div class="info">
+Filesystem primitives.
+</div>
+<pre><span id="TYPEglob_mode"><span class="keyword">type</span> <code class="type"></code>glob_mode</span> = <code class="type">[ `All_paths | `All_words | `Existing_paths ]</code> </pre>
+<div class="info">
+Modes:<ul>
+<li><code class="code">`Existing_paths</code>: Only paths are returned that really exist</li>
+<li><code class="code">`All_paths</code>: Generated paths not including <code class="code">*</code>, <code class="code">?</code> and
+        bracket expressions are returned even if they do not exist.
+        For example, globbing for <code class="code">"fictive{1,2,3}"</code> would return
+        <code class="code">["ficitve1";"fictive2";"fictive3"]</code> independent of whether
+        these files exist.</li>
+<li><code class="code">`All_words</code>: Patterns that cannot be resolved are returned
+        as-is (like the shell does)</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="TYPEpattern"><span class="keyword">type</span> <code class="type"></code>pattern</span> = <code class="type">[ `Expr of <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> | `String of string ]</code> </pre>
+<div class="info">
+Input for <a href="Netglob.html#VALglob"><code class="code">Netglob.glob</code></a><br>
+</div>
+
+<pre><span id="EXCEPTIONBad_glob_expr"><span class="keyword">exception</span> Bad_glob_expr</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+<div class="info">
+An syntax error in the glob expression; the argument is the bad
+      expression<br>
+</div>
+<pre><span id="EXCEPTIONUnsupported_expr"><span class="keyword">exception</span> Unsupported_expr</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+<div class="info">
+The notations <code class="code">:class:</code>, <code class="code">.symbol.</code>, <code class="code">=eqclass=</code> inside <code class="code">...</code> are
+ not supported by this implementation. If they are found, this exception
+ will be raised, and the argument is the whole glob expression<br>
+</div>
+<br>
+<h2 id="2_Parsingandprinting">Parsing and printing</h2><br>
+<pre><span id="VALparse_glob_expr"><span class="keyword">val</span> parse_glob_expr</span> : <code class="type">?encoding:<a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a> -><br>       ?enable_star:bool -><br>       ?enable_qmark:bool -><br>       ?enable_brackets:bool -><br>       ?enable_braces:bool -><br>       ?enable_tilde:bool -><br>       ?enable_escape:bool -> string -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a></code></pre><div class="info">
+Parses the glob expression. By default, all syntax features are enabled.
+ May raise <code class="code">Bad_glob_expr</code> or <code class="code">Unsupported_expr</code>.
+<p>
+
+ The glob expressions are POSIX-compliant with the extension of 
+ brace expressions, and tildes, and the omission of internationalized
+ bracket expressions:<ul>
+<li><code class="code">*</code>: Matches a sequence of zero or more arbitrary characters</li>
+<li><code class="code">?</code>: Matches one arbitrary character</li>
+<li><code class="code">[abc]</code>: Matches one of the mentioned characters</li>
+<li><code class="code">[a-z]</code>: Matches one of the characters of the range. This is here
+   only permitted when the range falls into the ASCII set. (Otherwise
+   the interpretation would be dependent on the encoding.) Note that
+   the ASCII restriction does not comply to POSIX.</li>
+<li><code class="code">[!expr]</code> or <code class="code">[^expr]</code>: Negates the bracket expression</li>
+<li><code class="code">{expr,expr,...}</code>: Generates a string for each of the alternatives.
+   A brace expression is even recognized if there is no comma, or even
+   no contents (i.e. <code class="code">"{expr}"</code> and <code class="code">"{}"</code>). The elements of brace expressions
+   may be again glob expressions; nested brace expressions are allowed.</li>
+<li><code class="code">~username</code>: Generates the home directory of this user</li>
+<li><code class="code">~</code>: Generates the home directory of the current user</li>
+<li>If enabled, the backslash character is the escape character. Within
+   bracket expressions, the backslash character never escapes.</li>
+<li>Not supported: Collating symbols <code class="code">[.a.]</code>, equivalence classes
+   <code class="code">[=a=]</code>, and character classes <code class="code">[:name:]</code>. If they are found, the
+   exception <code class="code">Unsupported_expr</code> will be raised.</li>
+</ul>
+
+ Glob expressions have a character <code class="code">encoding</code>. This defaults to
+ <code class="code">`Enc_iso88591</code>. Encodings must be ASCII-compatible.<br>
+</div>
+<pre><span id="VALvalidate_glob_expr"><span class="keyword">val</span> validate_glob_expr</span> : <code class="type"><a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a> -> <a href="Netglob.html#TYPEglob_expr">glob_expr</a> -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a></code></pre><div class="info">
+Checks whether the passed expression is syntactically valid. If so,
+      a validated expression is returned. Otherwise, this function fails.<br>
+</div>
+<pre><span id="VALrecover_glob_expr"><span class="keyword">val</span> recover_glob_expr</span> : <code class="type"><a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> <a href="Netglob.html#TYPEglob_expr">glob_expr</a></code></pre><div class="info">
+Returns the explicit representation<br>
+</div>
+<pre><span id="VALencoding_of_glob_expr"><span class="keyword">val</span> encoding_of_glob_expr</span> : <code class="type"><a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> <a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a></code></pre><div class="info">
+Returns the encoding<br>
+</div>
+<pre><span id="VALliteral_glob_expr"><span class="keyword">val</span> literal_glob_expr</span> : <code class="type"><a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a> -> string -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a></code></pre><div class="info">
+Returns an expression that matches literally the passed string<br>
+</div>
+<pre><span id="VALprint_glob_expr"><span class="keyword">val</span> print_glob_expr</span> : <code class="type">?escape_in_literals:bool -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> string</code></pre><div class="info">
+Prints the glob expression as string. Meta characters are 
+ escaped by a backslash when possible. Meta characters are:
+ <code class="code">"*"</code>, <code class="code">"?"</code>, <code class="code">"["], ["]"</code>, <code class="code">"{"</code>, <code class="code">"}"</code>, <code class="code">","</code>, <code class="code">"~"</code> and <code class="code">"\\"</code> 
+<p>
+<ul>
+<li><code class="code">escape_in_literals</code>: Whether meta characters in <code class="code">`Literal</code>
+   subexpressions are escaped. This is true by default.</li>
+</ul>
+<br>
+</div>
+<br>
+<h2 id="2_Operationsonvalidglobexpr">Operations on <code class="code">valid_glob_expr</code></h2><br>
+<pre><span id="VALexpand_glob_expr"><span class="keyword">val</span> expand_glob_expr</span> : <code class="type">?user_info:<a href="Netglob.user_info-c.html">user_info</a> -><br>       ?expand_brace:bool -><br>       ?expand_tilde:bool -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> list</code></pre><div class="info">
+Resolve generative sub expressions by expanding them. The returned
+ list of glob expr no longer contains the expanded constructions.
+<p>
+<ul>
+<li><code class="code">expand_brace</code>: Expands <code class="code">`Brace</code> subexpressions.</li>
+<li><code class="code">expand_tilde</code>: Expands <code class="code">`Tilde</code> subexpressions.</li>
+<li><code class="code">user_info</code>: The subset of file system operations needed for tilde
+   expansion. Defaults to <a href="Netglob.html#VALlocal_user_info"><code class="code">Netglob.local_user_info</code></a> (see below).</li>
+</ul>
+
+ Both <code class="code">expand_*</code> options are enabled by default.<br>
+</div>
+<pre><span id="VALmatch_glob_expr"><span class="keyword">val</span> match_glob_expr</span> : <code class="type">?protect_period:bool -><br>       ?protect_slash:bool -><br>       ?encoding:<a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a> -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> string -> bool</code></pre><div class="info">
+Matches the glob_expr against a string.
+<p>
+
+ The input must neither contain brace expressions nor tildes (i.e. call
+ <code class="code">expand_glob_expr</code> first). The function fails if it encounters such an
+ expression.
+<p>
+<ul>
+<li><code class="code">protect_period</code>: If true, a leading period cannot be not matched by
+    <code class="code">*</code>, <code class="code">?</code>, <code class="code">[...]</code>, but only by a literal <code class="code">.</code>. A leading period is
+    a <code class="code">.</code> at the beginning of the string to be matched against, or
+    if also <code class="code">protect_slash</code> a <code class="code">.</code> after a <code class="code">/</code></li>
+<li><code class="code">protect_slash</code>: If true, a slash cannot be matched by <code class="code">*</code>, <code class="code">?</code>, <code class="code">[...]</code>,
+    but only by a literal <code class="code">/</code></li>
+</ul>
+
+ Both options are enabled by default.
+<p>
+<ul>
+<li><code class="code">encoding</code>: The encoding of the string argument. Defaults to the
+   encoding of the glob pattern.</li>
+</ul>
+<br>
+</div>
+<pre><span id="VALsplit_glob_expr"><span class="keyword">val</span> split_glob_expr</span> : <code class="type"><a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> list</code></pre><div class="info">
+Splits the glob expression into filename components separated by
+ literal <code class="code">/</code> characters. For example, for the glob expression
+ <code class="code">"a*b/c/d?"</code>, the list <code class="code">["a*b"; "c"; "d?"]</code> is returned. 
+<p>
+
+ If the first component begins with a slash, the slash is not removed
+ from the first returned list element, e.g. for <code class="code">"/ab/c*"</code>, the list
+ <code class="code">[ "/ab"; "c*" ]</code> is computed. Use <code class="code">check_rooted_glob_expr</code> to test this
+ case.
+<p>
+
+ Several adjacent slashes are handled like a single slash. E.g.
+ for <code class="code">"a//b"</code>, the list <code class="code">["a"; "b"]</code> is returned.
+<p>
+
+ If the last component ends with a slash, it is not removed from the
+ returned list element, e.g. for <code class="code">"a/b/"</code>, the list <code class="code">[ "a"; "b/" ]</code> is
+ returned. Use <code class="code">check_directory_glob_expr</code> to test this case.
+<p>
+
+ The glob expression passed to this function must not contain brace
+ or tilde expressions.<br>
+</div>
+<pre><span id="VALcheck_rooted_glob_expr"><span class="keyword">val</span> check_rooted_glob_expr</span> : <code class="type"><a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> option</code></pre><div class="info">
+If the glob expression matches the root directory (i.e. the expression
+ begins with a literal <code class="code">/</code>), the function returns <code class="code">Some expr'</code>, where
+ <code class="code">expr'</code> matches the path relative to the root directory (i.e. the
+ expression without the <code class="code">/</code> at the beginning).
+<p>
+
+ Otherwise, <code class="code">None</code> is returned.
+<p>
+
+ Example: For <code class="code">"/a/b*"</code>, the expression <code class="code">"a/b*"</code> is returned.
+<p>
+
+ Special case: for <code class="code">"/"</code>, the expression <code class="code">""</code> (only matching the empty
+ string) is returned.
+<p>
+
+ The glob expression passed to this function must not contain brace
+ or tilde expressions.<br>
+</div>
+<pre><span id="VALcheck_directory_glob_expr"><span class="keyword">val</span> check_directory_glob_expr</span> : <code class="type"><a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> -> <a href="Netglob.html#TYPEvalid_glob_expr">valid_glob_expr</a> option</code></pre><div class="info">
+If the last component of the glob expression matches only directories
+ because it ends with a literal <code class="code">/</code> character, the value <code class="code">Some expr'</code> is
+ returned where <code class="code">expr'</code> matches the same path without the trailing <code class="code">/</code>.
+<p>
+
+ Otherwise, <code class="code">None</code> is returned.
+<p>
+
+ Example: For <code class="code">"a/b*/"</code>, the expression <code class="code">"a/b*"</code> is returned.
+<p>
+
+ Special case: for <code class="code">"/"</code>, the expression <code class="code">""</code> (only matching the empty
+ string) is returned.
+<p>
+
+ The glob expression passed to this function must not contain brace
+ or tilde expressions.<br>
+</div>
+<br>
+<h2 id="2_Globbing">Globbing</h2><br>
+<pre><span id="VALglob"><span class="keyword">val</span> glob</span> : <code class="type">?encoding:<a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a> -><br>       ?base_dir:string -><br>       ?protect_period:bool -><br>       ?fsys:<a href="Netglob.glob_fsys-c.html">glob_fsys</a> -><br>       ?user_info:<a href="Netglob.user_info-c.html">user_info</a> -><br>       ?mode:<a href="Netglob.html#TYPEglob_mode">glob_mode</a> -> <a href="Netglob.html#TYPEpattern">pattern</a> -> string list</code></pre><div class="info">
+Forms a set of filenames as described below, and matches this set
+ against the pattern. The pattern can be given as a <code class="code">`String s</code>
+ in which case <code class="code">s</code> is parsed (with all features enabled, and
+ it is assumed it has the passed <code class="code">encoding</code>). Alternatively,
+ an already parsed <code class="code">`Expr e</code> can be given. (Note that <code class="code">encoding</code>
+ is ignored in this case.)
+<p>
+
+ <b>Slashes must be explicitly matched:</b>
+ "/" must literally occur in order to be a candidate for matching.
+ It is not matched by <code class="code">*</code> or <code class="code">?</code> or a bracket expression.
+<p>
+
+ <b>Periods:</b> The leading period is protected if <code class="code">protect_period</code>.
+ It must then also literally occur to be matched.
+<p>
+
+ <b>Anchoring:</b> If the <code class="code">glob_expr</code> begins with a literal "/", the set
+ of filenames is
+ anchored at the root directory; otherwise the set is anchored at
+ the current directory or, if <code class="code">base_dir</code> is passed, at this directory.
+ (If <code class="code">fsys</code> is passed, it is required to also set <code class="code">base_dir</code>.)
+<p>
+
+ Initially, the set contains all files of the anchor
+ directory (for the root directory, a "/" is prepended).
+<p>
+
+ After that, the set is extended by adding the paths of
+ subdirectories relative to the anchor directory. Note that the
+ constructed set is always infinite, because "." and ".." are not
+ handled specially, and are also regarded as "subdirectories". However,
+ after applying the matching criterion, the returned list is always
+ finite.
+<p>
+
+ Note that the anchor directory itself is not part of the generated
+ set. For example, for the expression "/*" the root directory "/" is
+ not returned. As an exception of this rule, for the glob expression
+ "/" the file "/" is returned.
+<p>
+
+ <b>Braces:</b> Brace expressions are handled by expanding them first, even
+ before filename generation starts.
+<p>
+
+ <b>Mode:</b> By default, only existing paths are returned
+ (<code class="code">mode=`Existing_paths</code>).
+ If no files match, the empty list is returned (and not the pattern
+ as the shell does). By passing a different <code class="code">mode</code>, this can be changed:<ul>
+<li><code class="code">`All_paths</code>: It is allowed that non-existing paths
+    are returned when the paths do not contain *, ?, or [
+    metacharacters after the brace expansion. Path expressions
+    with these metacharacters are still checked for existence.</li>
+<li><code class="code">`All_words</code>: When an expression does not refer to existing
+    paths, it is returned as such, leaving the metacharacters *, ?, [
+    unexpanded (i.e., what the Bourne shell does). Note that
+    either all metacharacters are resolved, or none, but not
+    a subset of them.</li>
+</ul>
+
+ <b>Encodings:</b> Often, only the pattern has an encoding, but not
+ the filesystem (as in Unix). In this case, no conversion is attempted,
+ and the byte representation of the pattern is matched with the
+ byte representation of the filenames. Good luck.
+<p>
+
+ If the filesystem has an encoding, however, conversions may
+ be required, and this can cause problems. Usually, network filesystems
+ provide an encoding, and the Win32 local filesystem. (For Unix,
+ one can pass a custom <code class="code">fsys</code> with encoding knowledge.) Conversion
+ problems can be avoided if (1) the encoding of the pattern is a superset
+ of the filename encoding. Also, (2) one should not use literals
+ in the pattern that cannot be represented in the filename encoding.
+ If (2) cannot be satisfied, ensure you have at least 
+ <code class="code">mode=`Existing_paths</code>, i.e. the default mode (this removes results
+ from the returned list when a conversion problem occurs).
+<p>
+
+ The return value of <code class="code">glob</code> is encoded in the encoding of the filesystem
+ if the filesystem provides an encoding. (If you want to check this
+ encoding, pass <code class="code">fsys</code>, e.g. as <code class="code">local_fsys()</code>, and call the
+ <code class="code">path_encoding</code> method of <code class="code">fsys</code>.)<br>
+</div>
+<br>
+<h2 id="2_Remarks">Remarks</h2><br>
+<br>
+<b>Examples demonstrating the effect of encodings:</b> (Linux)
+<p>
+
+    <pre class="codepre"><code class="code">       let fsys = local_fsys ~encoding:`Enc_utf8()
+       let l = glob ~fsys (`String "\214*")
+    </code></pre>
+<p>
+
+    The byte 214 is O-umlaut in ISO-8859-1 (the default encoding for
+    patterns). By passing an <code class="code">fsys</code> argument we change the encoding
+    for filenames to UTF-8. For example, if
+<p>
+
+    "\195\150ffentlich"
+<p>
+
+    was a file in the current directory, it would be found and 
+    returned in <code class="code">l</code>.
+<p>
+
+    Conversions: For example, assume we have a file
+    "\226\130\172uro" (EUR-uro in UTF-8). The glob
+<p>
+
+    <pre class="codepre"><code class="code">       let fsys = local_fsys ~encoding:`Enc_utf8()
+       let l = glob ~fsys (`String "*")
+    </code></pre>
+<p>
+
+    finds it although the euro sign cannot be represented
+    in ISO-8859-1, the default pattern encoding.
+<p>
+
+    We run into a problem, however, if we want to generate the
+    euro sign even if the file is not present, and the filesystem
+    uses an encoding that does not include this sign:
+<p>
+
+    <pre class="codepre"><code class="code">       let fsys = local_fsys ~encoding:`Enc_iso88591()
+       let l = glob ~fsys ~encoding:`Enc_utf8 ~mode:`All_paths 
+                  (`String "\226\130\172uro")
+    </code></pre>
+<p>
+
+    This raises an exception <code class="code">Netconversion.Cannot_represent 8364</code>.<br>
+<br>
+<b>Notes for Win32:</b>
+<p>
+<ul>
+<li>Globbing only supports forward slashes, not backslashes as path
+    separators</li>
+<li>Globbing does neither recognize drive letters nor UNC
+    paths as special cases. This may lead to subtle bugs. Glob
+    expressions like "c:/file.*" may or may not work depending on the
+    context.</li>
+<li>The usually case-insensitive file system is not taken into account.
+    (To be fixed.)</li>
+</ul>
+<br>
+<br>
+<h2 id="2_Defaultaccessobjects">Default access objects</h2><br>
+<pre><span name="TYPElocal_user_info"><span class="keyword">class</span> <a href="Netglob.local_user_info-c.html">local_user_info</a></span> : <code class="type">unit -> </code><code class="type"><a href="Netglob.user_info-c.html">user_info</a></code></pre><pre><span id="VALlocal_user_info"><span class="keyword">val</span> local_user_info</span> : <code class="type">unit -> <a href="Netglob.user_info-c.html">user_info</a></code></pre><div class="info">
+Get the home directory of a user from the local user database.<br>
+</div>
+<pre><span name="TYPElocal_fsys"><span class="keyword">class</span> <a href="Netglob.local_fsys-c.html">local_fsys</a></span> : <code class="type">?encoding:<a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a> -> unit -> </code><code class="type"><a href="Netglob.glob_fsys-c.html">glob_fsys</a></code></pre><pre><span id="VALlocal_fsys"><span class="keyword">val</span> local_fsys</span> : <code class="type">?encoding:<a href="Netconversion.html#TYPEencoding">Netconversion.encoding</a> -> unit -> <a href="Netglob.glob_fsys-c.html">glob_fsys</a></code></pre><div class="info">
+Accesses the local filesystem<br>
+</div>
+<pre><span name="TYPEof_stream_fs"><span class="keyword">class</span> <a href="Netglob.of_stream_fs-c.html">of_stream_fs</a></span> : <code class="type">#<a href="Netfs.stream_fs-c.html">Netfs.stream_fs</a> -> </code><code class="type"><a href="Netglob.glob_fsys-c.html">glob_fsys</a></code></pre><pre><span id="VALof_stream_fs"><span class="keyword">val</span> of_stream_fs</span> : <code class="type">#<a href="Netfs.stream_fs-c.html">Netfs.stream_fs</a> -> <a href="Netglob.glob_fsys-c.html">glob_fsys</a></code></pre><div class="info">
+Use an arbitrary network filesystem for globbing<br>
+</div>
+<br>
+<h2 id="2_Compatibility">Compatibility</h2>
+<p>
+
+    This implementation is not fully compatible with the POSIX specs.
+    The differences:<ul>
+<li>Missing support for character classes, equivalence classes and
+      collating symbols.</li>
+<li>Ranges in brackets are restricted to ASCII.</li>
+<li>Unparseable patterns are indicated by exceptions. POSIX, however,
+      requires that such patterns are taken literally. E.g. a pattern "["
+      would match a left bracket in POSIX, but this module throws a
+      syntax error.</li>
+<li>If the slash character is protected, it is still allowed inside
+      brackets. POSIX, however, requires that the pattern is scanned
+      for slashes before brackets. For instance, the pattern "[a/b*]"
+      is scanned as <code class="code"> [`Literal "[a/b]"; `Star] </code> following the POSIX
+      rules while this implementation sees a bracket expression with
+      "a", "b", "/" and "*" characters.</li>
+<li>The "^" character negates the set if used at the beginning of
+      bracket expressions. POSIX leaves this unspecified.</li>
+<li>Brace expresions are an extension (although commonly implemented
+      in shells).</li>
+<li>The default globbing mode is <code class="code">`Existing_paths</code> which is not
+      defined by POSIX. Use <code class="code">`All_paths</code> for getting POSIX behavior.</li>
+</ul>
+
+    Compared with popular shells, there are some subtle differences in
+    how the various syntax elements (wildcards, braces, tildes) are
+    parsed and processed. Shells do it in this order:<ul>
+<li>Parse and expand brace expressions</li>
+<li>Parse and expand tildes</li>
+<li>Split the paths at slashes into path components</li>
+<li>Parse and expand wildcards</li>
+</ul>
+
+    For example, after expanding braces it is possible to see totally
+    new tilde or wildcard expressions, e.g. <code class="code">"~user{1,2}/file"</code> would
+    be legal. This implementation here does not support this - we first
+    parse the expression, and then interpret it. However, users interested in
+    a higher degree of compatibility can call the <a href="Netglob.html"><code class="code">Netglob</code></a> parsing,
+    processing and printing functions in the required order, and emulate
+    the shell behavior. For example,
+<p>
+
+    <pre class="codepre"><code class="code">  let alt_glob pat =
+    let g1 = 
+       parse_glob_expr 
+         ~enable_star:false ~enable_qmark:false ~enable_brackets:false
+         ~enable_tilde:false        (* only braces remain enabled *)
+          pat in
+    let g2_list = 
+       expand_glob_expr g1 in
+    let pat2_list = 
+       List.map (print_glob_expr ~escape_in_literals:false) g2_list in
+    let g3_list =
+       List.map
+         (fun pat2 -&gt; parse_glob_expr ~enable_braces:false pat2) 
+         pat2_list in
+    List.flatten
+      (List.map (fun g3 -&gt; glob (`Expr g3)) g3_list)
+    </code></pre>
+<p>
+
+    would parse and expand brace expressions in a separate step before 
+    running <code class="code">glob</code> on the remaining syntactic elements.<br>
+</body></html>

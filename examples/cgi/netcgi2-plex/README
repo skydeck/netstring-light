@@ -1,0 +1,26 @@
+This example shows how to use netcgi2 together with netplex. The
+resulting server is a stand-alone application server that can be
+contacted over FCGI, SCGI and AJP.
+
+In dir lighttpd there is a configuration how to configure FCGI and SCGI
+for lighttpd (no AJP support in this web server).
+
+Run the program with
+
+./netplex -config netplex.cfg -fg
+
+(or without -fg as background daemon). See also run.sh. 
+The program opens several sockets:
+
+- port 4444: FastCGI
+- port 4445: SCGI
+- port 4446: AJP
+
+In the suggested lighttpd configuration, the services are then
+available as:
+
+http://localhost:2080/fcgi/: Contacts the FastCGI port
+http://localhost:2080/scgi/: Contacts the SCGI port
+
+There is no AJP support in lighttpd.
+

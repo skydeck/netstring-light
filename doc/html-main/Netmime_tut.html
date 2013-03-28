@@ -1,0 +1,698 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Netchannels_tut.html">
+<link rel="next" href="Netsendmail_tut.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Netmime Tutorial" rel="Section" href="#tutorial">
+<link title="Structure of Mail Messages" rel="Subsection" href="#2_StructureofMailMessages">
+<link title="Messages in Netmime" rel="Subsection" href="#2_MessagesinNetmime">
+<link title="Accessing Headers" rel="Subsection" href="#2_AccessingHeaders">
+<link title="Accessing Bodies" rel="Subsection" href="#2_AccessingBodies">
+<link title="Parsing mail messages" rel="Subsection" href="#2_Parsingmailmessages">
+<link title="Creating Mail Messages" rel="Subsection" href="#2_CreatingMailMessages">
+<link title="Printing Mail Messages" rel="Subsection" href="#2_PrintingMailMessages">
+<title>Ocamlnet 3 Reference Manual : Netmime_tut</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Netchannels_tut.html" title="Netchannels_tut">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netsendmail_tut.html" title="Netsendmail_tut">Next</a>
+</div>
+<h1>Netmime_tut</h1>
+<br>
+<h1 id="tutorial">Netmime Tutorial</h1> 
+<p>
+
+<h2 id="2_StructureofMailMessages">Structure of Mail Messages</h2>
+<p>
+
+Nowadays mail messages are in MIME format. This format allows us to
+attach files to messages, and to encode the main text in markup
+languages like HTML. In principle, mail messages have only one header
+block (with fields like "Subject", sender and receiver addresses, etc.)
+and one body block. However, this is only one view on the mail format,
+e.g. as seen by MTAs (mail transfer agents). The MIME format adds the
+possibility to structure the body block into "parts" by additional
+encoding sequences. The MTAs can simply ignore this additional
+stuff, but software creating and analyzing mails can usually not. In
+<code class="code">Netmime</code>, one can control whether one wants to see the parts or
+not.
+<p>
+
+Logically, the parts of the mail body are small mail messages themselves.
+This means that every part has again a header and a body. The header
+can, in principal, contain any number of fields, and any kind of field,
+but in practice only a small subset of the possible fields are used,
+in particular only those fields that are necessary to describe the body of the 
+part. The body can be a normal text or data block, but it is explicitly
+also allowed that the body is again structured into a sequence of parts.
+Thus complex mail messages are recursive data structures (to be exact,
+they are trees).
+<p>
+
+For example, a message with two attachments usually looks like:
+<pre class="codepre"><code class="code">  (mail_header, mail_body)
+                 |
+                 +-- (main_text_header, main_text_body)
+                 +-- (att1_header, att1_body)
+                 +-- (att2_header, att2_body)
+</code></pre>
+<p>
+
+The headers contains two crucial fields that control the structure of
+the message:
+<p>
+<ul>
+<li>The <code class="code">Content-type</code> describes the kind of data found in the body,
+  e.g. "text/html". When the <code class="code">Content-type</code> has the major type
+  "multipart" (e.g. "multipart/mixed"), the body is composed of 
+  subparts. For all other types, the body is a leaf of the message
+  tree. (To be exact, there is another major type that opens a further
+  dimension of "message-in-message" composition: "message". This type
+  is usually used when it is not clear whether the inner message is
+  syntactically correct. <code class="code">Netmime</code> handles this type always as
+  leaf, but users of <code class="code">Netmime</code> can try to parse these inner messages
+  themselves.)</li>
+<li>The <code class="code">Content-transfer-encoding</code> describes how the body data is
+  encoded as ASCII text. It is usually only set for leaves.
+  Recommended values are <code class="code">"quoted-printable"</code> for bodies that
+  contain some kind of ASCII text, and <code class="code">"base64"</code> for binary
+  data.</li>
+</ul>
+
+<h2 id="2_MessagesinNetmime">Messages in <code class="code">Netmime</code></h2>
+<p>
+
+In <code class="code">Netmime</code>, the types of mail headers and mail bodies are defined 
+before and independent of their implementations: We have the 
+types
+<p>
+<ul>
+<li><code class="code">class type mime_header</code>: Specification of possible header implementations</li>
+<li><code class="code">class type mime_body</code>: Specification of possible body implementations</li>
+<li><code class="code">type complex_mime_message</code>: The type of a message tree</li>
+</ul>
+
+and the implementations
+<p>
+<ul>
+<li><code class="code">class basic_mime_header</code>: A basic header implementation</li>
+<li><code class="code">class memory_mime_body</code>: A body implementation storing the contents
+  in an O'Caml string in-memory</li>
+<li><code class="code">class file_mime_body</code>: A second body implementation storing the
+  contents in an external file</li>
+</ul>
+
+Of course, the implementation classes fulfill the specifications of
+the corresponding class types. For completeness, there are also
+reduced read-only class types that maybe helpful for signatures
+to indicate that a function does not modify a header or body.
+In principal, one can also define further implementations provided
+they fit to the class types.
+<p>
+
+The type <code class="code">complex_mime_message</code> represents the message as a tree.
+We have:
+<pre class="codepre"><code class="code">type complex_mime_message = mime_header * complex_mime_body
+and complex_mime_body =
+  [ `Body of mime_body
+  | `Parts of complex_mime_message list
+  ]
+</code></pre>
+For example, the above mentioned mail with two attachments has
+the following representation:
+<p>
+
+<pre class="codepre"><code class="code">let tree =
+  (mail_header, `Parts [ (main_text_header, `Body main_text_body);
+                         (att1_header, `Body att1_body);
+                         (att2_header, `Body att2_body) ] )
+</code></pre>
+<p>
+
+Here, <code class="code">*_header</code> are objects of type <code class="code">mime_header</code>, and 
+<code class="code">*_body</code> are objects of type <code class="code">mime_body</code>. It is obvious how to
+create the tree once one has these objects: Just use the
+syntax in this expression. Beginners of  O'Caml should recall
+that it is as easy to decompose such structured values by using
+the pattern matching feature of the language. For example, to get
+the <code class="code">main_text_header</code> of <code class="code">tree</code>, use
+<p>
+
+<pre class="codepre"><code class="code">let main_text_header =
+  match tree with
+      (_, `Parts ( (mth, _) :: _ )) -&gt; mth
+    | _ -&gt; failwith "Message has unexpected structure"
+</code></pre>
+<p>
+
+(Note that <code class="code"> [x1;x2;...] </code> is just an abbreviation for
+<code class="code"> x1 :: x2 :: ... :: [] </code>; by switching to the "::" syntax
+the message may have any number of parts in order to be
+matching.) At the first glance, it looks a bit strange to
+access the inner parts of mail messages in this way, but
+pattern matching is a very powerful sword once one gets
+accustomed to it.
+<p>
+
+Another hint: Because <code class="code">complex_mime_message</code> is a quite
+challanging type for the compiler, it is often necessary to
+give type annotations, such as
+<p>
+
+<code class="code"> (tree : complex_mime_message) </code>
+<p>
+
+before passing such values to functions, otherwise you get compiler
+errors.
+<p>
+
+<h2 id="2_AccessingHeaders">Accessing Headers</h2>
+<p>
+
+It is easy to get and set the fields of headers, e.g.
+<code class="code"> mail_header # field "subject" </code> returns the "Subject"
+header field as string (or raises <code class="code">Not_found</code>). The names of
+header fields are case-insensitive. To set a field, use
+<code class="code">update_field</code>, e.g.
+<code class="code"> mail_header # update_field "subject" "Ocamlnet is great" </code>.
+<p>
+
+The methods <code class="code">field</code> and <code class="code">update_field</code> process the field value
+as unparsed string (the parsers do only very little preprocessing,
+e.g. one can configure to remove all linefeeds). The module
+<a href="Mimestring.html"><code class="code">Mimestring</code></a> has a lot functions to parse and generate field
+values with a certain syntax. For example, "Subject" may contain
+so-called encoded words to express text written in a character
+set other than ASCII. To parse this, use
+<p>
+
+<pre class="codepre"><code class="code">let subject = mail_header # field "subject" in
+let word_list = Mimestring.scan_encoded_text_value subject in
+</code></pre>
+Now, the words contained in <code class="code">word_list</code> can be accessed with
+a number of functions, e.g.
+<pre class="codepre"><code class="code">let word_val = Mimestring.get_decoded_word word in
+let word_cset = Mimestring.get_charset word
+</code></pre>
+Here, the string <code class="code">word_val</code> is the word written in the character set
+<code class="code">word_cset</code>.
+<p>
+
+For example, for the "Subject" field 
+<p>
+
+<code class="code">=?iso-8859-1?q?this=20is=20some=20text?=</code>
+<p>
+
+this method returns a <code class="code">word_list</code> with one word, and for this word
+<code class="code">word_val = "this is some text"</code> and <code class="code">word_cset = "iso-8859-1"</code>.
+<p>
+
+To create such structured header values, there is the function <code class="code">write_value</code> 
+in <a href="Mimestring.html"><code class="code">Mimestring</code></a>. This function requires some more background beyond the
+scope of this tutorial. As this function also supports folding of header
+fields, we explain only this particular application.
+<p>
+
+Folding means that long header values must be split into several lines.
+There is a soft limit of 78 bytes and a hard limit of 998 bytes
+(not counting the end-of-line sequence). The soft limit only ensures that
+values can be displayed in usual terminals or windows without needing horizontal
+scrolling. Values exceeding the hard limit may be truncated in mail transport,
+however. To fold a string <code class="code">s</code> composed of words, first split it into its
+<code class="code">words</code>, make atoms of them, format them with <code class="code">write_value</code>, and put the result into
+the header field (note: this example can be programmed better, see below):
+<p>
+
+<pre class="codepre"><code class="code">let name = "Subject" in
+let words = Str.split (Str.regexp "[ \t]+") s in
+let atoms = List.map (fun w -&gt; Mimestring.Atom w) in
+let buf = Buffer.create 100 in
+let ch = new Netchannels.output_buffer buf in
+Mimestring.write_value 
+  ~maxlen1:(78 - String.length name - 2)
+  ~maxlen:78
+  ~hardmaxlen1:(998 - String.length name - 2)
+  ~hardmaxlen:998
+  ch;
+mail_header # update_field name (Buffer.contents buf)
+</code></pre>
+<p>
+
+Unfortunately, there is no general method that can fold any kind
+of string. The problem is that folding is only allowed at certain
+places in the string, but this depends on the type of the header
+field. The shown method works only for informational texts like
+"Subject". For other fields, like "Received", the method would
+have to be varied, especially how the list <code class="code">atoms</code> is determined.
+The syntax of the field must be known to compute <code class="code">atoms</code>.
+<p>
+
+In the module <a href="Netsendmail.html"><code class="code">Netsendmail</code></a> you can find formatting and
+folding functions for informational texts like "Subject",
+and for mail addresses. With these functions, the "Subject"
+field could also be set by
+<p>
+
+<pre class="codepre"><code class="code">let atoms = Netsendmail.create_text_tokens s in
+mail_header # update_field 
+  name (Netsendmail.format_field_value name atoms)
+</code></pre>
+<p>
+
+<h2 id="2_AccessingBodies">Accessing Bodies</h2>
+<p>
+
+Both types of bodies (in-memory, and file) support the following two
+ways of accessing:<ul>
+<li>Get/set the value as O'Caml string</li>
+<li>Read/write the value as object channel (see <a href="Netchannels.html"><code class="code">Netchannels</code></a>)</li>
+</ul>
+
+Note that when the value of a file-based body is changed, the file is
+overwritten, independently of which of the two ways is taken.
+<p>
+
+The <code class="code">string</code> access is very simple: To get the value, just call
+<code class="code">value</code>:
+<p>
+
+<code class="code"> let s = body # value </code>
+<p>
+
+To set the value, just call <code class="code">set_value</code>:
+<p>
+
+<code class="code"> body # set_value s </code>
+<p>
+
+The string returned by  <code class="code">value</code> is not transfer-encoded, or better,
+all such encodings (e.g. BASE-64) are decoded. Of course, 
+<code class="code">set_value</code> expects that the passed string is not decoded, too.
+<p>
+
+Note that using <code class="code">value</code> may be dangerous (or even fail) when the body
+is stored in a file and is very large. <code class="code">value</code> forces that the file
+is completely read into memory. You may run into serious problems when
+there is not enough memory, or when the value is larger than
+<code class="code">Sys.max_string_length</code> (16MB on 32 bit platforms).
+<p>
+
+Fortunately, there is the channel-based access method. It does not
+need much memory, even when large bodies are accessed. However, one
+does not get access to the completely body at once, but only chunk
+by chunk. For example, to read a body line by line, use:
+<p>
+
+<pre class="codepre"><code class="code">let ch = body # open_value_rd() in
+let line1 = ch # input_line() in
+let line2 = ch # input_line() in
+...
+ch # close_in()
+</code></pre>
+<p>
+
+As for <code class="code">value</code>, there are no transfer encodings in the returned lines.
+<p>
+
+The channel <code class="code">ch</code> can be used whereever an Ocamlnet function allows it,
+i.e. it is a full implementation. For example, one can pass it to the
+HTML parser:
+<p>
+
+<pre class="codepre"><code class="code">let ch = body # open_value_rd() in
+let html_doc = Nethtml.parse ch in
+ch # close_in()
+</code></pre>
+<p>
+
+To set the value using a channel, a body can also be opened for writing:
+<p>
+
+<pre class="codepre"><code class="code"> 
+let ch = body # open_value_wr() in
+ch # output_string "First line\n";
+ch # output_string "Second line\n";
+...
+ch # close_out()
+</code></pre>
+<p>
+
+<h2 id="2_Parsingmailmessages">Parsing mail messages</h2>
+<p>
+
+The message to parse must be available as an object channel. Recall that
+you can create an object channel from a string with
+<p>
+
+<code class="code"> let ch = new Netchannels.input_string s </code>
+<p>
+
+and from a file with
+<p>
+
+<code class="code"> let ch = new Netchannels.input_channel (open_in "filename") </code>
+<p>
+
+so one can parse mail messages coming from any source. As only sequential
+access is needed, it is even possible to read directly from a Unix pipe.
+<p>
+
+Now, it is required to create a so-called netstream from <code class="code">ch</code>:
+<p>
+
+<code class="code"> let nstr = new Netstream.input_stream ch </code>
+<p>
+
+A netstream is an object channel with additional look-ahead features.
+We need it here because the parser can then recognize certain patterns in
+the message in a simpler manner, for example the escape sequences
+separating the parts of a structured body.
+<p>
+
+Finally, one can invoke the parser:
+<p>
+
+<code class="code"> let tree = read_mime_message nstr </code>
+<p>
+
+There are a number of optional arguments for this function that can
+modify the way the message tree is generated. By default, all bodies
+are created in memory, and the tree is deeply parsed (i.e. inner
+multipart bodies are represented in tree form).
+<p>
+
+When bodies should be written to disk, the argument <code class="code">storage_style</code>
+can be passed: It is a function that is called whenever a header
+has been parsed, but before the corresponding body. The function must
+return the body object for representation and the output channel 
+connected to the body object. For example, to write the bodies
+into numbered files:
+<p>
+
+<pre class="codepre"><code class="code">let n = ref 1
+let ext_storage_style header =
+  let body = new file_mime_body ("file" ^ string_of_int !n) in
+  incr n;
+  (body, body#open_out_wr())
+let tree = read_mime_message ~storage_style:ext_storage_style nstr 
+</code></pre>
+<p>
+
+There is also the auxiliary function <code class="code">storage</code> to create such a
+storage style argument.
+<p>
+
+The <code class="code">header</code> can be used to generate the file name from it. Often,
+the <code class="code">filename</code> argument of the <code class="code">Content-disposition</code> field is the
+original file name before the attachment was appended to the
+mail message. To get this name:
+<p>
+
+<pre class="codepre"><code class="code">let filename =
+  try
+    let disp, disp_params = header # content_disposition() in
+    (* disp is usually "attachment", but we don't check *)
+    List.assoc "filename" disp_params
+  with
+    Not_found -&gt;
+       ...  (* No such paramater, use other method to gen filename *)
+</code></pre>
+<p>
+
+It is usually a good idea to check for dangerous characters in this name
+("/", "..") before constructing the name of the disk file.
+<p>
+
+A final remark: Don't forget to close <code class="code">nstr</code> after parsing (this implicitly
+closes <code class="code">ch</code>).
+<p>
+
+<h2 id="2_CreatingMailMessages">Creating Mail Messages</h2>
+<p>
+
+For simple applications, the <a href="Netsendmail.html"><code class="code">Netsendmail</code></a> module has a
+<a href="Netsendmail.html#VALcompose"><code class="code">Netsendmail.compose</code></a> function.
+It can create a mail message with attachments, and performs all the
+encoding details. This function is well explained in its module mli.
+<p>
+
+Of course, you can also do this yourself: Create the required headers
+and bodies, and put them together to the resulting <code class="code">tree</code>.
+<p>
+
+Example:
+<pre class="codepre"><code class="code"> 
+let date =
+  Netdate.mk_mail_date ~zone:Netdate.localzone (Unix.time()) in
+let mail_header =
+  new basic_mime_header [ "MIME-version", "1.0";
+                          "Subject", "Sample mail";
+                          "To", "recipient\@domain.net";
+                          "From", "sender\@domain.net";
+                          "Date", date;
+                          "Content-type", "multipart/mixed" ] in
+let main_text_header =
+  new basic_mime_header [ "Content-type", "text/plain;charset=ISO-8859-1";
+                          "Content-transfer-encoding", "quoted-printable";
+                        ] in
+let main_text_body =
+  new memory_mime_body "Hello world!\nThis is a sample mail.\n" in
+let att_header =
+  new basic_mime_header [ "Content-type", "image/jpeg";
+                          "Content-transfer-encoding", "base64";
+                          "Content-disposition", "inline;description=\"My photo\"";
+                        ] in
+let att_body =
+  new file_mime_body "photo.jpeg" in
+let tree =
+  (mail_header, `Parts [ (main_text_header, `Body main_text_body);
+                         (att_header, `Body att_body) ] )
+</code></pre>
+<p>
+
+<h2 id="2_PrintingMailMessages">Printing Mail Messages</h2>
+<p>
+
+In order to print <code class="code">tree</code> to the object channel <code class="code">ch</code>, simply call
+<p>
+
+<code class="code"> write_mime_message ch tree </code>
+<p>
+
+Before invoking this function, ensure the following:<ul>
+<li>The <code class="code">Content-type</code> field of all leaves should be set</li>
+<li>The <code class="code">Content-transfer-encoding</code> field of all leaves should be set
+  (in doubt use "base64"; if missing, the default is "7bit" -
+  probably not what you want)</li>
+<li>The <code class="code">Content-type</code> field of multipart nodes should be set (it 
+  defaults to "multipart/mixed" if missing)</li>
+<li>The <code class="code">Content-transfer-encoding</code> fields of multipart nodes should
+  <b>not</b> be set - this is done by the function</li>
+</ul>
+
+If the <code class="code">boundary</code> parameter is missing, the function will invent one;
+you don't need to deal with this.
+<p>
+
+The MIME message is written according to the found transfer encodings
+and the multi-part boundaries.
+<p>
+
+Don't forget to close <code class="code">ch</code> after writing!
+<p>
+
+<br>
+</body></html>

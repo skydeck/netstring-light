@@ -1,0 +1,10 @@
+TOP_DIR=../..
+
+PRE = 1
+PKGNAME = equeue-gtk1
+GENERATE = META
+NODEP = @true
+
+include ./Makefile.gtk
+
+include $(TOP_DIR)/Makefile.rules

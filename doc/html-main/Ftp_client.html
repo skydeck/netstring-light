@@ -1,0 +1,731 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Ftp_data_endpoint.html">
+<link rel="next" href="Http_fs.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Debugging" rel="Section" href="#1_Debugging">
+<link title="Examples and Discussion" rel="Subsection" href="#2_ExamplesandDiscussion">
+<title>Ocamlnet 3 Reference Manual : Ftp_client</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Ftp_data_endpoint.html" title="Ftp_data_endpoint">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Http_fs.html" title="Http_fs">Next</a>
+</div>
+<h1>Module <a href="type_Ftp_client.html">Ftp_client</a></h1>
+<pre><span class="keyword">module</span> Ftp_client: <code class="code">sig</code> <a href="Ftp_client.html">..</a> <code class="code">end</code></pre><div class="info">
+FTP client
+<p>
+
+ Currently implements:<ul>
+<li>Core FTP (RFC 959), except compressed transfer modes, and except page
+   files</li>
+<li>Negotiation of FTP extensions (RFC 2389)</li>
+<li>Common FTP extensions (RFC 3659)</li>
+<li>IPv6 (RFC 2428)</li>
+<li>Internationalization (RFC 2640)</li>
+<li>Directory walking (NVFS) and direct access (TVFS)</li>
+</ul>
+
+ The client is written in asynchronous style (using <a href="Uq_engines.html"><code class="code">Uq_engines</code></a>).
+<p>
+
+ The interface of this module was changed in Ocamlnet-3.3. Before this
+ release, the module was marked as "experimental". This is no longer
+ the case, as the interface has been updated, and the missing features
+ have been added (e.g. <code class="code">STOR</code> support).<br>
+</div>
+<hr width="100%">
+<pre><span id="EXCEPTIONFTP_error"><span class="keyword">exception</span> FTP_error</span> <span class="keyword">of</span> <code class="type">exn</code></pre>
+<div class="info">
+Something went wrong, often on socket level<br>
+</div>
+<pre><span id="EXCEPTIONFTP_protocol_violation"><span class="keyword">exception</span> FTP_protocol_violation</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+<div class="info">
+The server violates the FTP specification<br>
+</div>
+<pre><span id="EXCEPTIONFTP_timeout"><span class="keyword">exception</span> FTP_timeout</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+<div class="info">
+A timeout on the control or data connection (this is a fatal error)<br>
+</div>
+<pre><span id="TYPEcmd_state"><span class="keyword">type</span> <code class="type"></code>cmd_state</span> = <code class="type">[ `Init<br>       | `Not_connected<br>       | `Pass_acct_seq<br>       | `Perm_failure<br>       | `Preliminary<br>       | `Proto_error<br>       | `Rename_seq<br>       | `Restart_seq<br>       | `Success<br>       | `Temp_failure<br>       | `User_acct_seq<br>       | `User_pass_seq ]</code> </pre>
+<div class="info">
+The command state:<ul>
+<li><code class="code">`Not_connected</code>: Not connected.</li>
+<li><code class="code">`Init</code>: Just connected, no greeting message arrived yet</li>
+<li><code class="code">`Success</code>: Got the greeting message/last command was successful</li>
+<li><code class="code">`Proto_error</code>: <b>currently unused</b></li>
+<li><code class="code">`Temp_failure</code>: Last command was not successful, and the code
+   was between 400 and 499</li>
+<li><code class="code">`Perm_failure</code>: Last command was not successful, and the code
+   was between 500 and 599</li>
+<li><code class="code">`Rename_seq</code>: Used instead of <code class="code">`Success</code> after the RNFR command</li>
+<li><code class="code">`Restart_seq</code>: Used instead of <code class="code">`Success</code> after the REST command</li>
+<li><code class="code">`User_pass_seq</code>: Used instead of <code class="code">`Success</code> after the USER command
+   when a password must be typed in</li>
+<li><code class="code">`User_acct_seq</code>: Used instead of <code class="code">`Success</code> after the USER command
+   when an account ID must be typed in</li>
+<li><code class="code">`Pass_acct_seq</code>: Used instead of <code class="code">`Success</code> after the PASS command
+   when an account iD must be typed in</li>
+<li><code class="code">`Preliminary</code>: a reply with code 100 to 199. There will be another
+   final reply for the command</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="TYPEport"><span class="keyword">type</span> <code class="type"></code>port</span> = <code class="type">[ `Active of string * int * Unix.file_descr<br>       | `Ext_active of string * int * Unix.file_descr<br>       | `Ext_passive of int<br>       | `Passive of string * int<br>       | `Unspecified ]</code> </pre>
+<div class="info">
+The port of the data connection: <code class="code">`Active</code> means that the server 
+ initiates the data connection to the listening client, and in the
+ case of <code class="code">`Passive</code> the client initiates the data connection to the
+ listening server. The string argument is the IP address as dotted
+ quad, the int argument is the port number, and the descriptor 
+ is the listening master socket.<br>
+</div>
+
+<pre><span id="TYPEform_code"><span class="keyword">type</span> <code class="type"></code>form_code</span> = <code class="type">[ `ASA | `Non_print | `Telnet ]</code> </pre>
+<div class="info">
+The <code class="code">form_code</code> has a meaning when FTP is used to print files:<ul>
+<li><code class="code">`Non_print</code>: This is not the case.</li>
+<li><code class="code">`Telnet</code>: Telnet control codes are used for vertical movement</li>
+<li><code class="code">`ASA</code>: ASA (Fortran) control codes are used for vertical movement</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="TYPErepresentation"><span class="keyword">type</span> <code class="type"></code>representation</span> = <code class="type">[ `ASCII of <a href="Ftp_client.html#TYPEform_code">form_code</a> option<br>       | `EBCDIC of <a href="Ftp_client.html#TYPEform_code">form_code</a> option<br>       | `Image ]</code> </pre>
+<div class="info">
+The representation of the transferred file:<ul>
+<li><code class="code">`ASCII</code>: An ASCII variant is used, i.e. the server sends files in
+   ASCII encoding with CR/LF as end-of-line marker. Supported by all
+   servers.</li>
+<li><code class="code">`EBCDIC</code>: An EBCDIC variant is used, i.e. the server sends files in
+   EBCDIC encoding with NEL as end-of-line marker</li>
+<li><code class="code">`Image</code>: The file is transferred in its original binary
+   representation. Supported by all servers.</li>
+</ul>
+
+ "Local" representations are not supported.
+<p>
+
+ This FTP client does not recode the files such that they match the
+ selected representation. When files are downloaded, they are stored
+ as they are received. When files are uploaded, they are sent as they
+ are. The user of this client must do recodings when necessary
+ (the class <a href="Ftp_data_endpoint.data_converter-c.html"><code class="code">Ftp_data_endpoint.data_converter</code></a> may be useful for this).
+<p>
+
+ If no representation is selected, FTP servers assume <code class="code">`ASCII None</code>
+ as default.<br>
+</div>
+
+<pre><span id="TYPEstructure"><span class="keyword">type</span> <code class="type"></code>structure</span> = <code class="type">[ `File_structure | `Record_structure ]</code> </pre>
+<div class="info">
+The client supports two structures:<ul>
+<li><code class="code">`File_structure</code>: Files are simply contiguous streams of bytes</li>
+<li><code class="code">`Record_structure</code>: Files are sequences of records. FTP does
+   not make a difference between variable and fixed length records.
+   It is not forbidden that the records are themselves structured
+   into lines, in fact it can happen that end-of-line markers are
+   contained in binary records. Operating systems that support 
+   record-structured files often store text files in this format, i.e.
+   every line is stored in its own record, without end-of-line marker.
+   If record structure is selected by a STRU command, it is recommended
+   to use the classes <a href="Ftp_data_endpoint.out_record_channel-c.html"><code class="code">Ftp_data_endpoint.out_record_channel</code></a> and
+   <a href="Ftp_data_endpoint.in_record_channel-c.html"><code class="code">Ftp_data_endpoint.in_record_channel</code></a> for the local representation
+   of the files, otherwise the records may be incorrectly mapped
+   to the local conventions.</li>
+</ul>
+
+ Page-structured files (i.e. indexed files) are not supported.
+<p>
+
+ If no structure is selected, FTP servers will assume file structure
+ as default.<br>
+</div>
+
+<pre><span id="TYPEtransmission_mode"><span class="keyword">type</span> <code class="type"></code>transmission_mode</span> = <code class="type">[ `Block_mode | `Stream_mode ]</code> </pre>
+<div class="info">
+The transmission mode selects how the data are encoded in the data
+ connection.<ul>
+<li><code class="code">`Stream_mode</code>: This is the simple format that is responsible for
+   all the failed FTP downloads. It is supported by all FTP servers,
+   actually, you cannot assume a better transmission mode from an
+   unknown FTP server. It is unreliable because it cannot distinguish
+   between a transmission failure and the regular end-of-file condition.</li>
+<li><code class="code">`Block_mode</code>: This is an improved format using frames to protect
+   the transmitted data. Unfortunately, almost no FTP server supports
+   it.</li>
+</ul>
+
+ Both modes are compatible with both structures, i.e. you can transfer
+ a record-structured file in stream mode and a flat file in block
+ mode. However, in practice this is not the case. Servers that only
+ know flat files are likely to only support stream mode, and servers
+ implementing record structure imply that block transfers base on
+ the record format. So the advice is to use stream mode for flat
+ files, and block mode for record files.<br>
+</div>
+
+<pre><code><span id="TYPEftp_state"><span class="keyword">type</span> <code class="type"></code>ftp_state</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.cmd_state">cmd_state</span>&nbsp;:<code class="type"><a href="Ftp_client.html#TYPEcmd_state">cmd_state</a></code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the command state</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_connected">ftp_connected</span>&nbsp;:<code class="type">bool</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >whether connected with the server</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_data_conn">ftp_data_conn</span>&nbsp;:<code class="type">bool</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >whether there is a clean data conn</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_user">ftp_user</span>&nbsp;:<code class="type">string option</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >successfully sent user identifier</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_password">ftp_password</span>&nbsp;:<code class="type">string option</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >successfully sent password</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_account">ftp_account</span>&nbsp;:<code class="type">string option</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >successfully sent account identifier</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_logged_in">ftp_logged_in</span>&nbsp;:<code class="type">bool</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >whether the user is logged in</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_port">ftp_port</span>&nbsp;:<code class="type"><a href="Ftp_client.html#TYPEport">port</a></code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the selected port</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_repr">ftp_repr</span>&nbsp;:<code class="type"><a href="Ftp_client.html#TYPErepresentation">representation</a></code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the selected representation</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_structure">ftp_structure</span>&nbsp;:<code class="type"><a href="Ftp_client.html#TYPEstructure">structure</a></code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the selected structure</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_trans">ftp_trans</span>&nbsp;:<code class="type"><a href="Ftp_client.html#TYPEtransmission_mode">transmission_mode</a></code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the selected trans mode</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_dir">ftp_dir</span>&nbsp;:<code class="type">string list</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The current directory, expressed as list of CWD changes minus
+ CDUP changes. This is only reasonable if CWD does not include
+ slashes. The list is in reverse order, i.e. deepest directory
+ first.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_features">ftp_features</span>&nbsp;:<code class="type">(string * string option) list option</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >The list of features returned by the last FEAT command.
+ <code class="code">None</code> means that no FEAT command was yet tried. 
+ <code class="code">Some []</code> means that there are no features (either FEAT
+ returned an empty list, or the FEAT command is not implemented
+ by the server). Otherwise the list enumerates pairs 
+ <code class="code">(label,param)</code> where <code class="code">label</code> is the case-sensitive feature
+ label and <code class="code">param</code> the optional parameter. There is no
+ defined order for the list of features.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTftp_state.ftp_options">ftp_options</span>&nbsp;:<code class="type">(string * string option) list</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Remembers the OPTS commands sent to the server. The list
+ enumerates pairs <code class="code">(command,optionparam)</code>, where <code class="code">command</code>
+ is the uppercase command name the option refers to. Only
+ the last negotiated <code class="code">optionparam</code> for the command is remembered.</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+<div class="info">
+The ftp_state reflects the knowledge of the client about what has been
+ agreed upon with the server.<br>
+</div>
+
+<pre><span id="TYPEcmd"><span class="keyword">type</span> <code class="type"></code>cmd</span> = <code class="type">[ `ACCT of string<br>       | `ALLO of int * int option<br>       | `APPE of string * (<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_sender">Ftp_data_endpoint.local_sender</a>)<br>       | `CDUP<br>       | `CWD of string<br>       | `Connect of string * int<br>       | `DELE of string<br>       | `Disconnect<br>       | `Dummy<br>       | `EPRT<br>       | `EPSV of [ `AF of Unix.socket_domain | `ALL ] option<br>       | `FEAT<br>       | `HELP of string option<br>       | `LANG of string option<br>       | `LIST of<br>           string option *<br>           (<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>)<br>       | `MDTM of string<br>       | `MKD of string<br>       | `MLSD of<br>           string option *<br>           (<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>)<br>       | `MLST of string option<br>       | `MODE of <a href="Ftp_client.html#TYPEtransmission_mode">transmission_mode</a><br>       | `NLST of<br>           string option *<br>           (<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>)<br>       | `NOOP<br>       | `OPTS of string * string option<br>       | `PASS of string<br>       | `PASV<br>       | `PORT<br>       | `PWD<br>       | `QUIT<br>       | `REIN<br>       | `REST of string<br>       | `RETR of<br>           string * (<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>)<br>       | `RMD of string<br>       | `RNFR of string<br>       | `RNTO of string<br>       | `SITE of string<br>       | `SIZE of string<br>       | `SMNT of string<br>       | `STAT of string option<br>       | `STOR of string * (<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_sender">Ftp_data_endpoint.local_sender</a>)<br>       | `STOU of <a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_sender">Ftp_data_endpoint.local_sender</a><br>       | `STRU of <a href="Ftp_client.html#TYPEstructure">structure</a><br>       | `SYST<br>       | `TYPE of <a href="Ftp_client.html#TYPErepresentation">representation</a><br>       | `USER of string ]</code> </pre>
+<div class="info">
+An FTP command. Not all commands are implemented by all servers.<br>
+</div>
+
+<pre><span id="TYPEreply"><span class="keyword">type</span> <code class="type"></code>reply</span> = <code class="type">int * string</code> </pre>
+<div class="info">
+Reply code plus text<br>
+</div>
+
+<pre><span id="TYPEftp_client_pi"><span class="keyword">class type</span> <a href="Ftp_client.ftp_client_pi-c.html">ftp_client_pi</a></span> = <code class="code">object</code> <a href="Ftp_client.ftp_client_pi-c.html">..</a> <code class="code">end</code></pre><div class="info">
+The client protocol interpreter...
+</div>
+<pre><span id="TYPEftp_method"><span class="keyword">type</span> <code class="type"></code>ftp_method</span> = <code class="type"><a href="Ftp_client.ftp_client_pi-c.html">ftp_client_pi</a> -> unit <a href="Uq_engines.engine-c.html">Uq_engines.engine</a></code> </pre>
+<div class="info">
+An <code class="code">ftp_method</code> is a small procedure doing some task<br>
+</div>
+
+<pre><span id="EXCEPTIONFTP_method_temp_failure"><span class="keyword">exception</span> FTP_method_temp_failure</span> <span class="keyword">of</span> <code class="type">int * string</code></pre>
+<pre><span id="EXCEPTIONFTP_method_perm_failure"><span class="keyword">exception</span> FTP_method_perm_failure</span> <span class="keyword">of</span> <code class="type">int * string</code></pre>
+<pre><span id="EXCEPTIONFTP_method_unexpected_reply"><span class="keyword">exception</span> FTP_method_unexpected_reply</span> <span class="keyword">of</span> <code class="type">int * string</code></pre>
+<div class="info">
+These exceptions may be raised during execution by the FTP method.
+ The int is the unexpected FTP control code and the string the
+ corresponding text. A temporary failure has a code between 400 and
+ 499, and a permanent failure has a code between 500 and 599.<br>
+</div>
+<pre><span id="VALconnect_method"><span class="keyword">val</span> connect_method</span> : <code class="type">host:string -> ?port:int -> unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+This method connects to the <code class="code">host</code><br>
+</div>
+<pre><span id="VALlogin_method"><span class="keyword">val</span> login_method</span> : <code class="type">user:string -><br>       get_password:(unit -> string) -><br>       get_account:(unit -> string) -> unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+This FTP method logs the <code class="code">user</code> in. <code class="code">get_password</code> is called when
+ the FTP server asks for the password (may be skipped). <code class="code">get_account</code>
+ is called when the server asks for the account ID (may be skipped).<br>
+</div>
+<pre><span id="VALquit_method"><span class="keyword">val</span> quit_method</span> : <code class="type">unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Quits and disconnects<br>
+</div>
+<pre><span id="VALwalk_method"><span class="keyword">val</span> walk_method</span> : <code class="type">[ `Dir of string | `File of string | `Stay ] -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+This FTP method walks to the target directory:
+<p>
+<ul>
+<li><code class="code">`File name</code>: The <code class="code">name</code> is interpreted as slash-separated path.
+   It is always interpreted relative to the home directory of the 
+   user (i.e. the directory after login), even if it begins with a
+   slash. The FTP command walks to the directory containing <code class="code">name</code>.</li>
+<li><code class="code">`Dir name</code>: The FTP command walks to the directory <code class="code">name</code> (same
+   syntax as for <code class="code">`File</code>).</li>
+<li><code class="code">`Stay</code>: The FTP command does nothing (stays in the current directory).</li>
+</ul>
+<br>
+</div>
+<pre><span id="TYPEfilename"><span class="keyword">type</span> <code class="type"></code>filename</span> = <code class="type">[ `NVFS of string | `TVFS of string | `Verbatim of string ]</code> </pre>
+<div class="info">
+There are several methods how to specify filenames:<ul>
+<li><code class="code">`NVFS name</code>: The "Network Virtual File System" is the normal way
+   of accessing FTP files. The client walks into the directory containing
+   the file using <code class="code">CWD</code> and <code class="code">CDUP</code> commands, and calls the file operation
+   from this directory. For simplicity, this client interprets slashes
+   in <code class="code">name</code> as path component separators. The FTP server will never
+   see these slashes.</li>
+<li><code class="code">`TVFS name</code>: The optional "Trivial Network File System" avoids the
+   <code class="code">CWD</code> and <code class="code">CDUP</code> commands. The tagged <code class="code">name</code> is normalized (double
+   slashed removed etc.), and is passed to the server as-is. Before using
+   the faster TVFS one should check whether it is supported (feature
+   "TVFS"). Note that even for TVFS there are no special files "."
+   and ".."!</li>
+<li><code class="code">`Verbatim name</code>: The string <code class="code">name</code> is passed to the server without
+   transforming it in any way.</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="VALget_method"><span class="keyword">val</span> get_method</span> : <code class="type">file:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       representation:<a href="Ftp_client.html#TYPErepresentation">representation</a> -><br>       store:(<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>) -><br>       unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+This FTP method walks to the right directory and gets <code class="code">file</code> from
+ the server. The file is stored in the <code class="code">local_receiver</code> that can be
+ obtained by calling the <code class="code">store</code> function. The selected <code class="code">representation</code>
+ remains unchanged.<br>
+</div>
+<pre><span id="VALput_method"><span class="keyword">val</span> put_method</span> : <code class="type">?meth:[ `APPE | `STOR ] -><br>       file:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       representation:<a href="Ftp_client.html#TYPErepresentation">representation</a> -><br>       store:(<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_sender">Ftp_data_endpoint.local_sender</a>) -><br>       unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+This FTP method walks to the right directory and puts <code class="code">file</code> to
+ the server. The file is taken from the <code class="code">local_sender</code> that can be
+ obtained by calling the <code class="code">store</code> function. The selected <code class="code">representation</code>
+ remains unchanged.
+<p>
+
+ <code class="code">meth</code> selects the method to use (default <code class="code">`STOR</code>).<br>
+</div>
+<pre><span id="VALinvoke_method"><span class="keyword">val</span> invoke_method</span> : <code class="type">command:<a href="Ftp_client.html#TYPEcmd">cmd</a> -> unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+This FTP method simply invokes <code class="code">command</code>.<br>
+</div>
+<pre><span id="VALset_structure_method"><span class="keyword">val</span> set_structure_method</span> : <code class="type"><a href="Ftp_client.html#TYPEstructure">structure</a> -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Requests a certain structure for future file transfers<br>
+</div>
+<pre><span id="VALset_mode_method"><span class="keyword">val</span> set_mode_method</span> : <code class="type"><a href="Ftp_client.html#TYPEtransmission_mode">transmission_mode</a> -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Requests a certain mode for future file transfers<br>
+</div>
+<pre><span id="VALrename_method"><span class="keyword">val</span> rename_method</span> : <code class="type">file_from:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       file_to:<a href="Ftp_client.html#TYPEfilename">filename</a> -> unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Renames the <code class="code">file_from</code> into <code class="code">file_to</code>.
+<p>
+
+ Both file names must be of the same type, either <code class="code">`NVFS</code> or <code class="code">`Verbatim</code>.
+ If <code class="code">`NVFS</code>, both names must be in the same directory.<br>
+</div>
+<pre><span id="VALmkdir_method"><span class="keyword">val</span> mkdir_method</span> : <code class="type"><a href="Ftp_client.html#TYPEfilename">filename</a> -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Creates the named directory<br>
+</div>
+<pre><span id="VALrmdir_method"><span class="keyword">val</span> rmdir_method</span> : <code class="type"><a href="Ftp_client.html#TYPEfilename">filename</a> -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Deletes the named directory<br>
+</div>
+<pre><span id="VALdelete_method"><span class="keyword">val</span> delete_method</span> : <code class="type"><a href="Ftp_client.html#TYPEfilename">filename</a> -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Deletes the named file<br>
+</div>
+<pre><span id="VALlist_method"><span class="keyword">val</span> list_method</span> : <code class="type">dir:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       representation:<a href="Ftp_client.html#TYPErepresentation">representation</a> -><br>       store:(<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>) -><br>       unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Lists the contents of the directory <code class="code">dir</code> using the LIST command.
+ The <code class="code">representation</code> must not be <code class="code">`Image</code>.<br>
+</div>
+<pre><span id="VALnlst_method"><span class="keyword">val</span> nlst_method</span> : <code class="type">dir:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       representation:<a href="Ftp_client.html#TYPErepresentation">representation</a> -><br>       store:(<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>) -><br>       unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Lists the contents of the directory <code class="code">dir</code> using the NLST command
+ The <code class="code">representation</code> must not be <code class="code">`Image</code>.<br>
+</div>
+<pre><span id="VALparse_nlst_document"><span class="keyword">val</span> parse_nlst_document</span> : <code class="type">string -> string list</code></pre><div class="info">
+Returns the filenames contained in the output of <code class="code">`NLST</code><br>
+</div>
+<pre><span id="VALmdtm_method"><span class="keyword">val</span> mdtm_method</span> : <code class="type">file:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       process_result:(float -> unit) -> unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Determines the date and time of the last modification of <code class="code">file</code>.
+ On success, <code class="code">process_result</code> is called.<br>
+</div>
+<pre><span id="VALsize_method"><span class="keyword">val</span> size_method</span> : <code class="type">file:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       representation:<a href="Ftp_client.html#TYPErepresentation">representation</a> -><br>       process_result:(int64 -> unit) -> unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Determines the size of <code class="code">file</code>. On success, <code class="code">process_result</code> is called.
+    The size depends on <code class="code">representation</code>.<br>
+</div>
+<pre><span id="VALfeat_method"><span class="keyword">val</span> feat_method</span> : <code class="type">?process_result:((string * string option) list -> unit) -><br>       unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Get the list of feature tokens (see also
+      <a href="Ftp_client.html#TYPEELTftp_state.ftp_features"><code class="code">Ftp_client.ftp_state.ftp_features</code></a>)<br>
+</div>
+<pre><span id="TYPEentry"><span class="keyword">type</span> <code class="type"></code>entry</span> = <code class="type">string * (string * string) list</code> </pre>
+<div class="info">
+A file entry <code class="code">(name, facts)</code>. The facts are given as pairs
+	<code class="code">(factname,value)</code> where <code class="code">factname</code> is always lowercase.
+	For parsers for common facts see below.<br>
+</div>
+
+<pre><span id="VALmlst_method"><span class="keyword">val</span> mlst_method</span> : <code class="type">file:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       process_result:(<a href="Ftp_client.html#TYPEentry">entry</a> list -> unit) -><br>       unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Get the file entry for <code class="code">file</code>.<br>
+</div>
+<pre><span id="VALmlsd_method"><span class="keyword">val</span> mlsd_method</span> : <code class="type">dir:<a href="Ftp_client.html#TYPEfilename">filename</a> -><br>       store:(<a href="Ftp_client.html#TYPEftp_state">ftp_state</a> -> <a href="Ftp_data_endpoint.html#TYPElocal_receiver">Ftp_data_endpoint.local_receiver</a>) -><br>       unit -> <a href="Ftp_client.html#TYPEftp_method">ftp_method</a></code></pre><div class="info">
+Gets the entries for this directory.<br>
+</div>
+<pre><span id="VALparse_mlsd_document"><span class="keyword">val</span> parse_mlsd_document</span> : <code class="type">string -> <a href="Ftp_client.html#TYPEentry">entry</a> list</code></pre><div class="info">
+Returns the entries contained in the output of <code class="code">`MLSD</code><br>
+</div>
+<pre><span id="TYPEentry_type"><span class="keyword">type</span> <code class="type"></code>entry_type</span> = <code class="type">[ `Cdir | `Dir | `File | `Other | `Pdir ]</code> </pre>
+<div class="info">
+Types:<ul>
+<li><code class="code">`File</code>: entry refers to file</li>
+<li><code class="code">`Cdir</code>: entry refers to the directory being listed</li>
+<li><code class="code">`Pdir</code>: entry is a parent of the directory being listed</li>
+<li><code class="code">`Dir</code>: entry refers to directory</li>
+<li><code class="code">`Other</code>: entry is neither file nor directory</li>
+</ul>
+<br>
+</div>
+
+<pre><span id="TYPEentry_perm"><span class="keyword">type</span> <code class="type"></code>entry_perm</span> = <code class="type">[ `Append<br>       | `Create<br>       | `Delete<br>       | `Delete_member<br>       | `Enter<br>       | `List<br>       | `Mkdir<br>       | `Read<br>       | `Rename<br>       | `Write ]</code> </pre>
+<div class="info">
+Permissions:<ul>
+<li><code class="code">`Append</code>: append to file possible</li>
+<li><code class="code">`Create</code>: file can be created in this dir</li>
+<li><code class="code">`Delete</code>: file or dir can be deleted</li>
+<li><code class="code">`Enter</code>: dir can be entered</li>
+<li><code class="code">`Rename</code>: file or dir can be renamed</li>
+<li><code class="code">`List</code>: dir can be listed</li>
+<li><code class="code">`Mkdir</code>: subdir can be created in this dir</li>
+<li><code class="code">`Delete_member</code>: a file or dir can be deleted in this directory</li>
+<li><code class="code">`Read</code>: a file can be retrieved</li>
+<li><code class="code">`Write</code>: a file can be stored</li>
+</ul>
+<br>
+</div>
+
+<br>
+The following functions extract commonly used facts from entries.
+    They may raise <code class="code">Not_found</code>.<br>
+<pre><span id="VALget_name"><span class="keyword">val</span> get_name</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> string</code></pre><pre><span id="VALget_size"><span class="keyword">val</span> get_size</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> int64</code></pre><pre><span id="VALget_modify"><span class="keyword">val</span> get_modify</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> float</code></pre><pre><span id="VALget_create"><span class="keyword">val</span> get_create</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> float</code></pre><pre><span id="VALget_type"><span class="keyword">val</span> get_type</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> <a href="Ftp_client.html#TYPEentry_type">entry_type</a></code></pre><pre><span id="VALget_unique"><span class="keyword">val</span> get_unique</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> string</code></pre><pre><span id="VALget_perm"><span class="keyword">val</span> get_perm</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> <a href="Ftp_client.html#TYPEentry_perm">entry_perm</a> list</code></pre><pre><span id="VALget_lang"><span class="keyword">val</span> get_lang</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> string</code></pre><pre><span id="VALget_media_type"><span class="keyword">val</span> get_media_type</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> string</code></pre><pre><span id="VALget_charset"><span class="keyword">val</span> get_charset</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> string</code></pre><pre><span id="VALget_unix_mode"><span class="keyword">val</span> get_unix_mode</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> int</code></pre><pre><span id="VALget_unix_uid"><span class="keyword">val</span> get_unix_uid</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> string</code></pre><pre><span id="VALget_unix_gid"><span class="keyword">val</span> get_unix_gid</span> : <code class="type"><a href="Ftp_client.html#TYPEentry">entry</a> -> string</code></pre><pre><span name="TYPEftp_client"><span class="keyword">class</span> <a href="Ftp_client.ftp_client-c.html">ftp_client</a></span> : <code class="type">?event_system:<a href="Unixqueue.event_system-c.html">Unixqueue.event_system</a> -> unit -> </code><code class="code">object</code> <a href="Ftp_client.ftp_client-c.html">..</a> <code class="code">end</code></pre><div class="info">
+The ftp client is a user session that may even span several connections.
+</div>
+<br>
+<h2 id="2_ExamplesandDiscussion">Examples and Discussion</h2>
+<p>
+
+ To download a single flat file from a server:
+<p>
+
+ <pre class="codepre"><code class="code"> 
+   let buffer = Buffer.create 1000 in
+   let ch = new Netchannels.output_buffer buffer in
+   let client = new ftp_client() in
+   client # exec (connect_method ~host:"127.0.0.1" ());
+   client # exec (login_method ~user:"foo"
+                                ~get_password:(fun () -&gt; "password")
+                                ~get_account:(fun () -&gt; "foo") ());
+   client # exec (get_method ~file:(`NVFS "path/to/file")
+                             ~representation:`Image
+                             ~store:(fun _ -&gt; `File_structure ch) ());
+ </code></pre>
+<p>
+
+ The file is stored in <code class="code">buffer</code>. By using a different netchannel, it
+ can be stored whereever wanted.
+<p>
+
+ To download a record-structured text file, use a <code class="code">store</code> like:
+<p>
+
+ <pre class="codepre"><code class="code"> 
+    let ch = (as above) in
+    let rec_ch = new Ftp_data_endpoint.write_out_record_channel
+                       ~repr:(`ASCII_unix `Enc_iso88591)
+                       ch
+    ...
+    ... ~store:(fun _ -&gt; `Record_structure rec_ch)
+ </code></pre>
+<p>
+
+ Here, the end-of-record is transcoded to newline. Note that the ASCII
+ variant (<code class="code">`Enc_iso88591</code>) is ignored by <code class="code">write_out_record_channel</code>.
+ <b>Open: How to select record structure using an FTP method.</b>
+<p>
+
+ Character conversions: To convert an EBCDIC file to ASCII, use
+ something like
+<p>
+
+ <pre class="codepre"><code class="code"> 
+    let ch = (as above) in
+    let converter = new Ftp_data_endpoint.data_converter
+                         ~fromrepr:(`EBCDIC `Enc_cp1047)
+                         ~torepr:(`ASCII_unix `Enc_iso88591) in
+    let ch_ebcdic = new Netchannels.output_filter converter ch in
+    ...
+    ... ~representation:(`EBCDIC None)
+    ... ~store:(fun _ -&gt; `File_structure ch_ebcdic)
+ </code></pre>
+<p>
+
+ The class <code class="code">data_converter</code> also performs the transformation of the 
+ end-of-line convention, unlike the similar class
+ <code class="code">Netconversion.conversion_pipe</code>.<br>
+<br>
+<h1 id="1_Debugging">Debugging</h1><br>
+<pre><span class="keyword">module</span> <a href="Ftp_client.Debug.html">Debug</a>: <code class="code">sig</code> <a href="Ftp_client.Debug.html">..</a> <code class="code">end</code></pre></body></html>

@@ -1,0 +1,1322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Rpc_proxy.html">
+<link rel="next" href="Rpc_mapping_ref.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Introduction to ocamlrpcgen" rel="Section" href="#intro">
+<link title="Command line arguments of ocamlrpcgen" rel="Section" href="#rpcgen">
+<link title="The language mapping underlying ocamlrpcgen" rel="Section" href="#mapping">
+<link title="Overview over the RPC library" rel="Section" href="#lib">
+<link title="Netplex RPC systems" rel="Section" href="#rpc_netplex">
+<link title="Restrictions of the current implementation" rel="Section" href="#restrictions">
+<link title="Generating clients with ocamlrpcgen" rel="Subsection" href="#intro_clnt">
+<link title="Generating servers with ocamlrpcgen" rel="Subsection" href="#intro_srv">
+<link title="Debugging aids" rel="Subsection" href="#debuggig">
+<link title="The XDR syntax" rel="Subsection" href="#syn_xdr">
+<link title="Syntax of RPC programs" rel="Subsection" href="#syn_prog">
+<link title="Mapping names" rel="Subsection" href="#map_names">
+<link title="Mapping integer types" rel="Subsection" href="#map_ints">
+<link title="Mapping floating-point types" rel="Subsection" href="#map_fps">
+<link title="Mapping string and opaque types" rel="Subsection" href="#map_strings">
+<link title="Mapping array types" rel="Subsection" href="#map_arrays">
+<link title="Mapping record types (structs)" rel="Subsection" href="#map_records">
+<link title="Mapping enumerated types (enums)" rel="Subsection" href="#map_enums">
+<link title="Mapping union types discriminated by enumerations" rel="Subsection" href="#map_eunions">
+<link title="Mapping union types discriminated by integers" rel="Subsection" href="#map_iunions">
+<link title="Mapping option types (*)" rel="Subsection" href="#map_opts">
+<link title="Mapping recursive types" rel="Subsection" href="#map_recs">
+<title>Ocamlnet 3 Reference Manual : Rpc_intro</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Rpc_proxy.html" title="Rpc_proxy">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Rpc_mapping_ref.html" title="Rpc_mapping_ref">Next</a>
+</div>
+<h1>Rpc_intro</h1>
+<br>
+<b>Contents</b>
+<ul>
+<li><a href="Rpc_intro.html#intro"><i>Introduction to ocamlrpcgen</i></a>
+    <ul>
+<li><a href="Rpc_intro.html#intro_clnt"><i>Generating clients with ocamlrpcgen</i></a></li>
+<li><a href="Rpc_intro.html#intro_srv"><i>Generating servers with ocamlrpcgen</i></a></li>
+</ul>
+
+  </li>
+<li><a href="Rpc_intro.html#rpcgen"><i>Command line arguments of ocamlrpcgen</i></a></li>
+<li><a href="Rpc_intro.html#mapping"><i>The language mapping underlying ocamlrpcgen</i></a>
+    <ul>
+<li><a href="Rpc_intro.html#syn_xdr"><i>The XDR syntax</i></a></li>
+<li><a href="Rpc_intro.html#syn_prog"><i>Syntax of RPC programs</i></a></li>
+<li><a href="Rpc_intro.html#map_names"><i>Mapping names</i></a></li>
+<li><a href="Rpc_intro.html#map_ints"><i>Mapping integer types</i></a></li>
+<li><a href="Rpc_intro.html#map_fps"><i>Mapping floating-point types</i></a></li>
+<li><a href="Rpc_intro.html#map_strings"><i>Mapping string and opaque types</i></a></li>
+<li><a href="Rpc_intro.html#map_arrays"><i>Mapping array types</i></a></li>
+<li><a href="Rpc_intro.html#map_records"><i>Mapping record types (structs)</i></a></li>
+<li><a href="Rpc_intro.html#map_enums"><i>Mapping enumerated types (enums)</i></a></li>
+<li><a href="Rpc_intro.html#map_eunions"><i>Mapping union types discriminated by enumerations</i></a></li>
+<li><a href="Rpc_intro.html#map_iunions"><i>Mapping union types discriminated by integers</i></a></li>
+<li><a href="Rpc_intro.html#map_opts"><i>Mapping option types (*)</i></a></li>
+<li><a href="Rpc_intro.html#map_recs"><i>Mapping recursive types</i></a></li>
+</ul>
+
+  </li>
+<li><a href="Rpc_intro.html#lib"><i>Overview over the RPC library</i></a></li>
+<li><a href="Rpc_intro.html#rpc_netplex"><i>Netplex RPC systems</i></a></li>
+<li><a href="Rpc_intro.html#restrictions"><i>Restrictions of the current implementation</i></a></li>
+</ul>
+
+<p>
+
+<h1 id="intro">Introduction to <code class="code">ocamlrpcgen</code></h1>
+<p>
+
+The tool <code class="code">ocamlrpcgen</code> generates O'Caml modules which greatly simplify
+the creation and invocation of remote procedures. For example, if we have an
+XDR definition file <code class="code">calculate.x</code>
+<p>
+
+<pre class="codepre"><code class="code">program P {
+  version V {
+    int add(int,int) = 1;
+  } = 2;
+} = 3;
+</code></pre>
+<p>
+
+the generation of a corresponding RPC client is done by issuing the command
+<p>
+
+<pre class="codepre"><code class="code">ocamlrpcgen -aux -clnt calculate.x
+</code></pre>
+<p>
+
+and the tool will generate an RPC server by calling
+<p>
+
+<pre class="codepre"><code class="code">ocamlrpcgen -aux -srv calculate.x
+</code></pre>
+<p>
+
+The flag -aux causes <code class="code">ocamlrpcgen</code> to create a module <code class="code">Calculate_aux</code>
+containing types, and constants from the XDR definition, and
+containing conversion functions doing the language mapping from XDR to
+O'Caml and vice versa.
+<p>
+
+<code class="code">Calculate_aux</code> defines the types for the arguments of the procedure and
+the result as follows:
+<p>
+
+<pre class="codepre"><code class="code">type t_P'V'add'arg =                      (* Arguments *)
+      ( Rtypes.int4 * Rtypes.int4 )
+and t_P'V'add'res =                       (* Result *)
+      Rtypes.int4
+</code></pre>
+<p>
+
+Note that the XDR integer type is mapped to <a href="Rtypes.html#TYPEint4"><code class="code">Rtypes.int4</code></a> which is an
+opaque type representing 4-byte signed integers. <a href="Rtypes.html"><code class="code">Rtypes</code></a> defines
+conversion functions for int4 to/from other O'Caml types. If
+<a href="Rtypes.html#TYPEint4"><code class="code">Rtypes.int4</code></a> is not what you want, you can select a different
+integer mapping on the command line of <code class="code">ocamlrpcgen</code>. For example, <code class="code">-int
+int32</code> selects that you want the built-in <code class="code">int32</code> integer type, and <code class="code">-int
+unboxed</code> selects that you want the built-in <code class="code">int</code> integer type. Note (1)
+that you can also select the integer mapping case-by-case (see below),
+and (2) that there is a corresponding switch for the XDR <code class="code">hyper</code> type
+(8-byte integers).
+<p>
+
+<code class="code">Calculate_aux</code> also defines constants (none in our example), conversion
+functions, XDR type terms, and RPC programs. These other kinds of definitions
+can be ignored for the moment.
+<p>
+
+<h2 id="intro_clnt">Generating clients with <code class="code">ocamlrpcgen</code></h2>
+<p>
+
+The flag <code class="code">-clnt</code> causes <code class="code">ocamlrpcgen</code> to generate the module
+<code class="code">Calculate_clnt</code> containing functions necessary to contact a remote
+program as client. Here, <code class="code">Calculate_clnt</code> has the signature:
+<p>
+
+<pre class="codepre"><code class="code">module P : sig
+  module V : sig
+    open Calculate_aux
+    val create_client :
+            ?esys:Unixqueue.event_system -&gt;
+            Rpc_client.connector -&gt;
+            Rpc.protocol -&gt;
+            Rpc_client.t
+    val create_portmapped_client :
+            ?esys:Unixqueue.event_system -&gt;
+            string -&gt;
+            Rpc.protocol -&gt;
+            Rpc_client.t
+    val add : Rpc_client.t -&gt; t_P'V'add'arg -&gt; t_P'V'add'res
+    val add'async :
+            Rpc_client.t -&gt;
+            t_P'V'add'arg -&gt;
+            ((unit -&gt; t_P'V'add'res) -&gt; unit) -&gt;
+            unit
+  end
+end
+</code></pre>
+<p>
+
+(Note: Depending on the version of <code class="code">ocamlrpcgen</code> your are using,
+another function <code class="code">create_client2</code> may also be generated.)
+<p>
+
+Normally, the function <code class="code">P.V.create_portmapped_client</code> is the preferred
+function to contact the RPC program. For example, to call the <code class="code">add</code>
+procedure running on host <code class="code">moon</code>, the following statements suffice:
+<p>
+
+<pre class="codepre"><code class="code">let m1 = 42 in
+let m2 = 36 in
+let client = Calculator_clnt.P.V.create_portmapped_client "moon" Rpc.Tcp in
+let n = Calculator_clnt.P.V.add client (m1,m2) in
+Rpc_client.shut_down client;
+</code></pre>
+<p>
+
+That's all for a simple client!
+<p>
+
+The invocation of <code class="code">P.V.create_portmapped_client</code> first asks the
+portmapper on "moon" for the TCP instance of the program <code class="code">P.V</code>, and
+stores the resulting internet port. Because we wanted TCP, the TCP
+connection is opened, too. When <code class="code">P.V.add</code> is called, the values <code class="code">m1</code> and
+<code class="code">m2</code> are XDR-encoded and sent over the TCP connection to the remote
+procedure; the answer is XDR-decoded and returned, here <code class="code">n</code>. Finally,
+the function <code class="code">Rpc_client.shut_down</code> closes the TCP connection.
+<p>
+
+Of course, this works for UDP transports, too; simply pass <code class="code">Rpc.Udp</code>
+instead of <code class="code">Rpc.Tcp</code>.
+<p>
+
+The function <code class="code">P.V.create_client</code> does not contact the portmapper to
+find out the internet port; you must already know the port and pass it
+as connector argument (see <a href="Rpc_client.html"><code class="code">Rpc_client</code></a> for details).
+<p>
+
+You could have also invoked <code class="code">add</code> in an asynchronous way by using
+<code class="code">P.V.add'async</code>. This function does not wait until the result of the
+RPC call arrives; it returns immediately. When the result value has
+been received, the function passed as third argument is called back,
+and can process the value. An application of asynchronous calls is to
+invoke two remote procedures at the same time:
+<p>
+
+<pre class="codepre"><code class="code">let esys = Unixqueue.create_event_system() in
+let client1 = Calculator_clnt.P.V.create_portmapped_client 
+                ~esys:esys "moon" Rpc.Tcp in
+let client2 = Calculator_clnt.P.V.create_portmapped_client 
+                ~esys:esys "mars" Rpc.Tcp in
+let got_answer1 get_value =
+  let v = get_value() in
+  print_endline "moon has replied!"; ... in
+let got_answer2 get_value =
+  let v = get_value() in
+  print_endline "mars has replied!"; ... in
+Calculator_clnt.P.V.add'async client1 (m1,m2) got_answer1;
+Calculator_clnt.P.V.add'async client2 (m3,m4) got_answer1;
+Unixqueue.run esys
+</code></pre>
+<p>
+
+Here, the two clients can coexist because they share the same event
+system (see the <a href="Unixqueue.html"><code class="code">Unixqueue</code></a> module); this system manages it that
+every network event on the connection to "moon" will be forwarded to
+<code class="code">client1</code> and that the network events on the connection to "mars" will
+be forwarded to <code class="code">client2</code>. The <code class="code">add'async</code> calls do not block; they
+only register themselves with the event system and return
+immediately. <a href="Unixqueue.html#VALrun"><code class="code">Unixqueue.run</code></a> starts the event system: The XDR-encoded
+values <code class="code">(m1,m2)</code> are sent to "moon", and <code class="code">(m3,m4)</code> to "mars"; replies
+are recorded. Once the reply of "moon" is complete, <code class="code">got_answer1</code> is
+called; once the reply of "mars" has been fully received,
+<code class="code">got_answer2</code> is called. These functions can now query the received
+values by invoking <code class="code">get_value</code>; note that <code class="code">get_value</code> will either
+return the value or raise an exception if something went wrong. When
+both answers have been received and processed, <a href="Unixqueue.html#VALrun"><code class="code">Unixqueue.run</code></a> will
+return.
+<p>
+
+Obviously, asynchronous clients are a bit more complicated than
+synchronous ones; however it is still rather simple to program them. For
+more information on how the event handling works, see <a href="Equeue_intro.html"><code class="code">Equeue_intro</code></a>.
+<p>
+
+Note that clients have only a limited lifetime: After a shutdown or an
+error they become unusable. Since Ocamlnet version 3 there is another
+flavor of client, the so-called proxies. See <a href="Rpc_proxy.html#tut"><i>The Rpc_proxy tutorial</i></a> for an
+introduction. In particular, proxies can reconnect the connection to
+the server after a shutdown, and they can even manage several
+connections to the same server, or to different servers that are seen
+as equivalent.
+<p>
+
+<h2 id="intro_srv">Generating servers with <code class="code">ocamlrpcgen</code></h2>
+<p>
+
+The flag <code class="code">-srv</code> causes <code class="code">ocamlrpcgen</code> to generate the module
+<code class="code">Calculate_srv</code> containing functions which can act as RPC
+servers. (Note: Recent versions of <code class="code">ocamlrpcgen</code> also support a switch
+<code class="code">-srv2</code> that generates slightly better server stubs where one can bind
+several programs/versions to the same server port.) Here,
+<code class="code">Calculate_srv</code> has the signature:
+<p>
+
+<pre class="codepre"><code class="code">module P : sig
+  module V : sig
+    open Calculate_aux
+    val create_server :
+            ?limit:int -&gt;
+            proc_add : (t_P'V'add'arg -&gt; t_P'V'add'res) -&gt;
+            Rpc_server.connector -&gt;
+            Rpc.protocol -&gt;
+            Rpc.mode -&gt;
+            Unixqueue.event_system -&gt;
+            Rpc_server.t
+    val create_async_server :
+            ?limit:int -&gt;
+            proc_add : (Rpc_server.session -&gt;
+                        t_P'V'add'arg -&gt;
+                        (t_P'V'add'res -&gt; unit) -&gt;
+                        unit) -&gt;
+            Rpc_server.connector -&gt;
+            Rpc.protocol -&gt;
+            Rpc.mode -&gt;
+            Unixqueue.event_system -&gt;
+            Rpc_server.t
+    end
+end
+</code></pre>
+<p>
+
+There are two functions: <code class="code">P.V.create_server</code> acts as a synchronous
+server, and <code class="code">P.V.create_async_server</code> works as asynchronous
+server. Let's first explain the simpler synchronous case.
+<p>
+
+<code class="code">P.V.create_server</code> accepts a number of labeled arguments and a number
+of anonymous arguments. There is always an optional <code class="code">limit</code> parameter
+limiting the number of pending connections accepted by the server
+(default: 20); this is the second parameter of the <code class="code">Unix.listen</code>
+system call. For every procedure p realized by the server there is a
+labeled argument <code class="code">proc_</code>p passing the function actually computing the
+procedure. For synchronous servers, this function simply gets the
+argument of the procedure and must return the result of the
+procedure. In this example, we only want to realize the <code class="code">add</code>
+procedure, and so there is only a <code class="code">proc_add</code> argument. The anonymous
+<a href="Rpc_server.html#TYPEconnector"><code class="code">Rpc_server.connector</code></a> argument specifies the internet port (or the
+file descriptor) on which the server will listen for incoming
+connections. The <a href="Rpc.html#TYPEprotocol"><code class="code">Rpc.protocol</code></a> argument defines whether this is a
+TCP-like (stream-oriented) or a UDP-like (datagram-oriented)
+service. The <a href="Rpc.html#TYPEmode"><code class="code">Rpc.mode</code></a> parameter selects how the connector must be
+handled: Whether it acts like a socket or whether is behaves like an
+already existing bidirectional pipeline. Finally, the function expects
+the event system to be passed as last argument.
+<p>
+
+For example, to define a server accepting connections on the local
+loopback interface on TCP port 6789, the following statement creates
+such a server:
+<p>
+
+<pre class="codepre"><code class="code">let esys = Unixqueue.create_event_system in
+let server = 
+  Calculate_srv.P.V.create_server
+    ~proc_add: add
+    (Rpc_server.Localhost 6789)            (* connector *)
+    Rpc.Tcp                                (* protocol *)
+    Rpc.Socket                             (* mode *)
+    esys
+</code></pre>
+<p>
+
+Note that this statement creates the server, but actually does not
+serve the incoming connections. You need an additionally
+<p>
+
+<pre class="codepre"><code class="code">Unixqueue.run esys
+</code></pre>
+<p>
+
+to start the service. (Note: If the server raises an exception, it will
+fall through to the caller of <code class="code">Unixqueue.run</code>. The recommended way of
+handling this is to log the exception, and call <code class="code">Unixqueue.run</code> again
+in a loop. If too many exceptions occur in very short time the program
+should terminate.)
+<p>
+
+Not all combinations of connectors, protocols, and modes are
+sensible. Especially the following values work:
+<p>
+<ul>
+<li>TCP internet servers: One of the connectors <code class="code">Localhost</code>
+  or <code class="code">Portmapped</code>; the protocol <code class="code">Rpc.Tcp</code>; the mode <code class="code">Rpc.Socket</code></li>
+<li>UDP internet servers: One of the connectors <code class="code">Localhost</code>
+  or <code class="code">Portmapped</code>; the protocol <code class="code">Rpc.Udp</code>; the mode <code class="code">Rpc.Socket</code></li>
+<li>Stream-based Unix domain socket servers: The
+  connector <code class="code">Unix</code>, the protocol <code class="code">Rpc.Tcp</code>; the mode <code class="code">Rpc.Socket</code></li>
+<li>Datagram-based Unix domain socket servers: These are
+  not supported</li>
+<li>Serving an already accepted (inetd) stream connection:
+  The connector <code class="code">Descriptor</code>; the protocol <code class="code">Rpc.Tcp</code>; the mode <code class="code">Rpc.BiPipe</code></li>
+</ul>
+
+The connector <code class="code">Portmapped</code> registers the service at the local
+portmapper, and is the connector of choice.
+<p>
+
+Note that servers with mode=<code class="code">Socket</code> never terminate; they wait
+forever for service requests. On the contrary, servers with
+mode=<code class="code">BiPipe</code> process only the current (next) request, and terminate
+then.
+<p>
+
+The resulting server is synchronous because the next request is only
+accepted after the previous request has been finished. This means that
+the calls are processed in a strictly serialized way (one after
+another); however, the network traffic caused by the current and by
+previous calls can overlap (to maximize network performance).
+<p>
+
+In contrast to this, an asynchronous server needs not respond
+immediately to an RPC call. Once the call has been registered, the
+server is free to reply whenever it likes to, even after other calls
+have been received.  For example, you can synchronize several clients:
+Only after both clients A and B have called the procedure <code class="code">sync</code>, the
+replies of the procedures are sent back:
+<p>
+
+<pre class="codepre"><code class="code">let client_a_sync = ref None
+let client_b_sync = ref None
+
+let sync s arg send_result =
+  if arg.name_of_client = "A" then
+    client_a_sync := Some send_result;
+  if arg.name_of_client = "B" then
+    client_b_sync := Some send_result;
+  if !client_a_sync &lt;&gt; None &amp;&amp; !client_b_sync &lt;&gt; None then (
+    let Some send_result_to_a = !client_a_sync in
+    let Some send_result_to_b = !client_b_sync in
+    send_result_to_a "Synchronized";
+    send_result_to_b "Synchronized";
+  )
+
+let server =
+  Sync.V.create_async_server
+    ~proc_sync: sync
+    ...
+</code></pre>
+<p>
+
+Here, the variables <code class="code">client_a_sync</code> and <code class="code">client_b_sync</code> store whether
+one of the clients have already called the <code class="code">sync</code> service, and if so,
+the variables store also the function that needs to be called to pass
+the result back. For example, if <code class="code">A</code> calls <code class="code">sync</code> first, it is only
+recorded that there was such a call; because send_result is not
+invoked, <code class="code">A</code> will not get a reply. However, the function <code class="code">send_result</code>
+is stored in <code class="code">client_a_sync</code> such that it can be invoked later. If <code class="code">B</code>
+calls the <code class="code">sync</code> procedure next, <code class="code">client_b_sync</code> is updated, too.
+Because now both clients have called the service, synchronization has
+happed, and the answers to the procedure calls can be sent back to the
+clients. This is done by invoking the functions that have been
+remembered in <code class="code">client_a_sync</code> and <code class="code">client_b_sync</code>; the arguments of
+these functions are the return values of the <code class="code">sync</code> procedure.
+<p>
+
+It is even possible for an asynchronous server not to respond at all;
+for example to implement batching (the server receives a large number
+of calls on a TCP connection and replies only to the last call; the
+reply to the last call implicitly commits that all previous calls have
+been received, too).
+<p>
+
+To create multi-port servers, several servers can share the same event
+system; e.g.
+<p>
+
+<pre class="codepre"><code class="code">let esys = Unixqueue.create_event_system in
+let tcp_server = 
+  P.V.create_server ... Rpc.Tcp ... esys in
+let udp_server = 
+  P.V.create_server ... Rpc.Udp ... esys in
+Unixqueue.run esys
+</code></pre>
+<p>
+
+(Note: To create servers that implement several program or version
+definitions, look for what the -srv2 switch of <code class="code">ocamlrpcgen</code> generated.)
+<p>
+
+<h2 id="debuggig">Debugging aids</h2>
+<p>
+
+There are some built-in debugging aids for developing RPC clients and
+servers. Debug messages can be enabled by setting certain variables
+to <code class="code">true</code>:<ul>
+<li><a href="Rpc_client.Debug.html#VALenable"><code class="code">Rpc_client.Debug.enable</code></a>: Enables a general debug log for clients</li>
+<li><a href="Rpc_client.Debug.html#VALenable_ptrace"><code class="code">Rpc_client.Debug.enable_ptrace</code></a>: Enables the client-side procedure
+    trace. For every procedure call two messages are emitted, one for
+    the request message and one for the response message. The level of
+    verbosity can be set with <a href="Rpc_client.Debug.html#VALptrace_verbosity"><code class="code">Rpc_client.Debug.ptrace_verbosity</code></a>.</li>
+<li><a href="Rpc_server.Debug.html#VALenable"><code class="code">Rpc_server.Debug.enable</code></a>: Enables a general debug log for servers</li>
+<li><a href="Rpc_server.Debug.html#VALenable_ptrace"><code class="code">Rpc_server.Debug.enable_ptrace</code></a>: Enables the server-side procedure
+    trace. For every procedure call three messages are emitted, one for
+    the request message, one at the time the request is decoded, and one
+    for the response message. The level of
+    verbosity can be set with <a href="Rpc_server.Debug.html#VALptrace_verbosity"><code class="code">Rpc_server.Debug.ptrace_verbosity</code></a>.</li>
+<li><a href="Rpc_server.Debug.html#VALenable_ctrace"><code class="code">Rpc_server.Debug.enable_ctrace</code></a>: Enables the server-side connection
+    trace</li>
+</ul>
+
+The messages are output via <a href="Netlog.Debug.html"><code class="code">Netlog.Debug</code></a>, and have a <code class="code">`Debug</code> log
+level.
+<p>
+
+In Netplex context, the messages are redirected to the current Netplex
+logger, so that they appear in the normal log file. Also, messages are
+suppressed when they refer to the internally used RPC clients and servers.
+<p>
+
+<h1 id="rpcgen">Command line arguments of ocamlrpcgen</h1>
+<p>
+
+The tool accepts the following options:
+<p>
+
+<pre class="codepre"><code class="code">usage: ocamlrpcgen [-aux] [-clnt] [-srv] [-srv2]
+                   [-int   (abstract | int32 | unboxed) ]
+                   [-hyper (abstract | int64 | unboxed) ]  
+                   [-cpp   (/path/to/cpp | none) ]
+                   [-D var=value]
+                   [-U var]
+                   [-direct]
+                   file.xdr ...
+</code></pre>
+<p>
+<ul>
+<li><code class="code">-aux</code>: Creates for every XDR file the auxiliary
+   module containing the type and constant definitions as O'Caml expressions, and
+   containing the conversion functions implementing the language mapping.</li>
+<li><code class="code">-clnt</code>: Creates for every XDR file a client module.</li>
+<li><code class="code">-srv</code>: Creates for every XDR file a server module.</li>
+<li><code class="code">-srv2</code>: Creates for every XDR file a new-style server module.</li>
+<li><code class="code">-int abstract</code>: Uses <a href="Rtypes.html#TYPEint4"><code class="code">Rtypes.int4</code></a> for signed ints and
+  <a href="Rtypes.html#TYPEuint4"><code class="code">Rtypes.uint4</code></a> for unsigned ints as default integer representation.
+  This is the default. </li>
+<li><code class="code">-int int32</code>: Uses <code class="code">int32</code> for both signed and unsigned
+  ints as default integer representation. Note that overflows are ignored for
+  unsigned ints; i.e. large unsigned XDR integers are mapped to negative <code class="code">int32</code>
+  values.</li>
+<li><code class="code">-int unboxed</code>: Uses <code class="code">Pervasives.int</code> for both signed and
+  unsigned ints as default integer representation. XDR values outside the range
+  of O'Camls 31 bit signed ints are rejected (raise an exception).</li>
+<li><code class="code">-hyper abstract</code>: Uses <a href="Rtypes.html#TYPEint8"><code class="code">Rtypes.int8</code></a> for signed ints and
+  <a href="Rtypes.html#TYPEuint8"><code class="code">Rtypes.uint8</code></a> for unsigned ints as default hyper (64 bit integer) 
+  representation. This is the default.</li>
+<li><code class="code">-hyper int64</code>: Uses <code class="code">int64</code> for both signed and unsigned
+  ints as default hyper representation. Note that overflows are ignored for
+  unsigned ints; i.e. large unsigned XDR hypers are mapped to negative <code class="code">int64</code>
+  values.</li>
+<li><code class="code">-hyper unboxed</code>: Uses <code class="code">Pervasives.int</code> for both signed and
+  unsigned ints as default hyper representation. XDR values outside the range
+  of O'Camls 31 bit signed ints are rejected (raise an exception).</li>
+<li><code class="code">-cpp /path/to/cpp</code>: Applies the C preprocessor found
+  under /path/to/cpp on the XDR files before these are processed. The default 
+  is <code class="code">-cpp cpp</code> (i.e. look up the <code class="code">cpp</code> command in the command search path).</li>
+<li><code class="code">-cpp none</code>: Does not call the C preprocessor.</li>
+<li><code class="code">-D var=value</code>: Defines the C preprocessor variable <code class="code">var</code>
+  with the given <code class="code">value</code>.</li>
+<li><code class="code">-U var</code>: Undefines the C preprocessor variable <code class="code">var</code>.</li>
+<li><code class="code">-direct</code>: The effect of this switch is that ocamlrpcgen generates
+  different code that directly maps the XDR byte representation to
+  the final OCaml values, and bypasses <a href="Xdr.html#TYPExdr_value"><code class="code">Xdr.xdr_value</code></a> as much as
+  possible. This is the same style the traditional rpcgen preferred.
+  The code is faster (up to 50% for certain large values), but also much
+  longer. As a rule of thumb, this style is only a win if you have
+  arrays of structs, and these structs have many elements, and there
+  are not many strings (because there is no acceleration for strings).
+  For example, a numerical RPC interface would definetely profit from
+  this alternate code generation scheme. Except generating more code,
+  there is no downside of this scheme. (Available since Ocamlnet-3.5.)</li>
+</ul>
+
+<h1 id="mapping">The language mapping underlying ocamlrpcgen</h1>
+<p>
+
+The language mapping determines how the XDR types are mapped to O'Caml
+types. See also <a href="Rpc_mapping_ref.html"><code class="code">Rpc_mapping_ref</code></a>.
+<p>
+
+<h2 id="syn_xdr">The XDR syntax</h2>
+<p>
+
+From RFC 1832:
+<p>
+
+<pre class="codepre"><code class="code">      declaration:
+           type-specifier identifier
+         | type-specifier identifier "[" value "]"
+         | type-specifier identifier "&lt;" [ value ] "&gt;"
+         | "opaque" identifier "[" value "]"
+         | "opaque" identifier "&lt;" [ value ] "&gt;"
+         | "string" identifier "&lt;" [ value ] "&gt;"
+         | type-specifier "*" identifier
+         | "void"
+
+      value:
+           constant
+         | identifier
+
+      type-specifier:
+           [ "unsigned" ] "int"
+         | [ "unsigned" ] "hyper"
+         | "float"
+         | "double"
+         | "quadruple"
+         | "bool"
+         | enum-type-spec
+         | struct-type-spec
+         | union-type-spec
+         | identifier
+
+      enum-type-spec:
+         "enum" enum-body
+
+      enum-body:
+         "{"
+            ( identifier "=" value )
+            ( "," identifier "=" value )*
+         "}"
+
+      struct-type-spec:
+         "struct" struct-body
+
+      struct-body:
+         "{"
+            ( declaration ";" )
+            ( declaration ";" )*
+         "}"
+
+      union-type-spec:
+         "union" union-body
+
+      union-body:
+         "switch" "(" declaration ")" "{"
+            ( "case" value ":" declaration ";" )
+            ( "case" value ":" declaration ";" )*
+            [ "default" ":" declaration ";" ]
+         "}"
+
+      constant-def:
+         "const" identifier "=" constant ";"
+
+      type-def:
+           "typedef" declaration ";"
+         | "enum" identifier enum-body ";"
+         | "struct" identifier struct-body ";"
+         | "union" identifier union-body ";"
+
+      definition:
+           type-def
+         | constant-def
+
+      specification:
+           definition *
+</code></pre>
+<p>
+
+<code class="code">ocamlrpcgen</code> supports a few extensions to this standard, see below.
+<p>
+
+<h2 id="syn_prog">Syntax of RPC programs</h2>
+<p>
+
+From RFC 1831:
+<p>
+
+<pre class="codepre"><code class="code">   program-def:
+      "program" identifier "{"
+         version-def
+         version-def *
+      "}" "=" constant ";"
+
+   version-def:
+      "version" identifier "{"
+          procedure-def
+          procedure-def *
+      "}" "=" constant ";"
+
+   procedure-def:
+      type-specifier identifier "(" type-specifier
+        ("," type-specifier )* ")" "=" constant ";"
+
+</code></pre>
+<p>
+
+<h2 id="map_names">Mapping names</h2>
+<p>
+
+Because XDR has a different naming concept than O'Caml, sometimes
+identifiers must be renamed. For example, if you have two structs with
+equally named components
+<p>
+
+<pre class="codepre"><code class="code">struct a {
+  t1 c;
+  ...;
+}
+
+struct b {
+  t2 c;
+  ...;
+}
+</code></pre>
+<p>
+
+the corresponding O'Caml types will be
+<p>
+
+<pre class="codepre"><code class="code">type a = { c : t1; ... }
+type b = { c' : t2; ... }
+</code></pre>
+<p>
+
+i.e. the second occurrence of <code class="code">c</code> has been renamed to <code class="code">c'</code>. Note that
+<code class="code">ocamlrpcgen</code> prints always a warning for such renamings that are hard
+to predict.
+<p>
+
+Another reason to rename an identifier is that the first letter has
+the wrong case. In O'Caml, the case of the first letter must be
+compatible with its namespace. For example, a module name must be
+uppercase. Because RPC programs are mapped to O'Caml modules, the
+names of RPC programs must begin with an uppercase letter. If this is
+not the case, the identifier is (quietly) renamed, too.
+<p>
+
+You can specify the O'Caml name of every XDR/RPC identifier manually:
+Simply add after the definition of the identifier the phrase <code class="code">=&gt;
+ocaml_id</code> where <code class="code">ocaml_id</code> is the preferred name for O'Caml. Example:
+<p>
+
+<pre class="codepre"><code class="code">struct a {
+  t1 c =&gt; a_c;
+  ...;
+}
+
+struct b {
+  t2 c =&gt; b_c;
+  ...;
+}
+</code></pre>
+<p>
+
+Now the generated O'Caml types are
+<p>
+
+<pre class="codepre"><code class="code">type a = { a_c : t1; ... }
+type b = { b_c : t2; ... }
+</code></pre>
+<p>
+
+This works wherever a name is defined in the XDR file.
+<p>
+
+<h2 id="map_ints">Mapping integer types</h2>
+<p>
+
+XDR defines 32 bit and 64 bit integers, each in a signed and unsigned
+variant. As O'Caml does only know 31 bit signed integers (type <code class="code">int</code>; the
+so-called unboxed integers), 32 bit signed integers (type <code class="code">int32</code>), and 64 bit
+signed integers (type <code class="code">int64</code>), it is unclear how to map the XDR integers to
+O'Caml integers.
+<p>
+
+The module <a href="Rtypes.html"><code class="code">Rtypes</code></a> defines the opaque types <code class="code">int4</code>, <code class="code">uint4</code>, <code class="code">int8</code>,
+and <code class="code">uint8</code> which exactly correspond to the XDR types. These are
+useful to pass integer values through to other applications, and for
+simple identification of things. However, you cannot compute directly
+with the <a href="Rtypes.html"><code class="code">Rtypes</code></a> integers. Of course, <a href="Rtypes.html"><code class="code">Rtypes</code></a> also provides
+conversion functions to the basic O'Caml integer types <code class="code">int</code>, <code class="code">int32</code>,
+and <code class="code">int64</code>, but it would be very inconvenient to call these
+conversions for every integer individually.
+<p>
+
+Because of this, <code class="code">ocamlrpcgen</code> has the possibility to specify the
+O'Caml integer variant for every integer value (and it generates the
+necessary conversion invocations automatically). The new keywords
+<code class="code">_abstract</code>, <code class="code">_int32</code>, <code class="code">_int64</code>, and <code class="code">_unboxed</code> select the variant to
+use:
+<p>
+<ul>
+<li><code class="code">_abstract int</code>: A signed 32 bit integer mapped to <a href="Rtypes.html#TYPEint4"><code class="code">Rtypes.int4</code></a></li>
+<li><code class="code">_int32 int</code>: A signed 32 bit integer mapped to <code class="code">int32</code></li>
+<li><code class="code">_int64 int</code>: A signed 32 bit integer mapped to <code class="code">int64</code></li>
+<li><code class="code">_unboxed int</code>: A signed 32 bit integer mapped to <code class="code">int</code></li>
+<li><code class="code">unsigned _abstract int</code>: An unsigned 32 bit integer mapped to <a href="Rtypes.html#TYPEuint4"><code class="code">Rtypes.uint4</code></a></li>
+<li><code class="code">unsigned _int32 int</code>: An unsigned 32 bit integer mapped to <code class="code">int32</code> 
+  (ignoring overflows)</li>
+<li><code class="code">unsigned _int64 int</code>: An unsigned 32 bit integer mapped to <code class="code">int64</code></li>
+<li><code class="code">unsigned _unboxed int</code>: An unsigned 32 bit integer mapped to <code class="code">int</code></li>
+</ul>
+
+Note that the 32 bits of the unsigned integer are simply casted to the
+32 bits of <code class="code">int32</code> in the case of <code class="code">unsigned _int32 int</code> (the meaning
+of the sign is ignored). In contrast to this, the <code class="code">_unboxed</code> specifier
+causes a language mapping rejecting too small or too big values.
+<p>
+
+A similar mapping can be specified for the 64 bit integers (hypers):
+<p>
+<ul>
+<li><code class="code">_abstract hyper</code>: A signed 64 bit integer mapped to <a href="Rtypes.html#TYPEint8"><code class="code">Rtypes.int8</code></a></li>
+<li><code class="code">_int64 hyper</code>: A signed 64 bit integer mapped to <code class="code">int64</code></li>
+<li><code class="code">_unboxed hyper</code>: A signed 64 bit integer mapped to <code class="code">int</code></li>
+<li><code class="code">unsigned _abstract hyper</code>: An unsigned 64 bit integer mapped to <a href="Rtypes.html#TYPEuint8"><code class="code">Rtypes.uint8</code></a></li>
+<li><code class="code">unsigned _int64 hyper</code>: An unsigned 64 bit integer mapped to <code class="code">int64</code></li>
+<li><code class="code">unsigned _unboxed hyper</code>: An unsigned 64 bit integer mapped to <code class="code">int</code></li>
+</ul>
+
+Again, <code class="code">unsigned _int64 hyper</code> causes that the 64 bits of the XDR values are
+casted to <code class="code">int64</code>.
+<p>
+
+If the keyword specifying the kind of language mapping is omitted, the
+default mapping applies. Unless changed on the command line (options
+<code class="code">-int</code> and <code class="code">-hyper</code>), the default mapping is <code class="code">_abstract</code>.
+<p>
+
+<h2 id="map_fps">Mapping floating-point types</h2>
+<p>
+
+The XDR types <code class="code">single</code> and <code class="code">double</code> are supported and both mapped
+to the O'Caml type <code class="code">float</code>. The XDR type <code class="code">quadruple</code> is not supported.
+<p>
+
+The code for <code class="code">double</code> assumes that the CPU represents floating-point
+numbers according to the IEEE standards.
+<p>
+
+<h2 id="map_strings">Mapping string and opaque types</h2>
+<p>
+
+Strings and opaque values are mapped to O'Caml strings. If strings have a fixed
+length or a maximum length, this constraint is checked when the conversion is
+performed.
+<p>
+
+Since Ocamlnet-3, strings can be declared as "managed" in the XDR 
+file, e.g.
+<p>
+
+<pre class="codepre"><code class="code">typedef _managed string s&lt;&gt;;
+</code></pre>
+<p>
+
+A managed string is mapped to the object type <a href="Xdr_mstring.mstring-c.html"><code class="code">Xdr_mstring.mstring</code></a>.
+The idea of managed strings is to avoid data copies as much as possible,
+and to introduce some freedom of representation. In particular, managed
+strings can be backed by normal strings or by bigarrays of char. The
+RPC library chooses the representation that works best, and avoids copying
+so far possible.
+<p>
+
+<h2 id="map_arrays">Mapping array types</h2>
+<p>
+
+Arrays are mapped to O'Caml arrays. If arrays have a fixed
+length or a maximum length, this constraint is checked when the conversion is
+performed.
+<p>
+
+<h2 id="map_records">Mapping record types (structs)</h2>
+<p>
+
+Structs are mapped to O'Caml records.
+<p>
+
+<h2 id="map_enums">Mapping enumerated types (enums)</h2>
+<p>
+
+Enumerated types are mapped to <a href="Rtypes.html#TYPEint4"><code class="code">Rtypes.int4</code></a> (always, regardless of
+what the <code class="code">-int</code> option specifies). The enumerated constants are mapped
+to let-bound values of the same name. Example: The XDR definition
+<p>
+
+<pre class="codepre"><code class="code">enum e {
+  A = 1;
+  B = 2;
+}
+</code></pre>
+<p>
+
+generates the following lines of code in the auxiliary module:
+<p>
+
+<pre class="codepre"><code class="code">type e = Rtypes.int4;;
+val a : Rtypes.int4;;
+val b : Rtypes.int4;;
+</code></pre>
+<p>
+
+However, when the XDR conversion is performed, it is checked whether values of
+enumerators are contained in the set of allowed values.
+<p>
+
+The special enumerator <code class="code">bool</code> is mapped to the O'Caml type <code class="code">bool</code>.
+<p>
+
+<h2 id="map_eunions">Mapping union types discriminated by enumerations</h2>
+<p>
+
+Often, XDR unions are discriminated by enumerations, so this case is
+handled specially. For every case of the enumerator, a polymorphic
+variant is generated that contains the selected arm of the
+union. Example:
+<p>
+
+<pre class="codepre"><code class="code">enum e {
+  A = 1;
+  B = 2;
+  C = 3;
+  D = 4;
+}
+
+union u (e discr) {
+  case A: 
+    int x;
+  case B:
+    hyper y;
+  default:
+    string z;
+}
+</code></pre>
+<p>
+
+This is mapped to the O'Caml type definitions:
+<p>
+
+<pre class="codepre"><code class="code">type e = Rtypes.int4;;
+type u =
+  [ `a of Rtypes.int4
+  | `b of Rtypes.int8
+  | `c of string
+  | `d of string
+  ]
+</code></pre>
+<p>
+
+Note that the identifiers of the components (<code class="code">discr</code>, <code class="code">x</code>, <code class="code">y</code>, <code class="code">z</code>)
+have vanished; they are simply not necessary in a sound typing
+environment. Also note that the default case has been expanded;
+because the cases of the enumerator are known it is possible to
+determine the missing cases meant by <code class="code">default</code> and to define these
+cases explicitly.
+<p>
+
+<h2 id="map_iunions">Mapping union types discriminated by integers</h2>
+<p>
+
+If the discriminant has integer type, a different mapping scheme is
+used. For every case occuring in the union definition a separate
+polymorphic variant is defined; if necessary, an extra default variant
+is added. Example:
+<p>
+
+<pre class="codepre"><code class="code">union u (int discr) {
+  case -1: 
+    int x;
+  case 1:
+    hyper y;
+  default:
+    string z;
+}
+</code></pre>
+<p>
+
+This is mapped to the O'Caml type definition:
+<p>
+
+<pre class="codepre"><code class="code">type u = 
+  [ `__1 of Rtypes.int4
+  | `_1  of Rtypes.int8
+  | `default of (Rtypes.int4 * string)
+  ]
+</code></pre>
+<p>
+
+Note that positive cases get variant tags of the form "_n" and that
+negative cases get variant tags of the form "__n". The default case is
+mapped to the tag <code class="code">`default</code> with two arguments: First the value of
+the discriminant, second the value of the default component.
+<p>
+
+This type of mapping is not recommended, and only provided for
+completeness.
+<p>
+
+<h2 id="map_opts">Mapping option types (*)</h2>
+<p>
+
+The XDR <code class="code">*</code> type is mapped to the O'Caml <code class="code">option</code> type. Example:
+<p>
+
+<pre class="codepre"><code class="code">typedef string *s;
+</code></pre>
+<p>
+
+is mapped to
+<p>
+
+<pre class="codepre"><code class="code">type s = string option
+</code></pre>
+<p>
+
+<h2 id="map_recs">Mapping recursive types</h2>
+<p>
+
+Recursive types are fully supported. Unlike in the C language, you can
+recursively refer to types defined before or after the current type
+definition. Example:
+<p>
+
+<pre class="codepre"><code class="code">typedef intlistbody *intlist;   /* Forward reference */
+typedef struct {
+  int value;
+  intlist next;
+} intlistbody;
+</code></pre>
+<p>
+
+This is mapped to:
+<p>
+
+<pre class="codepre"><code class="code">type intlist = intlistbody option
+and intlistbody = 
+  { value : Rtypes.int4;
+    next : intlist;
+  }
+</code></pre>
+<p>
+
+However, it is not checked whether there is a finite fixpoint of the
+recursion. The O'Caml compiler will do this check anyway, so it not
+really needed within <code class="code">ocamlrpcgen</code>.
+<p>
+
+<h1 id="lib">Overview over the RPC library</h1>
+<p>
+
+Normally, only the following modules are of interest:
+<p>
+<ul>
+<li><a href="Rtypes.html"><code class="code">Rtypes</code></a>: Supports serialization/deserialization of the
+  basic integer and fp types ("rtypes" = remote types)</li>
+<li><a href="Rpc.html"><code class="code">Rpc</code></a>: Contains some types needed everyhwere</li>
+<li><a href="Rpc_client.html"><code class="code">Rpc_client</code></a>: Contains the functions supporting RPC clients</li>
+<li><a href="Rpc_server.html"><code class="code">Rpc_server</code></a>: Contains the functions supporting RPC servers</li>
+<li><a href="Rpc_portmapper.html"><code class="code">Rpc_portmapper</code></a>: Functions to contact the portmapper service</li>
+<li><a href="Rpc_auth_sys.html"><code class="code">Rpc_auth_sys</code></a>: AUTH_SYS style authentication.</li>
+</ul>
+
+<h1 id="rpc_netplex">Netplex RPC systems</h1>
+<p>
+
+If you need multi-processing for your RPC program, the Netplex library
+might be a good solution (see <a href="Netplex_intro.html"><code class="code">Netplex_intro</code></a>). It is limited to
+stream connections (TCP), however. With Netplex it is possible to
+develop systems of RPC services that connect to each other to do a
+certain job. Effectively, Netplex supports a component-based approach
+comparable to Corba, DCOM or Java Beans, but much more lightweight and
+efficient. In the following we call our technology <b>Netplex RPC
+systems</b>.
+<p>
+
+In this section it is assumed that you are familiar with the Netplex
+concepts (see <a href="Netplex_intro.html"><code class="code">Netplex_intro</code></a> for an introduction).
+<p>
+
+The module <a href="Rpc_netplex.html"><code class="code">Rpc_netplex</code></a> (part of the <code class="code">netplex</code> findlib library)
+allows us to encapsulate RPC servers as Netplex services. For instance,
+to turn the <code class="code">calculate.x</code> example of above into a service we can do
+<p>
+
+<pre class="codepre"><code class="code">let factory =
+  Rpc_netplex.rpc_factory
+    ~name:"Calculate"
+    ~configure:(fun _ _ -&gt; ())
+    ~setup:(fun srv () -&gt;
+             Calculate_srv.bind
+	        ~proc_add: add
+                srv
+           )
+    ()
+</code></pre>
+<p>
+
+and pass this <code class="code">factory</code> to <a href="Netplex_main.html#VALstartup"><code class="code">Netplex_main.startup</code></a>. Note that we have
+to generate <code class="code">calculate_srv.ml</code> with the <code class="code">-srv2</code> switch of
+<code class="code">ocamlrpcgen</code>, otherwise <code class="code">Calculate_srv.bind</code> is not available.
+<p>
+
+In the netplex config file we can refer to (and enable) this service
+by a section like
+<p>
+
+<pre class="codepre"><code class="code">    service {
+        name = "Calculate_service"            (* An arbitrary service name *)
+        protocol {
+	    name = "Calculate_proto"          (* An arbitrary protocol name *)
+            address {
+	        type = "internet";
+                bind = "0.0.0.0:2123"
+            }
+        };
+        processor {
+            type = "Calculate"                (* The ~name from above *)
+        };
+        workload_manager {
+            type = "constant";
+            threads = 1;                      (* Run in 1 process/thread *)
+        };
+    }
+</code></pre>
+<p>
+
+The interesting points of this technology are:
+<p>
+<ul>
+<li>You can bundle several services into one program. The services can be
+  RPC-implemented or by using other protocol modules that are compatible
+  with Netplex like the <a href="Nethttpd_plex.html"><code class="code">Nethttpd_plex</code></a> web server.</li>
+<li>You can profit from multi-processing or multi-threading.</li>
+<li>Netplex provides a framework for logging, a message bus, and start/stop.</li>
+</ul>
+
+Currently, there is no directory service where one can register 
+services by name and look them up. Such a service is under development,
+however, and will be released once the major functions work.
+<p>
+
+<h1 id="restrictions">Restrictions of the current implementation</h1>
+<p>
+
+The authentication styles AUTH_DH and AUTH_LOCAL are not yet supported
+on all platforms.
+<p>
+
+The implementation uses an intermediate, symbolic representation of
+the values to transport over the network. This may restrict the
+performance.
+<p>
+
+Quadruple-precision fp numbers are not supported.
+<p>
+
+RPC broadcasts are not supported.
+<p>
+
+TI-RPC and rpcbind versions 3 and 4 are not supported. (Note: There
+is some restricted support to contact existing TI-RPC servers over
+local transport in the <code class="code">Rpc_xti</code> module.)
+<br>
+</body></html>

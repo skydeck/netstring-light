@@ -1,0 +1,9 @@
+TOP_DIR=../..
+
+PRE = 1
+PKGNAME = nethttpd-for-netcgi2
+GENERATE = META 
+
+INSTALL_EXTRA += LICENSE
+
+include $(TOP_DIR)/Makefile.rules

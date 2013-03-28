@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Netmime_tut.html">
+<link rel="next" href="Netulex_tut.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Uq_gtk" rel="Chapter" href="Uq_gtk.html">
+<link title="Equeue" rel="Chapter" href="Equeue.html">
+<link title="Unixqueue" rel="Chapter" href="Unixqueue.html">
+<link title="Unixqueue_pollset" rel="Chapter" href="Unixqueue_pollset.html">
+<link title="Unixqueue_select" rel="Chapter" href="Unixqueue_select.html">
+<link title="Uq_resolver" rel="Chapter" href="Uq_resolver.html">
+<link title="Uq_engines" rel="Chapter" href="Uq_engines.html">
+<link title="Uq_socks5" rel="Chapter" href="Uq_socks5.html">
+<link title="Uq_io" rel="Chapter" href="Uq_io.html">
+<link title="Uq_lwt" rel="Chapter" href="Uq_lwt.html">
+<link title="Uq_libevent" rel="Chapter" href="Uq_libevent.html">
+<link title="Uq_mt" rel="Chapter" href="Uq_mt.html">
+<link title="Equeue_intro" rel="Chapter" href="Equeue_intro.html">
+<link title="Equeue_howto" rel="Chapter" href="Equeue_howto.html">
+<link title="Uq_ssl" rel="Chapter" href="Uq_ssl.html">
+<link title="Https_client" rel="Chapter" href="Https_client.html">
+<link title="Uq_tcl" rel="Chapter" href="Uq_tcl.html">
+<link title="Netcamlbox" rel="Chapter" href="Netcamlbox.html">
+<link title="Netcgi_apache" rel="Chapter" href="Netcgi_apache.html">
+<link title="Netcgi_modtpl" rel="Chapter" href="Netcgi_modtpl.html">
+<link title="Netcgi_common" rel="Chapter" href="Netcgi_common.html">
+<link title="Netcgi" rel="Chapter" href="Netcgi.html">
+<link title="Netcgi_ajp" rel="Chapter" href="Netcgi_ajp.html">
+<link title="Netcgi_scgi" rel="Chapter" href="Netcgi_scgi.html">
+<link title="Netcgi_cgi" rel="Chapter" href="Netcgi_cgi.html">
+<link title="Netcgi_fcgi" rel="Chapter" href="Netcgi_fcgi.html">
+<link title="Netcgi_dbi" rel="Chapter" href="Netcgi_dbi.html">
+<link title="Netcgi1_compat" rel="Chapter" href="Netcgi1_compat.html">
+<link title="Netcgi_test" rel="Chapter" href="Netcgi_test.html">
+<link title="Netcgi_porting" rel="Chapter" href="Netcgi_porting.html">
+<link title="Netcgi_plex" rel="Chapter" href="Netcgi_plex.html">
+<link title="Http_client_conncache" rel="Chapter" href="Http_client_conncache.html">
+<link title="Http_client" rel="Chapter" href="Http_client.html">
+<link title="Telnet_client" rel="Chapter" href="Telnet_client.html">
+<link title="Ftp_data_endpoint" rel="Chapter" href="Ftp_data_endpoint.html">
+<link title="Ftp_client" rel="Chapter" href="Ftp_client.html">
+<link title="Http_fs" rel="Chapter" href="Http_fs.html">
+<link title="Ftp_fs" rel="Chapter" href="Ftp_fs.html">
+<link title="Netclient_tut" rel="Chapter" href="Netclient_tut.html">
+<link title="Netgssapi" rel="Chapter" href="Netgssapi.html">
+<link title="Nethttpd_types" rel="Chapter" href="Nethttpd_types.html">
+<link title="Nethttpd_kernel" rel="Chapter" href="Nethttpd_kernel.html">
+<link title="Nethttpd_reactor" rel="Chapter" href="Nethttpd_reactor.html">
+<link title="Nethttpd_engine" rel="Chapter" href="Nethttpd_engine.html">
+<link title="Nethttpd_services" rel="Chapter" href="Nethttpd_services.html">
+<link title="Nethttpd_plex" rel="Chapter" href="Nethttpd_plex.html">
+<link title="Nethttpd_util" rel="Chapter" href="Nethttpd_util.html">
+<link title="Nethttpd_intro" rel="Chapter" href="Nethttpd_intro.html">
+<link title="Netmech_scram" rel="Chapter" href="Netmech_scram.html">
+<link title="Netmech_scram_gssapi" rel="Chapter" href="Netmech_scram_gssapi.html">
+<link title="Netmcore" rel="Chapter" href="Netmcore.html">
+<link title="Netmcore_camlbox" rel="Chapter" href="Netmcore_camlbox.html">
+<link title="Netmcore_mempool" rel="Chapter" href="Netmcore_mempool.html">
+<link title="Netmcore_heap" rel="Chapter" href="Netmcore_heap.html">
+<link title="Netmcore_ref" rel="Chapter" href="Netmcore_ref.html">
+<link title="Netmcore_array" rel="Chapter" href="Netmcore_array.html">
+<link title="Netmcore_sem" rel="Chapter" href="Netmcore_sem.html">
+<link title="Netmcore_mutex" rel="Chapter" href="Netmcore_mutex.html">
+<link title="Netmcore_condition" rel="Chapter" href="Netmcore_condition.html">
+<link title="Netmcore_queue" rel="Chapter" href="Netmcore_queue.html">
+<link title="Netmcore_buffer" rel="Chapter" href="Netmcore_buffer.html">
+<link title="Netmcore_matrix" rel="Chapter" href="Netmcore_matrix.html">
+<link title="Netmcore_hashtbl" rel="Chapter" href="Netmcore_hashtbl.html">
+<link title="Netmcore_process" rel="Chapter" href="Netmcore_process.html">
+<link title="Netmcore_tut" rel="Chapter" href="Netmcore_tut.html">
+<link title="Netplex_types" rel="Chapter" href="Netplex_types.html">
+<link title="Netplex_mp" rel="Chapter" href="Netplex_mp.html">
+<link title="Netplex_mt" rel="Chapter" href="Netplex_mt.html">
+<link title="Netplex_log" rel="Chapter" href="Netplex_log.html">
+<link title="Netplex_controller" rel="Chapter" href="Netplex_controller.html">
+<link title="Netplex_container" rel="Chapter" href="Netplex_container.html">
+<link title="Netplex_sockserv" rel="Chapter" href="Netplex_sockserv.html">
+<link title="Netplex_workload" rel="Chapter" href="Netplex_workload.html">
+<link title="Netplex_main" rel="Chapter" href="Netplex_main.html">
+<link title="Netplex_config" rel="Chapter" href="Netplex_config.html">
+<link title="Netplex_kit" rel="Chapter" href="Netplex_kit.html">
+<link title="Rpc_netplex" rel="Chapter" href="Rpc_netplex.html">
+<link title="Netplex_cenv" rel="Chapter" href="Netplex_cenv.html">
+<link title="Netplex_semaphore" rel="Chapter" href="Netplex_semaphore.html">
+<link title="Netplex_sharedvar" rel="Chapter" href="Netplex_sharedvar.html">
+<link title="Netplex_mutex" rel="Chapter" href="Netplex_mutex.html">
+<link title="Netplex_encap" rel="Chapter" href="Netplex_encap.html">
+<link title="Netplex_intro" rel="Chapter" href="Netplex_intro.html">
+<link title="Netplex_advanced" rel="Chapter" href="Netplex_advanced.html">
+<link title="Netplex_admin" rel="Chapter" href="Netplex_admin.html">
+<link title="Netshm" rel="Chapter" href="Netshm.html">
+<link title="Netshm_data" rel="Chapter" href="Netshm_data.html">
+<link title="Netshm_hashtbl" rel="Chapter" href="Netshm_hashtbl.html">
+<link title="Netshm_array" rel="Chapter" href="Netshm_array.html">
+<link title="Netshm_intro" rel="Chapter" href="Netshm_intro.html">
+<link title="Netconversion" rel="Chapter" href="Netconversion.html">
+<link title="Netchannels" rel="Chapter" href="Netchannels.html">
+<link title="Netstream" rel="Chapter" href="Netstream.html">
+<link title="Mimestring" rel="Chapter" href="Mimestring.html">
+<link title="Netmime" rel="Chapter" href="Netmime.html">
+<link title="Netsendmail" rel="Chapter" href="Netsendmail.html">
+<link title="Neturl" rel="Chapter" href="Neturl.html">
+<link title="Netaddress" rel="Chapter" href="Netaddress.html">
+<link title="Netbuffer" rel="Chapter" href="Netbuffer.html">
+<link title="Netdate" rel="Chapter" href="Netdate.html">
+<link title="Netencoding" rel="Chapter" href="Netencoding.html">
+<link title="Netulex" rel="Chapter" href="Netulex.html">
+<link title="Netaccel" rel="Chapter" href="Netaccel.html">
+<link title="Netaccel_link" rel="Chapter" href="Netaccel_link.html">
+<link title="Nethtml" rel="Chapter" href="Nethtml.html">
+<link title="Netstring_str" rel="Chapter" href="Netstring_str.html">
+<link title="Netmappings" rel="Chapter" href="Netmappings.html">
+<link title="Netaux" rel="Chapter" href="Netaux.html">
+<link title="Nethttp" rel="Chapter" href="Nethttp.html">
+<link title="Netpagebuffer" rel="Chapter" href="Netpagebuffer.html">
+<link title="Netfs" rel="Chapter" href="Netfs.html">
+<link title="Netglob" rel="Chapter" href="Netglob.html">
+<link title="Netauth" rel="Chapter" href="Netauth.html">
+<link title="Netsockaddr" rel="Chapter" href="Netsockaddr.html">
+<link title="Netnumber" rel="Chapter" href="Netnumber.html">
+<link title="Rtypes" rel="Chapter" href="Rtypes.html">
+<link title="Xdr_mstring" rel="Chapter" href="Xdr_mstring.html">
+<link title="Xdr" rel="Chapter" href="Xdr.html">
+<link title="Netcompression" rel="Chapter" href="Netcompression.html">
+<link title="Netunichar" rel="Chapter" href="Netunichar.html">
+<link title="Netchannels_tut" rel="Chapter" href="Netchannels_tut.html">
+<link title="Netmime_tut" rel="Chapter" href="Netmime_tut.html">
+<link title="Netsendmail_tut" rel="Chapter" href="Netsendmail_tut.html">
+<link title="Netulex_tut" rel="Chapter" href="Netulex_tut.html">
+<link title="Neturl_tut" rel="Chapter" href="Neturl_tut.html">
+<link title="Netstring_pcre" rel="Chapter" href="Netstring_pcre.html">
+<link title="Netsys" rel="Chapter" href="Netsys.html">
+<link title="Netsys_posix" rel="Chapter" href="Netsys_posix.html">
+<link title="Netsys_pollset" rel="Chapter" href="Netsys_pollset.html">
+<link title="Netlog" rel="Chapter" href="Netlog.html">
+<link title="Netexn" rel="Chapter" href="Netexn.html">
+<link title="Netsys_win32" rel="Chapter" href="Netsys_win32.html">
+<link title="Netsys_pollset_posix" rel="Chapter" href="Netsys_pollset_posix.html">
+<link title="Netsys_pollset_win32" rel="Chapter" href="Netsys_pollset_win32.html">
+<link title="Netsys_pollset_generic" rel="Chapter" href="Netsys_pollset_generic.html">
+<link title="Netsys_signal" rel="Chapter" href="Netsys_signal.html">
+<link title="Netsys_oothr" rel="Chapter" href="Netsys_oothr.html">
+<link title="Netsys_xdr" rel="Chapter" href="Netsys_xdr.html">
+<link title="Netsys_rng" rel="Chapter" href="Netsys_rng.html">
+<link title="Netsys_types" rel="Chapter" href="Netsys_types.html">
+<link title="Netsys_mem" rel="Chapter" href="Netsys_mem.html">
+<link title="Netsys_tmp" rel="Chapter" href="Netsys_tmp.html">
+<link title="Netsys_sem" rel="Chapter" href="Netsys_sem.html">
+<link title="Netsys_pmanage" rel="Chapter" href="Netsys_pmanage.html">
+<link title="Netgzip" rel="Chapter" href="Netgzip.html">
+<link title="Netpop" rel="Chapter" href="Netpop.html">
+<link title="Rpc_auth_dh" rel="Chapter" href="Rpc_auth_dh.html">
+<link title="Rpc_key_service" rel="Chapter" href="Rpc_key_service.html">
+<link title="Rpc_time" rel="Chapter" href="Rpc_time.html">
+<link title="Rpc_auth_local" rel="Chapter" href="Rpc_auth_local.html">
+<link title="Rpc" rel="Chapter" href="Rpc.html">
+<link title="Rpc_program" rel="Chapter" href="Rpc_program.html">
+<link title="Rpc_util" rel="Chapter" href="Rpc_util.html">
+<link title="Rpc_portmapper_aux" rel="Chapter" href="Rpc_portmapper_aux.html">
+<link title="Rpc_packer" rel="Chapter" href="Rpc_packer.html">
+<link title="Rpc_transport" rel="Chapter" href="Rpc_transport.html">
+<link title="Rpc_client" rel="Chapter" href="Rpc_client.html">
+<link title="Rpc_simple_client" rel="Chapter" href="Rpc_simple_client.html">
+<link title="Rpc_portmapper_clnt" rel="Chapter" href="Rpc_portmapper_clnt.html">
+<link title="Rpc_portmapper" rel="Chapter" href="Rpc_portmapper.html">
+<link title="Rpc_server" rel="Chapter" href="Rpc_server.html">
+<link title="Rpc_auth_sys" rel="Chapter" href="Rpc_auth_sys.html">
+<link title="Rpc_auth_gssapi" rel="Chapter" href="Rpc_auth_gssapi.html">
+<link title="Rpc_proxy" rel="Chapter" href="Rpc_proxy.html">
+<link title="Rpc_intro" rel="Chapter" href="Rpc_intro.html">
+<link title="Rpc_mapping_ref" rel="Chapter" href="Rpc_mapping_ref.html">
+<link title="Rpc_intro_gss" rel="Chapter" href="Rpc_intro_gss.html">
+<link title="Rpc_ssl" rel="Chapter" href="Rpc_ssl.html">
+<link title="Rpc_xti_client" rel="Chapter" href="Rpc_xti_client.html">
+<link title="Shell_sys" rel="Chapter" href="Shell_sys.html">
+<link title="Shell" rel="Chapter" href="Shell.html">
+<link title="Shell_uq" rel="Chapter" href="Shell_uq.html">
+<link title="Shell_fs" rel="Chapter" href="Shell_fs.html">
+<link title="Shell_intro" rel="Chapter" href="Shell_intro.html">
+<link title="Netsmtp" rel="Chapter" href="Netsmtp.html">
+<link title="Intro" rel="Chapter" href="Intro.html">
+<link title="Platform" rel="Chapter" href="Platform.html">
+<link title="Foreword" rel="Chapter" href="Foreword.html">
+<link title="Ipv6" rel="Chapter" href="Ipv6.html"><link title="Netsendmail Tutorial" rel="Section" href="#tutorial">
+<link title="Generate an ASCII Mail" rel="Subsection" href="#2_GenerateanASCIIMail">
+<link title="Generate an Internationalised Mail" rel="Subsection" href="#2_GenerateanInternationalisedMail">
+<link title="Generate a Mail with Attachments" rel="Subsection" href="#2_GenerateaMailwithAttachments">
+<link title="Generate a Multi-Format Mail" rel="Subsection" href="#2_GenerateaMultiFormatMail">
+<link title="Generate an MHTML Message" rel="Subsection" href="#2_GenerateanMHTMLMessage">
+<title>Ocamlnet 3 Reference Manual : Netsendmail_tut</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Netmime_tut.html" title="Netmime_tut">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Netulex_tut.html" title="Netulex_tut">Next</a>
+</div>
+<h1>Netsendmail_tut</h1>
+<br>
+<h1 id="tutorial">Netsendmail Tutorial</h1>
+<p>
+
+Generating mail messages is a very complicated procedure.
+<code class="code">Netsendmail</code> provides a comparatively simple interface
+to accomplish this task without knowing too much about the details
+of the mail format. Here is a kind of cookbook:
+<p>
+
+<h2 id="2_GenerateanASCIIMail">Generate an ASCII Mail</h2>
+<p>
+
+In the simplest case, the mail is an ASCII text. Generate the mail
+with
+<pre class="codepre"><code class="code"> 
+compose ~from_addr ~to_addrs ~subject main_text
+</code></pre>
+<p>
+
+Here, <code class="code">from_addr</code> is the sender's address as pair <code class="code">(name,formal_address)</code>,
+and <code class="code">to_addrs</code> is the list of recipients in the same format. 
+The variable <code class="code">subject</code> contains the subject of the message as string.
+Finally, <code class="code">main_text</code> is the ASCII text.
+<p>
+
+<h2 id="2_GenerateanInternationalisedMail">Generate an Internationalised Mail</h2>
+<p>
+
+When addresses or the main text contain non-ASCII characters, you 
+should care about the <code class="code">in_charset</code> and <code class="code">out_charset</code> parameters.
+In general, the strings you pass to <code class="code">compose</code> are encoded as 
+<code class="code">in_charset</code>, and the strings in the generated mail are encoded
+as <code class="code">out_charset</code>. Usually, it is a good idea to have 
+<code class="code">in_charset = out_charset</code>, or <code class="code">out_charset</code> as a superset of
+<code class="code">in_charset</code> (otherwise you might get conversion errors).
+<p>
+
+The default for both parameters is <code class="code">`Enc_iso88591</code>.
+<p>
+
+Not everything can be internationalised. In particular, the <code class="code">subject</code>,
+the informal names of mail addresses, the <code class="code">content_description</code>, and
+the main text can be encoded in a non-ASCII character set. Especially,
+the formal mail addresses cannot be internationalised. Example:
+<pre class="codepre"><code class="code">compose 
+  ~in_charset:`Enc_iso885915
+  ~out_charset:`Enc_iso885915
+  ~from_addr:("Heinz Dräger", "heinz\@draeger.de") 
+  ~to_addr:("Marion Schröder", "marion\@irgendwo.de")
+  ~subject:"Geschäftlich"
+  "Verkaufe Teddy-Bären für 100¤"
+</code></pre>
+<p>
+
+Note that when you also pass <code class="code">content_type</code>, the main text is 
+no longer converted according to <code class="code">in_charset</code> and <code class="code">out_charset</code>.
+It is expected that the main text has already the right encoding,
+and that the encoding is indicated by the <code class="code">content_type</code>. Example:
+<pre class="codepre"><code class="code">compose 
+  ~in_charset:`Enc_iso885915
+  ~out_charset:`Enc_iso885915
+  ~from_addr:("Heinz Dräger", "heinz\@draeger.de") 
+  ~to_addr:("Marion Schröder", "marion\@irgendwo.de")
+  ~content_type:("text/html", ["charset", Mimestring.mk_param "ISO-8859-1"])
+  ~subject:"Geschäftlich"
+  "&lt;html&gt;&lt;body&gt;Verkaufe Teddy-Bären für 100&amp;euro;&lt;/body&gt;&lt;/html&gt;"
+</code></pre>
+Here, the header fields are encoded in ISO-8859-15, but the main
+text uses ISO-8859-1.
+<p>
+
+The function <a href="Mimestring.html#VALmk_param"><code class="code">Mimestring.mk_param</code></a> encapsulates parameter values for
+several kinds of structured values that may occur in mail headers,
+here for <code class="code">Content-type</code>. This function takes care of the appropriate
+representation of the parameter value (e.g. for parameters like "title"
+that can be internationalised).
+<p>
+
+<h2 id="2_GenerateaMailwithAttachments">Generate a Mail with Attachments</h2>
+<p>
+
+An attachment can simply be passed to <code class="code">compose</code>. For example, to
+add a file "foo.gif":
+<pre class="codepre"><code class="code">compose
+  ...
+  attachments:[ wrap_attachment
+                  ~content_type:("image/gif", [])
+                  (new Netmime.file_mime_body "foo.gif") ]
+  ...
+</code></pre>
+<p>
+
+This creates a <code class="code">multipart/mixed</code> mail. The class
+<a href="Netmime.file_mime_body-c.html"><code class="code">Netmime.file_mime_body</code></a> encapsulates a file as a MIME body that
+can be attached to the mail (note: The file is not read as a whole
+into memory, but only chunk by chunk, so you can even attach large
+files without exhausting memory).
+<p>
+
+The type <code class="code">multipart/mixed</code> has the special feature that 
+the attached parts can
+either by displayed "inline" with the other contents, or suggested
+for saving in a file. This hint is indicated by the <code class="code">Content-disposition</code>
+header. For example, to have the first attachment "inline", and the
+second as a file with name "foo.gif", use:
+<pre class="codepre"><code class="code">compose
+  ...
+  attachments:[ wrap_attachment
+                  ~content_type:("image/gif", [])
+                  ~content_disposition:("inline", [])
+                  (new Netmime.file_mime_body "foo.gif");
+                wrap_attachment
+                  ~content_type:("image/gif", [])
+                  ~content_disposition:("attachment", ["filename",
+                                                       Mimestring.mk_param "foo.gif"])
+                  (new Netmime.file_mime_body "foo.gif") ]
+  ...
+</code></pre>
+<p>
+
+<h2 id="2_GenerateaMultiFormatMail">Generate a Multi-Format Mail</h2>
+<p>
+
+It is possible to generate messages where the main part is 
+available in several formats, e.g. in <code class="code">text/plain</code> and
+<code class="code">text/html</code>. The mail reader program can select which format
+can be presented best to the user.
+<p>
+
+The <code class="code">compose</code> function is not the right means to produce such
+a mail. It is better to use the more capable functions
+<code class="code">wrap_parts</code> and <code class="code">wrap_mail</code> for this purpose.
+<p>
+
+For example, to get a message with the <code class="code">text/plain</code> version
+<code class="code">s_plain</code> and the <code class="code">text/html</code> version <code class="code">s_html</code>, use:
+<pre class="codepre"><code class="code">wrap_mail
+   ~from_addr ~to_addrs ~subject
+   (wrap_parts
+      ~content_type:("multipart/alternative", [])
+      [ wrap_attachment
+          ~content_type:("text/plain", [])
+          (new Netmime.memory_mime_body s_plain);
+        wrap_attachment
+          ~content_type:("text/html", [])
+          (new Netmime.memory_mime_body s_html)
+      ])
+</code></pre>
+<p>
+
+Here, <code class="code">wrap_attachment</code> is used to encapsulate the two versions of
+the main text. This works because there is no difference between the
+format of an attachment and the format of a text part. (Actually,
+<code class="code">wrap_attachment</code> should be better called <code class="code">wrap_body</code>.) The class
+<a href="Netmime.memory_mime_body-c.html"><code class="code">Netmime.memory_mime_body</code></a> encapsulates a string as MIME body.
+<p>
+
+The function <code class="code">wrap_parts</code> bundles the two versions to the main
+message, and <code class="code">wrap_mail</code> adds the mail headers necessary to deliver
+the mail.
+<p>
+
+Note that the simplest version of the message should be added
+first, and the fanciest version of the message should be added
+last.
+<p>
+
+As a variant, one can also add file attachments. To do so, 
+insert a <code class="code">multipart/mixed</code> container around the <code class="code">multipart/alternative</code>
+message:
+<p>
+
+<pre class="codepre"><code class="code">wrap_mail
+   ~from_addr ~to_addrs ~subject
+   (wrap_parts
+      ~content_type:("multipart/mixed", [])
+      [ wrap_parts
+          ~content_type:("multipart/alternative", [])
+          [ wrap_attachment
+              ~content_type:("text/plain", [])
+              (new Netmime.memory_mime_body s_plain);
+            wrap_attachment
+              ~content_type:("text/html", [])
+              (new Netmime.memory_mime_body s_html)
+          ];
+        wrap_attachment
+          ~content_type:("audio/wav", [])
+          (new Netmime.file_mime_body "music.wav")
+      ])
+</code></pre>
+<p>
+
+<h2 id="2_GenerateanMHTMLMessage">Generate an MHTML Message</h2>
+<p>
+
+MHTML is an HTML document with attached resource files like images
+or style sheets. For example, to have the HTML text <code class="code">s_html</code> bundled
+with an image and a style sheet, use:
+<pre class="codepre"><code class="code">wrap_mail
+   ~from_addr ~to_addrs ~subject
+   (wrap_parts
+      ~content_type:("multipart/related",
+                     [ "type", Mimestring.mk_param "text/html" ])
+      [ wrap_attachment
+          ~content_type:("text/html", [])
+          (new Netmime.memory_mime_body s_html);
+        wrap_attachment
+          ~content_type:("image/gif", [])
+          ~content_id:"img1"
+          (new Netmime.file_mime_body "my.gif")
+        wrap_attachment
+          ~content_type:("text/css", [])
+          ~content_id:"style1"
+          (new Netmime.file_mime_body "style.css")
+      ])
+</code></pre>
+<p>
+
+Note the <code class="code">content_id</code> arguments that assign names to the individual
+parts. One can now refer to the parts from the HTML document by
+<code class="code">cid</code> URLs, e.g. <code class="code">cid:img1</code> points to the image in the second
+part.
+<p>
+
+There is another mechanism using the <code class="code">Content-Location</code> header to
+resolve hyperlinks to message parts. See RFC 2557 for details.
+<p>
+
+<br>
+</body></html>

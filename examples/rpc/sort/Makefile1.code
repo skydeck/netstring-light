@@ -1,0 +1,38 @@
+TOP_DIR = ../../..
+include $(TOP_DIR)/Makefile.rules
+
+REQUIRES = rpc,unix,netplex
+OBJ = sort1_proto_aux.cmo sort1_proto_clnt.cmo sort1_proto_srv.cmo \
+      sort1_worker.cmo sort1_controller.cmo
+SRV_EXPLICIT_OBJ = sort1_server.cmo
+CLNT_EXPLICIT_OBJ = sort1_client.cmo
+
+XOBJ = $(OBJ:.cmo=.cmx)
+SRV_EXPLICIT_XOBJ = $(SRV_EXPLICIT_OBJ:.cmo=.cmx)
+CLNT_EXPLICIT_XOBJ = $(CLNT_EXPLICIT_OBJ:.cmo=.cmx)
+
+CLEAN_LIST += *.run *.opt
+
+all: sort1lib.cma sort1_server.run sort1_client.run
+
+opt: sort1lib.cmxa sort1_server.opt sort1_client.opt
+
+sort1_server.run: $(SRV_EXPLICIT_OBJ)
+	$(OCAMLC) -o sort1_server.run sort1lib.cma $(SRV_EXPLICIT_OBJ) -linkpkg
+
+sort1_server.opt: $(SRV_EXPLICIT_XOBJ)
+	$(OCAMLOPT) -o sort1_server.opt sort1lib.cmxa $(SRV_EXPLICIT_XOBJ) -linkpkg
+
+sort1_client.run: $(CLNT_EXPLICIT_OBJ)
+	$(OCAMLC) -o sort1_client.run sort1lib.cma $(CLNT_EXPLICIT_OBJ) -linkpkg
+
+sort1_client.opt: $(CLNT_EXPLICIT_XOBJ)
+	$(OCAMLOPT) -o sort1_client.opt sort1lib.cmxa $(CLNT_EXPLICIT_XOBJ) -linkpkg
+
+sort1lib.cma: $(OBJ)
+	$(OCAMLC) -o sort1lib.cma -a $(OBJ)
+
+sort1lib.cmxa: $(XOBJ)
+	$(OCAMLOPT) -o sort1lib.cmxa -a $(XOBJ)
+
+include depend
