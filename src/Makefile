@@ -1,4 +1,4 @@
-.PHONY: default all opt doc install uninstall clean
+.PHONY: default all opt doc install uninstall reinstall clean
 FLAGS = -g -annot
 default: all opt
 nldate.ml: nldate.mlp
@@ -25,7 +25,10 @@ install:
 	ocamlfind install netstring-light META \
           $$(ls *.mli *.ml *.cm[ioxa] *.cmxa *.[oa] 2>/dev/null)
 uninstall:
-	ocamlfind remove netstring-light
+	-ocamlfind remove netstring-light
+reinstall:
+	$(MAKE) uninstall
+	$(MAKE) install
 clean:
 	rm -f *.cm[ioxa] *.o *.cmxa *.a *~ *.annot
 	rm -rf ../html

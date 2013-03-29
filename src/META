@@ -1,5 +1,6 @@
 name = "netstring-light"
 description = "Standalone subset of the netstring library"
+requires = "unix"
 archive(byte) = "netstring-light.cma"
 archive(native) = "netstring-light.cmxa"
 

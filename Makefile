@@ -1,4 +1,4 @@
-.PHONY: default all opt doc install uninstall clean
+.PHONY: default all opt doc install uninstall reinstall clean
 
 default: all opt
 all:
@@ -11,6 +11,8 @@ install:
 	$(MAKE) -C src install
 uninstall:
 	$(MAKE) -C src uninstall
+reinstall:
+	$(MAKE) -C src reinstall
 clean:
 	$(MAKE) -C src clean
 	rm -f *~
