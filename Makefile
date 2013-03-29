@@ -13,3 +13,4 @@ uninstall:
 	$(MAKE) -C src uninstall
 clean:
 	$(MAKE) -C src clean
+	rm -f *~
