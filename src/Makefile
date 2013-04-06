@@ -8,16 +8,24 @@ all: nldate.ml
 	ocamlc -c $(FLAGS) nldate.ml
 	ocamlc -c $(FLAGS) nlencoding.mli
 	ocamlc -c $(FLAGS) nlencoding.ml
-	ocamlc -a $(FLAGS) -o netstring-light.cma nldate.cmo nlencoding.cmo
+	ocamlc -c $(FLAGS) nlbuffer.mli
+	ocamlc -c $(FLAGS) nlbuffer.ml
+	ocamlc -c $(FLAGS) nlchannels.mli
+	ocamlfind ocamlc -package netsys -c $(FLAGS) nlchannels.ml
+	ocamlc -a $(FLAGS) -o netstring-light.cma nldate.cmo nlencoding.cmo nlbuffer.cmo nlchannels.cmo
 opt:
 	ocamlc -c $(FLAGS) nldate.mli
 	ocamlopt -c $(FLAGS) nldate.ml
 	ocamlc -c $(FLAGS) nlencoding.mli
 	ocamlopt -c $(FLAGS) nlencoding.ml
-	ocamlopt -a $(FLAGS) -o netstring-light.cmxa nldate.cmx nlencoding.cmx
+	ocamlc -c $(FLAGS) nlbuffer.mli
+	ocamlopt -c $(FLAGS) nlbuffer.ml
+	ocamlc -c $(FLAGS) nlchannels.mli
+	ocamlfind ocamlopt -package netsys -c $(FLAGS) nlchannels.ml
+	ocamlopt -a $(FLAGS) -o netstring-light.cmxa nldate.cmx nlencoding.cmx nlbuffer.cmx nlchannels.cmx
 doc:
 	mkdir -p ../html
-	ocamldoc -html -d ../html nldate.mli nlencoding.mli
+	ocamldoc -html -d ../html nldate.mli nlencoding.mli mlbuffer.mli nlchannels.mli
 
 netstring-light.cmxa: opt
 
