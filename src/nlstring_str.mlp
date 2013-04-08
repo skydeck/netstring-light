@@ -1,0 +1,293 @@
+open Printf
+
+let explode s =
+  let l = String.length s in
+  let rec loop k =
+    if k < l then
+      s.[k] :: loop (k+1)
+    else
+      [] in
+  loop 0
+
+let implode l =
+  let n = List.length l in
+  let s = String.create n in
+  let k = ref 0 in
+  List.iter
+    (fun c ->
+       s.[ !k ] <- c;
+       incr k
+    )
+    l;
+  s
+
+
+let quote_set s =
+  let l = explode s in
+  let have_circum = List.mem '^' l in
+  let have_minus = List.mem '-' l in
+  let have_rbracket = List.mem ']' l in
+  let l1 = List.filter (fun c -> c <> '^' && c <> '-' && c <> ']') l in
+  let l2 = if have_rbracket then ']' :: l1 else l1 in
+  let l3 = if have_circum then l2 @ ['^'] else l2 in
+  let l4 = if have_minus then l3 @ ['-'] else l3 in
+  let s4 = implode l4 in
+  let s' =
+    match s4 with
+      | "" -> failwith "Netstring_str.quote_set: empty"
+      | "^" -> "^"
+      | "^-" -> "[-^]"
+      | _ -> "[" ^ s4 ^ "]" in
+  s'
+
+
+(* We use here the Str externals directly, and reimplement parts of
+   the Str module to make it thread-safe
+ *)
+
+type regexp = Str.regexp;;
+type split_result = Str.split_result = Text of string | Delim of string;;
+
+type result =
+    { pos : int;
+      sr : int array;
+    }
+
+(* sr.(2*k) is the beginning of group k
+   sr.(2*k+1) is the end of group k
+   sr.(0) is match beginning
+   sr.(1) is match end
+ *)
+
+let match_beg sr = sr.(0)
+let match_e sr = sr.(1)
+let group_beg sr k = sr.(k+k)
+let group_e sr k = sr.(k+k+1)
+let n_groups sr = (Array.length sr - 2) lsr 1
+
+(* Groups are numbered 1 .. n_groups *)
+
+external re_string_match: regexp -> string -> int -> int array
+     = "re_string_match"
+external re_partial_match: regexp -> string -> int -> int array
+     = "re_partial_match"
+external re_search_forward: regexp -> string -> int -> int array
+     = "re_search_forward"
+external re_search_backward: regexp -> string -> int -> int array
+     = "re_search_backward"
+external re_replacement_text: string -> int array -> string -> string
+    = "re_replacement_text"
+
+
+
+let regexp s =
+  let re = Str.regexp s in
+  re
+
+
+let regexp_case_fold s =
+  let re = Str.regexp_case_fold s in
+  re
+
+
+let quote s =
+  let s' = Str.quote s in
+  s'
+
+
+let regexp_string = Str.regexp_string
+let regexp_string_case_fold = Str.regexp_string_case_fold
+
+let return_result pos sr =
+  { pos = pos; sr = sr }
+
+let string_match pat s pos =
+  let sr = re_string_match pat s pos in
+  if Array.length sr > 0 then
+    Some (return_result pos sr)
+  else
+    None
+
+let search_forward pat s pos =
+  let sr = re_search_forward pat s pos in
+  if Array.length sr = 0 then raise Not_found;
+  sr.(0), return_result pos sr
+
+let search_backward pat s pos =
+  let sr = re_search_backward pat s pos in
+  if Array.length sr = 0 then raise Not_found;
+  sr.(0), return_result pos sr
+
+let matched_string result s =
+  if match_beg result.sr < 0 || match_e result.sr < 0 then raise Not_found;
+  String.sub s (match_beg result.sr) (match_e result.sr - match_beg result.sr)
+
+let match_beginning result =
+  if match_beg result.sr < 0 then raise Not_found;
+  match_beg result.sr
+
+let match_end result =
+  if match_e result.sr < 0 then raise Not_found;
+  match_e result.sr
+
+let matched_group result n s =
+  if n < 0 || n > n_groups result.sr then raise Not_found;
+  if n = 0 then
+    matched_string result s
+  else
+    let gbeg = group_beg result.sr n in
+    let gend = group_e result.sr n in
+    if gbeg < 0 || gend < 0 then raise Not_found;
+    String.sub s gbeg (gend - gbeg)
+
+let group_beginning result n =
+  if n < 0 || n > n_groups result.sr then raise Not_found;
+  if n = 0 then
+    match_beginning result
+  else
+    let gbeg = group_beg result.sr n in
+    if gbeg < 0 then raise Not_found else
+      gbeg
+
+let group_end result n =
+  if n < 0 || n > n_groups result.sr then raise Not_found;
+  if n = 0 then
+    match_e result.sr
+  else
+    let gend = group_e result.sr n in
+    if gend < 0 then raise Not_found else
+      gend
+
+let substitute_first pat subst s =
+  try
+    let pos, m = search_forward pat s 0 in
+    String.concat ""
+      [ Str.string_before s pos;
+        subst m s;
+        Str.string_after s (match_end m)
+      ]
+  with Not_found -> s
+
+exception Cont of int
+
+let global_substitute pat subst s =
+  let l = String.length s in
+  let b = Buffer.create (l/2) in
+  let rec loop k =
+    try
+      if k <= l then (
+        let pos, m = search_forward pat s k in  (* or Not_found *)
+        Buffer.add_string b (String.sub s k (pos-k));
+        let repl = subst m s in
+        Buffer.add_string b repl;
+        let pos' = match_end m in
+        if pos = pos' then (
+          if pos < l then Buffer.add_char b s.[pos];
+          raise (Cont (pos'+1))
+        )
+        else
+          raise (Cont pos')
+      )
+    with
+      | Cont k_next ->
+          loop k_next
+      | Not_found ->
+          Buffer.add_string b (String.sub s k (l-k)) in
+  loop 0;
+  Buffer.contents b
+
+let replace_matched repl m s =
+  re_replacement_text repl m.sr s
+
+let global_replace pat repl s =
+  global_substitute
+    pat (replace_matched repl) s
+
+let replace_first pat repl s =
+  substitute_first
+    pat (replace_matched repl) s
+
+
+(* The splitting functions are practically copied from str.ml *)
+
+let opt_search_forward re s pos =
+  try Some(search_forward re s pos) with Not_found -> None
+
+let opt_search_forward_progress expr text start =
+  match opt_search_forward expr text start with
+    | None -> None
+    | Some (pos, m) ->
+        if match_end m > start then
+          Some (pos,m)
+        else if start < String.length text then
+          opt_search_forward expr text (start + 1)
+        else None
+
+let bounded_split expr text num =
+  let start =
+    match string_match expr text 0 with
+      | Some m -> match_end m
+      | None -> 0 in
+  let rec split accu start n =
+    if start >= String.length text then accu else
+    if n = 1 then Str.string_after text start :: accu else
+      match opt_search_forward_progress expr text start with
+        | None ->
+            Str.string_after text start :: accu
+        | Some (pos,m) ->
+            split
+              (String.sub text start (pos-start) :: accu)
+              (match_end m)
+              (n-1)
+  in
+  List.rev (split [] start num)
+
+let split expr text = bounded_split expr text 0
+
+let bounded_split_delim expr text num =
+  let rec split accu start n =
+    if start > String.length text then accu else
+      if n = 1 then Str.string_after text start :: accu else
+        match opt_search_forward_progress expr text start with
+          | None ->
+              Str.string_after text start :: accu
+          | Some (pos,m) ->
+              split
+                (String.sub text start (pos-start) :: accu)
+                (match_end m)
+                (n-1)
+  in
+  if text = "" then [] else List.rev (split [] 0 num)
+
+
+let split_delim expr text = bounded_split_delim expr text 0
+
+let bounded_full_split expr text num =
+  let rec split accu start n =
+    if start >= String.length text then accu else
+      if n = 1 then Text(Str.string_after text start) :: accu else
+        match opt_search_forward_progress expr text start with
+          | None ->
+              Text(Str.string_after text start) :: accu
+          | Some (pos,m) ->
+              let s = matched_string m text in
+              if pos > start then
+                split
+                  (Delim(s) :: Text(String.sub text start (pos-start)) :: accu)
+                  (match_end m)
+                  (n-1)
+              else
+                split
+                  (Delim(s) :: accu)
+                  (match_end m)
+                  (n-1)
+  in
+  List.rev (split [] 0 num)
+
+let full_split expr text = bounded_full_split expr text 0
+
+
+let string_before = Str.string_before;;
+let string_after = Str.string_after;;
+let first_chars = Str.first_chars;;
+let last_chars = Str.last_chars;;

@@ -166,6 +166,17 @@ val index_from : t -> int -> char -> int
      * returned. Otherwise, [Not_found] is raised.
      *)
 
+(** {2 Memory} *)
+
+val blit_to_memory : t -> int -> Netsys_mem.memory -> int -> int -> unit
+    (** [blit_to_memory nb srcpos dest destpos len]: Copies the [len] bytes at
+     *  position [srcpos] from [nb] to the membuffer [dest] at position
+	[destpos].
+     *)
+
+val add_sub_memory : t -> Netsys_mem.memory -> int -> int -> unit
+  (** Same as [add_sub_string], but gets data from a memory buffer *)
+
 
 (** {2 Miscelleneous} *)
 
