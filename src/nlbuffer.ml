@@ -86,10 +86,35 @@ let blit_to_string b srcpos dest destpos n =
 
 let blit = blit_to_string
 
+type memory =
+    (char, Bigarray.int8_unsigned_elt, Bigarray.c_layout) Bigarray.Array1.t
+
+let blit_string_to_memory src srcpos dst dstpos n =
+  let srclen = String.length src in
+  let dstlen = Bigarray.Array1.dim dst in
+  if n < 0
+    || srcpos < 0 || srcpos > srclen - n
+    || dstpos < 0 || dstpos > dstlen - n
+  then
+    raise (Invalid_argument "Nlbuffer.blit_string_to_memory");
+  for i = 0 to n - 1 do
+    dst.{i+dstpos} <- src.[i+srcpos]
+  done
+
+let blit_memory_to_string src srcpos dst dstpos n =
+  let srclen = Bigarray.Array1.dim src in
+  let dstlen = String.length dst in
+  if n < 0
+    || srcpos < 0 || srcpos > srclen - n
+    || dstpos < 0 || dstpos > dstlen - n
+  then
+    raise (Invalid_argument "Nlbuffer.blit_memory_to_string");
+  for i = 0 to n - 1 do
+    dst.[i+dstpos] <- src.{i+srcpos}
+  done
+
 let blit_to_memory b srcpos dest destpos n =
-  if srcpos < 0 || n < 0 || srcpos > b.length-n then
-    raise (Invalid_argument "Netbuffer.blit_to_memory");
-  Netsys_mem.blit_string_to_memory b.buffer srcpos dest destpos n
+  blit_string_to_memory b.buffer srcpos dest destpos n
 
 
 let unsafe_buffer b =
@@ -190,7 +215,7 @@ let add_sub_memory b s k l =
   if k < 0 || l < 0 || k > Bigarray.Array1.dim s-l then
     invalid_arg "Netbuffer.add_sub_memory";
   ensure_space b (l + b.length);
-  Netsys_mem.blit_memory_to_string s k b.buffer b.length l;
+  blit_memory_to_string s k b.buffer b.length l;
   b.length <- b.length + l
 
 

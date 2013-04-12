@@ -788,83 +788,6 @@ class buffered_raw_out_channel :
    *)
 
 
-
-(* ********************** Channels over descriptors ******************* *)
-
-(** {1:descriptors Channels over descriptors} *)
-
-class input_descr :
-  ?blocking:bool ->
-  ?start_pos_in:int ->
-  Unix.file_descr ->
-    raw_in_channel
-  (** Creates a [raw_in_channel] for the passed file descriptor, which must
-   * be open for reading.
-   *
-   * The [pos_in] method returns logical positions, i.e. it counts the number
-   * of read octets. It is not tried to determine the real file position.
-   *
-   * The method [close_in] also closes the file descriptor.
-   *
-   * This class also supports Win32 proxy descriptors referring to an input
-   * channel.
-   *
-   * @param blocking Whether the channel waits for data if it is not
-   * possible to read from the (non-blocking) descriptor. Defaults to [true].
-   * @param start_pos_in The position to which [pos_in] is initialized when
-   * the channel is created, by default 0
-   *)
-
-
-class output_descr :
-  ?blocking:bool ->
-  ?start_pos_out:int ->
-  Unix.file_descr ->
-    raw_out_channel
-  (** Creates a [raw_out_channel] for the passed file descriptor, which must
-   * be open for writing.
-   *
-   * The [pos_out] method returns logical positions, i.e. it counts the number
-   * of written octets. It is not tried to determine the real file position.
-   *
-   * The method [close_out] also closes the file descriptor.
-   *
-   * This class also supports Win32 proxy descriptors referring to an output
-   * channel.
-   *
-   * @param blocking Whether the channel waits until it can output if it is not
-   * possible to write to the (non-blocking) descriptor. Defaults to [true].
-   * @param start_pos_out The position to which [pos_out] is initialized when
-   * the channel is created, by default 0
-   *)
-
-class socket_descr :
-  ?blocking:bool ->
-  ?start_pos_in:int ->
-  ?start_pos_out:int ->
-  Unix.file_descr ->
-    raw_io_channel
-  (** Creates a [raw_io_channel] for the passed socket descriptor, which must
-   * be open for reading and writing, and not yet shut down in either
-   * direction. The [raw_io_channel] is used to represent a bidirectional
-   * channel: [close_out] shuts the socket down for sending, [close_in]
-   * shuts the socket down for reading, and when both directions are down,
-   * the descriptor is closed.
-   *
-   * The [pos_in] and [pos_out] methods returns logical positions.
-   *
-   * This class supports sockets and Win32 named pipes. Note, however,
-   * that for Win32 named pipes it is not possible to shut down only one
-   * direction of the bidirectional data channel.
-   *
-   * @param blocking See {!input_descr} and {!output_descr}
-   * @param start_pos_in The position to which [pos_in] is initialized when
-   * the channel is created, by default 0
-   * @param start_pos_out The position to which [pos_out] is initialized when
-   * the channel is created, by default 0
-   *)
-
-
 (* ********************* Transactional output channels **************** *)
 
 (** {1:transactional Transactional channels} *)
@@ -882,40 +805,6 @@ class buffered_trans_channel :
    * @param close_mode Specifies the semantics of [close_out], by default
    * [`Commit]
    *)
-
-val make_temporary_file :
-  ?mode:int -> ?limit:int -> ?tmp_directory:string -> ?tmp_prefix:string ->
-  unit ->
-    (string * in_channel * out_channel)
-  (** Creates a temporary file in the directory [tmp_directory] with a name
-   * prefix [tmp_prefix] and a unique suffix. The function returns
-   * the triple (name, inch, outch) containing the file [name],
-   * the file opened as in_channel [inch] and as out_channel [outch].
-   *
-   * @param tmp_directory Defaults to {!Netsys_tmp.tmp_directory()}
-   * @param tmp_prefix By default ["netstring"]. This needs not to be
-   *   unique, but just descriptive.
-   * @param mode The creation mask of the file; defaults to 0o600, i.e. the
-   *   file is private for the current user
-   * @param limit Limits the number of trials to find the unique suffix.
-   *   Defaults to 1000.
-   *)
-
-class tempfile_trans_channel :
-  ?close_mode:close_mode ->
-  ?tmp_directory:string ->
-  ?tmp_prefix:string ->
-  out_obj_channel ->
-    trans_out_obj_channel
-  (** A transactional output channel with a transaction buffer implemented
-   * as temporary file
-   *
-   * @param close_mode Specifies the semantics of [close_out], by default
-   *   [`Commit]
-   * @param tmp_directory See [make_temporary_file]
-   * @param tmp_prefix See [make_temporary_file]
-   *)
-
 
 
 (* ************************ Pipes and filters ************************* *)

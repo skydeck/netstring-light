@@ -168,13 +168,16 @@ val index_from : t -> int -> char -> int
 
 (** {2 Memory} *)
 
-val blit_to_memory : t -> int -> Netsys_mem.memory -> int -> int -> unit
+type memory =
+    (char, Bigarray.int8_unsigned_elt, Bigarray.c_layout) Bigarray.Array1.t
+
+val blit_to_memory : t -> int -> memory -> int -> int -> unit
     (** [blit_to_memory nb srcpos dest destpos len]: Copies the [len] bytes at
      *  position [srcpos] from [nb] to the membuffer [dest] at position
 	[destpos].
      *)
 
-val add_sub_memory : t -> Netsys_mem.memory -> int -> int -> unit
+val add_sub_memory : t -> memory -> int -> int -> unit
   (** Same as [add_sub_string], but gets data from a memory buffer *)
 
 

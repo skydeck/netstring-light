@@ -60,15 +60,15 @@ module Base64 = struct
        * So it is proved that the following unsafe string accesses always
        * work.
        *)
-      let bits = (Char.code (String.unsafe_get s (p))   lsl 16) lor
-		 (Char.code (String.unsafe_get s (p+1)) lsl  8) lor
-		 (Char.code (String.unsafe_get s (p+2))) in
+      let bits = (Char.code (String.get s (p))   lsl 16) lor
+		 (Char.code (String.get s (p+1)) lsl  8) lor
+		 (Char.code (String.get s (p+2))) in
       (* Obviously, 'bits' is a 24 bit entity (i.e. bits < 2**24) *)
       assert(!j + 3 < l_t');
-      String.unsafe_set t !j     (Array.unsafe_get b64 ( bits lsr 18));
-      String.unsafe_set t (!j+1) (Array.unsafe_get b64 ((bits lsr 12) land 63));
-      String.unsafe_set t (!j+2) (Array.unsafe_get b64 ((bits lsr  6) land 63));
-      String.unsafe_set t (!j+3) (Array.unsafe_get b64 ( bits         land 63));
+      String.set t !j     (Array.get b64 ( bits lsr 18));
+      String.set t (!j+1) (Array.get b64 ((bits lsr 12) land 63));
+      String.set t (!j+2) (Array.get b64 ((bits lsr  6) land 63));
+      String.set t (!j+3) (Array.get b64 ( bits         land 63));
       j := !j + 4;
       if linelen > 3 then begin
 	q := !q + 4;
@@ -171,7 +171,7 @@ module Base64 = struct
 	let c = ref 0 in
 	let p = ref 0 in
 	for i = pos to pos + len - 1 do
-	  match String.unsafe_get t i with
+	  match String.get t i with
 	      (' '|'\t'|'\r'|'\n'|'>') -> ()
 	    | ('='|'.') as ch ->
 		if ch = '.' && not p_url then
@@ -181,7 +181,7 @@ module Base64 = struct
 		if !p > 2 then
 		  invalid_arg "Netencoding.Base64.decode";
 		for j = i+1 to pos + len - 1 do
-		  match String.unsafe_get t j with
+		  match String.get t j with
 		      (' '|'\t'|'\r'|'\n'|'.'|'=') -> ()
 		    | _ ->
 			(* Only another '=' or spaces allowed *)
@@ -263,9 +263,9 @@ module Base64 = struct
 	let x0 = (n0 lsl 2) lor (n1 lsr 4) in
 	let x1 = ((n1 lsl 4) land 0xf0) lor (n2 lsr 2) in
 	let x2 = ((n2 lsl 6) land 0xc0) lor n3 in
-	String.unsafe_set s q     (Char.chr x0);
-	String.unsafe_set s (q+1) (Char.chr x1);
-	String.unsafe_set s (q+2) (Char.chr x2);
+	String.set s q     (Char.chr x0);
+	String.set s (q+1) (Char.chr x1);
+	String.set s (q+2) (Char.chr x2);
       done;
     end
     else begin
@@ -273,10 +273,10 @@ module Base64 = struct
       for k = 0 to l_t / 4 - 2 do
 	let p = pos + 4*k in
 	let q = 3*k in
-	let c0 = String.unsafe_get t p in
-	let c1 = String.unsafe_get t (p + 1) in
-	let c2 = String.unsafe_get t (p + 2) in
-	let c3 = String.unsafe_get t (p + 3) in
+	let c0 = String.get t p in
+	let c1 = String.get t (p + 1) in
+	let c2 = String.get t (p + 2) in
+	let c3 = String.get t (p + 3) in
 	let n0 = decode_char c0 in
 	let n1 = decode_char c1 in
 	let n2 = decode_char c2 in
@@ -284,9 +284,9 @@ module Base64 = struct
 	let x0 = (n0 lsl 2) lor (n1 lsr 4) in
 	let x1 = ((n1 lsl 4) land 0xf0) lor (n2 lsr 2) in
 	let x2 = ((n2 lsl 6) land 0xc0) lor n3 in
-	String.unsafe_set s q     (Char.chr x0);
-	String.unsafe_set s (q+1) (Char.chr x1);
-	String.unsafe_set s (q+2) (Char.chr x2);
+	String.set s q     (Char.chr x0);
+	String.set s (q+1) (Char.chr x1);
+	String.set s (q+2) (Char.chr x2);
       done;
       cursor := pos + l_t - 4;
     end;
@@ -373,7 +373,7 @@ module QuotedPrintable = struct
        * i: input byte count
        *)
       if i < len then
-	match String.unsafe_get s (pos+i) with
+	match String.get s (pos+i) with
 	    '\r' ->              (* CR is deleted *)
 	      count l n (i+1)
 	  | '\n' ->              (* LF may be expanded to CR/LF *)
@@ -445,7 +445,7 @@ module QuotedPrintable = struct
 
     let l = ref !line_length in
     for i = 0 to len - 1 do
-      match String.unsafe_get s i with
+      match String.get s i with
 	  '\r' ->   (* CR is deleted *)
 	    ()
 	| '\n' ->   (* LF is expanded to CR/LF *)
@@ -486,7 +486,7 @@ module QuotedPrintable = struct
 	      l := 0;
 	    )
 	| c ->
-	    String.unsafe_set t !k c;
+	    String.set t !k c;
 	    incr k;
 	    incr l;
 	    if !l > 72 then (
@@ -525,7 +525,7 @@ module QuotedPrintable = struct
 
     let rec count n i =
       if i < len then
-	match String.unsafe_get s (pos+i) with
+	match String.get s (pos+i) with
 	    '=' ->
 	      if i+1 = len then
 		(* A '=' at EOF is ignored *)
@@ -564,7 +564,7 @@ module QuotedPrintable = struct
     let i = ref 0 in
 
     while !i < l do
-      match String.unsafe_get s !k with
+      match String.get s !k with
 	  '=' ->
 	    if !k+1 = e then
 	      (* A '=' at EOF is ignored *)
@@ -593,7 +593,7 @@ module QuotedPrintable = struct
 	      else
 		invalid_arg "Netencoding.QuotedPrintable.decode_substring"
 	| c ->
-	    String.unsafe_set t !i c;
+	    String.set t !i c;
 	    incr k;
 	    incr i
     done;
@@ -619,7 +619,7 @@ module Q = struct
 
     let rec count n i =
       if i < len then
-	match String.unsafe_get s (pos+i) with
+	match String.get s (pos+i) with
 	  | ('A'..'Z'|'a'..'z'|'0'..'9') ->
 	      count (n+1) (i+1)
 	  | _ ->
@@ -644,9 +644,9 @@ module Q = struct
     in
 
     for i = 0 to len - 1 do
-      match String.unsafe_get s i with
+      match String.get s i with
 	| ('A'..'Z'|'a'..'z'|'0'..'9') as c ->
-	    String.unsafe_set t !k c;
+	    String.set t !k c;
 	    incr k
 	| c ->
 	    add_quoted c;
@@ -680,7 +680,7 @@ module Q = struct
 
     let rec count n i =
       if i < len then
-	match String.unsafe_get s (pos+i) with
+	match String.get s (pos+i) with
 	    '=' ->
 	      if i+2 >= len then
 		invalid_arg "Netencoding.Q.decode_substring";
@@ -700,7 +700,7 @@ module Q = struct
     let i = ref 0 in
 
     while !i < l do
-      match String.unsafe_get s !k with
+      match String.get s !k with
 	  '=' ->
 	    if !k+2 >= e then
 	      invalid_arg "Netencoding.Q.decode_substring";
@@ -710,11 +710,11 @@ module Q = struct
 	    k := !k + 3;
 	    incr i
 	| '_' ->
-	    String.unsafe_set t !i ' ';
+	    String.set t !i ' ';
 	    incr k;
 	    incr i
 	| c ->
-	    String.unsafe_set t !i c;
+	    String.set t !i c;
 	    incr k;
 	    incr i
     done;
@@ -756,25 +756,25 @@ module Url = struct
      string.  Invalid '%XX' are left unchanged.  *)
   let rec decode_range_loop plus i0 i up s =
     if i0 >= up then i else begin
-      match String.unsafe_get s i0 with
+      match String.get s i0 with
       | '+' ->
-	  String.unsafe_set s i plus;
+	  String.set s i plus;
 	  decode_range_loop plus (succ i0) (succ i) up s
       | '%' when i0 + 2 < up ->
           let i1 = succ i0 in
           let i2 = succ i1 in
           let i0_next =
             try
-              let v = hex_of_char(String.unsafe_get s i1) lsl 4
-                + hex_of_char(String.unsafe_get s i2) in
-	      String.unsafe_set s i (Char.chr v);
+              let v = hex_of_char(String.get s i1) lsl 4
+                + hex_of_char(String.get s i2) in
+	      String.set s i (Char.chr v);
 	      succ i2
             with Hex_of_char ->
-	      String.unsafe_set s i '%';
+	      String.set s i '%';
 	      i1 in
 	  decode_range_loop plus i0_next (succ i) up s
       | c ->
-	  String.unsafe_set s i c;
+	  String.set s i c;
 	  decode_range_loop plus (succ i0) (succ i) up s
     end
 
@@ -809,7 +809,7 @@ module Url = struct
      index and [up-1] the last index to scan. *)
   let rec get_key qs i0 i up =
     if i >= up then [(decode_range qs i0 up, "")] else
-      match String.unsafe_get qs i with
+      match String.get qs i with
       | '=' -> get_val qs (i+1) (i+1) up (decode_range qs i0 i)
       | '&' ->
 	  (* key but no val *)
@@ -818,7 +818,7 @@ module Url = struct
 	  get_key qs i0 (i+1) up
   and get_val qs i0 i up key =
     if i >= up then [(key, decode_range qs i0 up)] else
-      match String.unsafe_get qs i with
+      match String.get qs i with
       | '&' -> (key, decode_range qs i0 i) :: get_key qs (i+1) (i+1) up
       | _ -> get_val qs i0 (i+1) up key
 
@@ -832,36 +832,36 @@ module Url = struct
 
   let hex = [| '0'; '1'; '2'; '3'; '4'; '5'; '6'; '7'; '8'; '9';
 	       'A'; 'B'; 'C'; 'D'; 'E'; 'F' |]
-  let char_of_hex i = Array.(*unsafe_*)get hex i
+  let char_of_hex i = Array.(**)get hex i
 
   let encode_wrt is_special s0 =
     let len = String.length s0 in
     let encoded_length = ref len in
     for i = 0 to len - 1 do
-      if is_special(String.unsafe_get s0 i) then
+      if is_special(String.get s0 i) then
 	encoded_length := !encoded_length + 2
     done;
     let s = String.create !encoded_length in
     let rec do_enc i0 i = (* copy the encoded string in s *)
       if i0 < len then begin
-	let s0i0 = String.unsafe_get s0 i0 in
+	let s0i0 = String.get s0 i0 in
 	(* It is important to check first that [s0i0] is special in
 	   case [' '] is considered as such a character. *)
 	if is_special s0i0 then begin
           let c = Char.code s0i0 in
           let i1 = succ i in
           let i2 = succ i1 in
-          String.unsafe_set s i '%';
-          String.unsafe_set s i1 (char_of_hex (c lsr 4));
-          String.unsafe_set s i2 (char_of_hex (c land 0x0F));
+          String.set s i '%';
+          String.set s i1 (char_of_hex (c lsr 4));
+          String.set s i2 (char_of_hex (c land 0x0F));
           do_enc (succ i0) (succ i2)
 	end
 	else if s0i0 = ' ' then begin
-	  String.unsafe_set s i '+';
+	  String.set s i '+';
           do_enc (succ i0) (succ i)
 	end
 	else begin
-          String.unsafe_set s i s0i0;
+          String.set s i s0i0;
           do_enc (succ i0) (succ i)
 	end
       end in

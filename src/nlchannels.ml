@@ -3,8 +3,7 @@ exception Buffer_underrun
 exception Command_failure of Unix.process_status
 
 let () =
-  Netexn.register_printer
-    (Command_failure(Unix.WEXITED 0))
+  Printexc.register_printer
     (fun e ->
        match e with
 	 | Command_failure ps ->
@@ -14,14 +13,10 @@ let () =
 		 | Unix.WSIGNALED n -> "WSIGNALED " ^ string_of_int n
 		 | Unix.WSTOPPED n -> "WSTOPPED " ^ string_of_int n
 	     in
-	     "Netchannels.Command_failure(" ^ ps_str ^ ")"
+	     Some ("Netchannels.Command_failure(" ^ ps_str ^ ")")
 	 | _ ->
-	     assert false
+	     None
     )
-
-let () =
-  Netsys_signal.init()
-
 
 class type rec_in_channel = object
   method input : string -> int -> int -> int
@@ -834,7 +829,7 @@ let lift_in ?(eol = ["\n"]) ?(buffered=true) ?buffer_size ?pass_through
       `Rec r when not buffered ->
 	if eol <> ["\n"] then invalid_arg "Netchannels.lift_in";
 	new lift_rec_in_channel r
-    | `Rec r when buffered ->
+    | `Rec r ->
 	let r' = new lift_rec_in_channel r in
 	new lift_raw_in_channel_buf
 	  ~eol ?buffer_size ?pass_through
@@ -842,7 +837,7 @@ let lift_in ?(eol = ["\n"]) ?(buffered=true) ?buffer_size ?pass_through
     | `Raw r when not buffered ->
 	if eol <> ["\n"] then invalid_arg "Netchannels.lift_in";
 	new lift_raw_in_channel r
-    | `Raw r when buffered ->
+    | `Raw r ->
 	new lift_raw_in_channel_buf ~eol ?buffer_size ?pass_through r
 ;;
 
@@ -949,26 +944,8 @@ object (self)
 
   method close_out() =
     if not closed then (
-      ( try
-	  (* if !errflag is set, we know that the immediately preceding
-	     operation raised an exception, and we are now likely in the
-	     exception handler
-	   *)
-	  if !errflag then
-	    Pervasives.close_out_noerr ch
-	  else
-	    Pervasives.close_out ch;
-	  closed <- true;
-	with
-	  | error ->
-	      let bt = Printexc.get_backtrace() in
-	      Netlog.logf `Err
-		"Netchannels.output_channel: \
-                   Suppressed error in close_out: %s - backtrace: %s"
-		(Netexn.to_string error) bt;
-	      Pervasives.close_out_noerr ch;
-	      closed <- true;
-      );
+      (try Pervasives.close_out_noerr ch with _ -> assert false);
+      closed <- true;
       onclose()
     )
 
@@ -1298,10 +1275,10 @@ object (self)
 	with
 	  | error ->
 	      let bt = Printexc.get_backtrace() in
-	      Netlog.logf `Err
+	      Printf.eprintf
 		"Netchannels.buffered_raw_out_channel: \
                   Suppressed error in close_out: %s - backtrace: %s"
-		(Netexn.to_string error) bt;
+		(Printexc.to_string error) bt;
       );
       ch # close_out();
       closed <- true
@@ -1319,7 +1296,7 @@ let lift_out ?(buffered=true) ?buffer_size ?pass_through (x : lift_out_arg) =
   match x with
       `Rec r when not buffered ->
 	new lift_rec_out_channel r
-    | `Rec r when buffered ->
+    | `Rec r ->
 	let r' = new lift_rec_out_channel r in
 	let r'' =
 	  new buffered_raw_out_channel
@@ -1327,174 +1304,9 @@ let lift_out ?(buffered=true) ?buffer_size ?pass_through (x : lift_out_arg) =
 	new lift_raw_out_channel r''
     | `Raw r when not buffered ->
 	new lift_raw_out_channel r
-    | `Raw r when buffered ->
+    | `Raw r ->
 	let r' = new buffered_raw_out_channel ?buffer_size ?pass_through r in
 	new lift_raw_out_channel r'
-;;
-
-
-(************************* raw channels *******************************)
-
-class input_descr_prelim ?(blocking=true) ?(start_pos_in = 0) fd =
-  let fd_style = Netsys.get_fd_style fd in
-object (self)
-  val fd_in = fd
-  val mutable pos_in = start_pos_in
-  val mutable closed_in = false
-
-  method private complain_closed() =
-    raise Closed_channel
-
-  method input buf pos len =
-    if closed_in then self # complain_closed();
-    try
-      let n = Netsys.gread fd_style fd_in buf pos len in
-      pos_in <- pos_in + n;
-      if n=0 && len>0 then raise End_of_file;
-      n
-    with
-	Unix.Unix_error(Unix.EINTR,_,_) ->
-	  self # input buf pos len
-      | Unix.Unix_error(Unix.EAGAIN,_,_)
-      | Unix.Unix_error(Unix.EWOULDBLOCK,_,_) ->
-	  if blocking then (
-	    let _  = Netsys.restart
-	      (Netsys.wait_until_readable fd_style fd) (-1.0) in
-	    self # input buf pos len
-	  )
-	  else 0
-
-
-  method close_in () =
-    if not closed_in then (
-      Netsys.gclose fd_style fd_in;
-      closed_in <- true
-    )
-
-  method pos_in =
-    if closed_in then self # complain_closed();
-    pos_in
-end
-;;
-
-
-class input_descr ?blocking ?start_pos_in fd : raw_in_channel =
-  input_descr_prelim ?blocking ?start_pos_in fd
-;;
-
-
-class output_descr_prelim ?(blocking=true) ?(start_pos_out = 0) fd =
-  let fd_style = Netsys.get_fd_style fd in
-object (self)
-  val fd_out = fd
-  val mutable pos_out = start_pos_out
-  val mutable closed_out = false
-
-  method private complain_closed() =
-    raise Closed_channel
-
-  method output buf pos len =
-    if closed_out then self # complain_closed();
-    try
-      let n = Netsys.gwrite fd_style fd_out buf pos len in
-      pos_out <- pos_out + n;
-      n
-    with
-	Unix.Unix_error(Unix.EINTR,_,_) ->
-	  self # output buf pos len
-      | Unix.Unix_error(Unix.EAGAIN,_,_)
-      | Unix.Unix_error(Unix.EWOULDBLOCK,_,_) ->
-	  if blocking then (
-	    let _  = Netsys.restart
-	      (Netsys.wait_until_writable fd_style fd) (-1.0) in
-	    self # output buf pos len
-	  )
-	  else
-	    0
-
-  method close_out () =
-    if not closed_out then (
-      ( try
-	  Netsys.gshutdown fd_style fd Unix.SHUTDOWN_SEND
-	with
-	  | Netsys.Shutdown_not_supported -> ()
-	  | Unix.Unix_error(Unix.EAGAIN, _, _) ->
-	      (* FIXME. We block here even when non-blocking semantics
-               is requested. We do this because most programmers would
-               be surprised to get EAGAIN when closing a channel.
-               Actually, this only affects Win32 output threads.
-	       *)
-	      let _  = Netsys.restart
-		(Netsys.wait_until_writable fd_style fd) (-1.0) in
-	      Netsys.gshutdown fd_style fd Unix.SHUTDOWN_SEND
-	  | Unix.Unix_error(Unix.EPERM, _, _) ->
-	      ()
-      );
-      Netsys.gclose fd_style fd_out;
-      closed_out <- true
-    )
-
-  method pos_out =
-    if closed_out then self # complain_closed();
-    pos_out
-
-  method flush () =
-    if closed_out then self # complain_closed()
-end
-;;
-
-
-class output_descr ?blocking ?start_pos_out fd : raw_out_channel =
-  output_descr_prelim ?blocking ?start_pos_out fd
-;;
-
-
-class socket_descr ?blocking ?(start_pos_in = 0) ?(start_pos_out = 0) fd
-      : raw_io_channel =
-  let fd_style = Netsys.get_fd_style fd in
-  let () =
-    match fd_style with
-      | `Recv_send _
-      | `Recv_send_implied
-      | `W32_pipe -> ()
-      | _ ->
-	  failwith "Netchannels.socket_descr: This type of descriptor is \
-                    unsupported"
-  in
-object (self)
-  inherit input_descr_prelim ?blocking ~start_pos_in fd
-  inherit output_descr_prelim ?blocking ~start_pos_out fd
-
-  method private gen_close cmd =
-    ( try
-	Netsys.gshutdown fd_style fd cmd
-      with
-	| Netsys.Shutdown_not_supported -> ()
-	| Unix.Unix_error(Unix.EAGAIN, _, _) -> assert false
-	| Unix.Unix_error(Unix.EPERM, _, _) -> ()
-    );
-    if cmd = Unix.SHUTDOWN_ALL then
-      Netsys.gclose fd_style fd
-
-
-  method close_in () =
-    if not closed_in then (
-      closed_in <- true;
-      if closed_out then
-	self # gen_close Unix.SHUTDOWN_ALL
-      else
-	self # gen_close Unix.SHUTDOWN_RECEIVE
-    )
-
-  method close_out () =
-    if not closed_out then (
-      closed_out <- true;
-      if closed_in then
-	self # gen_close Unix.SHUTDOWN_ALL
-      else
-	self # gen_close Unix.SHUTDOWN_SEND
-    )
-end
 ;;
 
 
@@ -1532,10 +1344,10 @@ object (self)
 	with
 	  | error ->
 	      let bt = Printexc.get_backtrace() in
-	      Netlog.logf `Err
+	      Printf.eprintf
 		"Netchannels.buffered_trans_channel: \
                    Suppressed error in close_out: %s - backtrace: %s"
-		(Netexn.to_string error) bt;
+		(Printexc.to_string error) bt;
       );
       !trans # close_out();
       out # close_out();
@@ -1560,169 +1372,6 @@ object (self)
 
   method rollback_work() =
     reset()
-
-end
-;;
-
-
-let make_temporary_file
-  ?(mode = 0o600)
-  ?(limit = 1000)
-  ?(tmp_directory = Netsys_tmp.tmp_directory() )
-  ?(tmp_prefix = "netstring")
-  () =
-  (* Returns (filename, in_channel, out_channel). *)
-  let rec try_creation n =
-    try
-      let fn =
-        Filename.concat
-          tmp_directory
-          (Netsys_tmp.tmp_prefix tmp_prefix ^ "-" ^ (string_of_int n))
-      in
-      let fd_in =
-	Unix.openfile fn [ Unix.O_RDWR; Unix.O_CREAT; Unix.O_EXCL ] mode in
-      let fd_out =
-	Unix.openfile fn [ Unix.O_RDWR ] mode in
-      (* For security reasons check that fd_in and fd_out are the same file: *)
-      let stat_in = Unix.fstat fd_in in
-      let stat_out = Unix.fstat fd_out in
-      if stat_in.Unix.st_dev <> stat_out.Unix.st_dev ||
-	 stat_in.Unix.st_rdev <> stat_out.Unix.st_rdev ||
-	 stat_in.Unix.st_ino <> stat_out.Unix.st_ino
-      then
-	raise(Sys_error("File has been replaced (security alert)"));
-      let ch_in  = Unix.in_channel_of_descr fd_in in
-      let ch_out = Unix.out_channel_of_descr fd_out in
-      fn, ch_in, ch_out
-    with
-        Unix.Unix_error(Unix.EEXIST,_,_) ->
-          (* This does not look very intelligent, but it is the only chance
-           * to limit the number of trials.
-	   * Note that we get EACCES if the directory is not writeable.
-           *)
-          if n > limit then
-            failwith ("Netchannels: Cannot create temporary file - too many files in this temp directory: " ^ tmp_directory);
-          try_creation (n+1)
-      | Unix.Unix_error(e,_,_) ->
-	  raise (Sys_error("Cannot create a temporary file in the directory " ^
-			   tmp_directory ^ ": " ^ Unix.error_message e))
-
-  in
-  try_creation 0
-;;
-
-
-class tempfile_trans_channel ?(close_mode = (`Commit : close_mode))
-                              ?tmp_directory
-			      ?tmp_prefix
-			      (ch : out_obj_channel)
-			      : trans_out_obj_channel =
-  let _transname, _transch_in, _transch_out =
-    make_temporary_file ?tmp_directory ?tmp_prefix () in
-  let closed = ref false in
-object (self)
-  val transch_out        = _transch_out
-  val mutable transch_in = _transch_in
-  val trans              = new output_channel _transch_out
-  val mutable out        = ch
-  val close_mode         = close_mode
-  val mutable need_clear = false
-
-  initializer
-    try
-      Sys.remove _transname;
-      (* Remove the file immediately. This requires "Unix semantics" of the
-       * underlying file system, because we don't remove the file but only
-       * the entry in the directory. So we can read and write the file and
-       * allocate disk space, but the file is private from now on. (It's
-       * not fully private, because another process can obtain a descriptor
-       * between creation of the file and removal of the entry. We should
-       * keep that in mind if privacy really matters.)
-       * The disk space will be freed when the descriptor is closed.
-       *)
-    with
-	err ->
-	  close_in  _transch_in;
-	  close_out _transch_out;
-	  raise err
-
-  method output         = if need_clear then self#clear(); trans # output
-  method really_output  = if need_clear then self#clear(); trans # really_output
-  method output_char    = if need_clear then self#clear(); trans # output_char
-  method output_string  = if need_clear then self#clear(); trans # output_string
-  method output_byte    = if need_clear then self#clear(); trans # output_byte
-  method output_buffer  = if need_clear then self#clear(); trans # output_buffer
-  method output_channel = if need_clear then self#clear(); trans #output_channel
-  method flush          = if need_clear then self#clear(); trans # flush
-
-  method close_out() =
-    if not !closed then (
-      if need_clear then self#clear();
-      ( try
-	  ( match close_mode with
-		`Commit   -> self # commit_work()
-	      | `Rollback -> self # rollback_work()
-	  )
-	with
-	  | error ->
-	      let bt = Printexc.get_backtrace() in
-	      Netlog.logf `Err
-		"Netchannels.tempfile_trans_channel: \
-                  Suppressed error in close_out: %s - backtrace: %s"
-		(Netexn.to_string error) bt;
-      );
-      Pervasives.close_in transch_in;
-      trans # close_out();      (* closes transch_out *)
-      out # close_out();
-      closed := true
-    )
-
-
-  method pos_out =
-    if need_clear then self#clear();
-    out # pos_out + trans # pos_out
-
-  method commit_work() =
-    need_clear <- true;
-    let len = trans # pos_out in
-    trans # flush();
-    Pervasives.seek_in transch_in 0;
-    let trans' = new input_channel transch_in in
-    ( try
-        out # output_channel ~len trans';
-        out # flush();
-      with
-	  err ->
-	    self # rollback_work();
-	    raise err
-    );
-    self # clear()
-
-  method rollback_work() = self # clear()
-
-  method private clear() =
-    (* delete the contents of the file *)
-    (* First empty the file and reset the output channel: *)
-    Pervasives.seek_out transch_out 0;
-    Unix.ftruncate (Unix.descr_of_out_channel transch_out) 0;
-    (* Renew the input channel. We create a new channel to avoid problems
-     * with the internal buffer of the channel.
-     * (Problem: transch_in has an internal buffer, and the buffer contains
-     * old data now. So we drop the channel and create a new channel for the
-     * same file descriptor. Note that we cannot set the file offset with
-     * seek_in because neither the old nor the new channel is properly
-     * synchronized with the file. So we fall back to lseek.)
-     *)
-    let fd = Unix.descr_of_in_channel transch_in in
-    ignore(Unix.lseek fd 0 Unix.SEEK_END);                  (* set the offset *)
-    transch_in <- Unix.in_channel_of_descr fd;               (* renew channel *)
-    (* Now check that everything worked: *)
-    assert(pos_in transch_in = 0);
-    assert(in_channel_length transch_in = 0);
-    (* Note: the old transch_in will be automatically finalized, but the
-     * underlying file descriptor will not be closed in this case
-     *)
-    need_clear <- false
 
 end
 ;;
