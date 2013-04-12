@@ -44,12 +44,14 @@ let socksymbol_of_string s =
     | _ ->
 	failwith ("Cannot parse socket address: " ^ s)
 
+let domain_of_inet_addr addr =
+  Unix.domain_of_sockaddr(Unix.ADDR_INET(addr,0))
 
 let string_of_socksymbol =
   function
     | `Inet(ip,port) ->
 	let n = Unix.string_of_inet_addr ip in
-	( match Netsys.domain_of_inet_addr ip with
+	( match domain_of_inet_addr ip with
 	    | Unix.PF_INET ->
 		n ^ ":" ^ string_of_int port
 	    | Unix.PF_INET6 ->

@@ -594,8 +594,11 @@ let url_syntax_of_url url = url.url_syntax
 ;;
 
 
+let domain_of_inet_addr addr =
+  Unix.domain_of_sockaddr(Unix.ADDR_INET(addr,0))
+
 let host_of_addr ip =
-  match Netsys.domain_of_inet_addr ip with
+  match domain_of_inet_addr ip with
     | Unix.PF_INET -> Unix.string_of_inet_addr ip
     | Unix.PF_INET6 -> "[" ^ Unix.string_of_inet_addr ip ^ "]"
     | _ -> assert false
